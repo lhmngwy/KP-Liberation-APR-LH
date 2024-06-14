@@ -11,7 +11,7 @@
             "KPLIB_presetCivilians": 0,
             "KPLIB_presetArsenal": 10
         },
-        "workshopId": ""
+        "workshopId": "1578862234"
     },
     {
         "sourceFolder": "kp_liberation.cup_chernarus_A3",
@@ -25,7 +25,7 @@
             "KPLIB_presetCivilians": 0,
             "KPLIB_presetArsenal": 12
         },
-        "workshopId": ""
+        "workshopId": "880462893"
     },
     {
         "sourceFolder": "kp_liberation.Enoch",
@@ -40,7 +40,7 @@
             "KPLIB_presetCivilians": 0,
             "KPLIB_presetArsenal": 16
         },
-        "workshopId": ""
+        "workshopId": "1816049282"
     },
     {
         "sourceFolder": "kp_liberation.Malden",
@@ -54,7 +54,7 @@
             "KPLIB_presetCivilians": 0,
             "KPLIB_presetArsenal": 10
         },
-        "workshopId": ""
+        "workshopId": "1737370963"
     },
     {
         "sourceFolder": "kp_liberation.Tanoa",
@@ -68,6 +68,6 @@
             "KPLIB_presetCivilians": 1,
             "KPLIB_presetArsenal": 11
         },
-        "workshopId": ""
+        "workshopId": "884703460"
     }
 ]
