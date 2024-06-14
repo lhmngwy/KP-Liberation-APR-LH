@@ -5,13 +5,13 @@
         "map": "Altis",
         "configFile": "KPLIB_config.sqf",
         "variables": {
-            "KPLIB_preset_blufor": 0,
-            "KPLIB_preset_opfor": 0,
-            "KPLIB_preset_resistance": 0,
-            "KPLIB_preset_civilians": 0,
-            "KPLIB_arsenal": 10
+            "KPLIB_presetPlayer": 0,
+            "KPLIB_presetEnemy": 0,
+            "KPLIB_presetResistance": 0,
+            "KPLIB_presetCivilians": 0,
+            "KPLIB_presetArsenal": 10
         },
-        "workshopId": "1578862234"
+        "workshopId": ""
     },
     {
         "sourceFolder": "kp_liberation.cup_chernarus_A3",
@@ -19,13 +19,13 @@
         "map": "cup_chernarus_A3",
         "configFile": "KPLIB_config.sqf",
         "variables": {
-            "KPLIB_preset_blufor": 1,
-            "KPLIB_preset_opfor":1,
-            "KPLIB_preset_resistance": 0,
-            "KPLIB_preset_civilians": 0,
-            "KPLIB_arsenal": 12
+            "KPLIB_presetPlayer": 1,
+            "KPLIB_presetEnemy":1,
+            "KPLIB_presetResistance": 0,
+            "KPLIB_presetCivilians": 0,
+            "KPLIB_presetArsenal": 12
         },
-        "workshopId": "880462893"
+        "workshopId": ""
     },
     {
         "sourceFolder": "kp_liberation.Enoch",
@@ -34,13 +34,13 @@
         "mapDisplay": "Livonia",
         "configFile": "KPLIB_config.sqf",
         "variables": {
-            "KPLIB_preset_blufor": 30,
-            "KPLIB_preset_opfor": 1,
-            "KPLIB_preset_resistance": 0,
-            "KPLIB_preset_civilians": 0,
-            "KPLIB_arsenal": 16
+            "KPLIB_presetPlayer": 30,
+            "KPLIB_presetEnemy": 1,
+            "KPLIB_presetResistance": 0,
+            "KPLIB_presetCivilians": 0,
+            "KPLIB_presetArsenal": 16
         },
-        "workshopId": "1816049282"
+        "workshopId": ""
     },
     {
         "sourceFolder": "kp_liberation.Malden",
@@ -48,13 +48,13 @@
         "map": "Malden",
         "configFile": "KPLIB_config.sqf",
         "variables": {
-            "KPLIB_preset_blufor": 0,
-            "KPLIB_preset_opfor": 0,
-            "KPLIB_preset_resistance": 0,
-            "KPLIB_preset_civilians": 0,
-            "KPLIB_arsenal": 10
+            "KPLIB_presetPlayer": 0,
+            "KPLIB_presetEnemy": 0,
+            "KPLIB_presetResistance": 0,
+            "KPLIB_presetCivilians": 0,
+            "KPLIB_presetArsenal": 10
         },
-        "workshopId": "1737370963"
+        "workshopId": ""
     },
     {
         "sourceFolder": "kp_liberation.Tanoa",
@@ -62,12 +62,12 @@
         "map": "Tanoa",
         "configFile": "KPLIB_config.sqf",
         "variables": {
-            "KPLIB_preset_blufor": 1,
-            "KPLIB_preset_opfor": 1,
-            "KPLIB_preset_resistance": 1,
-            "KPLIB_preset_civilians": 1,
-            "KPLIB_arsenal": 11
+            "KPLIB_presetPlayer": 1,
+            "KPLIB_presetEnemy": 1,
+            "KPLIB_presetResistance": 1,
+            "KPLIB_presetCivilians": 1,
+            "KPLIB_presetArsenal": 11
         },
-        "workshopId": "884703460"
+        "workshopId": ""
     }
 ]
