@@ -440,7 +440,6 @@ if (!isNil "_saveData") then {
 			
 			// Persistent fuel
             if (!isNil "_fuel") then { _object setFuel _fuel; };
-            if (!isNil "_fuelCargo") then { [_object, _fuelCargo] call ace_refuel_fnc_setFuel; };
 
             // Persistent damage
             if (!isNil "_damages") then
