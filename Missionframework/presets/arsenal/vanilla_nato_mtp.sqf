@@ -701,7 +701,13 @@ KPLIB_arsenalMagazines = [
     "Money_stack_quest",
     "Sleeping_bag_folded_01",
     "Drone_Range_Mag",
-    "Drone_Range_Mag_dummy"
+    "Drone_Range_Mag_dummy",
+    "ACE_HandFlare_White",
+    "ACE_HandFlare_Red",
+    "ACE_HandFlare_Green",
+    "ACE_HandFlare_Yellow",
+    "ACE_M14",
+    "ACE_M84"
 ];
 
 KPLIB_arsenalItems = [
