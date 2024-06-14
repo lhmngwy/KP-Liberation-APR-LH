@@ -826,10 +826,15 @@ KPLIB_arsenalItems = [
     "optic_yorris",                                                 // Yorris J2
     "optic_DMS",                                                    // DMS
     "optic_Aco",                                                    // ACO (Red)
+    "optic_Holosight",                                              // Mk17 Holosight
     "optic_Holosight_khk_F",                                        // Mk17 Holosight (Khaki)
+    "optic_Holosight_smg",                                          // Mk17 Holosight SMG
     "optic_Holosight_smg_khk_F",                                    // Mk17 Holosight SMG (Khaki)
+    "optic_Hamr",                                                   // RCO
     "optic_Hamr_khk_F",                                             // RCO (Khaki)
+    "optic_sos",                                                    // MOS
     "optic_SOS_khk_F",                                              // MOS (Khaki)
+    "optic_LRPS",                                                   // LRPS
     "optic_LRPS_tna_F",                                             // LRPS (Tropic)
     "optic_AMS",                                                    // AMS (Black)
     "optic_AMS_khk",                                                // AMS (Khaki)

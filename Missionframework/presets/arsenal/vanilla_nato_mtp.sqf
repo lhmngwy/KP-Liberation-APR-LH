@@ -844,6 +844,8 @@ KPLIB_arsenalItems = [
     "optic_LRPS",                                                   // LRPS
     "optic_AMS",                                                    // AMS (Black)
     "optic_AMS_snd",                                                // AMS (Sand)
+    "optic_ERCO_blk_F",                                             // ERCO (Black)
+    "optic_ERCO_snd_F",                                             // ERCO (Sand)
     "bipod_01_f_blk",                                               // Bipod (Black) [NATO]
     "bipod_01_f_snd",                                               // Bipod (Sand) [NATO]
     "bipod_01_f_mtp",                                               // Bipod (MTP) [NATO]
@@ -853,6 +855,8 @@ KPLIB_arsenalItems = [
     "muzzle_snds_338_sand",                                         // Sound Suppressor (.338, Sand)
     "muzzle_snds_b",                                                // Sound Suppressor (7.62 mm)
     "muzzle_snds_b_snd_f",                                          // Sound Suppressor (7.62 mm, Sand)
+    "muzzle_snds_m",                                                // Sound Suppressor (5.56 mm)
+    "muzzle_snds_m_snd_f",                                          // Sound Suppressor (5.56 mm, Khaki)
     "optic_nvs",                                                    // NVS
     "optic_tws",                                                    // TWS
     "optic_tws_mg",                                                 // TWS MG

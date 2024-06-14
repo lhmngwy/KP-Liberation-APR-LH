@@ -813,16 +813,30 @@ KPLIB_arsenalItems = [
     "optic_yorris",                                                 // Yorris J2
     "optic_DMS",                                                    // DMS
     "optic_Aco",                                                    // ACO (Red)
-    "optic_holosight_blk_f",                                        // Mk17 Holosight (Black)
-    "optic_holosight_smg_blk_f",                                    // Mk17 Holosight SMG (Black)
+    "optic_Holosight",                                              // Mk17 Holosight
+    "optic_Holosight_khk_F",                                        // Mk17 Holosight (Khaki)
+    "optic_Holosight_smg",                                          // Mk17 Holosight SMG
+    "optic_Holosight_smg_khk_F",                                    // Mk17 Holosight SMG (Khaki)
     "optic_Hamr",                                                   // RCO
-    "optic_SOS",                                                    // MOS
-    "optic_lrps",                                                   // LRPS
+    "optic_Hamr_khk_F",                                             // RCO (Khaki)
+    "optic_sos",                                                    // MOS
+    "optic_SOS_khk_F",                                              // MOS (Khaki)
+    "optic_LRPS",                                                   // LRPS
+    "optic_LRPS_tna_F",                                             // LRPS (Tropic)
     "optic_AMS",                                                    // AMS (Black)
+    "optic_AMS_khk",                                                // AMS (Khaki)
+    "optic_ERCO_blk_F",                                             // ERCO (Black)
+    "optic_ERCO_khk_F",                                             // ERCO (Khaki)
     "bipod_01_f_blk",                                               // Bipod (Black) [NATO]
+    "bipod_01_F_khk",                                               // Bipod (Khaki) [NATO]
     "muzzle_snds_H",                                                // Sound Suppressor (6.5 mm)
+    "muzzle_snds_H_khk_F",                                          // Sound Suppressor (6.5 mm, Khaki)
     "muzzle_snds_338_black",                                        // Sound Suppressor (.338, Black)
+    "muzzle_snds_338_green",                                        // Sound Suppressor (.338, Green)
     "muzzle_snds_b",                                                // Sound Suppressor (7.62 mm)
+    "muzzle_snds_b_khk_f",                                          // Sound Suppressor (7.62 mm, Khaki)
+    "muzzle_snds_m",                                                // Sound Suppressor (5.56 mm)
+    "muzzle_snds_m_khk_f",                                          // Sound Suppressor (5.56 mm, Khaki)
     "optic_nvs",                                                    // NVS
     "optic_tws",                                                    // TWS
     "optic_tws_mg",                                                 // TWS MG
