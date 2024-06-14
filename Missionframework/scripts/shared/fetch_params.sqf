@@ -1,9 +1,9 @@
 #include "defines.hpp"
 
 // Check if ACE is running
-if (isClass (configfile >> "CfgPatches" >> "ace_common")) then {KPLIB_ace = true; ["ACE detected. Deactivating resupply script from Liberation.", "MOD"] call KPLIB_fnc_log;} else {KPLIB_ace = false};
+//if (isClass (configfile >> "CfgPatches" >> "ace_common")) then {KPLIB_ace = true; ["ACE detected. Deactivating resupply script from Liberation.", "MOD"] call KPLIB_fnc_log;} else {KPLIB_ace = false};
 // Check if ACE Medical is running
-if (isClass (configfile >> "CfgPatches" >> "ace_medical")) then {KPLIB_ace_med = true; ["ACE Medical detected. switch some script for ACE Medical.", "MOD"] call KPLIB_fnc_log;} else {KPLIB_ace_med = false};
+//if (isClass (configfile >> "CfgPatches" >> "ace_medical")) then {KPLIB_ace_med = true; ["ACE Medical detected. switch some script for ACE Medical.", "MOD"] call KPLIB_fnc_log;} else {KPLIB_ace_med = false};
 
 /* Not saveable params */
 KPLIB_param_wipe_savegame_1 = ["WipeSave1", 0] call bis_fnc_getParamValue;
