@@ -135,7 +135,7 @@ class Params {
         title = $STR_PARAMS_VICTORYCONDITION;
         values[] = {0, 1, 2, 3, 4};
         texts[] = {$STR_PARAMS_VICTORYCONDITION_0, $STR_PARAMS_VICTORYCONDITION_1, $STR_PARAMS_VICTORYCONDITION_2, $STR_PARAMS_VICTORYCONDITION_3, $STR_PARAMS_VICTORYCONDITION_4};
-        default = 4;
+        default = 2;
     };
     class Spacer1 {
         title = "";
@@ -177,7 +177,7 @@ class Params {
         title = $STR_A3_RequiredItems;
         values[] = {0, 1, 2};
         texts[] = {$STR_A3_None, $STR_A3_Medikit, $STR_A3_FirstAidKitOrMedikit};
-        default = 3;
+        default = 2;
     };
     class UnconsciousStateMode {
         title = $STR_A3_IncapacitationMode;
@@ -187,9 +187,9 @@ class Params {
     };
     class ReviveBleedOutDuration {
         title = $STR_A3_BleedOutDuration;
-        values[] = {10, 15, 20, 30, 45, 60, 90, 180, 360};
-        texts[] = {10, 15, 20, 30, 45, 60, 90, 180, 360};
-        default = 360;
+        values[] = {10, 15, 20, 30, 45, 60, 90, 180, 360, 720};
+        texts[] = {10, 15, 20, 30, 45, 60, 90, 180, 360, 720};
+        default = 720;
     };
     class ReviveForceRespawnDuration {
         title = $STR_A3_ForceRespawnDuration;
@@ -333,7 +333,7 @@ class Params {
         title = $STR_PARAM_SUPPMOD;
         values[] = {0, 1, 2};
         texts[] = {$STR_PARAMS_DISABLED, $STR_PARAM_SUPPMOD_CMDRANDWHITELIST, $STR_PARAM_SUPPMOD_EVERYONE};
-        default = 1;
+        default = 2;
     };
     class Tutorial {
         title = $STR_PARAM_TUTORIAL;
@@ -357,7 +357,7 @@ class Params {
         title = $STR_PERMISSIONS_PARAM;
         values[] = {1, 0};
         texts[] = {$STR_PARAMS_ENABLED, $STR_PARAMS_DISABLED};
-        default = 1;
+        default = 0;
     };
     class CleanupVehicles {
         title = $STR_CLEANUP_PARAM;
