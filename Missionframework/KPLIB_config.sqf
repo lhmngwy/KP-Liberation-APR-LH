@@ -21,8 +21,8 @@
 
 /*
     ----- Playerside preset -----
-    0  = Custom (default vanilla with many optional mods supported)
-    1  = Apex Tanoa (apex vanilla with many optional mods supported)
+    0  = Custom (default vanilla)
+    1  = Apex Tanoa (apex vanilla)
     2  = 3cb BAF (MTP)
     3  = 3cb BAF (Desert)
     4  = BWMod Bundeswehr (Flecktarn)
