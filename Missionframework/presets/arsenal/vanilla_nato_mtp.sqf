@@ -22,6 +22,25 @@ KPLIB_arsenalWeapons = [
     "MMG_02_sand_F",                                                // SPMG .338 (Sand)
     "srifle_DMR_02_sniper_F",                                       // MAR-10 .338 (Sand)
     "srifle_DMR_03_tan_F",                                          // Mk-I EMR 7.62 mm (Sand)
+    "arifle_MX_Black_F",                                            // MX 6.5 mm (Black)
+    "arifle_MX_GL_Black_F",                                         // MX 3GL 6.5 mm (Black)
+    "arifle_MX_SW_Black_F",                                         // MX SW 6.5 mm (Black)
+    "arifle_MXC_Black_F",                                           // MXC 6.5 mm (Black)
+    "arifle_MXM_Black_F",                                           // MXM 6.5 mm (Black)
+    "arifle_SDAR_F",                                                // SDAR 5.56 mm
+    "srifle_LRR_F",                                                 // M320 LRR .408
+    "SMG_01_F",                                                     // Vermin SMG .45 ACP
+    "MMG_02_black_F",                                               // SPMG .338 (Black)
+    "srifle_DMR_02_F",                                              // MAR-10 .338 (Black)
+    "srifle_DMR_03_F",                                              // Mk-I EMR 7.62 mm (Black)
+    "arifle_SPAR_01_blk_F",                                         // SPAR-16 5.56 mm (Black)
+    "arifle_SPAR_01_snd_F",                                         // SPAR-16 5.56 mm (Sand)
+    "arifle_SPAR_01_GL_blk_F",                                      // SPAR-16 GL 5.56 mm (Black)
+    "arifle_SPAR_01_GL_snd_F",                                      // SPAR-16 GL 5.56 mm (Sand)
+    "arifle_SPAR_02_blk_F",                                         // SPAR-16S 5.56 mm (Black)
+    "arifle_SPAR_02_snd_F",                                         // SPAR-16S 5.56 mm (Sand)
+    "arifle_SPAR_03_blk_F",                                         // SPAR-17 7.62 mm (Black)
+    "arifle_SPAR_03_snd_F",                                         // SPAR-17 7.62 mm (Sand)
 
     // Handgun
     "hgun_P07_F",                                                   // P07 9 mm

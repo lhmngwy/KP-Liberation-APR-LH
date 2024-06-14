@@ -22,6 +22,25 @@ KPLIB_arsenalWeapons = [
     "MMG_02_black_F",                                               // SPMG .338 (Black)
     "srifle_DMR_02_F",                                              // MAR-10 .338 (Black)
     "srifle_DMR_03_F",                                              // Mk-I EMR 7.62 mm (Black)
+    "arifle_MX_khk_F",                                              // MX 6.5 mm (Khaki)
+    "arifle_MX_GL_khk_F",                                           // MX 3GL 6.5 mm (Khaki)
+    "arifle_MX_SW_khk_F",                                           // MX SW 6.5 mm (Khaki)
+    "arifle_MXC_khk_F",                                             // MXC 6.5 mm (Khaki)
+    "arifle_MXM_khk_F",                                             // MXM 6.5 mm (Khaki)
+    "arifle_SDAR_F",                                                // SDAR 5.56 mm
+    "srifle_LRR_tna_F",                                             // M320 LRR .408 (Tropic)
+    "SMG_01_F",                                                     // Vermin SMG .45 ACP
+    "MMG_02_black_F",                                               // SPMG .338 (Black)
+    "srifle_DMR_02_F",                                              // MAR-10 .338 (Black)
+    "srifle_DMR_03_khaki_F",                                        // Mk-I EMR 7.62 mm (Khaki)
+    "arifle_SPAR_01_blk_F",                                         // SPAR-16 5.56 mm (Black)
+    "arifle_SPAR_01_khk_F",                                         // SPAR-16 5.56 mm (Khaki)
+    "arifle_SPAR_01_GL_blk_F",                                      // SPAR-16 GL 5.56 mm (Black)
+    "arifle_SPAR_01_GL_khk_F",                                      // SPAR-16 GL 5.56 mm (Khaki)
+    "arifle_SPAR_02_blk_F",                                         // SPAR-16S 5.56 mm (Black)
+    "arifle_SPAR_02_khk_F",                                         // SPAR-16S 5.56 mm (Khaki)
+    "arifle_SPAR_03_blk_F",                                         // SPAR-17 7.62 mm (Black)
+    "arifle_SPAR_03_khk_F",                                         // SPAR-17 7.62 mm (Khaki)
 
     // Handgun
     "hgun_P07_khk_F",                                               // P07 9 mm (Khaki)
