@@ -33,6 +33,7 @@ execVM "scripts\client\spawn\redeploy_manager.sqf";
 execVM "scripts\client\ui\ui_manager.sqf";
 execVM "scripts\client\ui\tutorial_manager.sqf";
 execVM "scripts\client\markers\update_production_sites.sqf";
+execVM "PAR\fn_init.sqf";
 
 player addMPEventHandler ["MPKilled", {_this spawn kill_manager;}];
 if (KPLIB_param_fuelconsumption) then {

@@ -153,7 +153,7 @@ class Params {
         title = $STR_A3_ReviveMode;
         values[] = {0, 1};
         texts[] = {$STR_A3_Disabled, $STR_A3_EnabledForAllPlayers};
-        default = 1;
+        default = 0;
     };
     class ReviveDuration {
         title = $STR_A3_ReviveDuration;
@@ -171,7 +171,7 @@ class Params {
         title = $STR_A3_RequiredTrait_MedicSpeedMultiplier;
         values[] = {1, 1.5, 2, 2.5, 3};
         texts[] = {"1x", "1.5x", "2x", "2.5x", "3x"};
-        default = 2;
+        default = 1;
     };
     class ReviveRequiredItems {
         title = $STR_A3_RequiredItems;
