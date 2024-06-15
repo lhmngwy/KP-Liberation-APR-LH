@@ -464,8 +464,6 @@ KPLIB_arsenalMagazines = [
     "100Rnd_580x42_Mag_Tracer_F",
     "100Rnd_580x42_hex_Mag_F",
     "100Rnd_580x42_hex_Mag_Tracer_F",
-    "100Rnd_580x42_ghex_Mag_F",
-    "100Rnd_580x42_ghex_Mag_Tracer_F",
     "20Rnd_650x39_Cased_Mag_F",
     "10Rnd_50BW_Mag_F",
     "150Rnd_556x45_Drum_Mag_F",
