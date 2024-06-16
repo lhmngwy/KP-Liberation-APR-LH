@@ -186,7 +186,7 @@ KPLIB_range_fob = 125;
 KPLIB_height_halo = 2500;
 
 // Range to activate a sector.
-KPLIB_range_sectorActivation = 2000;
+KPLIB_range_sectorActivation = 2500;
 
 // Range to capture a sector.
 KPLIB_range_sectorCapture = 175;
