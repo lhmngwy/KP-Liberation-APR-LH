@@ -11,46 +11,196 @@
 
 KPLIB_arsenalWeapons = [
     // Primary
-    "arifle_MX_F",                                                  // MX 6.5 mm
-    "arifle_MX_GL_F",                                               // MX 3GL 6.5 mm
-    "arifle_MX_SW_F",                                               // MX SW 6.5 mm
-    "arifle_MXC_F",                                                 // MXC 6.5 mm
-    "arifle_MXM_F",                                                 // MXM 6.5 mm
-    "arifle_SDAR_F",                                                // SDAR 5.56 mm
-    "srifle_LRR_camo_F",                                            // M320 LRR .408 (Camo)
-    "SMG_01_F",                                                     // Vermin SMG .45 ACP
-    "MMG_02_sand_F",                                                // SPMG .338 (Sand)
-    "srifle_DMR_02_sniper_F",                                       // MAR-10 .338 (Sand)
-    "srifle_DMR_03_tan_F",                                          // Mk-I EMR 7.62 mm (Sand)
-    "arifle_MX_Black_F",                                            // MX 6.5 mm (Black)
-    "arifle_MX_GL_Black_F",                                         // MX 3GL 6.5 mm (Black)
-    "arifle_MX_SW_Black_F",                                         // MX SW 6.5 mm (Black)
-    "arifle_MXC_Black_F",                                           // MXC 6.5 mm (Black)
-    "arifle_MXM_Black_F",                                           // MXM 6.5 mm (Black)
-    "arifle_SDAR_F",                                                // SDAR 5.56 mm
-    "srifle_LRR_F",                                                 // M320 LRR .408
-    "SMG_01_F",                                                     // Vermin SMG .45 ACP
-    "MMG_02_black_F",                                               // SPMG .338 (Black)
-    "srifle_DMR_02_F",                                              // MAR-10 .338 (Black)
-    "srifle_DMR_03_F",                                              // Mk-I EMR 7.62 mm (Black)
-    "arifle_SPAR_01_blk_F",                                         // SPAR-16 5.56 mm (Black)
-    "arifle_SPAR_01_snd_F",                                         // SPAR-16 5.56 mm (Sand)
-    "arifle_SPAR_01_GL_blk_F",                                      // SPAR-16 GL 5.56 mm (Black)
-    "arifle_SPAR_01_GL_snd_F",                                      // SPAR-16 GL 5.56 mm (Sand)
-    "arifle_SPAR_02_blk_F",                                         // SPAR-16S 5.56 mm (Black)
-    "arifle_SPAR_02_snd_F",                                         // SPAR-16S 5.56 mm (Sand)
-    "arifle_SPAR_03_blk_F",                                         // SPAR-17 7.62 mm (Black)
-    "arifle_SPAR_03_snd_F",                                         // SPAR-17 7.62 mm (Sand)
+    "srifle_DMR_01_F",
+    "srifle_EBR_F",
+    "srifle_GM6_F",
+    "srifle_GM6_camo_F",
+    "srifle_LRR_F",
+    "srifle_LRR_camo_F",
+    "LMG_Mk200_F",
+    "LMG_Zafir_F",
+    "arifle_Katiba_F",
+    "arifle_Katiba_C_F",
+    "arifle_Katiba_GL_F",
+    "arifle_Mk20_F",
+    "arifle_Mk20_plain_F",
+    "arifle_Mk20C_F",
+    "arifle_Mk20C_plain_F",
+    "arifle_Mk20_GL_F",
+    "arifle_Mk20_GL_plain_F",
+    "arifle_MXC_F",
+    "arifle_MX_F",
+    "arifle_MX_GL_F",
+    "arifle_MX_SW_F",
+    "arifle_MXM_F",
+    "arifle_MXC_Black_F",
+    "arifle_MX_Black_F",
+    "arifle_MX_GL_Black_F",
+    "arifle_MX_SW_Black_F",
+    "arifle_MXM_Black_F",
+    "arifle_SDAR_F",
+    "arifle_TRG21_F",
+    "arifle_TRG20_F",
+    "arifle_TRG21_GL_F",
+    "hgun_PDW2000_F",
+    "SMG_01_F",
+    "SMG_02_F",
+    "srifle_DMR_02_F",
+    "srifle_DMR_02_camo_F",
+    "srifle_DMR_02_sniper_F",
+    "srifle_DMR_03_F",
+    "srifle_DMR_03_khaki_F",
+    "srifle_DMR_03_tan_F",
+    "srifle_DMR_03_multicam_F",
+    "srifle_DMR_03_woodland_F",
+    "srifle_DMR_04_F",
+    "srifle_DMR_04_Tan_F",
+    "srifle_DMR_05_blk_F",
+    "srifle_DMR_05_hex_F",
+    "srifle_DMR_05_tan_f",
+    "srifle_DMR_05_KHS_LP_F",
+    "srifle_DMR_06_camo_F",
+    "srifle_DMR_06_olive_F",
+    "srifle_DMR_06_camo_khs_F",
+    "LMG_Mk200_LP_BI_F",
+    "LMG_Mk200_BI_F",
+    "MMG_01_hex_F",
+    "MMG_01_tan_F",
+    "MMG_02_camo_F",
+    "MMG_02_black_F",
+    "MMG_02_sand_F",
+    "SMG_03_TR_black",
+    "SMG_03_TR_camo",
+    "SMG_03_TR_khaki",
+    "SMG_03_TR_hex",
+    "SMG_03C_TR_black",
+    "SMG_03C_TR_camo",
+    "SMG_03C_TR_khaki",
+    "SMG_03C_TR_hex",
+    "SMG_03_black",
+    "SMG_03_camo",
+    "SMG_03_khaki",
+    "SMG_03_hex",
+    "SMG_03C_black",
+    "SMG_03C_camo",
+    "SMG_03C_khaki",
+    "SMG_03C_hex",
+    "arifle_MX_khk_F",
+    "arifle_MX_GL_khk_F",
+    "arifle_MX_SW_khk_F",
+    "arifle_MXC_khk_F",
+    "arifle_MXM_khk_F",
+    "srifle_LRR_tna_F",
+    "srifle_GM6_ghex_F",
+    "srifle_DMR_07_blk_F",
+    "srifle_DMR_07_hex_F",
+    "srifle_DMR_07_ghex_F",
+    "LMG_03_F",
+    "arifle_AK12_F",
+    "arifle_AK12_GL_F",
+    "arifle_AKM_F",
+    "arifle_AKM_FL_F",
+    "arifle_AKS_F",
+    "arifle_ARX_blk_F",
+    "arifle_ARX_ghex_F",
+    "arifle_ARX_hex_F",
+    "arifle_ARX_Viper_F",
+    "arifle_ARX_Viper_hex_F",
+    "arifle_CTAR_blk_F",
+    "arifle_CTAR_hex_F",
+    "arifle_CTAR_ghex_F",
+    "arifle_CTAR_GL_blk_F",
+    "arifle_CTAR_GL_hex_F",
+    "arifle_CTAR_GL_ghex_F",
+    "arifle_CTARS_blk_F",
+    "arifle_CTARS_hex_F",
+    "arifle_CTARS_ghex_F",
+    "arifle_SPAR_01_blk_F",
+    "arifle_SPAR_01_khk_F",
+    "arifle_SPAR_01_snd_F",
+    "arifle_SPAR_01_GL_blk_F",
+    "arifle_SPAR_01_GL_khk_F",
+    "arifle_SPAR_01_GL_snd_F",
+    "arifle_SPAR_02_blk_F",
+    "arifle_SPAR_02_khk_F",
+    "arifle_SPAR_02_snd_F",
+    "arifle_SPAR_03_blk_F",
+    "arifle_SPAR_03_khk_F",
+    "arifle_SPAR_03_snd_F",
+    "SMG_05_F",
+    "srifle_DMR_06_hunter_F",
+    "srifle_DMR_06_hunter_khs_F",
+    "LMG_Mk200_black_F",
+    "LMG_Mk200_black_LP_BI_F",
+    "LMG_Mk200_black_BI_F",
+    "arifle_AK12_lush_F",
+    "arifle_AK12_arid_F",
+    "arifle_AK12_GL_lush_F",
+    "arifle_AK12_GL_arid_F",
+    "arifle_RPK12_F",
+    "arifle_RPK12_lush_F",
+    "arifle_RPK12_arid_F",
+    "arifle_AK12U_F",
+    "arifle_AK12U_lush_F",
+    "arifle_AK12U_arid_F",
+    "arifle_MSBS65_F",
+    "arifle_MSBS65_Mark_F",
+    "arifle_MSBS65_GL_F",
+    "arifle_MSBS65_UBS_F",
+    "arifle_MSBS65_black_F",
+    "arifle_MSBS65_Mark_black_F",
+    "arifle_MSBS65_GL_black_F",
+    "arifle_MSBS65_UBS_black_F",
+    "arifle_MSBS65_sand_F",
+    "arifle_MSBS65_Mark_sand_F",
+    "arifle_MSBS65_GL_sand_F",
+    "arifle_MSBS65_UBS_sand_F",
+    "arifle_MSBS65_camo_F",
+    "arifle_MSBS65_Mark_camo_F",
+    "arifle_MSBS65_GL_camo_F",
+    "arifle_MSBS65_UBS_camo_F",
+    "arifle_MSBS65_ico_F",
+    "arifle_MSBS65_GL_ico_F",
+    "arifle_MSBS65_UBS_ico_F",
+    "arifle_MSBS65_black_ico_F",
+    "arifle_MSBS65_GL_black_ico_F",
+    "arifle_MSBS65_UBS_black_ico_F",
+    "sgun_HunterShotgun_01_F",
+    "sgun_HunterShotgun_01_sawedoff_F",
 
     // Handgun
-    "hgun_P07_F",                                                   // P07 9 mm
-    "hgun_Pistol_heavy_01_F",                                       // 4-five .45 ACP
+    "hgun_P07_F",
+    "hgun_Pistol_heavy_01_F",
+    "hgun_Pistol_heavy_02_F",
+    "hgun_Rook40_F",
+    "hgun_P07_khk_F",
+    "hgun_P07_blk_F",
+    "hgun_Pistol_01_F",
+    "hgun_Pistol_heavy_01_green_F",
 
     // Launcher
-    "launch_B_Titan_F",                                             // Titan MPRL (Sand)
-    "launch_B_Titan_short_F",                                       // Titan MPRL Compact (Sand)
-    "launch_NLAW_F",                                                // PCML
-    "launch_MRAWS_sand_F"                                           // MAAWS Mk4 Mod 1 (Sand)
+    "launch_NLAW_F",
+    "launch_RPG32_F",
+    "launch_B_Titan_F",
+    "launch_I_Titan_F",
+    "launch_O_Titan_F",
+    "launch_Titan_F",
+    "launch_B_Titan_short_F",
+    "launch_I_Titan_short_F",
+    "launch_O_Titan_short_F",
+    "launch_Titan_short_F",
+    "launch_RPG32_ghex_F",
+    "launch_RPG7_F",
+    "launch_B_Titan_tna_F",
+    "launch_B_Titan_short_tna_F",
+    "launch_O_Titan_ghex_F",
+    "launch_O_Titan_short_ghex_F",
+    "launch_MRAWS_olive_F",
+    "launch_MRAWS_olive_rail_F",
+    "launch_MRAWS_green_F",
+    "launch_MRAWS_green_rail_F",
+    "launch_MRAWS_sand_F",
+    "launch_MRAWS_sand_rail_F"
 ];
 
 KPLIB_arsenalMagazines = [
@@ -68,17 +218,21 @@ KPLIB_arsenalMagazines = [
     "30Rnd_556x45_Stanag_Sand_Tracer_Yellow",
     "20Rnd_556x45_UW_mag",
     "30Rnd_65x39_caseless_mag",
+    "30Rnd_65x39_caseless_khaki_mag",
     "30Rnd_65x39_caseless_black_mag",
     "30Rnd_65x39_caseless_green",
     "30Rnd_65x39_caseless_mag_Tracer",
+    "30Rnd_65x39_caseless_khaki_mag_Tracer",
     "30Rnd_65x39_caseless_black_mag_Tracer",
     "30Rnd_65x39_caseless_green_mag_Tracer",
     "20Rnd_762x51_Mag",
     "7Rnd_408_Mag",
     "5Rnd_127x108_Mag",
     "100Rnd_65x39_caseless_mag",
+    "100Rnd_65x39_caseless_khaki_mag",
     "100Rnd_65x39_caseless_black_mag",
     "100Rnd_65x39_caseless_mag_Tracer",
+    "100Rnd_65x39_caseless_khaki_mag_tracer",
     "100Rnd_65x39_caseless_black_mag_tracer",
     "200Rnd_65x39_cased_Box",
     "200Rnd_65x39_cased_Box_Tracer",
@@ -186,6 +340,10 @@ KPLIB_arsenalMagazines = [
     "30Rnd_580x42_Mag_Tracer_F",
     "100Rnd_580x42_Mag_F",
     "100Rnd_580x42_Mag_Tracer_F",
+    "100Rnd_580x42_hex_Mag_F",
+    "100Rnd_580x42_hex_Mag_Tracer_F",
+    "100Rnd_580x42_ghex_Mag_F",
+    "100Rnd_580x42_ghex_Mag_Tracer_F",
     "20Rnd_650x39_Cased_Mag_F",
     "10Rnd_50BW_Mag_F",
     "150Rnd_556x45_Drum_Mag_F",
@@ -241,36 +399,10 @@ KPLIB_arsenalMagazines = [
     "6Rnd_12Gauge_Pellets",
     "6Rnd_12Gauge_Slug",
     "15Rnd_12Gauge_Pellets",
-    "15Rnd_12Gauge_Slug",
-    "Antibiotic",
-    "Antimalaricum",
-    "AntimalaricumVaccine",
-    "Bandage",
-    "Files",
-    "Files_diary",
-    "Files_researchNotes",
-    "FileTopSecret",
-    "FileNetworkStructure",
-    "FilesSecret",
-    "DocumentsSecret",
-    "Wallet_ID",
-    "Keys",
-    "Laptop_Unfolded",
-    "Laptop_Closed",
-    "SatPhone",
-    "MobilePhone",
-    "SmartPhone",
-    "FlashDisk",
-    "ButaneCanister",
-    "Money",
-    "Money_bunch",
-    "Money_roll",
-    "Money_stack",
-    "Money_stack_quest",
-    "Sleeping_bag_folded_01",
     "Drone_Range_Mag",
-    "Drone_Range_Mag_dummy",
-    "ACE_HandFlare_Base",
+    "B_IR_Grenade",
+    "O_IR_Grenade",
+    "I_IR_Grenade",
     "ACE_HandFlare_White",
     "ACE_HandFlare_Red",
     "ACE_HandFlare_Green",
@@ -321,10 +453,12 @@ KPLIB_arsenalMagazines = [
     "ACE_20Rnd_762x51_M993_AP_Mag",
     "ACE_30Rnd_65x47_Scenar_mag",
     "ACE_30Rnd_65x47_Scenar_black_mag",
+    "ACE_30Rnd_65x47_Scenar_khaki_mag",
     "ACE_20Rnd_65x47_Scenar_mag",
     "ACE_30Rnd_65x47_Scenar_msbs_mag",
     "ACE_30Rnd_65_Creedmor_mag",
     "ACE_30Rnd_65_Creedmor_black_mag",
+    "ACE_30Rnd_65_Creedmor_khaki_mag",
     "ACE_20Rnd_65_Creedmor_mag",
     "ACE_30Rnd_65_Creedmor_msbs_mag",
     "ACE_10Rnd_338_300gr_HPBT_Mag",
@@ -343,13 +477,7 @@ KPLIB_arsenalMagazines = [
     "ACE_10Rnd_127x99_API_Mag",
     "ACE_10Rnd_127x99_AMAX_Mag",
     "ACE_16Rnd_9x19_mag",
-    "ACE_10Rnd_762x54_Tracer_mag",
-    "ACE_HandFlare_White",
-    "ACE_HandFlare_Red",
-    "ACE_HandFlare_Green",
-    "ACE_HandFlare_Yellow",
-    "ACE_M14",
-    "ACE_M84"
+    "ACE_10Rnd_762x54_Tracer_mag"
 ];
 
 KPLIB_arsenalItems = [
@@ -452,37 +580,98 @@ KPLIB_arsenalItems = [
     // Items
     "acc_pointer_IR",                                               // IR Laser Pointer
     "acc_flashlight",                                               // Flashlight
-    "acc_flashlight_smg_01",                                        // Flashlight
     "acc_flashlight_pistol",                                        // Pistol Flashlight
-    "muzzle_snds_acp",                                              // Sound Suppressor (.45 ACP)
-    "muzzle_snds_l",                                                // Sound Suppressor (9 mm)
-    "optic_mrd",                                                    // MRD
-    "optic_yorris",                                                 // Yorris J2
-    "optic_DMS",                                                    // DMS
-    "optic_Aco",                                                    // ACO (Red)
-    "optic_Holosight",                                              // Mk17 Holosight
-    "optic_Holosight_smg",                                          // Mk17 Holosight SMG
-    "optic_Hamr",                                                   // RCO
-    "optic_sos",                                                    // MOS
-    "optic_LRPS",                                                   // LRPS
-    "optic_AMS",                                                    // AMS (Black)
-    "optic_AMS_snd",                                                // AMS (Sand)
-    "optic_ERCO_blk_F",                                             // ERCO (Black)
-    "optic_ERCO_snd_F",                                             // ERCO (Sand)
-    "bipod_01_f_blk",                                               // Bipod (Black) [NATO]
-    "bipod_01_f_snd",                                               // Bipod (Sand) [NATO]
-    "bipod_01_f_mtp",                                               // Bipod (MTP) [NATO]
-    "muzzle_snds_H",                                                // Sound Suppressor (6.5 mm)
-    "muzzle_snds_h_snd_f",                                          // Sound Suppressor (6.5 mm, Sand)
-    "muzzle_snds_338_black",                                        // Sound Suppressor (.338, Black)
-    "muzzle_snds_338_sand",                                         // Sound Suppressor (.338, Sand)
-    "muzzle_snds_b",                                                // Sound Suppressor (7.62 mm)
-    "muzzle_snds_b_snd_f",                                          // Sound Suppressor (7.62 mm, Sand)
-    "muzzle_snds_m",                                                // Sound Suppressor (5.56 mm)
-    "muzzle_snds_m_snd_f",                                          // Sound Suppressor (5.56 mm, Khaki)
-    "optic_nvs",                                                    // NVS
-    "optic_tws",                                                    // TWS
-    "optic_tws_mg",                                                 // TWS MG
+    "optic_Arco",
+    "optic_Hamr",
+    "optic_Aco",
+    "optic_ACO_grn",
+    "optic_Aco_smg",
+    "optic_ACO_grn_smg",
+    "optic_Holosight",
+    "optic_Holosight_smg",
+    "optic_SOS",
+    "optic_MRCO",
+    "optic_NVS",
+    "optic_Nightstalker",
+    "optic_tws",
+    "optic_tws_mg",
+    "optic_DMS",
+    "optic_Yorris",
+    "optic_MRD",
+    "optic_LRPS",yyz
+    "optic_AMS",
+    "optic_AMS_khk",
+    "optic_AMS_snd",
+    "optic_KHS_blk",
+    "optic_KHS_hex",
+    "optic_KHS_old",
+    "optic_KHS_tan",
+    "optic_Arco_blk_F",
+    "optic_Arco_ghex_F",
+    "optic_DMS_ghex_F",
+    "optic_Hamr_khk_F",
+    "optic_SOS_khk_F",
+    "optic_LRPS_tna_F",
+    "optic_LRPS_ghex_F",
+    "optic_Holosight_blk_F",
+    "optic_Holosight_khk_F",
+    "optic_Holosight_smg_blk_F",
+    "optic_Holosight_smg_khk_F",
+    "optic_ico_01_f",
+    "optic_ico_01_black_f",
+    "optic_ico_01_sand_f",
+    "optic_ico_01_camo_f",
+    "optic_Holosight_lush_F",
+    "optic_Holosight_arid_F",
+    "optic_Arco_lush_F",
+    "optic_Arco_arid_F",
+    "optic_Arco_AK_blk_F",
+    "optic_Arco_AK_lush_F",
+    "optic_Arco_AK_arid_F",
+    "optic_MRD_black",
+    "optic_Hamr_F",`
+    "muzzle_snds_H",
+    "muzzle_snds_L",
+    "muzzle_snds_M",
+    "muzzle_snds_B",
+    "muzzle_snds_H_MG",
+    "muzzle_snds_H_SW",
+    "muzzle_snds_acp",
+    "muzzle_snds_338_black",
+    "muzzle_snds_338_green",
+    "muzzle_snds_338_sand",
+    "muzzle_snds_93mmg",
+    "muzzle_snds_93mmg_tan",
+    "muzzle_snds_570",
+    "muzzle_snds_H_khk_F",
+    "muzzle_snds_H_snd_F",
+    "muzzle_snds_m_khk_F",
+    "muzzle_snds_m_snd_F",
+    "muzzle_snds_58_blk_F",
+    "muzzle_snds_58_wdm_F",
+    "muzzle_snds_58_ghex_F",
+    "muzzle_snds_58_hex_F",
+    "muzzle_snds_B_khk_F",
+    "muzzle_snds_B_snd_F",
+    "muzzle_snds_65_TI_blk_F",
+    "muzzle_snds_65_TI_hex_F",
+    "muzzle_snds_65_TI_ghex_F",
+    "muzzle_snds_H_MG_blk_F",
+    "muzzle_snds_H_MG_khk_F",
+    "muzzle_tma_65",
+    "muzzle_snds_B_lush_F",
+    "muzzle_snds_B_arid_F",
+    "bipod_01_F_snd",
+    "bipod_01_F_blk",
+    "bipod_01_F_mtp",
+    "bipod_02_F_blk",
+    "bipod_02_F_tan",
+    "bipod_02_F_hex",
+    "bipod_03_F_blk",
+    "bipod_03_F_oli",
+    "bipod_01_F_khk",
+    "bipod_02_F_lush",
+    "bipod_02_F_arid",
 
     // ACE Items
     "ACE_acc_pointer_green",                                        // Laser Pointer (green)
