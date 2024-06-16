@@ -621,7 +621,7 @@ KPLIB_arsenalItems = [
     "optic_Arco_AK_lush_F",
     "optic_Arco_AK_arid_F",
     "optic_MRD_black",
-    "optic_Hamr_F",`
+    "optic_Hamr_F",
     "muzzle_snds_H",
     "muzzle_snds_L",
     "muzzle_snds_M",
