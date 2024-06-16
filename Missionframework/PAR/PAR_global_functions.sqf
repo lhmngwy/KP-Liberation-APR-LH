@@ -77,11 +77,11 @@ PAR_unblock_AI = {
 };
 PAR_fn_globalchat = {
 	params ["_speaker", "_msg"];
-//	if (isDedicated) exitWith {};
-//	if (!(local _speaker)) exitWith {};
-//	if ((_speaker getVariable ["PAR_Grp_ID","0"]) == format ["Bros_%1", PAR_Grp_ID] || isPlayer _speaker) then {
-//		player globalChat _msg;
-//	};
+	if (isDedicated) exitWith {};
+	if (!(local _speaker)) exitWith {};
+	if ((_speaker getVariable ["PAR_Grp_ID","0"]) == format ["Bros_%1", PAR_Grp_ID] || isPlayer _speaker) then {
+	 	_speaker globalChat _msg;
+	};
 };
 PAR_fn_fixPos = {
 	params ["_list"];
@@ -137,10 +137,6 @@ PAR_revive_max = {
 
 	private _cur_revive = (_unit getVariable ["PAR_revive_max", PAR_ai_revive]) - 1;
 	_unit setVariable ["PAR_revive_max", _cur_revive];
-	if (_cur_revive <= 3) then {
-		private _msg = format ["%1 last revive (%2) !!", name _unit, _cur_revive];
-		[_unit, _msg] call PAR_fn_globalchat;
-	};
 
 	private _timer = 20;
 	while { _timer >= 0 && alive _unit } do {
@@ -150,9 +146,9 @@ PAR_revive_max = {
 				private _msg = format ["%1 is healing faster...", name _unit];
 				[_unit, _msg] call PAR_fn_globalchat;
 			};
-			sleep 25;
+			sleep 6;
 		} else {
-			sleep 60;
+			sleep 30;
 		};
 		_timer = _timer - 1;
 	};
@@ -160,7 +156,7 @@ PAR_revive_max = {
 	if (!alive _unit) exitWith {};
 	private _revive = (_unit getVariable ["PAR_revive_max", PAR_ai_revive]) + 1;
 	_unit setVariable ["PAR_revive_max", _revive];
-	private _msg = format ["%1 revive restored (%2) !!", name _unit, _revive];
+	private _msg = format ["%1 revives restored (%2) !!", name _unit, _revive];
 	[_unit, _msg] call PAR_fn_globalchat;
 
 };

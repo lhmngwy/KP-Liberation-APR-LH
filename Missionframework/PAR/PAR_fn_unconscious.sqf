@@ -59,7 +59,6 @@ while { alive _unit && (_unit getVariable ["PAR_isUnconscious", false]) && time 
 				player setVariable ["PAR_last_message", round(time + 20)];
 			};
 		};
-		//systemchat str ((_unit getVariable ["PAR_BleedOutTimer", 0]) - time);
 		_cnt = 10;
 	};
 	_cnt = _cnt - 1;

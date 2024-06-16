@@ -159,7 +159,7 @@ class Params {
         title = $STR_A3_ReviveDuration;
         values[] = {6, 8, 10,12, 15, 20, 25, 30};
         texts[] = {6, 8, 10, 12, 15, 20, 25, 30};
-        default = 12;
+        default = 6;
     };
     class ReviveRequiredTrait {
         title = $STR_A3_RequiredTrait;
@@ -187,9 +187,9 @@ class Params {
     };
     class ReviveBleedOutDuration {
         title = $STR_A3_BleedOutDuration;
-        values[] = {10, 15, 20, 30, 45, 60, 90, 180, 360};
-        texts[] = {10, 15, 20, 30, 45, 60, 90, 180, 360};
-        default = 360;
+        values[] = {10, 15, 20, 30, 45, 60, 90, 180, 300};
+        texts[] = {10, 15, 20, 30, 45, 60, 90, 180, 300};
+        default = 300;
     };
     class ReviveForceRespawnDuration {
         title = $STR_A3_ForceRespawnDuration;

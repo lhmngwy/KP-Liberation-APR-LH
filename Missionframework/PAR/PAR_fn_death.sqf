@@ -9,11 +9,4 @@ if (_unit == player) then {
 	private _pos = getPosATL _unit;
 	"player_grave_box" setMarkerPosLocal _pos;
 	titleText ["" ,"BLACK FADED", 100];
-} else {
-	player globalChat (format [localize "STR_PAR_DE_01", name _unit]);
-	removeAllActions _unit;
-	removeAllWeapons _unit;
-	hideBody _unit;
-	sleep 5;
-	deleteVehicle _unit;
 };

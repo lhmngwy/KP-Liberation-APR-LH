@@ -23,7 +23,7 @@ if (!isPlayer _medic) then {
 	_cnt = 6;
 	while { _cnt > 0 && (_wnded getVariable ["PAR_myMedic", objNull] == _medic) } do {
 		sleep 1;
-		_cnt = _cnt -1
+		_cnt = _cnt - 1;
 	};
 };
 private _my_medic = _wnded getVariable ["PAR_myMedic", objNull];

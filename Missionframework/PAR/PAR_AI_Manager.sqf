@@ -54,11 +54,8 @@ while {true} do {
                     private _msg = "";
                     private _cur_revive = _unit getVariable ["PAR_revive_max", PAR_ai_revive];
                     private _near_medical = (count (nearestObjects [_unit, [PAR_medical_source], 12]) > 0);
-                    if (_cur_revive <= 3 && !_near_medical) then {
-                        _msg = format ["WARN: %1 need Medical Support Now !!", name _unit];
-                    };
-                    if (_cur_revive == 1) then {
-                        _msg = format ["CRITICAL: %1 will NOT Revive anymore !!", name _unit];
+                    if (_cur_revive == 0) then {
+                        _msg = format ["CRITICAL: Can't revive %1 anymore!", name _unit];
                     };
                     if (_msg != "") then {
                         [_unit, _msg] call PAR_fn_globalchat;
@@ -80,7 +77,6 @@ while {true} do {
                 } else {
                     [_unit] call PAR_fn_AI_Damage_EH;
                 };
-                player globalChat format ["%1 protected by PAR.", name _unit];
             };
             sleep 0.3;
         };
