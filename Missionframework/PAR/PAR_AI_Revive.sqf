@@ -52,7 +52,7 @@ if (isNil "PAR_bleedout_extra") then { PAR_bleedout_extra = 60 };
 if (isNil "PAR_ai_limit") then { PAR_ai_limit = 12 };
 
 // Max AI revive counter
-if (isNil "PAR_ai_revive") then { PAR_ai_revive = 4 };
+if (isNil "PAR_ai_revive") then { PAR_ai_revive = 2 };
 
 // Enable info killer message
 PAR_EnableDeathMessages = false;

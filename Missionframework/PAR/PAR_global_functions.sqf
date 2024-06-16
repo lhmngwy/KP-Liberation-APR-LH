@@ -152,7 +152,7 @@ PAR_revive_max = {
 	if (!alive _unit) exitWith {};
 	private _revive = (_unit getVariable ["PAR_revive_max", PAR_ai_revive]) + 1;
 	_unit setVariable ["PAR_revive_max", _revive];
-	private _msg = format ["%1 revives restored (%2) !!", name _unit, _revive];
+	private _msg = format ["%1 is recovering (Revives left: %2) !!", name _unit, _revive];
 	[_unit, _msg] call PAR_fn_globalchat;
 
 };
