@@ -34,7 +34,7 @@ if (lifeState _medic == "INCAPACITATED" || (!alive _wnded)) exitWith { [_medic, 
 _wnded setUnconscious false;
 _wnded setVariable ["PAR_isUnconscious", false, true];
 
-if (PAR_revive == 2) then {
+if (PAR_revive >= 2) then {
 	_medic removeItem "FirstAidKit";
 };
 

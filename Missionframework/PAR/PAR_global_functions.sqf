@@ -142,11 +142,7 @@ PAR_revive_max = {
 	while { _timer >= 0 && alive _unit } do {
 		private _near_medical = (count (nearestObjects [_unit, [PAR_medical_source], 12]) > 0);
 		if (_near_medical) then {
-			if (_unit distance2D player < 100) then {
-				private _msg = format ["%1 is healing faster...", name _unit];
-				[_unit, _msg] call PAR_fn_globalchat;
-			};
-			sleep 6;
+			sleep 1;
 		} else {
 			sleep 30;
 		};
