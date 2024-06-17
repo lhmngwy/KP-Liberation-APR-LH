@@ -144,7 +144,7 @@ PAR_revive_max = {
 		if (_near_medical) then {
 			sleep 1;
 		} else {
-			sleep 30;
+			sleep 45;
 		};
 		_timer = _timer - 1;
 	};
