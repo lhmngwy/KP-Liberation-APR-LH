@@ -186,7 +186,7 @@ KPLIB_range_fob = 125;
 KPLIB_height_halo = 2500;
 
 // Range to activate a sector.
-KPLIB_range_sectorActivation = 2500;
+KPLIB_range_sectorActivation = 1500;
 
 // Range to capture a sector.
 KPLIB_range_sectorCapture = 175;
@@ -209,16 +209,16 @@ KPLIB_distance_sector = KPLIB_range_sectorCapture + KPLIB_range_fob;
 */
 
 // Cap for BLUFOR.
-KPLIB_cap_playerSide = 100;
+KPLIB_cap_playerSide = 150;
 
 // Cap for enemy units.
-KPLIB_cap_enemySide = 180;
+KPLIB_cap_enemySide = 270;
 
 // Cap for enemy battlegroups.
-KPLIB_cap_battlegroup = 150;
+KPLIB_cap_battlegroup = 225;
 
 // Cap for enemy patrols.
-KPLIB_cap_patrol = 150;
+KPLIB_cap_patrol = 225;
 
 // Size of enemy battlegroups.
 KPLIB_battlegroup_size = 6;
