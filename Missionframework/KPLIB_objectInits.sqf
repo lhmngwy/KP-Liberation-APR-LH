@@ -24,7 +24,18 @@
 */
 
 KPLIB_objectInits = [
-    // Set KP logo on white flag
+    // add fullheal action to huron medical container (mobile fullHeal)
+    [
+        ["B_Slingload_01_Medevac_F"],
+        {
+            [_this] spawn {
+                params ["_medvacbox"];
+                waitUntil {sleep 0.1; time > 0};
+                [_medvacbox] remoteExecCall ["KPLIB_fnc_addActionsFullHeal", 0, _medvacbox];
+            };
+        }
+    ],
+    // Set logo on white flag
     [
         ["Flag_White_F"],
         {_this setFlagTexture "res\flag_kp_co.paa";}
@@ -62,6 +73,7 @@ KPLIB_objectInits = [
                 params ["_fob"];
                 waitUntil {sleep 0.1; time > 0};
                 [_fob] remoteExecCall ["KPLIB_fnc_addActionsFob", 0, _fob];
+                [_fob] remoteExecCall ["TWZ_fnc_addClearActions", 0, _fob];
             };
         }
     ],
@@ -88,8 +100,8 @@ KPLIB_objectInits = [
     [
         [KPLIB_b_crateSupply, KPLIB_b_crateAmmo, KPLIB_b_crateFuel],
         {
-        _this lockInventory true;
-        _this setVariable ["ace_cargo_noRename", true];
+            _this lockInventory true;
+            _this setVariable ["ace_cargo_noRename", true];
         }
     ],
     
@@ -131,6 +143,14 @@ KPLIB_objectInits = [
                     [_arty] remoteExecCall ["KPLIB_fnc_addArtyToSupport", 0, _arty];
                 };
             };
+        }
+    ],
+    
+    // Add Workbench compat in case it doesn't work the other way
+    [
+        ["Land_Workbench_01_F"], 
+        {
+            _this setVariable ["ace_isRepairFacility", 1, true];
         }
     ],
 

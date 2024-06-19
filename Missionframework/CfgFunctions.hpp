@@ -3,6 +3,7 @@ class KPLIB {
         file = "functions";
 
         class addActionsFob             {};
+        class addActionsFullHeal        {};
         class addActionsPlayer          {};
         class addArtyToSupport          {};
         class addObjectInit             {};
@@ -41,6 +42,7 @@ class KPLIB {
         class getLocationName           {};
         class getMilitaryId             {};
         class getMobileRespawns         {};
+        class getMobileRespawnName      {};
         class getNearbyPlayers          {};
         class getNearestBluforObjective {};
         class getNearestFob             {};
@@ -68,6 +70,7 @@ class KPLIB {
         class isCapitalActive           {};
         class isClassUAV                {};
         class isRadio                   {};
+        class lambs_enableReinforcements{};
         class log                       {};
         class potatoScan                {};
         class protectObject             {};
@@ -103,4 +106,11 @@ class KPLIB {
     };
     #include "scripts\client\CfgFunctions.hpp"
     #include "scripts\server\CfgFunctions.hpp"
+};
+class TWZ {
+    class functions {
+        file = "functions\twz";
+        class tiwazSmoothFog {};
+        class addClearActions {};
+    };
 };

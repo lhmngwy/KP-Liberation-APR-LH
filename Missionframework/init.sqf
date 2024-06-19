@@ -26,6 +26,11 @@ if (KPPLM_CBA && KPLIB_param_playerMenu) then {
 } else {
     [] execVM "GREUH\scripts\GREUH_activate.sqf";
 };
+// Temperature and humidity changes
+[{
+    ace_weather_humidityShift = 25;
+    ace_weather_temperatureShift = 27;
+},[], 1] call CBA_fnc_waitAndExecute;
 
 [] call compile preprocessFileLineNumbers "scripts\shared\init_shared.sqf";
 
@@ -84,12 +89,12 @@ if ( isServer) then {
                 removeAllContainers _unit;                 // Clear Clothes, Vests, Backpacks
 
                 _unit addUniform _basic_uniform;     // given a specific uniform
-                _unit addWeapon "Rangefinder";    //  Binoculars/Night Vision Goggles are classified under Weapons...
+                //_unit addWeapon "Rangefinder";    //  Binoculars/Night Vision Goggles are classified under Weapons...
                 {
                     _unit linkItem _x;            //  Add and automatically equip special props
                 } foreach [
                     "ItemCompass",
-                    "ItemGPS",
+                    //"ItemGPS",
                     "ItemMap",
                     "ItemWatch"
                 ];
@@ -107,3 +112,6 @@ if (isServer) then {
     KPLIB_initServerDone = true;
     publicVariable "KPLIB_initServerDone";
 };
+
+//VAM_GUI: For changing camo and vehicle appearence without Zeus:
+[] execVM "VAM_GUI\VAM_GUI_init.sqf";

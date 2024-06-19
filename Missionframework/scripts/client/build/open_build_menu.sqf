@@ -1,6 +1,6 @@
 private [ "_oldbuildtype", "_cfg", "_initindex", "_dialog", "_iscommandant", "_squadname", "_buildpages", "_build_list", "_classnamevar", "_entrytext", "_icon", "_affordable", "_affordable_crew", "_selected_item", "_linked", "_linked_unlocked", "_base_link", "_link_color", "_link_str", "_nearfob", "_actual_fob"];
 
-if (([ getpos player , 500 , KPLIB_side_enemy ] call KPLIB_fnc_getUnitsCount ) > 4 ) exitWith { hint localize "STR_BUILD_ENEMIES_NEARBY";};
+if (([ getpos player , 300 , KPLIB_side_enemy ] call KPLIB_fnc_getUnitsCount ) > 4 ) exitWith { hint localize "STR_BUILD_ENEMIES_NEARBY";};
 
 if (isNil "buildtype") then {buildtype = 1};
 if (isNil "buildindex") then {buildindex = -1};
@@ -60,7 +60,9 @@ while {dialog && alive player && (dobuild == 0 || buildtype == 1)} do {
                 switch (_classnamevar) do {
                     case KPLIB_b_fobBox: {_entrytext = localize "STR_FOBBOX";};
                     case KPLIB_b_arsenal: {if (KPLIB_param_mobileArsenal) then {_entrytext = localize "STR_ARSENAL_BOX";};};
-                    case KPLIB_b_mobileRespawn: {if (KPLIB_param_mobileRespawn) then {_entrytext = localize "STR_RESPAWN_TRUCK";};};
+                    case (KPLIB_b_mobileRespawn select 0): {if (KPLIB_param_mobileRespawn) then {_entrytext = "MSP " + getText (configFile >> "CfgVehicles" >> (KPLIB_b_mobileRespawn select 0) >> "displayName");};};
+                    case (KPLIB_b_mobileRespawn select 1): {if (KPLIB_param_mobileRespawn) then {_entrytext = "MSP " + getText (configFile >> "CfgVehicles" >> (KPLIB_b_mobileRespawn select 1) >> "displayName");};};
+                    case (KPLIB_b_mobileRespawn select 2): {if (KPLIB_param_mobileRespawn) then {_entrytext = "MSP " + getText (configFile >> "CfgVehicles" >> (KPLIB_b_mobileRespawn select 2) >> "displayName");};};
                     case KPLIB_b_fobTruck: {_entrytext = localize "STR_FOBTRUCK";};
                     case "Flag_White_F": {_entrytext = localize "STR_INDIV_FLAG";};
                     case KPLIB_b_smallStorage: {_entrytext = localize "STR_SMALL_STORAGE";};
@@ -107,6 +109,15 @@ while {dialog && alive player && (dobuild == 0 || buildtype == 1)} do {
                 ((findDisplay 5501) displayCtrl (110)) lnbSetColor  [[((lnbSize 110) select 0) - 1, 1], [0.4,0.4,0.4,1]];
                 ((findDisplay 5501) displayCtrl (110)) lnbSetColor  [[((lnbSize 110) select 0) - 1, 2], [0.4,0.4,0.4,1]];
                 ((findDisplay 5501) displayCtrl (110)) lnbSetColor  [[((lnbSize 110) select 0) - 1, 3], [0.4,0.4,0.4,1]];
+            };
+            if (buildtype != 8) then {
+                _classnamevar = (_x select 0);
+                if ( _classnamevar isEqualTo "Sign_Arrow_F") then {
+                    ((findDisplay 5501) displayCtrl (110)) lnbSetColor  [[((lnbSize 110) select 0) - 1, 0], [1,1,0,1]];
+                    ((findDisplay 5501) displayCtrl (110)) lnbSetColor  [[((lnbSize 110) select 0) - 1, 1], [1,1,0,1]];
+                    ((findDisplay 5501) displayCtrl (110)) lnbSetColor  [[((lnbSize 110) select 0) - 1, 2], [1,1,0,1]];
+                    ((findDisplay 5501) displayCtrl (110)) lnbSetColor  [[((lnbSize 110) select 0) - 1, 3], [1,1,0,1]];
+                };
             };
 
         } foreach _build_list;

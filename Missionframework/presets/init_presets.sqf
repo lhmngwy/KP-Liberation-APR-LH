@@ -89,12 +89,12 @@ switch (KPLIB_presetCivilians) do {
 
 // Prices for the blufor infantry squads (supplies, ammo, fuel)
 KPLIB_b_allSquads = [
-    [KPLIB_b_squadLight,200,0,0],
-    [KPLIB_b_squadInf,300,0,0],
-    [KPLIB_b_squadAT,200,250,0],
-    [KPLIB_b_squadAA,200,250,0],
-    [KPLIB_b_squadRecon,250,0,0],
-    [KPLIB_b_squadPara,200,0,0]
+    [KPLIB_b_squadLight,50,0,0],
+    [KPLIB_b_squadInf,75,25,0],
+    [KPLIB_b_squadAT,50,50,0],
+    [KPLIB_b_squadAA,50,50,0],
+    [KPLIB_b_squadRecon,75,0,0],
+    [KPLIB_b_squadPara,50,0,0]
 ];
 
 // Squad names for build menu
@@ -184,7 +184,8 @@ KPLIB_crates            = [KPLIB_b_crateSupply, KPLIB_b_crateAmmo, KPLIB_b_crate
 KPLIB_airSlots          = [KPLIB_b_slotHeli, KPLIB_b_slotPlane];
 KPLIB_storageBuildings  = [KPLIB_b_smallStorage, KPLIB_b_largeStorage];
 KPLIB_upgradeBuildings  = [KPLIB_b_logiStation, KPLIB_b_airControl, KPLIB_b_slotHeli, KPLIB_b_slotPlane];
-KPLIB_aiResupplySources append [KPLIB_b_mobileRespawn, KPLIB_b_potato01, KPLIB_b_arsenal];
+KPLIB_aiResupplySources append KPLIB_b_mobileRespawn;
+KPLIB_aiResupplySources append [KPLIB_b_potato01, KPLIB_b_arsenal];
 
 KPLIB_crates            = KPLIB_crates              apply {toLowerANSI _x};
 KPLIB_airSlots          = KPLIB_airSlots            apply {toLowerANSI _x};
@@ -259,7 +260,7 @@ KPLIB_typeAirClasses   = +KPLIB_b_air_classes;
     };
 } forEach (KPLIB_b_support_classes + [toLowerANSI KPLIB_b_potato01]);
 
-// Military alphabet used for FOBs and convois
+// Military alphabet used for FOBs and convoys
 KPLIB_militaryAlphabet = ["Alpha", "Bravo", "Charlie", "Delta", "Echo", "Foxtrot", "Golf", "Hotel", "India", "Juliet", "Kilo", "Lima", "Mike", "November", "Oscar", "Papa", "Quebec", "Romeo", "Sierra", "Tango", "Uniform", "Victor", "Whiskey", "X-Ray", "Yankee", "Zulu"];
 
 // Misc variables
