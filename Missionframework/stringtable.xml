@@ -54,6 +54,9 @@
         <Key ID="STR_MISSION_VERSION">
             <Original>v0.96.8apr</Original>
         </Key>
+        <Key ID="STR_MISSION_PRESENT">
+            <Original>[GREUH] and the Killah Potatoes present</Original>
+        </Key>
         <Key ID="STR_MISSION_AUTHOR">
             <Original>[GREUH] Zbug &amp; McKeewa, KP Liberation Dev Team, Apricot_ale, MoistBois</Original>
         </Key>
@@ -62,6 +65,9 @@
         </Key>
         <Key ID="STR_MISSION_ONLOAD">
             <Original>github.com/Apricot-ale/KP-Liberation-APR</Original>
+        </Key>
+        <Key ID="STR_HURON01_NAME">
+            <Original>Spartan 01</Original>
         </Key>
         <Key ID="STR_STARTBASE">
             <Original>OPERATION START POINT</Original>
@@ -4015,7 +4021,7 @@
             <Japanese>輸送車列強襲 (Convoy Hijack)</Japanese>
         </Key>
         <Key ID="STR_SECONDARY_BRIEFING1">
-            <Original>&lt;t size='1.3' color='#ffa000'&gt;CONVOY HIJACK&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1'&gt;OPFOR forces use road convoys to resupply their defensive positions. Intercepting one of these convoys would effectively disrupt their supply lines, and we could use the occasion to retrieve an hefty amount of ammunition.&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1'&gt;Your mission is to stop the OPFOR convoy by any means necessary. You can destroy it, or hijack it to retrieve all the ammunition you can grab. The target will be spotted on your map.&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1.15' color='#00a0ff'&gt;Cost: 10&lt;img image='\A3\Ui_f\data\GUI\Cfg\Ranks\general_gs.paa'/&gt;&lt;/t&gt;&lt;br/&gt;&lt;t size='1.15' color='#ffa000'&gt;Reward: OPFOR alert level reduced by 15%&lt;/t&gt;&lt;br/&gt;&lt;t size='1.15' color='#ffa000'&gt;Side reward: All the ammunition you can retrieve.&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='10'&gt;&lt;img image='res\secondary\convoy_obj.jpg'/&gt;&lt;/t&gt;</Original>
+            <Original>&lt;t size='1.3' color='#ffa000'&gt;CONVOY HIJACK&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1'&gt;OPFOR forces use road convoys to resupply their defensive positions. Intercepting one of these convoys would effectively disrupt their supply lines, and we could use the occasion to retrieve an hefty amount of resources.&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1'&gt;Your mission is to stop the OPFOR convoy by any means necessary. You can destroy it, or hijack it to retrieve all the ammunition you can grab. The target will be spotted on your map.&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1.15' color='#00a0ff'&gt;Cost: 10&lt;img image='\A3\Ui_f\data\GUI\Cfg\Ranks\general_gs.paa'/&gt;&lt;/t&gt;&lt;br/&gt;&lt;t size='1.15' color='#ffa000'&gt;Reward: OPFOR alert level reduced by 15%&lt;/t&gt;&lt;br/&gt;&lt;t size='1.15' color='#ffa000'&gt;Side reward: All the resources you can retrieve.&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='10'&gt;&lt;img image='res\secondary\convoy_obj.jpg'/&gt;&lt;/t&gt;</Original>
             <French>&lt;t size='1.3' color='#ffa000'&gt;INTERCEPTION DE CONVOI&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1'&gt;Les forces de l'OPFOR utilisent des convois routiers pour réaprovisionner leurs positions. Intercepter un de ces convois pertuberait leurs lignes d'approvisionnement, et nous pourrions utiliser l'occasion pour récupérer une grande quantité de munitions.&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1'&gt;Votre mission est de stopper le convoi de l'OPFOR par tous les moyens nécessaires. Vous pouvez le détruire, ou le stopper pour récupérer un maximum de munitions. La cible sera marquée sur votre carte.&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1.15' color='#00a0ff'&gt;Coût: 10&lt;img image='\A3\Ui_f\data\GUI\Cfg\Ranks\general_gs.paa'/&gt;&lt;/t&gt;&lt;br/&gt;&lt;t size='1.15' color='#ffa000'&gt;Récompense: niveau d'alerte de l'OPFOR réduit de 15%&lt;/t&gt;&lt;br/&gt;&lt;t size='1.15' color='#ffa000'&gt;Récompense secondaire: toutes les munitions que vous pourrez récupérer.&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='10'&gt;&lt;img image='res\secondary\convoy_obj.jpg'/&gt;&lt;/t&gt;</French>
             <German>&lt;t size='1.3' color='#ffa000'&gt;KONVOI HINTERHALT&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1'&gt;Die OPFOR Streitkräfte benutzen Straßenkonvois um ihre Verteidigungspositionen zu versorgen. Diese Konvois abzufangen würden ihre Nachschublinien effektiv unterbrechen und außerdem könnten wir die Möglichkeit nutzen, um selbst eine große Menge an Munition zu erbeuten.&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1'&gt;Ihr Auftrag ist es, den OPFOR Konvoi auf jede erdenkliche Weise zu stoppen. Sie können ihn zerstören oder übernehmen, um soviel Munition wie möglich zu erbeuten. Das Ziel wird auf Ihrer Karte aufgeklärt.&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1.15' color='#00a0ff'&gt;Kosten: 10&lt;img image='\A3\Ui_f\data\GUI\Cfg\Ranks\general_gs.paa'/&gt;&lt;/t&gt;&lt;br/&gt;&lt;t size='1.15' color='#ffa000'&gt;Belohnung: OPFOR Alarmstatus wird um 15% reduziert&lt;/t&gt;&lt;br/&gt;&lt;t size='1.15' color='#ffa000'&gt;Weitere Belohnung: Soviel Munition wie Sie erbeuten können.&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='10'&gt;&lt;img image='res\secondary\convoy_obj.jpg'/&gt;&lt;/t&gt;</German>
             <Spanish>&lt;t size='1.3' color='#ffa000'&gt;INTERCEPTAR EL CONVOY&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1'&gt;Las fuerzas OPFOR utilizan convoys de carretera para reabastecer sus posiciones defensivas. Interceptar uno de estos convoy rompería de forma efectiva sus líneas de suministro, y podríamos aprovechar la ocasión para obtener una buena cantidad de munición.&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1'&gt;Tu misión consiste en parar ese convoy por cualquier medio. Puedes destruirlo o capturarlo para capturar toda la munición que sea posible. El objetivo aparecerá marcado en el mapa.&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1.15' color='#00a0ff'&gt;Coste: 10&lt;img image='\A3\Ui_f\data\GUI\Cfg\Ranks\general_gs.paa'/&gt;&lt;/t&gt;&lt;br/&gt;&lt;t size='1.15' color='#ffa000'&gt;Recompensa: Nivel de alerta OPFOR reducido 15%&lt;/t&gt;&lt;br/&gt;&lt;t size='1.15' color='#ffa000'&gt;Recompensa secundaria: Toda la munición que puedas traer.&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='10'&gt;&lt;img image='res\secondary\convoy_obj.jpg'/&gt;&lt;/t&gt;</Spanish>
@@ -4140,8 +4146,8 @@
             <Japanese>人道支援 (Humanitarian Aid)</Japanese>
         </Key>
         <Key ID="STR_SECONDARY_BRIEFING3">
-            <Original>&lt;t size='1.3' color='#ffa000'&gt;HUMANITARIAN AID&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1'&gt;Local civilians in our occupied sector are requesting supplies as humanitarian aid. This is an opportunity for us to show compassion and empathy towards the people of this region. They may eventually act as guerrilla allies and support us in our attacks.&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1'&gt;Your mission is to transport and deliver our supplies to the requested sector. Resources required are 200 supplies (2 crates). Load the supplies onto the vehicle, head to the target location, and unload upon arrival.&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1.15' color='#00a0ff'&gt;Cost: 8&lt;img image='\A3\Ui_f\data\GUI\Cfg\Ranks\general_gs.paa'/&gt;&lt;br/&gt;200 Supplies (2 crates)&lt;/t&gt;&lt;br/&gt;&lt;t size='1.15' color='#ffa000'&gt;Reward: increase in Civil Reputation by 5%.&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='10'&gt;&lt;img image='res\secondary\humaid_obj.jpg'/&gt;&lt;/t&gt;</Original>
-            <Japanese>&lt;t size='1.3' color='#ffa000'&gt;人道支援&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1'&gt;我々の占領したセクターの地元市民が支援物資としてサプライを要求している。我々がこの地域の市民に対して友好的であることをを示すチャンスだ。彼らは最終的には我々の攻撃に加勢するゲリラとして活動してくれるかもしれない。&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1'&gt;諸君の任務は要請のあったセクターに我々のサプライを輸送し、譲渡することだ。資源は200サプライ (最低2箱) 必要となる。車両に物資を積み込み目標地点に向かい到着したら荷下ろしするだけでいい。&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1.15' color='#00a0ff'&gt;費用: 8&lt;img image='\A3\Ui_f\data\GUI\Cfg\Ranks\general_gs.paa'/&gt;&lt;br/&gt;200 サプライ (最低2箱)&lt;/t&gt;&lt;br/&gt;&lt;t size='1.15' color='#ffa000'&gt;報酬: 市民評価が5%上昇。&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='10'&gt;&lt;img image='res\secondary\humaid_obj.jpg'/&gt;&lt;/t&gt;</Japanese>
+            <Original>&lt;t size='1.3' color='#ffa000'&gt;HUMANITARIAN AID&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1'&gt;Local civilians in our occupied sector are requesting supplies as humanitarian aid. This is an opportunity for us to show compassion and empathy towards the people of this region. They may eventually act as guerrilla allies and support us in our attacks.&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1'&gt;Your mission is to transport and deliver our supplies to the requested sector. Resources required are 200 supplies (2 crates). Load the supplies onto the vehicle, head to the target location, and unload upon arrival.&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1.15' color='#00a0ff'&gt;Cost: 8&lt;img image='\A3\Ui_f\data\GUI\Cfg\Ranks\general_gs.paa'/&gt;&lt;br/&gt;200 Supplies (2 crates)&lt;/t&gt;&lt;br/&gt;&lt;t size='1.15' color='#ffa000'&gt;Reward: increase in Civil Reputation by 10pt.&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='10'&gt;&lt;img image='res\secondary\humaid_obj.jpg'/&gt;&lt;/t&gt;</Original>
+            <Japanese>&lt;t size='1.3' color='#ffa000'&gt;人道支援&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1'&gt;我々の占領したセクターの地元市民が支援物資としてサプライを要求している。我々がこの地域の市民に対して友好的であることをを示すチャンスだ。彼らは最終的には我々の攻撃に加勢するゲリラとして活動してくれるかもしれない。&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1'&gt;諸君の任務は要請のあったセクターに我々のサプライを輸送し、譲渡することだ。資源は200サプライ (最低2箱) 必要となる。車両に物資を積み込み目標地点に向かい到着したら荷下ろしするだけでいい。&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1.15' color='#00a0ff'&gt;費用: 8&lt;img image='\A3\Ui_f\data\GUI\Cfg\Ranks\general_gs.paa'/&gt;&lt;br/&gt;200 サプライ (最低2箱)&lt;/t&gt;&lt;br/&gt;&lt;t size='1.15' color='#ffa000'&gt;報酬: 市民評価が10ポイント上昇。&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='10'&gt;&lt;img image='res\secondary\humaid_obj.jpg'/&gt;&lt;/t&gt;</Japanese>
         </Key>
         <Key ID="STR_SECONDARY_MISSION4">
             <Japanese>燃料切れ (Bingo Fuel)</Japanese>
@@ -7442,18 +7448,18 @@
             <Japanese>IEDが爆発した回数: %1</Japanese>
         </Key>
         <Key ID="STR_STATS_POTATO">
-            <Original>Number of Potato 01 losses: %1</Original>
-            <French>Pertes de Potato 01: %1</French>
-            <German>Verluste von Potato 01: %1</German>
-            <Spanish>Número de pérdidas de Potato 01: %1</Spanish>
-            <Russian>Количество потерянных Potato 01: %1</Russian>
-            <Italian>Numero di Potato 01 persi: %1</Italian>
-            <Chinesesimp>损失的斯巴达01号： %1</Chinesesimp>
-            <Turkish>Potato 01 kayıpları: %1</Turkish>
-            <Portuguese>Número de baixas de Potato 01: %1</Portuguese>
-            <Korean> 파괴된 재투입차량 : %1</Korean>
-            <Czech>Počet ztracených Potato 01: %1</Czech>
-            <Japanese>モバイルリスポーンヘリが失われた数: %1</Japanese>
+            <Original>Number of %2 losses: %1</Original>
+            <French>Pertes de %2: %1</French>
+            <German>Verluste von %2: %1</German>
+            <Spanish>Número de pérdidas de %2: %1</Spanish>
+            <Russian>Количество потерянных %2: %1</Russian>
+            <Italian>Numero di %2 persi: %1</Italian>
+            <Chinesesimp>损失的 %2： %1</Chinesesimp>
+            <Turkish>%2 kayıpları: %1</Turkish>
+            <Portuguese>Número de baixas de %2: %1</Portuguese>
+            <Korean>파괴된 %2: %1</Korean>
+            <Czech>Počet ztracených %2: %1</Czech>
+            <Japanese>%2 が失われた数: %1</Japanese>
         </Key>
         <Key ID="STR_STATS_RABBITS">
             <Original>Rabbits killed: %1</Original>
