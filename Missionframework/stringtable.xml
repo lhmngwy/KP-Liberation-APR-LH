@@ -54,6 +54,15 @@
         <Key ID="STR_MISSION_VERSION">
             <Original>v0.96.8apr</Original>
         </Key>
+        <Key ID="STR_MISSION_AUTHOR">
+            <Original>[GREUH] Zbug &amp; McKeewa, KP Liberation Dev Team, Apricot_ale, MoistBois</Original>
+        </Key>
+        <Key ID="STR_MISSION_OVERVIEW">
+            <Original>APR Tweaked KP Liberation!&lt;br/&gt;Check github.com/Apricot-ale/KP-Liberation-APR to more info.</Original>
+        </Key>
+        <Key ID="STR_MISSION_ONLOAD">
+            <Original>github.com/Apricot-ale/KP-Liberation-APR</Original>
+        </Key>
         <Key ID="STR_STARTBASE">
             <Original>OPERATION START POINT</Original>
             <German>OPERATIONSBEGINN</German>
@@ -496,28 +505,92 @@
             <Japanese>KP 燃料消費量増加システムを有効化</Japanese>
         </Key>
         <Key ID="STR_PARAMS_FOBFULLHEAL">
-            <Original>Allow Full Heal from Action menu in FOB</Original>
+            <Original>Allow FULL HEAL from Action menu in FOB</Original>
             <Japanese>FOBのアクションメニューから完全治療を許可する</Japanese>
+        </Key>
+        <Key ID="STR_PARAMS_FOBFULLHEAL_CHECKENEMIES">
+            <Original>Prevents FULL HEAL if enemy is nearby</Original>
+            <Japanese>敵が近くにいる場合、完全治療を阻止する</Japanese>
+        </Key>
+        <Key ID="STR_PARAMS_FOBFULLHEAL_COOLDOWN">
+            <Original>FULL HEAL Cooldown (minutes)</Original>
+            <Japanese>完全治療のクールダウン(分)</Japanese>
         </Key>
         <Key ID="STR_FULLHEAL_ACTION">
             <Original>-- FULL HEAL --</Original>
             <Japanese>-- 完全治療 --</Japanese>
         </Key>
-        <Key ID="STR_HEAL_ENEMIES_NEARBY">
+        <Key ID="STR_FULLHEAL_ENEMIES_NEARBY">
             <Original>Cannot heal: hostile forces nearby.</Original>
             <Japanese>治療不可: 敵軍が近くにいます。</Japanese>
         </Key>
         <Key ID="STR_FULLHEAL_DONE">
-            <Original>You have fully healed injuries</Original>
+            <Original>You have fully healed</Original>
             <Japanese>負傷が完全に治療されました</Japanese>
         </Key>
         <Key ID="STR_FULLHEAL_APPLY">
             <Original>You have been fully healed\nby %1</Original>
-            <Japanese>%1 によって\n完全に治療されました</Japanese>
+            <Japanese>%1 によって\n負傷が完全に治療されました</Japanese>
         </Key>
         <Key ID="STR_FULLHEAL_COOLDOWN">
-            <Original>Full Heal still on cooldown</Original>
-            <Japanese>完全治療はクールタイム中です</Japanese>
+            <Original>FULL HEAL was attempted\nbut it's still on cooldown.\nAvailable in %1 minutes.</Original>
+            <Japanese>完全治療が試行されましたが、\n現在クールタイム中です。\n残り %1 分後に利用可能になります。</Japanese>
+        </Key>
+        <Key ID="STR_PARAMS_FOBTIMEWEATHER">
+            <Original>Allow Time Skip and Clear Fog from Action menu in FOB</Original>
+            <Japanese>FOBのアクションメニューから時間スキップと霧を晴らすのを許可する</Japanese>
+        </Key>
+        <Key ID="STR_FOB_TW_ACTION_OPEN">
+            <Original>-- Time Skip / Clear Fog --</Original>
+            <Japanese>-- 時間スキップ / 霧を晴らす --</Japanese>
+        </Key>
+        <Key ID="STR_FOB_TW_ACTION_TITLE">
+            <Original>Skip time to 9 AM/PM</Original>
+            <Japanese>午前/午後9時まで時間をスキップ</Japanese>
+        </Key>
+        <Key ID="STR_FOB_TW_ACTION_INFO_1">
+            <Original>Screen will black while transition!</Original>
+            <Japanese>スキップ時、画面が暗転します!</Japanese>
+        </Key>
+        <Key ID="STR_FOB_TW_ACTION_INFO_2">
+            <Original>Please ensure safety before.</Original>
+            <Japanese>安全を確保してください。</Japanese>
+        </Key>
+        <Key ID="STR_FOB_TW_ACTION_INFO_3">
+            <Original>After 4:00 PM (1600), time is skipped until 9:00 AM (0900).</Original>
+            <Japanese>午後4時以降は午前9時までスキップします。</Japanese>
+        </Key>
+        <Key ID="STR_FOB_TW_ACTION_INFO_4">
+            <Original>After 8:00 AM (0800), time is skipped until 9:00 PM (2100).</Original>
+            <Japanese>午前8時以降は午後9時までスキップします。</Japanese>
+        </Key>
+        <Key ID="STR_FOB_TW_ACTION_TIMESKIP">
+            <Original>Skip Time</Original>
+            <Japanese>時間をスキップ</Japanese>
+        </Key>
+        <Key ID="STR_FOB_TW_ACTION_CLEARFOG">
+            <Original>Clear Fog</Original>
+            <Japanese>霧を晴らす</Japanese>
+        </Key>
+        <Key ID="STR_FOB_TW_ACTION_TIMESKIP_COUNTDOWN">
+            <Original>Time skip will be performed\nafter %1 seconds.\nPlease stay in safe position!</Original>
+            <Japanese>%1 秒後に\n時間スキップが行われます。\n安全な位置で待機してください!</Japanese>
+        </Key>
+        <Key ID="STR_FOB_TW_ACTION_TIMESKIP_START">
+            <Original>Time skip will be performed\nnow.\nPlease stay in safe position!</Original>
+            <Japanese>まもなく\n時間スキップが行われます。\n安全な位置で待機してください!</Japanese>
+        </Key>
+        <Key ID="STR_FOB_TW_ACTION_TIMESKIP_DONE_MORNING">
+            <Original>Good morning! It's now 9:00 AM.</Original>
+            <Japanese>おはようございます! 朝9時になりました。</Japanese>
+        </Key>
+        <Key ID="STR_FOB_TW_ACTION_TIMESKIP_DONE_NIGHT">
+            <Original>It's now 9:00 PM. Don't forget the lights!</Original>
+            <Japanese>夜9時になりました。 明かりを忘れずに!</Japanese>
+        </Key>
+        <Key ID="STR_FOB_TW_ACTION_CLEARFOG_DONE">
+            <Original>The fog situation has start improve.</Original>
+            <Japanese>霧の状況は改善に向かっている。</Japanese>
         </Key>
         <Key ID="STR_FOB_ACTION">
             <Original>-- DEPLOY FOB --</Original>
@@ -3355,6 +3428,21 @@
             <Korean>사령관 슬롯을 사용할 권한이 없습니다.</Korean>
             <Czech>Nemáš oprávnění používat pozici Komandéra na tomto serveru.</Czech>
             <Japanese>あなたは指揮官スロットへ入ることをサーバーに許可されていません。</Japanese>
+        </Key>
+        <Key ID="STR_CBA_IS_REQUIRED">
+            <Original>CBA_A3 not loaded. KP Liberation APR requires CBA to run properly.</Original>
+            <French>CBA_A3 non chargé. KP Liberation APR nécessite CBA pour fonctionner correctement.</French>
+            <German>CBA_A3 nicht geladen. KP Liberation APR erfordert CBA, um ordnungsgemäß zu funktionieren.</German>
+            <Spanish>CBA_A3 no cargado. KP Liberation APR requiere CBA para funcionar correctamente.</Spanish>
+            <Russian>CBA_A3 не загружен. Для правильной работы KP Liberation APR требуется CBA.</Russian>
+            <Italian>CBA_A3 non caricato. KP Liberation APR richiede CBA per funzionare correttamente.</Italian>
+            <Chinesesimp>CBA_A3 未加载。KP Liberation APR 需要 CBA 才能正常运行。</Chinesesimp>
+            <Chinese>CBA_A3 未加載。KP Liberation APR 需要 CBA 才能正常運行。</Chinese>
+            <Turkish>CBA_A3 yüklenmedi. KP Liberation APR düzgün çalışması için CBA gerektirir.</Turkish>
+            <Portuguese>CBA_A3 não carregado. KP Liberation APR requer CBA para funcionar corretamente.</Portuguese>
+            <Korean>CBA_A3 가 로드되지 않았습니다. KP Liberation APR 는 정상적으로 작동하기 위해 CBA 가 필요합니다.</Korean>
+            <Czech>CBA_A3 není načteno. KP Liberation APR vyžaduje pro správný chod CBA.</Czech>
+            <Japanese>CBA_A3 が読み込まれていません。 KP Liberation APR の正常な動作には CBA が必要です。</Japanese>
         </Key>
         <Key ID="STR_MAKE_RESPAWN_LOADOUT">
             <Original>Save respawn loadout</Original>
@@ -6701,6 +6789,10 @@
             <Czech>-- Zvýšit</Czech>
             <Japanese>-- 上げる</Japanese>
         </Key>
+        <Key ID="STR_RESET">
+            <Original>-- Reset</Original>
+            <Japanese>-- リセット</Japanese>
+        </Key>
         <Key ID="STR_LOWER">
             <Original>-- Lower</Original>
             <German>-- Niedriger</German>
@@ -8171,94 +8263,92 @@
             <Original>KP Player Menu v1.0.2\nby Wyqer</Original>
             <Japanese>KP プレイヤー メニュー v1.0.2\nby Wyqer</Japanese>
         </Key>
-<!-- VAM LINE START -->
-<!-- Function/기능부 -->
-			<Key ID="STR_VAM_INITIALIZED">
-				<Original>Vehicle Appearance Manager initialized</Original>
-				<Korean>차량 형상 관리자 불러오기 및 초기화 완료</Korean>
-				<Japanese>車両外観マネージャーが初期化されました</Japanese>
-			</Key>
-			<Key ID="STR_VAM_MAIN_MENU_NAME">
-				<Original>Vehicle Appearance Manager</Original>
-				<Korean>차량 형상 관리자</Korean>
-				<Japanese>車両外観マネージャー</Japanese>
-			</Key>
-			<Key ID="STR_VAM_RESET_VEHICLE">
-				<Original>Reset</Original>
-				<Korean>초기화</Korean>
-				<Japanese>リセット</Japanese>
-			</Key>
-			<Key ID="STR_VAM_CONFIRM_MENU">
-				<Original>Confirm</Original>
-				<Korean>확인</Korean>
-				<Japanese>確定</Japanese>
-			</Key>
-			<Key ID="STR_VAM_CURRENT_VEHICLE">
-				<Original>Current Vehicle :</Original>
-				<Korean>현  재    차  량 :</Korean>
-				<Japanese>現 在 の 車 両 :</Japanese>
-			</Key>
-			<Key ID="STR_VAM_FOB_CONDITION_CHECK_FAILED">
-				<Original>You should be in %1 m from FOB.</Original>
-				<Korean>FOB에서 %1m 안에 있어야 합니다.</Korean>
-				<Japanese>FOBから %1 m 以内にいる必要があります。</Japanese>
-			</Key>
-			<Key ID="STR_VAM_COMPLETE_RESET">
-				<Original>Reset complete</Original>
-				<Korean>초기화 완료</Korean>
-				<Japanese>リセット完了</Japanese>
-			</Key>
-			<Key ID="STR_VAM_CAMOUFLAGE">
-				<Original>Camoufluge</Original>
-				<Korean>위장</Korean>
-				<Japanese>迷彩</Japanese>
-			</Key>
-			<Key ID="STR_VAM_COMPONENT">
-				<Original>Component</Original>
-				<Korean>구성품</Korean>
-				<Japanese>部品</Japanese>
-			</Key>
-			<Key ID="STR_VAM_NO_CAMOUFLAGE">
-				<Original>There is no camouflage.</Original>
-				<Korean>위장이 없습니다.</Korean>
-				<Japanese>迷彩はありません。</Japanese>
-			</Key>
-			<Key ID="STR_VAM_NO_COMPONENT">
-				<Original>There is no component.</Original>
-				<Korean>구성품이 없습니다.</Korean>
-				<Japanese>部品はありません。</Japanese>
-			</Key>
-			<Key ID="STR_VAM_MARID_V1_NOTICE">
-				<Original>Your Marid is outdated one.\nVehicle component setup may not be loaded next time.\nPlease contact with your server admin.</Original>
-				<Korean>당신의 마리드는 오래된 것입니다.\n다음 번에 차량 구성품 설정을 불러올 수 없을 것입니다.\n해당 서버 관리자와 연락을 취해보십시오.</Korean>
-				<Japanese>あなたのMarid APCは古いものです。\n次回から車両コンポーネントのセットアップがロードされない可能性があります。\nサーバー管理者にお問い合わせください。</Japanese>
-			</Key>
-<!-- Camouflage/위장 -->
-			<Key ID="STR_VAM_BLUFOR_CAMO">
-				<Original>BLUFOR</Original>
-				<Korean>청군</Korean>
-				<Japanese>同盟軍</Japanese>
-			</Key>
-			<Key ID="STR_VAM_GREEN_CAMO">
-				<Original>Green</Original>
-				<Korean>녹색</Korean>
-				<Japanese>緑</Japanese>
-			</Key>
-			<Key ID="STR_VAM_BLACK_CAMO">
-				<Original>Black</Original>
-				<Korean>검정색</Korean>
-				<Japanese>黒</Japanese>
-			</Key>
-			<Key ID="STR_VAM_AAF_CAMO">
-				<Original>AAF</Original>
-				<Korean>AAF</Korean>
-				<Japanese>AAF</Japanese>
-			</Key>
-			<Key ID="STR_VAM_DARK_GREEN_CAMO">
-				<Original>Dark Green</Original>
-				<Korean>어두운 녹색</Korean>
-				<Japanese>深緑</Japanese>
-			</Key>
-<!-- VAM LINE END -->
+    </Package>
+    <Package name="VAM">
+        <Key ID="STR_VAM_INITIALIZED">
+            <Original>Vehicle Appearance Manager initialized</Original>
+            <Korean>차량 형상 관리자 불러오기 및 초기화 완료</Korean>
+            <Japanese>車両外観マネージャーが初期化されました</Japanese>
+        </Key>
+        <Key ID="STR_VAM_MAIN_MENU_NAME">
+            <Original>Vehicle Appearance Manager</Original>
+            <Korean>차량 형상 관리자</Korean>
+            <Japanese>車両外観マネージャー</Japanese>
+        </Key>
+        <Key ID="STR_VAM_RESET_VEHICLE">
+            <Original>Reset</Original>
+            <Korean>초기화</Korean>
+            <Japanese>リセット</Japanese>
+        </Key>
+        <Key ID="STR_VAM_CONFIRM_MENU">
+            <Original>Confirm</Original>
+            <Korean>확인</Korean>
+            <Japanese>確定</Japanese>
+        </Key>
+        <Key ID="STR_VAM_CURRENT_VEHICLE">
+            <Original>Current Vehicle :</Original>
+            <Korean>현  재    차  량 :</Korean>
+            <Japanese>現 在 の 車 両 :</Japanese>
+        </Key>
+        <Key ID="STR_VAM_FOB_CONDITION_CHECK_FAILED">
+            <Original>You should be in %1 m from FOB.</Original>
+            <Korean>FOB에서 %1m 안에 있어야 합니다.</Korean>
+            <Japanese>FOBから %1 m 以内にいる必要があります。</Japanese>
+        </Key>
+        <Key ID="STR_VAM_COMPLETE_RESET">
+            <Original>Reset complete</Original>
+            <Korean>초기화 완료</Korean>
+            <Japanese>リセット完了</Japanese>
+        </Key>
+        <Key ID="STR_VAM_CAMOUFLAGE">
+            <Original>Camoufluge</Original>
+            <Korean>위장</Korean>
+            <Japanese>迷彩</Japanese>
+        </Key>
+        <Key ID="STR_VAM_COMPONENT">
+            <Original>Component</Original>
+            <Korean>구성품</Korean>
+            <Japanese>部品</Japanese>
+        </Key>
+        <Key ID="STR_VAM_NO_CAMOUFLAGE">
+            <Original>There is no camouflage.</Original>
+            <Korean>위장이 없습니다.</Korean>
+            <Japanese>迷彩はありません。</Japanese>
+        </Key>
+        <Key ID="STR_VAM_NO_COMPONENT">
+            <Original>There is no component.</Original>
+            <Korean>구성품이 없습니다.</Korean>
+            <Japanese>部品はありません。</Japanese>
+        </Key>
+        <Key ID="STR_VAM_MARID_V1_NOTICE">
+            <Original>Your Marid is outdated one.\nVehicle component setup may not be loaded next time.\nPlease contact with your server admin.</Original>
+            <Korean>당신의 마리드는 오래된 것입니다.\n다음 번에 차량 구성품 설정을 불러올 수 없을 것입니다.\n해당 서버 관리자와 연락을 취해보십시오.</Korean>
+            <Japanese>あなたのMarid APCは古いものです。\n次回から車両コンポーネントのセットアップがロードされない可能性があります。\nサーバー管理者にお問い合わせください。</Japanese>
+        </Key>
+        <Key ID="STR_VAM_BLUFOR_CAMO">
+            <Original>BLUFOR</Original>
+            <Korean>청군</Korean>
+            <Japanese>同盟軍</Japanese>
+        </Key>
+        <Key ID="STR_VAM_GREEN_CAMO">
+            <Original>Green</Original>
+            <Korean>녹색</Korean>
+            <Japanese>緑</Japanese>
+        </Key>
+        <Key ID="STR_VAM_BLACK_CAMO">
+            <Original>Black</Original>
+            <Korean>검정색</Korean>
+            <Japanese>黒</Japanese>
+        </Key>
+        <Key ID="STR_VAM_AAF_CAMO">
+            <Original>AAF</Original>
+            <Korean>AAF</Korean>
+            <Japanese>AAF</Japanese>
+        </Key>
+        <Key ID="STR_VAM_DARK_GREEN_CAMO">
+            <Original>Dark Green</Original>
+            <Korean>어두운 녹색</Korean>
+            <Japanese>深緑</Japanese>
+        </Key>
     </Package>
 </Project>

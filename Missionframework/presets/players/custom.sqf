@@ -2,7 +2,7 @@
     File: custom.sqf
     Author: KP Liberation Dev Team - https://github.com/KillahPotatoes
     Date: 2017-10-07
-    Last Update: 2020-05-25
+    Last Update: 2024-06-20
     License: MIT License - http://www.opensource.org/licenses/MIT
 
     Description:
@@ -25,7 +25,10 @@ KPLIB_b_fobBuilding     = "Land_Cargo_HQ_V1_F";                         // This 
 KPLIB_b_fobBox          = "B_Slingload_01_Cargo_F";                     // This is the FOB as a container.
 KPLIB_b_fobTruck        = "B_Truck_01_box_F";                           // This is the FOB as a vehicle.
 KPLIB_b_arsenal         = "B_supplyCrate_F";                            // This is the virtual arsenal as portable supply crates.
-KPLIB_b_mobileRespawn   = "B_Truck_01_medical_F";                       // This is the mobile respawn (and medical) truck.
+
+// This is the mobile respawn (and medical) truck.
+KPLIB_b_mobileRespawn   = ["B_Truck_01_medical_F","B_T_Truck_01_medical_F"];
+
 KPLIB_b_potato01        = "B_Heli_Transport_03_unarmed_F";              // This is Potato 01, a multipurpose mobile respawn as a helicopter.
 KPLIB_b_crewUnit        = "B_crew_F";                                   // This defines the crew for vehicles.
 KPLIB_b_heliPilotUnit   = "B_Helipilot_F";                              // This defines the pilot for helicopters.
@@ -119,7 +122,6 @@ KPLIB_b_vehAir = [
     ["B_Heli_Attack_01_dynamicLoadout_F",500,400,200],                  // AH-99 Blackfoot
     ["B_Heli_Transport_01_F",250,80,150],                               // UH-80 Ghost Hawk
     ["B_Heli_Transport_01_camo_F",250,80,150],                          // UH-80 Ghost Hawk (Camo)
-    ["B_Heli_Transport_03_unarmed_F",300,0,175],                        // CH-67 Huron (Unarmed)
     ["B_Heli_Transport_03_F",300,80,175],                               // CH-67 Huron (Armed)
     ["B_UAV_02_dynamicLoadout_F",400,400,200],                          // MQ-4A Greyhawk
     ["B_T_UAV_03_dynamicLoadout_F",450,500,250],                        // MQ-12 Falcon
@@ -225,7 +227,8 @@ KPLIB_b_objectsDeco = [
 
 KPLIB_b_vehSupport = [
     [KPLIB_b_arsenal,100,200,0],
-    [KPLIB_b_mobileRespawn,200,0,100],
+    [(KPLIB_b_mobileRespawn select 0),200,0,100],
+    [(KPLIB_b_mobileRespawn select 1),200,0,100],
     [KPLIB_b_fobBox,300,500,0],
     [KPLIB_b_fobTruck,300,500,75],
     [KPLIB_b_smallStorage,0,0,0],
