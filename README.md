@@ -1,5 +1,5 @@
 # KP Liberation APR 
-This is my customised fork of Apricot_ale's Fork of KP Liberation. My fork was created for my brother and I to play, the changes are mainly to improve co-op for low player numbers.
+This is my customised fork of Apricot_ale's Fork of KP Liberation. My fork was created for my brother and I to play, the changes are mainly to improve co-op for low player counts.
 
 [![license](https://img.shields.io/github/license/KillahPotatoes/KP-Liberation.svg)](https://github.com/KillahPotatoes/KP-Liberation/blob/master/LICENSE.md)
 
