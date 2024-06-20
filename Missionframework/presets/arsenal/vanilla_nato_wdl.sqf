@@ -574,7 +574,7 @@ KPLIB_arsenalItems = [
     "optic_DMS",
     "optic_Yorris",
     "optic_MRD",
-    "optic_LRPS",yyz
+    "optic_LRPS",
     "optic_AMS",
     "optic_AMS_khk",
     "optic_AMS_snd",

@@ -27,7 +27,7 @@ KPLIB_b_fobTruck        = "B_Truck_01_box_F";                           // This 
 KPLIB_b_arsenal         = "B_supplyCrate_F";                            // This is the virtual arsenal as portable supply crates.
 
 // This is the mobile respawn (and medical) truck.
-KPLIB_b_mobileRespawn   = ["B_Truck_01_medical_F","B_T_Truck_01_medical_F"];
+KPLIB_b_mobileRespawn   = ["B_Truck_01_medical_F"];
 
 KPLIB_b_potato01        = "B_Heli_Transport_03_unarmed_F";              // This is Potato 01, a multipurpose mobile respawn as a helicopter.
 KPLIB_b_crewUnit        = "B_crew_F";                                   // This defines the crew for vehicles.
@@ -228,7 +228,6 @@ KPLIB_b_objectsDeco = [
 KPLIB_b_vehSupport = [
     [KPLIB_b_arsenal,100,200,0],
     [(KPLIB_b_mobileRespawn select 0),200,0,100],
-    [(KPLIB_b_mobileRespawn select 1),200,0,100],
     [KPLIB_b_fobBox,300,500,0],
     [KPLIB_b_fobTruck,300,500,75],
     [KPLIB_b_smallStorage,0,0,0],
