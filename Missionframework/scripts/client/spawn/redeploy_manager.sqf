@@ -180,16 +180,24 @@ while {true} do {
         private _idxchoice = lbCurSel DEPLOY_LIST_IDC;
         _spawn_str = (KPLIB_respawnPositionsList select _idxchoice) select 0;
 
+        private _destpos = [0, 0, 0];
         if (count (KPLIB_respawnPositionsList select _idxchoice) == 3) then {
             private _truck = (KPLIB_respawnPositionsList select _idxchoice) select 2;
-            player setposATL (_truck getPos [5 + (random 3), random 360]);
-            player setDir (random 360);
+            _destpos = _truck getPos [5 + (random 3), random 360];
             KPLIB_respawn_mobile_done = true;
         } else {
-            private _destpos = ((KPLIB_respawnPositionsList select _idxchoice) select 1);
-            player setposATL [((_destpos select 0) + 5) - (random 10),((_destpos select 1) + 5) - (random 10),(_destpos select 2)];
-            player setDir (random 360);
+            _destpos = ((KPLIB_respawnPositionsList select _idxchoice) select 1);
+            _destpos = [((_destpos select 0) + 5) - (random 10),((_destpos select 1) + 5) - (random 10),(_destpos select 2)];
         };
+        player setposATL _destpos;
+        player setDir (random 360);
+
+        // Move AI squad members
+        private _aisquad = (units group player) select {alive _x && !isPlayer _x}; // Get all AI squad members
+        {
+            _x setposATL _destpos;
+            _x setDir (random 360);
+        } forEach _aisquad;
 
         if ((lbCurSel 203) > 0) then {
             private _selectedLoadout = _loadouts_data select ((lbCurSel 203) - 1);
