@@ -9,7 +9,7 @@ My customisations include:
 
 - Updated all vanilla presets, all factions have access to all guns, armour and vehicles are still faction restricted.
 - Added persistent vehicle cargo and damage, plus some other changes from https://github.com/moistbois/Moist-Liberation-APR
-- Integrated pSiKO Ai Revive to enable AI medics to revive: https://steamcommunity.com/sharedfiles/filedetails/?id=2996342068
+- Integrated pSiKO Ai Revive to enable AI medics to revive. This is hard coded so leave "Revive Mode" set to disabled in mission parameters: https://steamcommunity.com/sharedfiles/filedetails/?id=2996342068
 - Added additional map ports by stutpip123: https://github.com/KillahPotatoes/KP-Liberation/pull/854
 - More changes to come...
 
