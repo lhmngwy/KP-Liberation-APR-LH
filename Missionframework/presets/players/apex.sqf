@@ -25,7 +25,7 @@ KPLIB_b_fobBuilding = "Land_Cargo_HQ_V4_F";                                    /
 KPLIB_b_fobBox = "B_Slingload_01_Cargo_F";                            // This is the FOB as a container.
 KPLIB_b_fobTruck = "B_T_Truck_01_box_F";                              // This is the FOB as a vehicle.
 KPLIB_b_arsenal = "B_supplyCrate_F";                                   // This is the virtual arsenal as portable supply crates.
-KPLIB_b_mobileRespawn = "B_T_Truck_01_medical_F";                      // This is the mobile respawn (and medical) truck.
+KPLIB_b_mobileRespawn = ["B_T_Truck_01_medical_F", "B_Slingload_01_Medevac_F", "Respawn_TentDome_F"]; // This is the mobile respawn (and medical) truck.
 KPLIB_b_potato01 = "B_Heli_Transport_03_unarmed_F";                       // This is Potato 01, a multipurpose mobile respawn as a helicopter.
 KPLIB_b_crewUnit = "B_T_crew_F";                                       // This defines the crew for vehicles.
 KPLIB_b_heliPilotUnit = "B_T_Helipilot_F";                                    // This defines the pilot for helicopters.
@@ -219,7 +219,8 @@ KPLIB_b_objectsDeco = [
 
 KPLIB_b_vehSupport = [
     [KPLIB_b_arsenal,100,200,0],
-    [KPLIB_b_mobileRespawn,200,0,100],
+    [(KPLIB_b_mobileRespawn select 2),100,0,0],
+    [(KPLIB_b_mobileRespawn select 0),200,0,100],
     [KPLIB_b_fobBox,300,500,0],
     [KPLIB_b_fobTruck,300,500,75],
     [KPLIB_b_smallStorage,0,0,0],
@@ -238,6 +239,7 @@ KPLIB_b_vehSupport = [
     ["B_T_Truck_01_Repair_F",325,0,75],                                 // HEMTT Repair
     ["B_T_Truck_01_fuel_F",125,0,275],                                  // HEMTT Fuel
     ["B_T_Truck_01_ammo_F",125,200,75],                                 // HEMTT Ammo
+    [(KPLIB_b_mobileRespawn select 1),200,0,0],                         // Huron Medevac
     ["B_Slingload_01_Repair_F",275,0,0],                                // Huron Repair
     ["B_Slingload_01_Fuel_F",75,0,200],                                 // Huron Fuel
     ["B_Slingload_01_Ammo_F",75,200,0]                                  // Huron Ammo
