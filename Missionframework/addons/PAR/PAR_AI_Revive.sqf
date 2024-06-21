@@ -80,7 +80,7 @@ PAR_MedGarbage = [
 PAR_medical_source = "Land_MedicalTent_01_base_F";
 
 //--- Init functions --------------------------------//
-[] call compile preprocessFile "PAR\PAR_global_functions.sqf";
+[] call compile preprocessFile "addons\PAR\PAR_global_functions.sqf";
 
 //--- PAR Manager ---------------------------------------//
 [] spawn PAR_AI_Manager;
