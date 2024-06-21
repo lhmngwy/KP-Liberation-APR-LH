@@ -22,11 +22,12 @@ if (_CapturedPlayer == objNull) then {
     } forEach _players;
     _CapturedPlayer = _nearestPlayer;
 };
-[[_informant], group _capturedPlayer] remoteExecCall ["joinSilent"];
+[[_informant], group _capturedPlayer] remoteExec ["joinSilent"];
+
 if (KPLIB_ace) then {
     private _isCuffed = _informant getVariable ["ace_captives_isHandcuffed", false];
     if !(_isCuffed) then {
-        ["ace_captives_setSurrendered", [_unit, false], _unit] call CBA_fnc_targetEvent;
+        ["ace_captives_setSurrendered", [_informant, false], _informant] call CBA_fnc_targetEvent;
     };
 } else {
     _informant setCaptive false;
@@ -39,10 +40,11 @@ if (KPLIB_ace) then {
 doStop _informant;
 _informant doFollow _capturedPlayer;
 
+private _is_near_fob = false;
 waitUntil {
     sleep 5;
     private _nearestfob = [getPos _informant] call KPLIB_fnc_getNearestFob;
-    private _is_near_fob = false;
+    _is_near_fob = false;
     if (count _nearestfob == 3) then {
         _is_near_fob = ((_informant distance _nearestfob) < 30);
     };
@@ -55,11 +57,11 @@ if (alive _informant) then {
         private _grp = createGroup [KPLIB_side_civilian, true];
         [_informant] joinSilent _grp;
         if (KPLIB_ace) then {
-            private _isCuffed = _unit getVariable ["ace_captives_isHandcuffed", false];
+            private _isCuffed = _informant getVariable ["ace_captives_isHandcuffed", false];
             if (_isCuffed) then {
-                ["ace_captives_setHandcuffed", [_unit, false], _unit] call CBA_fnc_targetEvent;
+                ["ace_captives_setHandcuffed", [_informant, false], _informant] call CBA_fnc_targetEvent;
             } else {
-                ["ace_captives_setSurrendered", [_unit, false], _unit] call CBA_fnc_targetEvent;
+                ["ace_captives_setSurrendered", [_informant, false], _informant] call CBA_fnc_targetEvent;
             };
             sleep 1;
         };
