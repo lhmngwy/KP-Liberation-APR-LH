@@ -1,5 +1,5 @@
 # KP Liberation APR 
-This is my customised fork of Apricot_ale's Fork of KP Liberation. My fork was created for my brother and I to play, the changes are mainly to improve co-op for low player counts.
+This is my customised fork of Apricot_ale's fork of KP Liberation. My fork was created for my brother and I to play, the changes are mainly to improve co-op for low player counts.
 
 [![license](https://img.shields.io/github/license/KillahPotatoes/KP-Liberation.svg)](https://github.com/KillahPotatoes/KP-Liberation/blob/master/LICENSE.md)
 
@@ -12,6 +12,8 @@ My customisations include:
 - Added persistent vehicle cargo, fuel and damage, plus some other changes from https://github.com/moistbois/Moist-Liberation-APR
 - Integrated pSiKO Ai Revive to enable AI medics to revive. This is hard coded so leave "Revive Mode" set to disabled in mission parameters: https://steamcommunity.com/sharedfiles/filedetails/?id=2996342068
 - Added additional map ports by stutpip123: https://github.com/KillahPotatoes/KP-Liberation/pull/854
+- Integrated VcomAI 3.4.1: https://github.com/genesis92x/VcomAI-3.0/tree/3.4.1---Dev-Build/
+- Integrated Advanced Towing: https://steamcommunity.com/sharedfiles/filedetails/?id=639837898
 - More changes to come...
 
 ### Required Add-ons
