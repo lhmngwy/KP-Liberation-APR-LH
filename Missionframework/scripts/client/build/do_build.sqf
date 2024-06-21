@@ -111,7 +111,7 @@ while { true } do {
 
             _dist = 0.6 * (sizeOf _classname);
             if (_dist < 3.5) then { _dist = 3.5 };
-            _dist = _dist + 5;
+            _dist = _dist + 2;
 
             for [{_i=0}, {_i<5}, {_i=_i+1}] do {
                 _vehicle setObjectTextureGlobal [_i, '#(rgb,8,8,3)color(0,1,0,0.8)'];
