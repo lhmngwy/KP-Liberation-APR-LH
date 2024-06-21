@@ -513,7 +513,7 @@
 			"CHECKBOX", // setting type
 			"Experimental Improvements to AI driving.", // Pretty name shown inside the ingame settings menu. Can be stringtable entry.
 			"VCOM SETTINGS", // Pretty name of the category where the setting can be found. Can be stringtable entry.
-			false,// data for this setting:
+			true,// data for this setting:
 			true, // "_isGlobal" flag. Set this to true to always have this setting synchronized between all clients in multiplayer
 			{  
 				params ["_value"];
@@ -607,7 +607,7 @@
 			"CHECKBOX", // setting type
 			"Disable Static Weapon Use", // Pretty name shown inside the ingame settings menu. Can be stringtable entry.
 			"VCOM SETTINGS", // Pretty name of the category where the setting can be found. Can be stringtable entry.
-			false,// data for this setting:
+			true,// data for this setting:
 			true, // "_isGlobal" flag. Set this to true to always have this setting synchronized between all clients in multiplayer
 			{
 				params ["_value"];
