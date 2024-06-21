@@ -39,7 +39,7 @@ diag_log "-_- LRX PAR Mod by pSiKO -_-";
 // 2 - Enabled - Everyone can revive using Medikit/FAK
 // 3 - Enabled - Only medics can revive
 
-if (isNil "PAR_revive") then { PAR_revive = 3 };
+if (isNil "PAR_revive") then { PAR_revive = 2 };
 if (PAR_revive == 0) exitWith {};
 
 // Seconds until unconscious unit bleeds out and dies.
