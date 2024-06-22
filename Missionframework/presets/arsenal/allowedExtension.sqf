@@ -76,7 +76,7 @@ KPLIB_arsenalAllowedExtension = [
     "ACE_PlottingBoard",
     "ACE_WaterBottle",
     "ACE_WaterBottle_Half",
-    "ACE_WaterBottle_Empty",
+    "ACE_WaterBottle_Empty"
     
     //ACE End
 ];
