@@ -11,7 +11,7 @@ My customisations include:
 - AI squad members will now redeploy with the player.
 - Added persistent player squads, disconnect and reconnect and you will still have your squad!
 
-Integrations from others:
+Integrated from others:
 
 - Persistent vehicle cargo, fuel and damage, plus some other changes from https://github.com/moistbois/Moist-Liberation-APR
 - pSiKO Ai Revive to enable AI medics to revive. This is hard coded so leave "Revive Mode" set to disabled in mission parameters: https://steamcommunity.com/sharedfiles/filedetails/?id=2996342068
