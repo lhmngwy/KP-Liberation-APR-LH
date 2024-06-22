@@ -67,9 +67,6 @@ PAR_Grp_ID = getPlayerUID player;
 PAR_Medikit = "Medikit";
 PAR_AidKit = "FirstAidKit";
 PAR_BloodSplat = [
-  "BloodPool_01_Large_New_F",
-  "BloodPool_01_Medium_New_F",
-  "BloodSplatter_01_Large_New_F",
   "BloodSplatter_01_Medium_New_F",
   "BloodSplatter_01_Small_New_F"
 ];
