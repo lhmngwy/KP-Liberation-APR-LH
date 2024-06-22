@@ -25,7 +25,7 @@ KPLIB_b_fobBuilding = "Land_Cargo_HQ_V4_F";                                    /
 KPLIB_b_fobBox = "B_Slingload_01_Cargo_F";                            // This is the FOB as a container.
 KPLIB_b_fobTruck = "B_T_Truck_01_box_F";                              // This is the FOB as a vehicle.
 KPLIB_b_arsenal = "B_supplyCrate_F";                                   // This is the virtual arsenal as portable supply crates.
-KPLIB_b_mobileRespawn = ["I_E_Truck_02_Medical_F", "B_Slingload_01_Medevac_F", "Respawn_TentDome_F"]; // This is the mobile respawn (and medical) truck.
+KPLIB_b_mobileRespawn   = ["Respawn_TentDome_F", "I_E_Truck_02_Medical_F", "B_Heli_Transport_03_unarmed_F", "B_Slingload_01_Medevac_F"]; // This is the mobile respawn (and medical) truck.
 KPLIB_b_potato01 = "B_Heli_Transport_03_unarmed_F";                       // This is Potato 01, a multipurpose mobile respawn as a helicopter.
 KPLIB_b_crewUnit = "I_E_Crew_F";                                       // This defines the crew for vehicles.
 KPLIB_b_heliPilotUnit = "I_E_Helipilot_F";                                    // This defines the pilot for helicopters.
@@ -221,33 +221,39 @@ KPLIB_b_objectsDeco = [
 ];
 
 KPLIB_b_vehSupport = [
-    [(KPLIB_b_mobileRespawn select 2),100,0,0],
-    [(KPLIB_b_mobileRespawn select 0),200,0,100],
+    [(KPLIB_b_mobileRespawn select 0),100,0,0],
+    [KPLIB_b_arsenal,100,200,0],
     [KPLIB_b_fobBox,300,500,0],
     [KPLIB_b_fobTruck,300,500,75],
     [KPLIB_b_smallStorage,0,0,0],
     [KPLIB_b_largeStorage,0,0,0],
-    [KPLIB_b_logiStation,200,100,0],
+    [KPLIB_b_logiStation,250,0,0],
     [KPLIB_b_airControl,1000,0,0],
     [KPLIB_b_slotHeli,250,0,0],
     [KPLIB_b_slotPlane,500,0,0],
-    [KPLIB_b_arsenal,25,0,0],
-    ["ACE_medicalSupplyCrate_advanced",10,0,0],
-    ["Box_East_Support_F",10,0,0],
-    ["Box_CSAT_Equip_F",10,0,0],
-    ["Box_East_Grenades_F",10,0,0],
-    ["Box_East_WpsSpecial_F",10,0,0],
-    ["Box_East_Ammo_F",10,0,0],
-    ["Box_East_Wps_F",10,0,0],
-    ["Box_CSAT_Uniforms_F",10,0,0],
-    ["Box_East_AmmoOrd_F",10,0,0],
+    ["ACE_medicalSupplyCrate_advanced",50,0,0],
+    ["ACE_Box_82mm_Mo_HE",50,40,0],
+    ["ACE_Box_82mm_Mo_Smoke",50,10,0],
+    ["ACE_Box_82mm_Mo_Illum",50,10,0],
+    ["Box_EAF_Wps_F",10,0,0],
+    ["Box_EAF_WpsSpecial_F",10,0,0],
+    ["Box_EAF_WpsLaunch_F",10,0,0],
+    ["Box_EAF_Ammo_F",10,0,0],
+    ["Box_EAF_Equip_F",10,0,0],
+    ["Box_EAF_Grenades_F",10,0,0],
+    ["Box_EAF_AmmoOrd_F",10,0,0],
+    ["Box_EAF_Support_F",10,0,0],
+    ["Box_EAF_AmmoVeh_F",10,0,0],
+    ["Box_EAF_Uniforms_F",10,0,0],
     ["ACE_Wheel",10,0,0],
     ["ACE_Track",10,0,0],
     ["Land_CanisterFuel_F",0,0,2],
     ["I_E_Van_02_medevac_F",150,0,80],                                  // Transporter (Ambulance)
+    [(KPLIB_b_mobileRespawn select 0),200,0,100],                       // Zamak Medevac
     ["I_E_Truck_02_Box_F",325,0,75],                                    // Zamak Repair
     ["I_E_Truck_02_fuel_F",125,0,275],                                  // Zamak Fuel
     ["I_E_Truck_02_Ammo_F",125,200,75],                                 // Zamak Ammo
+    [(KPLIB_b_mobileRespawn select 3),300,0,175],                       // CH-67 Huron (Unarmed)
     [(KPLIB_b_mobileRespawn select 1),200,0,0],                         // Huron Medevac
     ["B_Slingload_01_Repair_F",275,0,0],                                // Huron Repair
     ["B_Slingload_01_Fuel_F",75,0,200],                                 // Huron Fuel

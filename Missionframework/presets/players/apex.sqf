@@ -25,7 +25,7 @@ KPLIB_b_fobBuilding = "Land_Cargo_HQ_V4_F";                                    /
 KPLIB_b_fobBox = "B_Slingload_01_Cargo_F";                            // This is the FOB as a container.
 KPLIB_b_fobTruck = "B_T_Truck_01_box_F";                              // This is the FOB as a vehicle.
 KPLIB_b_arsenal = "B_supplyCrate_F";                                   // This is the virtual arsenal as portable supply crates.
-KPLIB_b_mobileRespawn = ["B_T_Truck_01_medical_F", "B_Slingload_01_Medevac_F", "Respawn_TentDome_F"]; // This is the mobile respawn (and medical) truck.
+KPLIB_b_mobileRespawn   = ["Respawn_TentDome_F", "B_T_Truck_01_medical_F", "B_Heli_Transport_03_unarmed_F", "B_Slingload_01_Medevac_F"]; // This is the mobile respawn (and medical) truck.
 KPLIB_b_potato01 = "B_Heli_Transport_03_unarmed_F";                       // This is Potato 01, a multipurpose mobile respawn as a helicopter.
 KPLIB_b_crewUnit = "B_T_crew_F";                                       // This defines the crew for vehicles.
 KPLIB_b_heliPilotUnit = "B_T_Helipilot_F";                                    // This defines the pilot for helicopters.
@@ -113,7 +113,6 @@ KPLIB_b_vehAir = [
     ["B_Heli_Attack_01_dynamicLoadout_F",500,400,200],                  // AH-99 Blackfoot
     ["B_Heli_Transport_01_F",250,80,150],                               // UH-80 Ghost Hawk
     ["B_Heli_Transport_01_camo_F",250,80,150],                          // UH-80 Ghost Hawk (Camo)
-    ["B_Heli_Transport_03_unarmed_F",300,0,175],                        // CH-67 Huron (Unarmed)
     ["B_Heli_Transport_03_F",300,80,175],                               // CH-67 Huron (Armed)
     ["B_UAV_02_dynamicLoadout_F",400,300,200],                          // MQ-4A Greyhawk
     ["B_T_UAV_03_dynamicLoadout_F",450,500,250],                        // MQ-12 Falcon
@@ -218,9 +217,8 @@ KPLIB_b_objectsDeco = [
 ];
 
 KPLIB_b_vehSupport = [
+    [(KPLIB_b_mobileRespawn select 0),100,0,0],
     [KPLIB_b_arsenal,100,200,0],
-    [(KPLIB_b_mobileRespawn select 2),100,0,0],
-    [(KPLIB_b_mobileRespawn select 0),200,0,100],
     [KPLIB_b_fobBox,300,500,0],
     [KPLIB_b_fobTruck,300,500,75],
     [KPLIB_b_smallStorage,0,0,0],
@@ -233,13 +231,26 @@ KPLIB_b_vehSupport = [
     ["ACE_Box_82mm_Mo_HE",50,40,0],
     ["ACE_Box_82mm_Mo_Smoke",50,10,0],
     ["ACE_Box_82mm_Mo_Illum",50,10,0],
+    ["Box_NATO_Wps_F",10,0,0],
+    ["Box_NATO_WpsSpecial_F",10,0,0],
+    ["Box_NATO_WpsLaunch_F",10,0,0],
+    ["Box_NATO_Ammo_F",10,0,0],
+    ["Box_NATO_Equip_F",10,0,0],
+    ["Box_NATO_Grenades_F",10,0,0],
+    ["Box_NATO_AmmoOrd_F",10,0,0],
+    ["Box_NATO_Support_F",10,0,0],
+    ["Box_NATO_AmmoVeh_F",10,0,0],
+    ["Box_NATO_Uniforms_F",10,0,0],
     ["ACE_Wheel",10,0,0],
     ["ACE_Track",10,0,0],
+    ["Land_CanisterFuel_F",0,0,2],
     ["B_T_APC_Tracked_01_CRV_F",500,250,350],                           // CRV-6e Bobcat
+    [(KPLIB_b_mobileRespawn select 1),200,0,100],                       // HEMTT Medevac
     ["B_T_Truck_01_Repair_F",325,0,75],                                 // HEMTT Repair
     ["B_T_Truck_01_fuel_F",125,0,275],                                  // HEMTT Fuel
     ["B_T_Truck_01_ammo_F",125,200,75],                                 // HEMTT Ammo
-    [(KPLIB_b_mobileRespawn select 1),200,0,0],                         // Huron Medevac
+    [(KPLIB_b_mobileRespawn select 2),300,0,175],                       // CH-67 Huron (Unarmed)
+    [(KPLIB_b_mobileRespawn select 3),200,0,0],                         // Huron Medevac
     ["B_Slingload_01_Repair_F",275,0,0],                                // Huron Repair
     ["B_Slingload_01_Fuel_F",75,0,200],                                 // Huron Fuel
     ["B_Slingload_01_Ammo_F",75,200,0]                                  // Huron Ammo
