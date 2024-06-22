@@ -10,11 +10,15 @@ My customisations include:
 - Updated all vanilla presets, all factions have access to all guns. Armour and vehicles are still faction restricted.
 - AI squad members will now redeploy with the player.
 - Added persistent player squads, disconnect and reconnect and you will still have your squad!
-- Added persistent vehicle cargo, fuel and damage, plus some other changes from https://github.com/moistbois/Moist-Liberation-APR
-- Integrated pSiKO Ai Revive to enable AI medics to revive. This is hard coded so leave "Revive Mode" set to disabled in mission parameters: https://steamcommunity.com/sharedfiles/filedetails/?id=2996342068
-- Added additional map ports by stutpip123: https://github.com/KillahPotatoes/KP-Liberation/pull/854
-- Integrated VcomAI 3.4.1: https://github.com/genesis92x/VcomAI-3.0/tree/3.4.1---Dev-Build/
-- Integrated Advanced Towing: https://steamcommunity.com/sharedfiles/filedetails/?id=639837898
+
+Integrations from others:
+
+- Persistent vehicle cargo, fuel and damage, plus some other changes from https://github.com/moistbois/Moist-Liberation-APR
+- pSiKO Ai Revive to enable AI medics to revive. This is hard coded so leave "Revive Mode" set to disabled in mission parameters: https://steamcommunity.com/sharedfiles/filedetails/?id=2996342068
+- Additional map ports by stutpip123: https://github.com/KillahPotatoes/KP-Liberation/pull/854
+- VcomAI 3.4.1: https://github.com/genesis92x/VcomAI-3.0/tree/3.4.1---Dev-Build/
+- Advanced Towing: https://steamcommunity.com/sharedfiles/filedetails/?id=639837898
+
 - More changes to come...
 
 ### Required Add-ons
