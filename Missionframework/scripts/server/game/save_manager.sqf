@@ -3,9 +3,12 @@ scriptName "KPLIB_saveLoop";
 private _start = diag_tickTime;
 ["----- Loading save data", "SAVE"] call KPLIB_fnc_log;
 
+KPLIB_squad_save_key = format ["%1_AISquad", KPLIB_save_key];
+
 // Handle possible enabled "wipe save" mission parameters
 if (KPLIB_param_wipe_savegame_1 == 1 && KPLIB_param_wipe_savegame_2 == 1) then {
     profileNamespace setVariable [KPLIB_save_key,nil];
+    profileNamespace setVariable [KPLIB_squad_save_key,nil];
     saveProfileNamespace;
     ["Save wiped via mission parameters", "SAVE"] call KPLIB_fnc_log;
 } else {
@@ -31,6 +34,96 @@ if (hasInterface) then {
         [] call KPLIB_fnc_doSave;
     }];
 };
+
+// Save player squad on disconnect
+addMissionEventHandler ["PlayerDisconnected", {
+    params ["_id", "_uid", "_name", "_jip", "_owner", "_idstr"];
+
+    // Check if the player is a headless client or the server
+    if (_uid find "HC" != -1 || _name == "__SERVER__") exitWith {};
+
+    // Find the player unit
+    private _unit = _uid call BIS_fnc_getUnitByUID;
+
+    if (isNull _unit) exitWith {};
+
+    // Get AI squad members
+    private _aiSquad = [];
+    {
+        if (!isPlayer _x) then {
+            _aiSquad pushBack _x;
+        };
+    } forEach units group _unit;
+
+    // Save AI squad members data (only unit type)
+    private _aiData = _aiSquad apply {
+        typeOf _x
+    };
+
+    // Retrieve existing AI data and update with current player's squad
+    private _existingData = profileNamespace getVariable [KPLIB_squad_save_key, []];
+    private _updatedData = [];
+
+    // Add or update the current player's AI data
+    private _found = false;
+    {
+        if (_x select 0 == _uid) then {
+            _updatedData pushBack [_uid, _aiData];
+            _found = true;
+        } else {
+            _updatedData pushBack _x;
+        };
+    } forEach _existingData;
+
+    // If the player's data was not found, add it
+    if (!_found) then {
+        _updatedData pushBack [_uid, _aiData];
+    };
+
+    profileNamespace setVariable [KPLIB_squad_save_key, _updatedData];
+    saveProfileNamespace;
+}];
+
+// Restore player squad on connect
+addMissionEventHandler ["PlayerConnected", {
+    params ["_id", "_uid", "_name", "_jip", "_owner", "_idstr"];
+
+    // Check if the player is a headless client or the server
+    if (_uid find "HC" != -1 || _name == "__SERVER__") exitWith {};
+
+    // Periodically check for player unit initialization
+    [_uid, _name] spawn {
+        params ["_uid", "_name"];
+
+        private _unit = objNull;
+        private _maxWaitTime = 60;  // Maximum wait time in seconds
+        private _startTime = time;
+
+        // Loop until the player unit is found or the maximum wait time is exceeded
+        while {isNull _unit && (time - _startTime < _maxWaitTime)} do {
+            _unit = _uid call BIS_fnc_getUnitByUID;
+            if (isNull _unit) then {
+                sleep 1;  // Wait for 1 second before rechecking
+            };
+        };
+
+        if (isNull _unit) exitWith {};
+
+        // Retrieve existing AI data
+        private _existingData = profileNamespace getVariable [KPLIB_squad_save_key, []];
+        private _aiData = [];
+        {
+            if (_x select 0 == _uid) exitWith {
+                _aiData = _x select 1;
+            };
+        } forEach _existingData;
+
+        // Recreate AI squad members at the player's position
+        {
+            private _aiUnit = (_x createUnit [position _unit, group _unit]);
+        } forEach _aiData;
+    };
+}];
 
 // All classnames of objects which should be saved
 KPLIB_classnamesToSave = [toLowerANSI KPLIB_b_fobBuilding, toLowerANSI KPLIB_b_potato01];
@@ -683,6 +776,7 @@ while {true} do {
     // Exit the while and wipe save, if campaign ended
     if (KPLIB_endgame == 1) exitWith {
         profileNamespace setVariable [KPLIB_save_key, nil];
+        profileNamespace setVariable [KPLIB_squad_save_key,nil];
         saveProfileNamespace;
     };
 
