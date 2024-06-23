@@ -108,7 +108,7 @@ private _allBlueGroups = allGroups select {
     {!isPlayer _x} count units _x == count units _x // No player units in the group
 };
 
-// Fetch all objects and AI groups near each FOB
+// Fetch all objects near each FOB
 private ["_fobPos", "_fobObjects", "_grpUnits", "_fobMines"];
 {
     _fobPos = _x;
@@ -127,15 +127,7 @@ private ["_fobPos", "_fobObjects", "_grpUnits", "_fobMines"];
     _allObjects = _allObjects + (_fobObjects select {!((toLowerANSI (typeOf _x)) in KPLIB_storageBuildings)});
     _allStorages = _allStorages + (_fobObjects select {(_x getVariable ["KPLIB_storage_type",-1]) == 0});
 
-    // Process all groups near this FOB
-    {
-        // Get only living AI units of the group by excluding possible POWs currently in the player group
-        _grpUnits = (units _x) select {!(isPlayer _x) && (alive _x) && !((typeOf _x) in KPLIB_o_inf_classes) && !((typeOf _x) in KPLIB_o_militiaInfantry)};
-        // Add to save array
-        _aiGroups pushBack [getPosATL (leader _x), (_grpUnits apply {typeOf _x})];
-    } forEach (_allBlueGroups select {(_fobPos distance2D (leader _x)) < (KPLIB_range_fob * 1.2)});
-
-    // Save all mines around FOB
+    // Fetch all mines around FOB
     _fobMines = allMines inAreaArray [_fobPos, KPLIB_range_fob * 1.2, KPLIB_range_fob * 1.2];
     _allMines append (_fobMines apply {[
         getPosWorld _x,
@@ -144,6 +136,25 @@ private ["_fobPos", "_fobObjects", "_grpUnits", "_fobMines"];
         _x mineDetectedBy KPLIB_side_player
     ]});
 } forEach KPLIB_sectors_fob;
+
+// Fetch all remaining blufor vehicles that are not near a fob
+_allObjects = _allObjects + (vehicles select {
+    ((toLowerANSI (typeOf _x)) in KPLIB_b_allVeh_classes) &&    // All Blufor vehicles, any distance from FOB
+    {alive _x} &&                                               // Exclude dead or broken objects
+    {isNull attachedTo _x} &&                                   // Exclude attachTo'd objects
+    {!(_x getVariable ["KPLIB_edenObject", false])} &&          // Exclude all objects placed via editor in mission.sqm
+    {!(_x getVariable ["KPLIB_preplaced", false])} &&           // Exclude preplaced (e.g. little birds from carrier)
+    {!((toLowerANSI (typeOf _x)) in KPLIB_crates)} &&           // Exclude storage crates (those are handled separately)
+    !(_x in _allObjects)                                        // Exclude vehicles already in _allObjects
+});
+
+// Fetch all infantry groups
+{
+    // Get only living AI units of the group by excluding possible POWs currently in the player group
+    _grpUnits = (units _x) select {!(isPlayer _x) && (alive _x) && !((typeOf _x) in KPLIB_o_inf_classes) && !((typeOf _x) in KPLIB_o_militiaInfantry)};
+    // Add to save array
+    _aiGroups pushBack [getPosATL (leader _x), (_grpUnits apply {typeOf _x})];
+} forEach (_allBlueGroups);
 
 // Save all fetched objects
 private ["_savedPos", "_savedVecDir", "_savedVecUp", "_class", "_hasCrew", "_inventory", "_fuel", "_fuelCargo", "_damages"];
