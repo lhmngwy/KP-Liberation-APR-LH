@@ -268,18 +268,7 @@ class FSM
                          "VcmAI_ActiveList deleteAt _N;" \n
                          "" \n
                          "if (VCM_DebugFSM) then {diag_log (format [""%1: EXITED VCOM SCRIPTS"",_Group])};" \n
-                         "" \n
-                         "" \n
-                         "//Remove all eventhandlers" \n
-                         "{" \n
-                         "	_x params [""_Unit"",""_EventhandlerList""];" \n
-                         "	if (alive _Unit) then" \n
-                         "	{" \n
-                         "	{" \n
-                         "		_Unit removeEventHandler [(_x#0),(_x#1)];" \n
-                         "	} foreach _Eventhandlerlist;" \n
-                         "	};" \n
-                         "} foreach _Eventhandlers;"/*%FSM</STATEINIT""">*/;
+                         ""/*%FSM</STATEINIT""">*/;
                         precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
                         class Links
                         {
@@ -435,17 +424,7 @@ class FSM
                          "VcmAI_ActiveList deleteAt _N;" \n
                          "" \n
                          "if (VCM_DebugFSM) then {diag_log (format [""%1: EXITED VCOM SCRIPTS"",_Group])};" \n
-                         "" \n
-                         "//Remove all eventhandlers" \n
-                         "{" \n
-                         "	_x params [""_Unit"",""_EventhandlerList""];" \n
-                         "	if (alive _Unit) then" \n
-                         "	{" \n
-                         "	{" \n
-                         "		_Unit removeEventHandler [(_x#0),(_x#1)];" \n
-                         "	} foreach _Eventhandlerlist;" \n
-                         "	};" \n
-                         "} foreach _Eventhandlers;"/*%FSM</STATEINIT""">*/;
+                         ""/*%FSM</STATEINIT""">*/;
                         precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
                         class Links
                         {
@@ -1079,18 +1058,7 @@ class FSM
                          "VcmAI_ActiveList deleteAt _N;" \n
                          "" \n
                          "if (VCM_DebugFSM) then {diag_log (format [""%1: EXITED VCOM SCRIPTS"",_Group])};" \n
-                         "" \n
-                         "" \n
-                         "//Remove all eventhandlers" \n
-                         "{" \n
-                         "	_x params [""_Unit"",""_EventhandlerList""];" \n
-                         "	if (alive _Unit) then" \n
-                         "	{" \n
-                         "	{" \n
-                         "		_Unit removeEventHandler [(_x#0),(_x#1)];" \n
-                         "	} foreach _Eventhandlerlist;" \n
-                         "	};" \n
-                         "} foreach _Eventhandlers;"/*%FSM</STATEINIT""">*/;
+                         ""/*%FSM</STATEINIT""">*/;
                         precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
                         class Links
                         {
