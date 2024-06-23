@@ -102,9 +102,10 @@ private _allCrates = [];
 
 // Get all blufor groups
 private _allBlueGroups = allGroups select {
-    (side _x == KPLIB_side_player) &&                 // Only blufor groups
-    {isNull objectParent (leader _x)} &&                // Make sure it's an infantry group
-    {!(((units _x) select {alive _x}) isEqualTo [])}    // At least one unit has to be alive
+    (side _x == west) &&                               // Only BLUFOR groups (assuming west is BLUFOR side)
+    {isNull objectParent (leader _x)} &&               // Make sure it's an infantry group
+    {!(((units _x) select {alive _x}) isEqualTo [])} && // At least one unit has to be alive
+    {!isPlayer _x} count units _x == count units _x // No player units in the group
 };
 
 // Fetch all objects and AI groups near each FOB

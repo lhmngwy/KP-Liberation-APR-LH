@@ -57,7 +57,10 @@ addMissionEventHandler ["PlayerDisconnected", {
 
     // Save AI squad members data (only unit type)
     private _aiData = _aiSquad apply {
-        typeOf _x
+        _type = typeOf _x;
+        doGetOut _x;
+        deleteVehicle _x;
+        _type;
     };
 
     // Retrieve existing AI data and update with current player's squad
