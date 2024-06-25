@@ -8,6 +8,8 @@ _cfg = configFile >> "cfgVehicles";
 _vehtomark = [];
 
 _support_to_skip = [
+    KPLIB_o_fuelContainer,
+    KPLIB_o_ammoContainer,
     KPLIB_b_logiStation,
     KPLIB_b_airControl,
     "B_Slingload_01_Repair_F",

@@ -42,9 +42,9 @@ if ((side group _unit == KPLIB_side_enemy) && (_unit isKindOf "CAManBase") && (a
 
         if (alive _unit) then {
             private _CapturedPlayer = _unit getVariable ["KPLIB_prisonner_whois", objNull];
-            if (_CapturedPlayer == objNull) then {
+            if (isNull _capturedPlayer) then {
                 private _players = allPlayers;
-                private _nearestPlayer = objNull;
+                private _nearestPlayer = player;
                 private _minDistance = 100;
                 {
                     private _distance = _unit distance _x;

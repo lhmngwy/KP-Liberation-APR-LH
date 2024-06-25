@@ -186,6 +186,7 @@ KPLIB_range_fob = 125;
 KPLIB_height_halo = 2500;
 
 // Range to activate a sector.
+<<<<<<< HEAD
 KPLIB_range_sectorActivation   = 1250;
 KPLIB_range_capitalActivation  = 1250;
 KPLIB_range_cityActivation     = 1250;
@@ -194,6 +195,16 @@ KPLIB_range_militaryActivation = 1250;
 KPLIB_range_towerActivation    = 1250;
 KPLIB_range_airSpawnActivation = 1250;
 KPLIB_range_pointActivation    = 1250;
+=======
+KPLIB_range_sectorActivation   = 1000;
+KPLIB_range_capitalActivation  = 1250;
+KPLIB_range_cityActivation     = 750;
+KPLIB_range_factoryActivation  = 500;
+KPLIB_range_militaryActivation = 1500;
+KPLIB_range_towerActivation    = 500;
+KPLIB_range_airSpawnActivation = 500;
+KPLIB_range_pointActivation    = 500;
+>>>>>>> e00d9e12cd6b7339f934b3c87371480f2ed08178
 
 // Range to capture a sector.
 KPLIB_range_sectorCapture = 175;

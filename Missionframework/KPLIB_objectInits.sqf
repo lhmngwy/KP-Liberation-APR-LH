@@ -157,6 +157,16 @@ KPLIB_objectInits = [
         }
     ],
 
+    // Add KPLQ Radio to static radios
+    [
+        ["Land_FMradio_F", "Land_SurvivalRadio_F", "CUP_radio_b", "Radio", "Radio_Old"],
+        {
+            if (KPLIB_klpq) then {
+                [_this, false] call klpq_musicRadio_fnc_addRadio;
+            };
+        }
+    ],
+
     // Disable autocombat (if set in parameters) and fleeing
     [
         ["CAManBase"],

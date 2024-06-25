@@ -45,7 +45,7 @@ if (isClass (configfile >> "CfgPatches" >> "ace_field_ration")) then {_acefr = t
         _target setVariable ["lastHealTime", _localtime];
         if (KPLIB_ace_med) then {[_caller, _target] call ace_medical_treatment_fnc_fullHeal;} else {_target setDamage 0;};
         if (isPlayer _target) then {
-            if (_acefr) then {_target setVariable ["acex_field_rations_thirst",0]; _target setVariable ["acex_field_rations_hunger",0];};
+            if (_acefr) then {_target setVariable ["acex_field_rations_thirst",0,true]; _target setVariable ["acex_field_rations_hunger",0,true];};
             if (_target isNotEqualTo _caller) then {_healedunits pushBack _target;};
         };
     } else {
