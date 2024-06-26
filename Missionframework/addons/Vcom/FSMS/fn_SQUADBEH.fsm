@@ -742,6 +742,10 @@ class FSM
                          "{" \n
                          "    _NearestFriendly2Enemy = objNull; // Set to objNull if it returns an array" \n
                          "};" \n
+                         "if (_NearestEnemy isEqualType []) then" \n
+                         "{" \n
+                         "    _NearestEnemy = objNull; // Set to objNull if it returns an array" \n
+                         "};" \n
                          " _PredictedLoc = (_NearestFriendly2Enemy targetKnowledge (vehicle _NearestEnemy))#6;" \n
                          "_LocAccuracy = _NearestEnemy distance2d _PredictedLoc;" \n
                          "" \n
