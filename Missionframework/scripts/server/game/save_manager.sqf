@@ -48,12 +48,7 @@ addMissionEventHandler ["PlayerDisconnected", {
     if (isNull _unit) exitWith {};
 
     // Get AI squad members
-    private _aiSquad = [];
-    {
-        if (!isPlayer _x) then {
-            _aiSquad pushBack _x;
-        };
-    } forEach units group _unit;
+    _aiSquad = (units group _unit) select {!(isPlayer _x) && (alive _x) && !((typeOf _x) in KPLIB_o_inf_classes) && !((typeOf _x) in KPLIB_o_militiaInfantry)};
 
     // Save AI squad members data (only unit type)
     private _aiData = _aiSquad apply {

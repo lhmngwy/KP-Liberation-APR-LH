@@ -100,13 +100,15 @@ private _allStorages = [];
 private _allMines = [];
 private _allCrates = [];
 
-// Get all blufor groups
+// Get all blufor AI groups
 private _allBlueGroups = allGroups select {
-    (side _x == west) &&                               // Only BLUFOR groups (assuming west is BLUFOR side)
-    {isNull objectParent (leader _x)} &&               // Make sure it's an infantry group
-    {!(((units _x) select {alive _x}) isEqualTo [])} && // At least one unit has to be alive
-    {!isPlayer _x} count units _x == count units _x // No player units in the group
+    (side _x == west) &&                                    // Only BLUFOR groups (assuming west is BLUFOR side)
+    {isNull objectParent (leader _x)} &&                    // Make sure it's an infantry group
+    {!(((units _x) select {alive _x}) isEqualTo [])} &&     // At least one unit has to be alive
+    {isPlayer _x} count units _x == 0 &&                    // No player units in the group
+    (groupId _x) find "HQ" == -1                        // Group name does not contain "HQ"
 };
+
 
 // Fetch all objects near each FOB
 private ["_fobPos", "_fobObjects", "_grpUnits", "_fobMines"];
@@ -150,8 +152,8 @@ _allObjects = _allObjects + (vehicles select {
 
 // Fetch all infantry groups
 {
-    // Get only living AI units of the group by excluding possible POWs currently in the player group
-    _grpUnits = (units _x) select {!(isPlayer _x) && (alive _x) && !((typeOf _x) in KPLIB_o_inf_classes) && !((typeOf _x) in KPLIB_o_militiaInfantry)};
+    // Get only living AI units
+    _grpUnits = (units _x) select {alive _x};
     // Add to save array
     _aiGroups pushBack [getPosATL (leader _x), (_grpUnits apply {typeOf _x})];
 } forEach (_allBlueGroups);
