@@ -186,7 +186,8 @@ private ["_savedPos", "_savedVecDir", "_savedVecUp", "_class", "_hasCrew", "_inv
         _inventory = [_x] call fnc_serializeCargo;
         
         _fuel = fuel _x;
-        _fuelCargo = getFuelCargo _x;
+        if (!KPLIB_ace_ref) then { _fuelCargo = getFuelCargo _x; };
+        if (KPLIB_ace_ref) then { _fuelCargo = _x call ace_refuel_fnc_getFuel; };
         _damages = getAllHitPointsDamage _x;
         
         _objectsToSave pushBack [_class, _savedPos, _savedVecDir, _savedVecUp, _hasCrew, _inventory, _fuel, _fuelCargo, _damages];
