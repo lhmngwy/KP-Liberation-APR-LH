@@ -10,6 +10,7 @@ My customisations include:
 - Updated all vanilla presets, all factions have access to all guns. Armour and vehicles are still faction restricted.
 - AI squad members will now redeploy with the player.
 - Added persistent player squads, disconnect and reconnect and you will still have your squad!
+- Blufor vehicles and HC squads will be saved anywhere on the map.
 
 Integrated from others:
 
