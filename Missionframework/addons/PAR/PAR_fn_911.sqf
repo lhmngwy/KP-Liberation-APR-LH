@@ -4,9 +4,7 @@ _medic setHitPointDamage ["hitLegs",0];
 _medic allowDamage false;
 _medic setCaptive true;
 
-private _grpmedic = createGroup [civilian, true];
-[_medic] joinSilent _grpmedic;
-_grpmedic setBehaviourStrong "AWARE";
+_medic setBehaviourStrong "AWARE";
 
 unassignVehicle _medic;
 if (!isnull objectParent _medic) then {
