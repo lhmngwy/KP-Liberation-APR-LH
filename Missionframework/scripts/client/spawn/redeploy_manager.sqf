@@ -194,12 +194,16 @@ while {true} do {
         player setposATL _destpos;
         player setDir (random 360);
 
-        // Move AI squad members
-        private _aisquad = (units group player) select {alive _x && !isPlayer _x}; // Get all AI squad members
-        {
-            _x setposATL _destpos;
-            _x setDir (random 360);
-        } forEach _aisquad;
+        // Move AI squad members (exclude aircraft carrier)
+        if (!surfaceIsWater _destpos) then {
+            private _aisquad = (units group player) select {alive _x && !isPlayer _x}; // Get all AI squad members
+            {
+                _x setposATL _destpos;
+                _x setDir (random 360);
+            } forEach _aisquad;
+            doStop _aisquad;
+            _aisquad doFollow player;
+        };
 
         if ((lbCurSel 203) > 0) then {
             private _selectedLoadout = _loadouts_data select ((lbCurSel 203) - 1);
