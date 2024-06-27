@@ -665,7 +665,7 @@
 			"SLIDER", // setting type
 			"West aiming speed", // Pretty name shown inside the ingame settings menu. Can be stringtable entry.
 			"VCOM AI West Skill", // Pretty name of the category where the setting can be found. Can be stringtable entry.
-			[0,1,0.15,2], // data for this setting:
+			[0,1,0.3,2], // data for this setting:
 			true, // "_isGlobal" flag. Set this to true to always have this setting synchronized between all clients in multiplayer
 			{
 				params ["_value"];
@@ -777,7 +777,7 @@
 			"SLIDER", // setting type
 			"East aiming shake", // Pretty name shown inside the ingame settings menu. Can be stringtable entry.
 			"VCOM AI East Skill", // Pretty name of the category where the setting can be found. Can be stringtable entry.
-			[0,1,0.15,2], // data for this setting:
+			[0,1,0.3,2], // data for this setting:
 			true, // "_isGlobal" flag. Set this to true to always have this setting synchronized between all clients in multiplayer
 			{
 				params ["_value"];
@@ -915,7 +915,7 @@
 			"SLIDER", // setting type
 			"Resistance aiming speed", // Pretty name shown inside the ingame settings menu. Can be stringtable entry.
 			"VCOM AI Resistance Skill", // Pretty name of the category where the setting can be found. Can be stringtable entry.
-			[0,1,0.15,2], // data for this setting:
+			[0,1,0.3,2], // data for this setting:
 			true, // "_isGlobal" flag. Set this to true to always have this setting synchronized between all clients in multiplayer
 			{
 				params ["_value"];
@@ -1039,7 +1039,7 @@
 			"SLIDER", // setting type
 			"General aiming speed", // Pretty name shown inside the ingame settings menu. Can be stringtable entry.
 			"VCOM AI General Skill", // Pretty name of the category where the setting can be found. Can be stringtable entry.
-			[0,1,0.35,2], // data for this setting:
+			[0,1,0.3,2], // data for this setting:
 			true, // "_isGlobal" flag. Set this to true to always have this setting synchronized between all clients in multiplayer
 			{
 				params ["_value"];
