@@ -143,12 +143,6 @@ class Params {
         texts[] = {""};
         default = "";
     };
-    class Spacer2 {
-        title = "";
-        values[] = {""};
-        texts[] = {""};
-        default = "";
-    };
     class GameplayOptions {
         title = $STR_PARAMS_GAMEPLAYOPTIONS;
         values[] = {""};
@@ -305,7 +299,7 @@ class Params {
         texts[] = {$STR_PARAMS_ENABLED, $STR_PARAMS_DISABLED};
         default = 0;
     };
-    class Spacer3 {
+    class Spacer2 {
         title = "";
         values[] = {""};
         texts[] = {""};
@@ -365,7 +359,7 @@ class Params {
         texts[] = {$STR_WIPE_NO, $STR_WIPE_YES};
         default = 0;
     };
-    class Spacer4 {
+    class Spacer3 {
         title = "";
         values[] = {""};
         texts[] = {""};
