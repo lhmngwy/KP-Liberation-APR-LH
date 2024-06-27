@@ -72,7 +72,7 @@ if(isServer) then {
     } else {
         // Revive Options
         ["--- Revive Options ---", "PARAM"] call KPLIB_fnc_log;
-        GET_PARAM(bis_reviveParam_mode, "ReviveMode", 1);
+        GET_PARAM(bis_reviveParam_mode, "ReviveMode", 0);
         GET_PARAM(bis_reviveParam_duration, "ReviveDuration", 6);
         GET_PARAM(bis_reviveParam_requiredTrait, "ReviveRequiredTrait", 1);
         GET_PARAM(bis_reviveParam_medicSpeedMultiplier, "ReviveMedicSpeedMultiplier", 1);

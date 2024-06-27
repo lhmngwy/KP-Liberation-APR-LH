@@ -54,9 +54,6 @@ while {true} do {
                     private _msg = "";
                     private _cur_revive = _unit getVariable ["PAR_revive_max", PAR_ai_revive];
                     private _near_medical = (count (nearestObjects [_unit, [PAR_medical_source], 12]) > 0);
-                    if (_cur_revive == 0) then {
-                        _msg = format ["%1 is critical! (Revives left: 0)", name _unit];
-                    };
                     if (_msg != "") then {
                         [_unit, _msg] call PAR_fn_globalchat;
                         _unit setVariable ["PAR_revive_msg_timer", round (time + (3 * 60))];

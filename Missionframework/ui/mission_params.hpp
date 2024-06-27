@@ -143,60 +143,6 @@ class Params {
         texts[] = {""};
         default = "";
     };
-    class ReviveOptions {
-        title = $STR_PARAMS_REVIVEOPTIONS;
-        values[] = {""};
-        texts[] = {""};
-        default = "";
-    };
-    class ReviveMode {
-        title = $STR_A3_ReviveMode;
-        values[] = {0, 1};
-        texts[] = {$STR_A3_Disabled, $STR_A3_EnabledForAllPlayers};
-        default = 0;
-    };
-    class ReviveDuration {
-        title = $STR_A3_ReviveDuration;
-        values[] = {6, 8, 10,12, 15, 20, 25, 30};
-        texts[] = {6, 8, 10, 12, 15, 20, 25, 30};
-        default = 6;
-    };
-    class ReviveRequiredTrait {
-        title = $STR_A3_RequiredTrait;
-        values[] = {0, 1};
-        texts[] = {$STR_A3_None, $STR_A3_Medic};
-        default = 0;
-    };
-    class ReviveMedicSpeedMultiplier {
-        title = $STR_A3_RequiredTrait_MedicSpeedMultiplier;
-        values[] = {1, 1.5, 2, 2.5, 3};
-        texts[] = {"1x", "1.5x", "2x", "2.5x", "3x"};
-        default = 1;
-    };
-    class ReviveRequiredItems {
-        title = $STR_A3_RequiredItems;
-        values[] = {0, 1, 2};
-        texts[] = {$STR_A3_None, $STR_A3_Medikit, $STR_A3_FirstAidKitOrMedikit};
-        default = 2;
-    };
-    class UnconsciousStateMode {
-        title = $STR_A3_IncapacitationMode;
-        values[] = {0, 1, 2};
-        texts[] = {$STR_A3_Basic, $STR_A3_Advanced, $STR_A3_Realistic};
-        default = 0;
-    };
-    class ReviveBleedOutDuration {
-        title = $STR_A3_BleedOutDuration;
-        values[] = {10, 15, 20, 30, 45, 60, 90, 180, 300};
-        texts[] = {10, 15, 20, 30, 45, 60, 90, 180, 300};
-        default = 300;
-    };
-    class ReviveForceRespawnDuration {
-        title = $STR_A3_ForceRespawnDuration;
-        values[] = {3, 4, 5, 6, 7, 8, 9, 10};
-        texts[] = {3, 4, 5, 6, 7, 8, 9, 10};
-        default = 10;
-    };
     class Spacer2 {
         title = "";
         values[] = {""};
