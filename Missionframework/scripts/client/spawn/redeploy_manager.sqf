@@ -195,13 +195,13 @@ while {true} do {
         player setDir (random 360);
 
         // Move AI squad members (exclude aircraft carrier)
+        private _aisquad = (units group player) select {alive _x && !isPlayer _x}; // Get all AI squad members
+        doStop _aisquad;
         if (!surfaceIsWater _destpos) then {
-            private _aisquad = (units group player) select {alive _x && !isPlayer _x}; // Get all AI squad members
             {
                 _x setposATL _destpos;
                 _x setDir (random 360);
             } forEach _aisquad;
-            doStop _aisquad;
             _aisquad doFollow player;
         };
 
