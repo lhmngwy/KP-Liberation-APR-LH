@@ -94,11 +94,9 @@ addMissionEventHandler ["PlayerConnected", {
         params ["_uid", "_name"];
 
         private _unit = objNull;
-        private _maxWaitTime = 60;  // Maximum wait time in seconds
-        private _startTime = time;
 
-        // Loop until the player unit is found or the maximum wait time is exceeded
-        while {isNull _unit && (time - _startTime < _maxWaitTime)} do {
+        // Loop until the player unit is found
+        while {isNull _unit} do {
             _unit = _uid call BIS_fnc_getUnitByUID;
             if (isNull _unit) then {
                 sleep 1;  // Wait for 1 second before rechecking
