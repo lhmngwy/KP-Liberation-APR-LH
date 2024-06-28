@@ -68,8 +68,6 @@ if (!KPLIB_param_weaponSway) then {
 
 execVM "scripts\client\ui\intro.sqf";
 
-[player] joinSilent (createGroup [KPLIB_side_player, true]);
-
 // Commander init
 if (player isEqualTo ([] call KPLIB_fnc_getCommander)) then {
     // Start tutorial

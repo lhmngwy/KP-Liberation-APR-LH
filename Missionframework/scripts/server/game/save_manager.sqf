@@ -114,9 +114,11 @@ addMissionEventHandler ["PlayerConnected", {
             };
         } forEach _existingData;
 
+        [_unit] joinSilent (createGroup [KPLIB_side_player, true]);
+
         // Recreate AI squad members at the player's position
         {
-            private _aiUnit = (_x createUnit [position _unit, group _unit]);
+            _x createUnit [position _unit, group _unit];
         } forEach _aiData;
     };
 }];
