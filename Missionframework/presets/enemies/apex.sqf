@@ -24,7 +24,6 @@ KPLIB_o_rifleman = "O_T_Soldier_F";                                     // Rifle
 KPLIB_o_riflemanLAT = "O_T_Soldier_LAT_F";                              // Rifleman (LAT)
 KPLIB_o_grenadier = "O_T_Soldier_GL_F";                                 // Grenadier
 KPLIB_o_machinegunner = "O_T_Soldier_AR_F";                             // Autorifleman
-KPLIB_o_heavyGunner = "O_T_Soldier_AR_F";                               // Autorifleman
 KPLIB_o_marksman = "O_T_Soldier_M_F";                                   // Marksman
 KPLIB_o_sharpshooter = "O_T_Soldier_M_F";                               // Marksman
 KPLIB_o_sniper = "O_T_Sniper_F";                                        // Sniper
@@ -33,6 +32,7 @@ KPLIB_o_aaSpecialist = "O_T_Soldier_AA_F";                              // AA Sp
 KPLIB_o_medic = "O_T_Medic_F";                                          // Combat Life Saver
 KPLIB_o_engineer = "O_T_Engineer_F";                                    // Engineer
 KPLIB_o_paratrooper = "O_T_Soldier_PG_F";                               // Paratrooper
+KPLIB_o_expSpecialist = "O_T_Soldier_Exp_F";                              // Explosive specialist
 
 // Enemy vehicles used by secondary objectives.
 KPLIB_o_mrap = "O_T_LSV_02_unarmed_F";                                  // Qilin
@@ -82,6 +82,7 @@ KPLIB_o_armyVehicles = [
     "O_T_MBT_02_cannon_ghex_F",                                         // T-100 Varsuk
     "O_T_MBT_04_cannon_F",                                              // T-140 Angara
     "O_T_MBT_04_command_F"                                              // T-140K Angara
+    "O_T_MBT_02_arty_ghex_F"                                            // 2S9 Sochor
 ];
 
 // All enemy vehicles that can spawn as sector defenders and patrols but at a lower enemy combat readiness (aggression levels).
