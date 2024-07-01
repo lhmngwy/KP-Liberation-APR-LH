@@ -34,7 +34,7 @@ private _targetunits = units KPLIB_side_player select {(alive _x) and (_x distan
 private _healedunits = [];
 private _cooldownunits = [];
 private _acefr = false;
-if (isClass (configfile >> "CfgPatches" >> "ace_field_ration")) then {_acefr = true};
+if (isClass (configfile >> "CfgPatches" >> "ace_field_rations")) then {_acefr = true};
 
 {
     private _target = _x;

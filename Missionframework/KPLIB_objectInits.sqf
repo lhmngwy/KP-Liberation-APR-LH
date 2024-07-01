@@ -162,7 +162,11 @@ KPLIB_objectInits = [
         ["Land_FMradio_F", "Land_SurvivalRadio_F", "CUP_radio_b", "Radio", "Radio_Old"],
         {
             if (KPLIB_klpq) then {
-                [_this, false] call klpq_musicRadio_fnc_addRadio;
+                [_this] spawn {
+                    params ["_radio"];
+                    waitUntil {sleep 0.1; time > 0};
+                    [_radio, false] remoteExecCall ["klpq_musicRadio_fnc_addRadio", 0, _radio];
+                };
             };
         }
     ],

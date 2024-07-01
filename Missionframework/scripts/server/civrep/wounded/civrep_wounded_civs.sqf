@@ -16,9 +16,11 @@ for "_i" from 1 to _count do {
     };
     private _civ = [selectRandom KPLIB_c_units, _pos, _grp] call KPLIB_fnc_createManagedUnit;
     _civ setDir (random 360);
+    doStop _civ;
+    _civ stop true;
     _civ disableAI "ALL";
     removeAllItems _civ;
-    _civ setDamage 0.5;
+    _civ setDamage 0.75;
     _civ call F_cr_woundedAnim;
     if (KPLIB_ace_med) then {[_civ] remoteExec ["KPLIB_fnc_crAddAceAction"];};
     _civs pushBack _civ;
@@ -55,6 +57,8 @@ while {true} do {
                     [_civx, "AinjPpneMstpSnonWnonDnon_kneel"] remoteExecCall ["switchMove"];
                     [_civx, "AinjPpneMstpSnonWnonDnon_kneel"] remoteExecCall ["playMoveNow"];
                     sleep 2;
+                    _civx doFollow leader group _civx;
+                    _civx stop false;
                     _civx enableAI "ALL";
                     [4, [(name _civx)]] remoteExec ["KPLIB_fnc_crGlobalMsg"];
                     [KPLIB_cr_wounded_gain] call F_cr_changeCR;

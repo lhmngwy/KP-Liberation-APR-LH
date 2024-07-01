@@ -35,7 +35,7 @@ while { KPLIB_endgame == 0 } do {
             if ( _sector_spawn_pos distance (markerpos _x) < 2500) then {
                 _sectors_spawn pushBack _x;
             };
-        } foreach (KPLIB_sectors_all - KPLIB_sectors_player);
+        } foreach (KPLIB_sectors_all - (KPLIB_sectors_player + KPLIB_sectors_active));
         private _sector_spawn = selectRandom _sectors_spawn;
         if (!isNil "_sector_spawn") then {_sector_spawn_pos = markerPos _sector_spawn};
 

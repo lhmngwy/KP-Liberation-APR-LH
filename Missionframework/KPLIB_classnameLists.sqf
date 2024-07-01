@@ -16,7 +16,7 @@ kp_fuel_ignore_vehicles = [
     "HMCS",
     "HMCS_501",
     "HMCS_VW1",
-	
+    
     "gm_ge_army_bicycle_01_oli",
     "C_Cher90s_Civ_Bike",
     "RDS_MMT_Civ_01",
@@ -28,6 +28,9 @@ kp_fuel_ignore_vehicles = [
 
 // Vehicle classnames which also function as ACE medical vehicles.
 KPLIB_medical_vehicles = [
+    "PRACS_BMR_AMB",
+    "PRACS_M250_AMB",
+    "PRACS_Sa330_Puma_MED",
     "B_T_Truck_01_medical_F",
     "B_Truck_01_medical_F",
     "C_Van_02_medevac_F",
@@ -113,6 +116,13 @@ KPLIB_medical_facilities = [
 
 // Classnames of ACE crates
 KPLIB_ace_crates = [
+    "BWA3_box_120mm_Mo_Combo",
+    "BWA3_box_120mm_Mo_HE",
+    "BWA3_box_120mm_Mo_HE_annz",
+    "BWA3_box_120mm_Mo_HE_dpz",
+    "BWA3_box_120mm_Mo_Illum",
+    "BWA3_box_120mm_Mo_Smoke",
+    
     "ACE_Box_82mm_Mo_Combo",
     "ACE_Box_82mm_Mo_HE",
     "ACE_Box_82mm_Mo_Illum",
@@ -122,6 +132,10 @@ KPLIB_ace_crates = [
 
 // Everything the AI troups should be able to resupply from.
 KPLIB_aiResupplySources = [
+    "cwr3_b_uk_fv620_reammo",
+    "PRACS_M88",
+    "PRACS_M250_Ammo",
+    "PRACS_m548_ammo",
     "B_APC_Tracked_01_CRV_F",
     "B_Slingload_01_Ammo_F",
     "B_T_APC_Tracked_01_CRV_F",
@@ -176,6 +190,9 @@ KPLIB_aiResupplySources = [
 
 // Everything that can repair other vehicles.
 vehicle_repair_sources = [
+    "cwr3_b_uk_fv620_repair",
+    "PRACS_M88",
+    "PRACS_M250_Repair",
     "Sparky_JSDF_Overhaul_JSDF_JGSDF_type90_Recovery",
     "B_APC_Tracked_01_CRV_F",
     "rhs_gaz66_repair_vmf",
@@ -224,6 +241,10 @@ vehicle_repair_sources = [
 
 // Everything that can rearm other vehicles.
 vehicle_rearm_sources = [
+    "cwr3_b_uk_fv620_reammo",
+    "PRACS_M88",
+    "PRACS_M250_Ammo",
+    "PRACS_m548_ammo",
     "Sparky_JSDF_Overhaul_JSDF_JGSDF_type90_Recovery",
     "B_APC_Tracked_01_CRV_F",
     "rhs_gaz66_ammo_vmf",
@@ -272,6 +293,10 @@ vehicle_rearm_sources = [
 
 // Everything that can refuel other vehicles.
 vehicle_refuel_sources = [
+    "cwr3_b_uk_fv620_refuel",
+    "PRACS_M88",
+    "PRACS_M250_fuel",
+    "PRACS_m548_fuel",
     "B_AFBiH_URAL_Fuel",
     "Sparky_JSDF_Overhaul_JSDF_JGSDF_type90_Recovery",
     "B_APC_Tracked_01_CRV_F",
@@ -613,9 +638,15 @@ KPLIB_radioTowerClassnames = [
 
 // Classnames of objects which should be ignored when building
 KPLIB_collisionIgnoreObjects = [
-    "Land_HelipadSquare_F",
-    "Land_vn_b_helipad_01",
+    "Crater",
+    "Land_ShellCrater_01_decal_F",
+    "Land_ShellCrater_02_debris_F",
+    "Land_ShellCrater_02_decal_F",
+    "Land_Hangar_F",
     "Land_TentHangar_V1_F",
+    "Land_Airport_01_hangar_F",
+    "Land_ServiceHangar_01_L_F",
+    "Land_ServiceHangar_01_R_F",
     "Land_runway_edgelight",
     "Land_runway_edgelight_blue_F",
     "Land_Flush_Light_green_F",
@@ -632,13 +663,20 @@ KPLIB_collisionIgnoreObjects = [
     "Land_PortableLight_double_F",
     "Land_HelipadCircle_F",
     "Land_HelipadRescue_F",
+    "Land_HelipadSquare_F",
+    "Land_HelipadCivil_F",
+    "Land_HelipadEmpty_F",
+    "Land_JumpTarget_F",
     "Helipad",
     "LAND_uns_Heli_pad",
     "LAND_uns_evac_pad",
-    "PortableHelipadLight_01_blue_F",
-    "PortableHelipadLight_01_green_F",
+    "Land_vn_b_helipad_01",
+    "Land_PortableHelipadLight_01_F",
     "PortableHelipadLight_01_red_F",
-    "Land_Airport_01_hangar_F",
+    "PortableHelipadLight_01_green_F",
+    "PortableHelipadLight_01_blue_F",
+    "PortableHelipadLight_01_yellow_F",
+    "PortableHelipadLight_01_white_F",
     "Land_BagFence_Round_F",
     "Land_BagFence_Short_F",
     "Land_BagFence_Long_F",
@@ -648,8 +686,6 @@ KPLIB_collisionIgnoreObjects = [
     "Land_Sign_WarningMilAreaSmall_F",
     "Land_Sign_WarningMilitaryVehicles_F",
     "Land_Razorwire_F",
-    "Sign_Sphere100cm_F",
-    "Land_ClutterCutter_large_F",
     "Land_HighVoltageColumnWire_F",
     "Land_PowerLine_01_wire_50m_F",    
     "Land_PowerLine_01_wire_50m_main_F",    
@@ -677,9 +713,6 @@ KPLIB_collisionIgnoreObjects = [
     "ACE_Wheel",
     "Land_CanisterFuel_F",
     "GroundWeaponHolder",
-    "Land_HelipadCivil_F",
-    "Land_HelipadEmpty_F",
-    "Land_JumpTarget_F",
     "Land_ClutterCutter_large_F",
     "Land_Can_V2_F",
     "Sign_Arrow_Blue_F",
