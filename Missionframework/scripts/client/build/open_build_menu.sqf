@@ -15,7 +15,7 @@ _dialog = createDialog "liberation_build";
 waitUntil { dialog };
 
 _iscommandant = false;
-if (player == [] call KPLIB_fnc_getCommander) then {
+if (player == [] call KPLIB_fnc_getCommander || player getVariable ['KPLIB_hasDirectAccess', false]) then {
     _iscommandant = true;
 };
 
