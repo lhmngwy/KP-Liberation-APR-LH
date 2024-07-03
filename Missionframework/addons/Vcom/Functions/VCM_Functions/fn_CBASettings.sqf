@@ -197,7 +197,7 @@
 			"CHECKBOX", // setting type
 			"AI will use Enhanced Movement", // Pretty name shown inside the ingame settings menu. Can be stringtable entry.
 			"VCOM SETTINGS", // Pretty name of the category where the setting can be found. Can be stringtable entry.
-			false,// data for this setting:
+			true,// data for this setting:
 			true, // "_isGlobal" flag. Set this to true to always have this setting synchronized between all clients in multiplayer
 			{  
 				params ["_value"];
@@ -210,7 +210,7 @@
 			"SLIDER", // setting type
 			"Chance AI use EM - checks every 0.5 secs", // Pretty name shown inside the ingame settings menu. Can be stringtable entry.
 			"VCOM SETTINGS", // Pretty name of the category where the setting can be found. Can be stringtable entry.
-			[0,100,10,0], // data for this setting: [min, max, default, number of shown trailing decimals]
+			[0,100,5,0], // data for this setting: [min, max, default, number of shown trailing decimals]
 			true, // "_isGlobal" flag. Set this to true to always have this setting synchronized between all clients in multiplayer
 			{  
 				params ["_value"];
@@ -236,7 +236,7 @@
 			"CHECKBOX", // setting type
 			"AI steal empty/unlocked vehicles?", // Pretty name shown inside the ingame settings menu. Can be stringtable entry.
 			"VCOM SETTINGS", // Pretty name of the category where the setting can be found. Can be stringtable entry.
-			true,// data for this setting:
+			false,// data for this setting:
 			true, // "_isGlobal" flag. Set this to true to always have this setting synchronized between all clients in multiplayer
 			{  
 				params ["_value"];
@@ -381,7 +381,7 @@
 			"SLIDER", // setting type
 			"Distance AI can hear gunfire.", // Pretty name shown inside the ingame settings menu. Can be stringtable entry.
 			"VCOM SETTINGS", // Pretty name of the category where the setting can be found. Can be stringtable entry.
-			[0,10000,625,0], // data for this setting:
+			[0,10000,550,0], // data for this setting:
 			true, // "_isGlobal" flag. Set this to true to always have this setting synchronized between all clients in multiplayer
 			{  
 				params ["_value"];
@@ -394,7 +394,7 @@
 			"SLIDER", // setting type
 			"Distance AI will call for reinforcements from.", // Pretty name shown inside the ingame settings menu. Can be stringtable entry.
 			"VCOM SETTINGS", // Pretty name of the category where the setting can be found. Can be stringtable entry.
-			[0,10000,625,0], // data for this setting:
+			[0,10000,550,0], // data for this setting:
 			true, // "_isGlobal" flag. Set this to true to always have this setting synchronized between all clients in multiplayer
 			{  
 				params ["_value"];
@@ -420,7 +420,7 @@
 			"SLIDER", // setting type
 			"Time (seconds) AI stay on unarmed Static Weapons", // Pretty name shown inside the ingame settings menu. Can be stringtable entry.
 			"VCOM SETTINGS", // Pretty name of the category where the setting can be found. Can be stringtable entry.
-			[0,10000,10,0], // data for this setting:
+			[0,10000,300,0], // data for this setting:
 			true, // "_isGlobal" flag. Set this to true to always have this setting synchronized between all clients in multiplayer
 			{  
 				params ["_value"];
@@ -434,7 +434,7 @@
 			"SLIDER", // setting type
 			"Chance for AI to place a mine, once in combat.", // Pretty name shown inside the ingame settings menu. Can be stringtable entry.
 			"VCOM SETTINGS", // Pretty name of the category where the setting can be found. Can be stringtable entry.
-			[0,100,75,0], // data for this setting:
+			[0,100,50,0], // data for this setting:
 			true, // "_isGlobal" flag. Set this to true to always have this setting synchronized between all clients in multiplayer
 			{  
 				params ["_value"];

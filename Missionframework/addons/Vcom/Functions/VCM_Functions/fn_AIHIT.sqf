@@ -24,7 +24,7 @@
 */
 params ["_unit", "_source", "_damage", "_instigator"];
 
-if (VCM_MEDICALACTIVE) exitWith {};
+if !(VCM_MEDICALACTIVE) exitWith {};
 
 if (VCM_RAGDOLL && {_unit distance2D _instigator < 101} && {_damage > 0.05} && {!(lifestate _unit isEqualTo "INCAPACITATED")} && {VCM_RAGDOLLCHC > (random 100)}) then
 {
