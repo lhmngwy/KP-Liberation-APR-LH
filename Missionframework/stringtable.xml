@@ -2356,8 +2356,11 @@
             <Chinesesimp>附身</Chinesesimp>
             <Chinese>取代</Chinese>
             <Turkish>Değiştir</Turkish>
-            <Portuguese>Substituir</Portuguese>.
-            <Korean>분대원 교체</Korean><Czech>Nahradit</Czech><Japanese>置き換え</Japanese></Key>
+            <Portuguese>Substituir</Portuguese>
+            <Korean>분대원 교체</Korean>
+            <Czech>Nahradit</Czech>
+            <Japanese>置き換え</Japanese>
+        </Key>
         <Key ID="STR_DEPLOY_ON_MEMBER_TOOLTIP">
             <Original>You will deploy on the selected squad member and replace them while keeping your current loadout.</Original>
             <French>Vous allez vous déployer à la place du member d'escouade selectionné tout en conservant votre équipement actuel.</French>
@@ -6252,7 +6255,7 @@
             <Japanese>民間人 %1 が %2 に殺害された!</Japanese>
         </Key>
         <Key ID="STR_CR_VEHICLEMSG">
-            <Original>A civilian's vehicle was seized!</Original>
+            <Original>Citizens reporting their vehicle was seized by %1!</Original>
             <German>Ein Zivilfahrzeug wurde beschlagnahmt!</German>
             <Spanish>Un vehículo civil fue tomado!</Spanish>
             <Russian>Транспорт гражданского был захвачен!</Russian>
@@ -6263,7 +6266,7 @@
             <Portuguese>Um veículo de civil foi tomado!</Portuguese>
             <Korean>민간인의 차량이 탈취되었다!</Korean>
             <Czech>Civilní vozidlo bylo zajato jednotkami BLUFOR!</Czech>
-            <Japanese>民間車両を違法に徴用しています!</Japanese>
+            <Japanese>市民は %1 によって彼らの車両が不当に徴用されたと報告しています!</Japanese>
         </Key>
         <Key ID="STR_CR_BUILDINGMSG">
             <Original>Civilians are complaining about %1 lost buildings.</Original>
@@ -6277,10 +6280,10 @@
             <Portuguese>Civis estão reclamando sobre %1 construções destruídas</Portuguese>
             <Korean>민간인들이 %1 건물이 파괴된 것에 대해 불평하고 있다. </Korean>
             <Czech>Civilisté si stěžují na %1 zničené budovy.</Czech>
-            <Japanese>市民の家財が %1 個所破壊されました。</Japanese>
+            <Japanese>市民は彼らの家財が %1 個所破壊されたと苦情を伝えています。</Japanese>
         </Key>
         <Key ID="STR_CR_HEALMSG">
-            <Original>Civilian named %1 is thankful for your help.</Original>
+            <Original>Civilian named %1 is thankful to %2 for help.</Original>
             <German>Der Zivilist %1 ist dankbar für die Hilfe.</German>
             <Spanish>El civil %1 se siente agradecido por tu ayuda.</Spanish>
             <Russian>Гражданский %1 благодарен за вашу помощь.</Russian>
@@ -6289,7 +6292,11 @@
             <Chinese>平民 %1 感謝你的幫助。</Chinese>
             <Korean>시민 %1 가 도와줘서 고맙다고 인사한다. </Korean>
             <Czech>Civilista jménem %1 ti děkuje za pomoc.</Czech>
-            <Japanese>民間人 %1 は感謝の意を述べています。</Japanese>
+            <Japanese>民間人 %1 が %2 に感謝の意を表しています。</Japanese>
+        </Key>
+        <Key ID="STR_CR_HELPMSG">
+            <Original>%1 citizens of %2 are injured and need help.</Original>
+            <Japanese>%2 の民間人 %1名 が負傷し助けを要しています。</Japanese>
         </Key>
         <Key ID="STR_PARAM_CR_BUILDING">
             <Original>Civil Reputation penalty for buildings if building is</Original>

@@ -24,7 +24,7 @@ if (!isServer) then {waitUntil {!isNil "KPLIB_initServerDone"};};
 if (!KPPLM_CBA) then {
     ["CBA_A3 not loaded. Aborting Mission! KPLib_APR requires CBA!!!"] call BIS_fnc_error;
     ["CBA_A3 not loaded. This mission requires CBA to run properly."] remoteExec ["hint", 0, true];
-	sleep 1;
+    sleep 1;
     endMission "END2";
     false;
 };

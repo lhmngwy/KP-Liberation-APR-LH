@@ -42,9 +42,9 @@ if (alive _unit) then {
         if (KPLIB_ace) then {
             private _isCuffed = _unit getVariable ["ace_captives_isHandcuffed", false];
             if (_isCuffed) then {
-                ["ace_captives_setHandcuffed", [_unit, false], _unit] call CBA_fnc_targetEvent;
+                ["ace_captives_setHandcuffed", [_unit, false], _unit] remoteExecCall ["CBA_fnc_targetEvent", 2];
             } else {
-                ["ace_captives_setSurrendered", [_unit, false], _unit] call CBA_fnc_targetEvent;
+                ["ace_captives_setSurrendered", [_unit, false], _unit] remoteExecCall ["CBA_fnc_targetEvent", 2];
             };
             sleep 1;
         };

@@ -38,11 +38,12 @@ if (isClass (configfile >> "CfgPatches" >> "ace_field_rations")) then {_acefr = 
 
 {
     private _target = _x;
-    private _localtime = time;
-    private _lastHeal = _target getVariable ["lastHealTime", -6000];
+    private _localtime = serverTime; // MP
+    if (_localtime isEqualTo 0) then {_localtime = time}; // SP
+    private _lastHeal = _target getVariable ["KPLIB_lastHealTime", -6000];
     private _cooltime = KPLIB_param_fullHealCooldown + _lastHeal;
     if (_cooltime < _localtime) then {
-        _target setVariable ["lastHealTime", _localtime];
+        _target setVariable ["KPLIB_lastHealTime", _localtime];
         if (KPLIB_ace_med) then {[_caller, _target] call ace_medical_treatment_fnc_fullHeal;} else {_target setDamage 0;};
         if (isPlayer _target) then {
             if (_acefr) then {_target setVariable ["acex_field_rations_thirst",0,true]; _target setVariable ["acex_field_rations_hunger",0,true];};
@@ -51,10 +52,10 @@ if (isClass (configfile >> "CfgPatches" >> "ace_field_rations")) then {_acefr = 
     } else {
         _cooldownunits pushBack _target;
         private _cooldowntime = (_cooltime - _localtime)/60;
-        if (_target isNotEqualTo _caller) then {
-            [format [localize "STR_FULLHEAL_COOLDOWN", round _cooldowntime, name _caller]] remoteExecCall ["hint", _target];
-        } else {
+        if (_target isEqualTo _caller) then {
             [format [localize "STR_FULLHEAL_COOLDOWN_OWN", round _cooldowntime]] remoteExecCall ["hint", _target];
+        } else {
+            [format [localize "STR_FULLHEAL_COOLDOWN", round _cooldowntime, name _caller]] remoteExecCall ["hint", _target];
         };
     };
 } forEach _targetunits;

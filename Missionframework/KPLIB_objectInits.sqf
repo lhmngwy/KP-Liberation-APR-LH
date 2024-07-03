@@ -96,10 +96,18 @@ KPLIB_objectInits = [
         }
     ],
     
-    // Add ACE variables to corresponding building types
+    // Add ACE variables to corresponding building/vehicle types
     [
-        [KPLIB_b_logiStation],
+        KPLIB_repair_facilities + [KPLIB_b_logiStation],
         {_this setVariable ["ace_isRepairFacility", 1, true];}
+    ],
+    [
+        vehicle_repair_sources,
+        {_this setVariable ["ace_isRepairVehicle", 1, true];}
+    ],
+    [
+        vehicle_rearm_sources,
+        {_this setVariable ["ace_rearm_isSupplyVehicle", true, true];}
     ],
     [
         KPLIB_medical_facilities,
@@ -108,6 +116,20 @@ KPLIB_objectInits = [
     [
         KPLIB_medical_vehicles,
         {_this setVariable ["ace_medical_isMedicalVehicle", true, true];}
+    ],
+
+    // Add ACE refuel function to corresponding building/vehicle types when ace fuelCargo config is missing
+    [
+        vehicle_refuel_sources,
+        {
+            [_this] spawn {
+                params ["_fuelTruck"];
+                waitUntil {sleep 0.1; time > 0};
+                if (getNumber (configfile >> "CfgVehicles" >> (typeOf _fuelTruck) >> "ace_refuel_fuelCargo") <= 0) then {
+                    [_fuelTruck, 3000] remoteExecCall ["ace_refuel_fnc_makeSource", 0, _fuelTruck];
+                };
+            };
+        }
     ],
 
     // Hide Cover on big GM trucks
@@ -149,14 +171,6 @@ KPLIB_objectInits = [
         }
     ],
 
-    // Add VAM Workbench repairFacility compat in case it doesn't work the other way
-    [
-        ["Land_Workbench_01_F"], 
-        {
-            _this setVariable ["ace_isRepairFacility", 1, true];
-        }
-    ],
-
     // Add KPLQ Radio to static radios
     [
         ["Land_FMradio_F", "Land_SurvivalRadio_F", "CUP_radio_b", "Radio", "Radio_Old"],
@@ -168,6 +182,14 @@ KPLIB_objectInits = [
                     [_radio, false] remoteExecCall ["klpq_musicRadio_fnc_addRadio", 0, _radio];
                 };
             };
+        }
+    ],
+
+    // Set MH47 Probe
+    [
+        ["CUP_B_MH47E_USA"],
+        {
+            [_this,nil,["Hide_Probe",0]] call BIS_fnc_initVehicle;
         }
     ],
 

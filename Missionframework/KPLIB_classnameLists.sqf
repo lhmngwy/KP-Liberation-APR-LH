@@ -114,8 +114,22 @@ KPLIB_medical_facilities = [
     "US_Tent_MASH"
 ];
 
+// Building classnames which also function as ACE repair facilities.
+KPLIB_repair_facilities = [
+    "Land_RepairDepot_01_green_F",
+    "Land_RepairDepot_01_tan_F",
+    "Land_Workbench_01_F"
+];
+
 // Classnames of ACE crates
 KPLIB_ace_crates = [
+    "APR_MREBox_GreenTea",
+    "APR_MREBox_Water",
+    "APR_MREBox_IDAP",
+    "APR_MREBox_MRE",
+    "APR_MREBox_JP",
+    "APR_MREBox_ALL",
+    
     "BWA3_box_120mm_Mo_Combo",
     "BWA3_box_120mm_Mo_HE",
     "BWA3_box_120mm_Mo_HE_annz",
@@ -220,7 +234,6 @@ vehicle_repair_sources = [
     "O_Heli_Transport_04_repair_F",
     "O_T_Truck_03_repair_ghex_F",
     "O_Truck_03_repair_F",
-    "Land_Workbench_01_F",
     "RHS_Ural_Repair_VDV_01",
     "rhsusf_M1078A1R_SOV_M2_D_fmtv_socom",
     "rhsusf_M1239_M2_Deploy_socom_d",
@@ -345,6 +358,8 @@ vehicle_refuel_sources = [
 
 // Classnames of boats, so they can be built on water.
 boats_names = [
+    "sab_mp_rhib",
+    "sab_mp_migaloo",
     "B_Boat_Armed_01_minigun_F",
     "C_Scooter_Transport_01_F",
     "B_Boat_Transport_01_F",

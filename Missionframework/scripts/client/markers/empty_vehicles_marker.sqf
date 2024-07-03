@@ -16,6 +16,7 @@ _support_to_skip = [
     "B_Slingload_01_Fuel_F",
     "B_Slingload_01_Ammo_F"
 ];
+_support_to_skip = _support_to_skip apply {toLowerANSI _x};
 
 {
     _vehtomark append _x;

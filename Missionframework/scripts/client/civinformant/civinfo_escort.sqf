@@ -2,7 +2,7 @@ scriptName "civinfo_escort";
 
 params ["_informant"];
 
-if (isDedicated) exitWith {};
+waitUntil {sleep 0.5; local _unit};
 
 if (KPLIB_civinfo_debug > 0) then {[format ["civinfo_escort called on: %1 - Parameters: [%2]", debug_source, _informant], "CIVINFO"] remoteExecCall ["KPLIB_fnc_log", 2];};
 
@@ -25,9 +25,9 @@ if (alive _informant) then {
         if (KPLIB_ace) then {
             private _isCuffed = _informant getVariable ["ace_captives_isHandcuffed", false];
             if (_isCuffed) then {
-                ["ace_captives_setHandcuffed", [_informant, false], _informant] call CBA_fnc_targetEvent;
+                ["ace_captives_setHandcuffed", [_informant, false], _informant] remoteExecCall ["CBA_fnc_targetEvent", 2];
             } else {
-                ["ace_captives_setSurrendered", [_informant, false], _informant] call CBA_fnc_targetEvent;
+                ["ace_captives_setSurrendered", [_informant, false], _informant] remoteExecCall ["CBA_fnc_targetEvent", 2];
             };
             sleep 1;
         };
@@ -38,12 +38,10 @@ if (alive _informant) then {
         [_informant, "AidlPsitMstpSnonWnonDnon_ground00"] remoteExecCall ["switchMove"];
         [_informant] remoteExec ["civinfo_delivered",2];
         if (KPLIB_civinfo_debug > 0) then {["civinfo_escort -> Informant at FOB", "CIVINFO"] remoteExecCall ["KPLIB_fnc_log", 2];};
-        _informant setVariable ["KPLIB_civinfo_under_control", false, true];
+        KPLIB_civinfo_under_control = true;
         sleep 600;
         if (isNull objectParent _informant) then {deleteVehicle _informant} else {(objectParent _informant) deleteVehicleCrew _informant};
         if (KPLIB_civinfo_debug > 0) then {[format ["civinfo_escort finished by: %1", debug_source], "CIVINFO"] remoteExecCall ["KPLIB_fnc_log", 2];};
     };
-} else {
-    if (KPLIB_civinfo_debug > 0) then {[format ["civinfo_escort exited by: %1 - Informant isn't alive", debug_source], "CIVINFO"] remoteExecCall ["KPLIB_fnc_log", 2];};
-    [3] remoteExec ["civinfo_notifications"];
 };
+KPLIB_civinfo_under_control = false;

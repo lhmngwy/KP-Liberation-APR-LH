@@ -17,7 +17,8 @@
 */
 
 params [
-    ["_veh", objNull, [objNull]]
+    ["_veh", objNull, [objNull]],
+    ["_unit", objNull, [objNull]]
 ];
 
 if (isNull _veh) exitWith {["Null object given"] call BIS_fnc_error; false};
@@ -28,7 +29,8 @@ if !(_type in KPLIB_c_vehicles) exitWith {false};
 
 if !(_veh getVariable ["KPLIB_seized", false]) then {
     _veh setVariable ["KPLIB_seized", true, true];
-    [0] remoteExec ["KPLIB_fnc_crGlobalMsg"];
+    _seizedUser = name _unit;
+    [0, [_seizedUser]] remoteExec ["KPLIB_fnc_crGlobalMsg"];
     [KPLIB_cr_vehicle_penalty, true] remoteExec ["F_cr_changeCR", 2];
     stats_civilian_vehicles_seized = stats_civilian_vehicles_seized + 1;
     publicVariable "stats_civilian_vehicles_seized";

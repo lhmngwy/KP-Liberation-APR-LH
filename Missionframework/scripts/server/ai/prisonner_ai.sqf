@@ -25,7 +25,7 @@ if ((side group _unit == KPLIB_side_enemy) && (_unit isKindOf "CAManBase") && (a
         _unit setVariable ["KPLIB_prisonner_surrendered", true, true];
 
         if (KPLIB_ace) then {
-            ["ace_captives_setSurrendered", [_unit, true], _unit] call CBA_fnc_targetEvent;
+            ["ace_captives_setSurrendered", [_unit, true], _unit] remoteExecCall ["CBA_fnc_targetEvent", 2];
         } else {
             _unit disableAI "ANIM";
             _unit disableAI "MOVE";
@@ -61,7 +61,7 @@ if ((side group _unit == KPLIB_side_enemy) && (_unit isKindOf "CAManBase") && (a
                 if (_isCuffed) then {
                     _unit setVariable ["KPLIB_prisonner_captured", true, true];
                 } else {
-                    ["ace_captives_setSurrendered", [_unit, false], _unit] call CBA_fnc_targetEvent;
+                    ["ace_captives_setSurrendered", [_unit, false], _unit] remoteExecCall ["CBA_fnc_targetEvent", 2];
                 };
             } else {
                 _unit setCaptive false;

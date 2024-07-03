@@ -47,7 +47,7 @@ while {(count (units _para_group)) < 8} do {
     [KPLIB_o_paratrooper, markerPos _spawnsector, _para_group] call KPLIB_fnc_createManagedUnit;
 };
 
-{removeBackpack _x; _x addBackPack "B_parachute"; _x moveInCargo _newvehicle;} forEach (units _para_group);
+{removeBackpack _x; _x addBackPack "B_parachute"; _x moveInCargo _newvehicle; _x assignAsCargo _newvehicle;} forEach (units _para_group);
 
 while {(count (waypoints _pilot_group)) != 0} do {deleteWaypoint ((waypoints _pilot_group) select 0);};
 while {(count (waypoints _para_group)) != 0} do {deleteWaypoint ((waypoints _para_group) select 0);};

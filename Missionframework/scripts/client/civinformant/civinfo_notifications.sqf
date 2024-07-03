@@ -13,9 +13,9 @@ switch (_notif_id) do {
         
         private _informant_zone = createMarkerLocal ["informantzone", _pos];
         _informant_zone setMarkerColorLocal "ColorCIV";
-        _informant_zone setMarkerShape "ELLIPSE";
-        _informant_zone setMarkerBrush "FDiagonal";
-        _informant_zone setMarkerSize [75,75];
+        _informant_zone setMarkerShapeLocal "ELLIPSE";
+        _informant_zone setMarkerBrushLocal "FDiagonal";
+        _informant_zone setMarkerSizeLocal [150,150];
     };
     case 1: {
         ["lib_civ_informant_success"] call BIS_fnc_showNotification;
@@ -34,15 +34,15 @@ switch (_notif_id) do {
     };
     case 4: {
         ["lib_civ_hvt_start", [markertext ([10000, _pos] call KPLIB_fnc_getNearestSector)]] call BIS_fnc_showNotification;
-        private _marker = createMarker ["HVT_marker", _pos];
-        _marker setMarkerColor KPLIB_color_enemyActive;
-        _marker setMarkerType "hd_unknown";
+        private _marker = createMarkerLocal ["HVT_marker", _pos];
+        _marker setMarkerColorLocal KPLIB_color_enemyActive;
+        _marker setMarkerTypeLocal "hd_unknown";
 
-        private _marker_zone = createMarker ["HVT_zone", _pos];
-        _marker_zone setMarkerColor KPLIB_color_enemyActive;
-        _marker_zone setMarkerShape "ELLIPSE";
-        _marker_zone setMarkerBrush "FDiagonal";
-        _marker_zone setMarkerSize [500,500];
+        private _marker_zone = createMarkerLocal ["HVT_zone", _pos];
+        _marker_zone setMarkerColorLocal KPLIB_color_enemyActive;
+        _marker_zone setMarkerShapeLocal "ELLIPSE";
+        _marker_zone setMarkerBrushLocal "FDiagonal";
+        _marker_zone setMarkerSizeLocal [500,500];
     };
     case 5: {
         ["lib_civ_hvt_success"] call BIS_fnc_showNotification;

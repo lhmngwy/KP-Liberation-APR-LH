@@ -91,13 +91,13 @@ while {KPLIB_endgame == 0} do {
     private _helislots = KPLIB_heli_slots;
     private _planeslots = KPLIB_plane_slots * 1.5;
     private _difficulty = KPLIB_param_difficulty;
-    if (KPLIB_param_difficulty isEqualTo 4) then {_difficulty = 3};
-    if (KPLIB_param_difficulty isEqualTo 10) then {_difficulty = 5};
-    _maxSAMnumber = _maxSAMnumber + _helislots + _planeslots;
+    if (KPLIB_param_difficulty isEqualTo 4) then {_difficulty = 1};
+    if (KPLIB_param_difficulty isEqualTo 10) then {_difficulty = 2};
+    _maxSAMnumber = _maxSAMnumber + (_helislots / 2) + (_planeslots);
     _maxSAMnumber = _maxSAMnumber + (KPLIB_enemyReadiness / 30);
     _maxSAMnumber = _maxSAMnumber * _difficulty;
     _maxSAMnumber = round _maxSAMnumber;
-    if (_maxSAMnumber > 20) then {_maxSAMnumber = 20};
+    if (_maxSAMnumber > 10) then {_maxSAMnumber = 10};
     // maximum amount of SAM turrets should not exceed number of opfor sectors
     if (_maxSAMnumber > (count KPLIB_sectors_all - count KPLIB_sectors_player)) then {_maxSAMnumber = count KPLIB_sectors_all - count KPLIB_sectors_player};
 

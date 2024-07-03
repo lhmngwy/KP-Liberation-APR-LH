@@ -205,13 +205,13 @@ if ((!(_sector in KPLIB_sectors_player)) && (([markerPos _sector, [_opforcount, 
     {
         if (_x isEqualTo "Turret_Array_Empty") exitWith {};
         _vehicle = [_sectorpos, _x] call KPLIB_fnc_spawnVehicle;
-        if ((_x in KPLIB_o_turrets_MORTAR) && _lambsEnable) then {
-            [group ((crew _vehicle) select 0)] call lambs_wp_fnc_taskArtilleryRegister;
-        };
         [group ((crew _vehicle) select 0),_sectorpos] spawn add_defense_waypoints;
         _managed_units pushback _vehicle;
         {_managed_units pushback _x;} foreach (crew _vehicle);
         sleep 0.25;
+        if ((_x in KPLIB_o_turrets_MORTAR) && _lambsEnable) then {
+            [group ((crew _vehicle) select 0)] call lambs_wp_fnc_taskArtilleryRegister;
+        };
     } forEach _vehtospawn;
 
     if (_building_ai_max > 0) then {
