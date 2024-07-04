@@ -69,7 +69,7 @@ while {true} do {
 
     // Get loadouts either from ACE or BI arsenals
     private ["_loadouts_data"];
-    if (KPLIB_ace && KPLIB_param_arsenalType) then {
+    if (KPLIB_ace_arsenal && KPLIB_param_arsenalType) then {
         _loadouts_data = +(profileNamespace getVariable ["ace_arsenal_saved_loadouts", []]);
     } else {
         private _saved_loadouts = +(profileNamespace getVariable "bis_fnc_saveInventory_data");
@@ -207,7 +207,7 @@ while {true} do {
 
         if ((lbCurSel 203) > 0) then {
             private _selectedLoadout = _loadouts_data select ((lbCurSel 203) - 1);
-            if (KPLIB_ace && KPLIB_param_arsenalType) then {
+            if (KPLIB_ace_arsenal && KPLIB_param_arsenalType) then {
                 [player, _selectedLoadout select 1, KPLIB_fill_mags] call CBA_fnc_setLoadout;
             } else {
                 [player, [profileNamespace, _selectedLoadout]] call BIS_fnc_loadInventory;

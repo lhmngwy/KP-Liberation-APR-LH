@@ -36,7 +36,7 @@ while {true} do {
         _informant setUnitPos "UP";
         sleep 1;
         
-        if (KPLIB_ace) then {
+        if (KPLIB_ace_captives) then {
             ["ace_captives_setSurrendered", [_informant, true], _informant] remoteExecCall ["CBA_fnc_targetEvent", 2];
         } else {
             _informant disableAI "ANIM";
@@ -103,7 +103,7 @@ while {true} do {
             };
             _informant setVariable ["KPLIB_prisonner_whois", _capturedPlayer];
             [[_informant], group _capturedPlayer] remoteExecCall ["joinSilent"];
-            if (KPLIB_ace) then {
+            if (KPLIB_ace_captives) then {
                 private _isCuffed = _informant getVariable ["ace_captives_isHandcuffed", false];
                 if !(_isCuffed) then {
                     ["ace_captives_setSurrendered", [_informant, false], _informant] remoteExecCall ["CBA_fnc_targetEvent", 2];

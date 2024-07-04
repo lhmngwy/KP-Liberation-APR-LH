@@ -42,7 +42,7 @@ if (!isNull _storage) then {
     // Store crate
     _crate attachTo [_storage, [(_storage_positions select _crates_count) select 0, (_storage_positions select _crates_count) select 1, _height]];
     [_crate, false] remoteExec ["enableRopeAttach"];
-    if(KPLIB_ace) then {[_crate, false, [0, 1.5, 0], 0] remoteExec ["ace_dragging_fnc_setCarryable"];};
+    if(KPLIB_ace_dragging) then {[_crate, false, [0, 1.5, 0], 0] remoteExec ["ace_dragging_fnc_setCarryable"];};
 
     // Update sector resource values, if requested
     if (_update) then {

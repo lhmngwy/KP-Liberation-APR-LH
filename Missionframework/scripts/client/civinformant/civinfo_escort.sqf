@@ -22,7 +22,7 @@ if (alive _informant) then {
         sleep 5;
         private _grp = createGroup [KPLIB_side_civilian, true];
         [_informant] joinSilent _grp;
-        if (KPLIB_ace) then {
+        if (KPLIB_ace_captives) then {
             private _isCuffed = _informant getVariable ["ace_captives_isHandcuffed", false];
             if (_isCuffed) then {
                 ["ace_captives_setHandcuffed", [_informant, false], _informant] remoteExecCall ["CBA_fnc_targetEvent", 2];

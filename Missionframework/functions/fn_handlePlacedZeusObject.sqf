@@ -51,7 +51,7 @@ if !(_crate) then {
     _obj setMass 500;
     _obj setVariable ["KPLIB_crate_value", 100, true];
     [_obj, true] call KPLIB_fnc_clearCargo;
-    if (KPLIB_ace) then {[_obj, true, [0, 1.5, 0], 0] remoteExec ["ace_dragging_fnc_setCarryable"];};
+    if (KPLIB_ace_dragging) then {[_obj, true, [0, 1.5, 0], 0] remoteExec ["ace_dragging_fnc_setCarryable"];};
 };
 
 // Add object init codes

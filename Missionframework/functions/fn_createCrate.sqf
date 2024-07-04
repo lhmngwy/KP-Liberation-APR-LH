@@ -37,7 +37,7 @@ _crate setVariable ["KPLIB_crate_value", _amount, true];
 _crate lockInventory true;
 
 // Add ACE carry functionality and disable cargo renaming
-if (KPLIB_ace) then {
+if (KPLIB_ace_dragging) then {
     [_crate, true, [0, 1.5, 0], 0] remoteExec ["ace_dragging_fnc_setCarryable"];
     _crate setVariable ["ace_cargo_noRename", true];
 };

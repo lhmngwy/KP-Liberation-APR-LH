@@ -39,7 +39,7 @@ if (alive _unit) then {
         sleep 5;
         _grp = createGroup [KPLIB_side_civilian, true];
         [_unit] joinSilent _grp;
-        if (KPLIB_ace) then {
+        if (KPLIB_ace_captives) then {
             private _isCuffed = _unit getVariable ["ace_captives_isHandcuffed", false];
             if (_isCuffed) then {
                 ["ace_captives_setHandcuffed", [_unit, false], _unit] remoteExecCall ["CBA_fnc_targetEvent", 2];

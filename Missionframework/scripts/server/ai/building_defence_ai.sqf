@@ -30,7 +30,7 @@ if (isClass (configfile >> "CfgPatches" >> "lambs_wp")) then {
             }
         ) then {
             _move_is_disabled = false;
-            if (KPLIB_ace) then {
+            if (KPLIB_ace_ai) then {
                 [_unit] call ace_ai_fnc_unGarrison;
             } else {
                 _unit enableAI "PATH";
@@ -75,7 +75,7 @@ if (isClass (configfile >> "CfgPatches" >> "lambs_wp")) then {
             }
         ) then {
             _move_is_disabled = false;
-            if (KPLIB_ace) then {
+            if (KPLIB_ace_ai) then {
                 [_unit] call ace_ai_fnc_unGarrison;
             } else {
                 _unit enableAI "PATH";

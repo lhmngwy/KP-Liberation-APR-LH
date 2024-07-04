@@ -60,7 +60,7 @@ if (KPLIB_sectors_fob isEqualTo []) then {
         [_crate, 500] remoteExec ["setMass", _crate];
         [objNull, _crate] call BIS_fnc_curatorObjectEdited;
         _crate lockInventory true;
-        if (KPLIB_ace) then {
+        if (KPLIB_ace_dragging) then {
             [_crate, true, [0, 1.5, 0], 0] remoteExec ["ace_dragging_fnc_setCarryable"];
             _crate setVariable ["ace_cargo_noRename", true];
         };

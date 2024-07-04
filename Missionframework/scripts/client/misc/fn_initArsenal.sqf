@@ -111,7 +111,7 @@ if (KPLIB_param_useArsenalPreset) then {
     } forEach KPLIB_arsenalAllowed;
 
     KPLIB_arsenalAllowed append KPLIB_arsenalAllowedExtension;
-    if (KPLIB_ace && KPLIB_param_arsenalType) then {[player, KPLIB_arsenalAllowed, false] call ace_arsenal_fnc_addVirtualItems;};
+    if (KPLIB_ace_arsenal && KPLIB_param_arsenalType) then {[player, KPLIB_arsenalAllowed, false] call ace_arsenal_fnc_addVirtualItems;};
 
     // Lowering to avoid issues with incorrect capitalized classnames in KPLIB_fnc_checkGear
     KPLIB_arsenalAllowed = KPLIB_arsenalAllowed apply {toLowerANSI _x};
@@ -120,7 +120,7 @@ if (KPLIB_param_useArsenalPreset) then {
     [missionNamespace, true] call BIS_fnc_addVirtualMagazineCargo;
     [missionNamespace, true] call BIS_fnc_addVirtualItemCargo;
     [missionNamespace, true] call BIS_fnc_addVirtualBackpackCargo;
-    if (KPLIB_ace && KPLIB_param_arsenalType) then {[player, true, false] call ace_arsenal_fnc_addVirtualItems;};
+    if (KPLIB_ace_arsenal && KPLIB_param_arsenalType) then {[player, true, false] call ace_arsenal_fnc_addVirtualItems;};
 };
 
 true

@@ -89,7 +89,7 @@ KPLIB_objectInits = [
         KPLIB_crates,
         {
             _this lockInventory true;
-            if (KPLIB_ace) then {
+            if (KPLIB_ace_dragging) then {
                 [_this, true, [0, 1.5, 0], 0] remoteExec ["ace_dragging_fnc_setCarryable"];
                 _this setVariable ["ace_cargo_noRename", true];
             };

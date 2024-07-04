@@ -24,7 +24,7 @@ execVM "scripts\client\markers\sector_manager.sqf";
 execVM "scripts\client\markers\spot_timer.sqf";
 execVM "scripts\client\misc\broadcast_squad_colors.sqf";
 execVM "scripts\client\misc\permissions_warning.sqf";
-if (!KPLIB_ace_ref) then {execVM "scripts\client\misc\resupply_manager.sqf";};
+if (!KPLIB_ace_refuel) then {execVM "scripts\client\misc\resupply_manager.sqf";};
 execVM "scripts\client\misc\secondary_jip.sqf";
 execVM "scripts\client\misc\synchronise_vars.sqf";
 execVM "scripts\client\misc\synchronise_eco.sqf";

@@ -1,11 +1,19 @@
 #include "defines.hpp"
 
 // Check if ACE is running
-if (isClass (configfile >> "CfgPatches" >> "ace_interaction")) then {KPLIB_ace = true; ["ACE detected.", "MOD"] call KPLIB_fnc_log;} else {KPLIB_ace = false};
-// Check if ACE refuel is running
-if (isClass (configfile >> "CfgPatches" >> "ace_refuel")) then {KPLIB_ace_ref = true; ["ACE refuel detected.", "MOD"] call KPLIB_fnc_log;} else {KPLIB_ace_ref = false};
+if (isClass (configfile >> "CfgPatches" >> "ace_common")) then {KPLIB_ace = true; ["ACE detected.", "MOD"] call KPLIB_fnc_log;} else {KPLIB_ace = false};
+// Check if ACE AI is running
+if (isClass (configfile >> "CfgPatches" >> "ace_ai")) then {KPLIB_ace_ai = true; ["ACE AI detected.", "MOD"] call KPLIB_fnc_log;} else {KPLIB_ace_ai = false};
+// Check if ACE arsenal is running
+if (isClass (configfile >> "CfgPatches" >> "ace_arsenal")) then {KPLIB_ace_arsenal = true; ["ACE arsenal detected.", "MOD"] call KPLIB_fnc_log;} else {KPLIB_ace_arsenal = false};
+// Check if ACE captives is running
+if (isClass (configfile >> "CfgPatches" >> "ace_captives")) then {KPLIB_ace_captives = true; ["ACE captives detected.", "MOD"] call KPLIB_fnc_log;} else {KPLIB_ace_captives = false};
+// Check if ACE dragging is running
+if (isClass (configfile >> "CfgPatches" >> "ace_dragging")) then {KPLIB_ace_dragging = true; ["ACE dragging detected.", "MOD"] call KPLIB_fnc_log;} else {KPLIB_ace_dragging = false};
 // Check if ACE Medical is running
 if (isClass (configfile >> "CfgPatches" >> "ace_medical")) then {KPLIB_ace_med = true; ["ACE Medical detected.", "MOD"] call KPLIB_fnc_log;} else {KPLIB_ace_med = false};
+// Check if ACE refuel is running
+if (isClass (configfile >> "CfgPatches" >> "ace_refuel")) then {KPLIB_ace_refuel = true; ["ACE refuel detected.", "MOD"] call KPLIB_fnc_log;} else {KPLIB_ace_refuel = false};
 // Check if KLPQ is running
 if (isClass (configfile >> "CfgPatches" >> "klpq_musicRadio")) then {KPLIB_klpq = true;} else {KPLIB_klpq = false};
 
