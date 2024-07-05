@@ -38,7 +38,33 @@ execVM "addons\PAR\fn_init.sqf";
 player addMPEventHandler ["MPKilled", {
     params ["_unit", "_killer"];
     ["KPLIB_manageKills", [_unit, _killer]] call CBA_fnc_localEvent;
+
+    _hcgrp = _unit getVariable ["KPLIB_lastHC", objNull];
+    _playerGroup = group _unit;
+    
+    // Initialize a flag to check if there are AI members in the player's group
+    private _hasAIMembers = false;
+
+    // Loop through the player's group and delete AI members
+    {
+        if (!isPlayer _x) then {
+            _x setDamage 1;
+            _hasAIMembers = true;
+        };
+    } forEach units _playerGroup;
+
+    // If the player's group had no AI members and _hcgrp is not null, delete AI members from _hcgrp
+    if (!_hasAIMembers && !isNull _hcgrp) then {
+        {
+            if (!isPlayer _x) then {
+                _x setDamage 1;
+            };
+        } forEach units _hcgrp;
+    };
+
+    player setVariable ["KPLIB_lastHC", objNull, true];
 }];
+
 if (KPLIB_param_fuelconsumption) then {
     player addEventHandler ["GetInMan", {[_this select 2] spawn kp_fuel_consumption;}];
 };
