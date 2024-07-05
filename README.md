@@ -12,7 +12,7 @@ My customisations include:
 - Added persistent player squads, disconnect and reconnect and you will still have your squad!
 - Redeploy from anywhere as long as there are no enemies nearby.
 - AI squad members will now redeploy with the player.
-- Respawning will kill your squad too, or the last HC squad you created if you have no squad.
+- Respawning will kill your squad too, or the last HC squad you created if you have no squad. No cheesing respawns to save your squad.
 
 Integrated from others:
 
