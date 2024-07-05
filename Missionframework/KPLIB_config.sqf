@@ -358,7 +358,7 @@ KPLIB_resistance_ambush_chance = 25;
 */
 
 // Time in minutes until a resource crate is produced, when resources multiplier is set to 1.
-KPLIB_production_interval = 30;
+KPLIB_production_interval = 20;
 
 // Percentage of resources you get back from recycling.
 KPLIB_recycling_percentage = 0.5;
