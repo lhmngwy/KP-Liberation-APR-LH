@@ -12,7 +12,7 @@
         - Contact DLC
 
     Optional Mods:
-        - None
+        - https://steamcommunity.com/sharedfiles/filedetails/?id=2177826065
 */
 
 /*
@@ -25,7 +25,7 @@ KPLIB_b_fobBuilding = "Land_Cargo_HQ_V4_F";                                    /
 KPLIB_b_fobBox = "B_Slingload_01_Cargo_F";                            // This is the FOB as a container.
 KPLIB_b_fobTruck = "B_T_Truck_01_box_F";                              // This is the FOB as a vehicle.
 KPLIB_b_arsenal = "B_supplyCrate_F";                                   // This is the virtual arsenal as portable supply crates.
-KPLIB_b_mobileRespawn   = ["Respawn_TentDome_F", "I_E_Truck_02_Medical_F", "B_Slingload_01_Medevac_F"]; // This is the mobile respawn (and medical) truck.
+KPLIB_b_mobileRespawn   = ["EO_TentDome_F", "I_E_Truck_02_Medical_F", "B_Slingload_01_Medevac_F"]; // This is the mobile respawn (and medical) truck.
 KPLIB_b_potato01 = "B_Heli_Transport_03_unarmed_F";                       // This is Potato 01, a multipurpose mobile respawn as a helicopter.
 KPLIB_b_crewUnit = "I_E_Crew_F";                                       // This defines the crew for vehicles.
 KPLIB_b_heliPilotUnit = "I_E_Helipilot_F";                                    // This defines the pilot for helicopters.
@@ -236,11 +236,11 @@ KPLIB_b_vehSupport = [
     ["ACE_Track",10,0,0],
     ["Land_CanisterFuel_F",0,0,2],
     ["I_E_Van_02_medevac_F",150,0,80],                                  // Transporter (Ambulance)
-    [(KPLIB_b_mobileRespawn select 0),200,0,100],                       // Zamak Medevac
+    [(KPLIB_b_mobileRespawn select 1),200,0,100],                       // Zamak Medevac
     ["I_E_Truck_02_Box_F",325,0,75],                                    // Zamak Repair
     ["I_E_Truck_02_fuel_F",125,0,275],                                  // Zamak Fuel
     ["I_E_Truck_02_Ammo_F",125,200,75],                                 // Zamak Ammo
-    [(KPLIB_b_mobileRespawn select 1),200,0,0],                         // Huron Medevac
+    [(KPLIB_b_mobileRespawn select 2),200,0,0],                         // Huron Medevac
     ["B_Slingload_01_Repair_F",275,0,0],                                // Huron Repair
     ["B_Slingload_01_Fuel_F",75,0,200],                                 // Huron Fuel
     ["B_Slingload_01_Ammo_F",75,200,0]                                  // Huron Ammo

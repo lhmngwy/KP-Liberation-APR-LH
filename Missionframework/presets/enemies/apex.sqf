@@ -24,6 +24,7 @@ KPLIB_o_rifleman = "O_T_Soldier_F";                                     // Rifle
 KPLIB_o_riflemanLAT = "O_T_Soldier_LAT_F";                              // Rifleman (LAT)
 KPLIB_o_grenadier = "O_T_Soldier_GL_F";                                 // Grenadier
 KPLIB_o_machinegunner = "O_T_Soldier_AR_F";                             // Autorifleman
+KPLIB_o_heavyGunner = "O_T_HeavyGunner_F";                                // Heavy Gunner
 KPLIB_o_marksman = "O_T_Soldier_M_F";                                   // Marksman
 KPLIB_o_sharpshooter = "O_T_Soldier_M_F";                               // Marksman
 KPLIB_o_sniper = "O_T_Sniper_F";                                        // Sniper
@@ -81,7 +82,7 @@ KPLIB_o_armyVehicles = [
     "O_T_MBT_02_cannon_ghex_F",                                         // T-100 Varsuk
     "O_T_MBT_02_cannon_ghex_F",                                         // T-100 Varsuk
     "O_T_MBT_04_cannon_F",                                              // T-140 Angara
-    "O_T_MBT_04_command_F"                                              // T-140K Angara
+    "O_T_MBT_04_command_F",                                              // T-140K Angara
     "O_T_MBT_02_arty_ghex_F"                                            // 2S9 Sochor
 ];
 

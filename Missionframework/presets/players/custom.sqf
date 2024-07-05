@@ -12,7 +12,7 @@
         - None
 
     Optional Mods:
-        - None
+        - https://steamcommunity.com/sharedfiles/filedetails/?id=2177826065
 */
 
 /*
@@ -27,7 +27,7 @@ KPLIB_b_fobTruck        = "B_Truck_01_box_F";                           // This 
 KPLIB_b_arsenal         = "B_supplyCrate_F";                            // This is the virtual arsenal as portable supply crates.
 
 // This is the mobile respawn (and medical) truck.
-KPLIB_b_mobileRespawn   = ["Respawn_TentDome_F", "B_Truck_01_medical_F", "B_Slingload_01_Medevac_F"];
+KPLIB_b_mobileRespawn   = ["EO_TentDome_F", "B_Truck_01_medical_F", "B_Slingload_01_Medevac_F"];
 
 KPLIB_b_potato01        = "B_Heli_Transport_03_unarmed_F";              // This is Potato 01, a multipurpose mobile respawn as a helicopter.
 KPLIB_b_crewUnit        = "B_crew_F";                                   // This defines the crew for vehicles.

@@ -11,10 +11,7 @@ _support_to_skip = [
     KPLIB_o_fuelContainer,
     KPLIB_o_ammoContainer,
     KPLIB_b_logiStation,
-    KPLIB_b_airControl,
-    "B_Slingload_01_Repair_F",
-    "B_Slingload_01_Fuel_F",
-    "B_Slingload_01_Ammo_F"
+    KPLIB_b_airControl
 ];
 _support_to_skip = _support_to_skip apply {toLowerANSI _x};
 
