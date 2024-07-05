@@ -77,7 +77,7 @@ KPLIB_b_infantry = [
 ];
 
 KPLIB_b_vehLight = [
-    ["B_T_Quadbike_01_F",50,0,25],                                      // Quad Bike
+    ["B_T_Quadbike_01_F",30,0,15],                                      // Quad Bike
     ["B_T_LSV_01_unarmed_F",75,0,50],                                   // Prowler
     ["B_T_LSV_01_armed_F",75,40,50],                                    // Prowler (HMG)
     ["B_T_LSV_01_AT_F",75,60,50],                                       // Prowler (AT)

@@ -78,7 +78,7 @@ KPLIB_b_infantry = [
 ];
 
 KPLIB_b_vehLight = [
-    ["I_E_Quadbike_01_F",50,0,25],                                      // Quad Bike
+    ["I_E_Quadbike_01_F",30,0,15],                                      // Quad Bike
     ["I_E_Offroad_01_F",60,0,35],                                       // Offroad
     ["I_E_Offroad_01_covered_F",60,0,35],                               // Offroad (Covered)
     ["I_E_Offroad_01_comms_F",60,0,35],                                 // Offroad (Comms)
