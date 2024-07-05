@@ -47,7 +47,8 @@ if (hasInterface) then {
         false,
         true,
         "",
-        '_target isEqualTo _originalTarget'
+        '_target isEqualTo _originalTarget
+        && {build_confirmed isEqualTo 0}'
     ];
     [_actionArray] call CBA_fnc_addPlayerAction;
 
