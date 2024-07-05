@@ -52,3 +52,8 @@ if ([
         [KPLIB_param_supportModule_arty] call BIS_fnc_moduleSupportsInitProvider;
     };
 };
+
+player setUnitTrait ["engineer", true];
+player setUnitTrait ["explosiveSpecialist", true];
+player setUnitTrait ["medic", true];
+player setUnitTrait ["UAVHacker", true];
