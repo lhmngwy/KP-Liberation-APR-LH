@@ -19,7 +19,6 @@ Integrated from others:
 - Persistent vehicle cargo, fuel and damage, plus some other changes from https://github.com/moistbois/Moist-Liberation-APR
 - Additional map ports by stutpip123: https://github.com/KillahPotatoes/KP-Liberation/pull/854
 - pSiKO Ai Revive to enable AI medics to revive: https://steamcommunity.com/sharedfiles/filedetails/?id=2996342068
-- VcomAI 3.4.1: https://github.com/genesis92x/VcomAI-3.0/tree/3.4.1---Dev-Build/
 - Advanced Towing: https://steamcommunity.com/sharedfiles/filedetails/?id=639837898
 
 - More changes to come...
