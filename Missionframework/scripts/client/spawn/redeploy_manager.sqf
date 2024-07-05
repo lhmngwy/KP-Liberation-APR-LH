@@ -236,7 +236,7 @@ while {true} do {
     };
 
     if (KPLIB_param_useArsenalPreset) then {
-        [_backpack] call KPLIB_fnc_checkGear;
+        //[_backpack] call KPLIB_fnc_checkGear;
     };
 
     if (KPLIB_param_mobileRespawn && (KPLIB_respawn_time > time)) then {
