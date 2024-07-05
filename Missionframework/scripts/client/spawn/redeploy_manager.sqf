@@ -36,12 +36,14 @@ while {true} do {
         (KPLIB_force_redeploy || (player distance (markerPos KPLIB_respawn_marker) < 50)) && vehicle player == player && alive player && !dialog && howtoplay == 0
     };
 
+    KPLIB_force_redeploy = false;
+
+    if (([getPosATL player, 350, KPLIB_side_enemy ] call KPLIB_fnc_getUnitsCount) > 1 ) then {[localize "STR_REDEPLOY_ENEMIES_NEARBY"] remoteExecCall ["hint", player]; continue };
+
     private _backpack = backpack player;
 
     fullmap = 0;
     _old_fullmap = 0;
-
-    KPLIB_force_redeploy = false;
 
     createDialog "liberation_deploy";
     deploy = 0;

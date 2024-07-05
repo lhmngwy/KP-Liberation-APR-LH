@@ -545,6 +545,10 @@
             <Original>Cannot heal: hostile forces nearby.</Original>
             <Japanese>治療不可: 敵軍が近くにいます。</Japanese>
         </Key>
+        <Key ID="STR_REDEPLOY_ENEMIES_NEARBY">
+            <Original>Cannot redeploy: hostile forces nearby.</Original>
+            <Japanese>再展開できません: 敵軍が近くにいます。</Japanese>
+        </Key>
         <Key ID="STR_FULLHEAL_DONE">
             <Original>You have fully healed</Original>
             <Japanese>負傷が完全に治療されました</Japanese>
