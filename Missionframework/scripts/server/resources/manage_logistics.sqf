@@ -138,14 +138,14 @@ while {KPLIB_endgame == 0} do {
                             } forEach _storage_areas;
 
                             private _toProcess = ceil ((ceil (((_x select _locRes) select 0) / 100)) + (ceil (((_x select _locRes) select 1) / 100)) + (ceil (((_x select _locRes) select 2) / 100)));
-                            if (_toProcess > 3) then {_toProcess = 3;};
+                            if (_toProcess > 3) then {_toProcess = 1;};
 
                             private _maxGetSupply = ((_x select _locRes) select 0);
-                            if (_maxGetSupply > 300) then {_maxGetSupply = 300;};
+                            if (_maxGetSupply > 100) then {_maxGetSupply = 100;};
                             private _maxGetAmmo = ((_x select _locRes) select 1);
-                            if (_maxGetAmmo > 300) then {_maxGetAmmo = 300;};
+                            if (_maxGetAmmo > 100) then {_maxGetAmmo = 100;};
                             private _maxGetFuel = ((_x select _locRes) select 2);
-                            if (_maxGetFuel > 300) then {_maxGetFuel = 300;};
+                            if (_maxGetFuel > 100) then {_maxGetFuel = 100;};
 
                             private _getSupply = 0;
                             private _getAmmo = 0;
