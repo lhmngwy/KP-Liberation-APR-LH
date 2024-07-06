@@ -49,6 +49,7 @@ player addMPEventHandler ["MPKilled", {
     {
         if (!isPlayer _x) then {
             _x setDamage 1;
+            [_x] joinSilent grpNull;
             _hasAIMembers = true;
         };
     } forEach units _playerGroup;
@@ -58,6 +59,7 @@ player addMPEventHandler ["MPKilled", {
         {
             if (!isPlayer _x) then {
                 _x setDamage 1;
+                [_x] joinSilent grpNull;
             };
         } forEach units _hcgrp;
     };
