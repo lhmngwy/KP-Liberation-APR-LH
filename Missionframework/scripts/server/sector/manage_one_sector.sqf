@@ -212,6 +212,9 @@ if ((!(_sector in KPLIB_sectors_player)) && (([markerPos _sector, [_opforcount, 
         if ((_x in KPLIB_o_turrets_MORTAR) && _lambsEnable) then {
             [group ((crew _vehicle) select 0)] call lambs_wp_fnc_taskArtilleryRegister;
         };
+        if ((_x in KPLIB_o_artyVehicles) && _lambsEnable) then {
+            [group ((crew _vehicle) select 0)] call lambs_wp_fnc_taskArtilleryRegister;
+        };
     } forEach _vehtospawn;
 
     if (_building_ai_max > 0) then {

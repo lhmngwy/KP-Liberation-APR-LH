@@ -82,7 +82,12 @@ KPLIB_o_armyVehicles = [
     "O_T_MBT_02_cannon_ghex_F",                                         // T-100 Varsuk
     "O_T_MBT_02_cannon_ghex_F",                                         // T-100 Varsuk
     "O_T_MBT_04_cannon_F",                                              // T-140 Angara
-    "O_T_MBT_04_command_F",                                              // T-140K Angara
+    "O_T_MBT_04_command_F",                                             // T-140K Angara
+    "O_T_MBT_02_arty_ghex_F"                                            // 2S9 Sochor
+];
+
+// All enemy vehicles in KPLIB_o_armyVehicles that are artillery
+KPLIB_o_artyVehicles = [
     "O_T_MBT_02_arty_ghex_F"                                            // 2S9 Sochor
 ];
 
@@ -154,6 +159,33 @@ KPLIB_o_helicopters = [
 KPLIB_o_planes = [
     "O_Plane_CAS_02_dynamicLoadout_F",                                  // To-199 Neophron (CAS)
     "O_Plane_Fighter_02_F"                                              // To-201 Shikra
+];
+
+// Enemy defence turrets that will be spawned in sectors.
+KPLIB_o_turrets_HMG = [
+    "O_HMG_01_F",
+    "O_HMG_01_high_F"
+];
+
+// Enemy defence turrets that will be spawned in sectors.
+KPLIB_o_turrets_GMG = [
+    "O_GMG_01_F",
+    "O_GMG_01_high_F"
+];
+
+// Enemy defence turrets that will be spawned in sectors.
+KPLIB_o_turrets_AT = [
+    "O_static_AT_F"
+];
+
+// Enemy defence turrets that will be spawned in sectors.
+KPLIB_o_turrets_AA = [
+    "O_static_AA_F"
+];
+
+// Enemy defence turrets that will be spawned in sectors.
+KPLIB_o_turrets_MORTAR = [
+    "O_Mortar_01_F"
 ];
 
 // Enemy SAM turrets that will be spawned in the back country

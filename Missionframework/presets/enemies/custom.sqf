@@ -86,6 +86,11 @@ KPLIB_o_armyVehicles = [
     "O_MBT_02_arty_F"                                                   // 2S9 Sochor
 ];
 
+// All enemy vehicles in KPLIB_o_armyVehicles that are artillery
+KPLIB_o_artyVehicles = [
+    "O_MBT_02_arty_F"                                                   // 2S9 Sochor
+];
+
 // All enemy vehicles that can spawn as sector defenders and patrols but at a lower enemy combat readiness (aggression levels).
 KPLIB_o_armyVehiclesLight = [
     "O_MRAP_02_hmg_F",                                                  // Ifrit (HMG)
