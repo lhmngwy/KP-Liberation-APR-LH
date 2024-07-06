@@ -199,7 +199,11 @@ while {true} do {
         // Move AI squad members (exclude aircraft carrier)
         private _aisquad = (units group player) select {alive _x && !isPlayer _x}; // Get all AI squad members
         doStop _aisquad;
-        if (!surfaceIsWater _destpos) then {
+        private _okToMove = true;
+        if (_spawn_str == _basenamestr && surfaceIsWater _destpos) then {
+            _okToMove = false; //exclude aircraft carrier
+        };
+        if (_okToMove) then {
             {
                 _x setposATL _destpos;
                 _x setDir (random 360);
