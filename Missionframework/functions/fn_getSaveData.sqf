@@ -142,6 +142,7 @@ private ["_fobPos", "_fobObjects", "_grpUnits", "_fobMines"];
 // Fetch all remaining blufor vehicles that are not near a fob
 _allObjects = _allObjects + (vehicles select {
     ((toLowerANSI (typeOf _x)) in KPLIB_b_allVeh_classes) &&    // All Blufor vehicles, any distance from FOB
+    typeOf _x != "B_Quadbike_01_F" &&                           // Exclude Quadbikes
     {alive _x} &&                                               // Exclude dead or broken objects
     {isNull attachedTo _x} &&                                   // Exclude attachTo'd objects
     {!(_x getVariable ["KPLIB_edenObject", false])} &&          // Exclude all objects placed via editor in mission.sqm
