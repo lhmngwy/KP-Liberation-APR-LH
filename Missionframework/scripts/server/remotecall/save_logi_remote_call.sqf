@@ -5,7 +5,7 @@ params ["_index", "_dest_a", "_ress_a", "_dest_b", "_ress_b", "_clientID"];
 logiError = 0;
 
 if ((_ress_a isEqualTo [0,0,0]) && (_ress_b isEqualTo [0,0,0])) then {
-    logiError = 1;
+    _ress_a = [9999999999,9999999999,9999999999];
 };
 
 if (
