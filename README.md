@@ -13,7 +13,7 @@ My customisations include:
 - Redeploy from anywhere as long as there are no enemies nearby.
 - AI squad members will now redeploy with the player.
 - Respawning will kill your squad too, or the last HC squad you created if you have no squad. No cheesing respawns to save your squad.
-- Added respawn tents (Requires Tent Backpacks mod).
+- Added tents and landing craft as mobile respawn points (See recommended add-ons).
 
 Integrated from others:
 
@@ -31,3 +31,4 @@ Integrated from others:
 - [ACE](https://steamcommunity.com/sharedfiles/filedetails/?id=463939057)
 - [LAMBS Danger.fsm](https://steamcommunity.com/sharedfiles/filedetails/?id=1858075458)
 - [Tent Backpacks](https://steamcommunity.com/sharedfiles/filedetails/?id=2177826065)
+- [RKSL Studios - LCVP Mk5 Landing Craft](https://steamcommunity.com/sharedfiles/filedetails/?id=1752496126)
