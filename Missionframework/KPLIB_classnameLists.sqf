@@ -397,7 +397,8 @@ boats_names = [
     "uns_pbr",
     "UNS_Zodiac_W",
     "B_Lifeboat",
-    "vn_b_boat_05_01"
+    "vn_b_boat_05_01",
+    "rksla3_lcvpmk5_viv_generic_grey"
 ];
 
 // Classnames of artillery vehicles, which should be added to the support module
