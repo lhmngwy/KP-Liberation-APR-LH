@@ -1,4 +1,4 @@
-# KP Liberation APR 
+# KP Liberation APR LH
 This is my customised fork of Apricot_ale's fork of KP Liberation. My fork was created for my brother and I to play, the changes are mainly to improve co-op for low player counts.
 
 [![license](https://img.shields.io/github/license/KillahPotatoes/KP-Liberation.svg)](https://github.com/KillahPotatoes/KP-Liberation/blob/master/LICENSE.md)
@@ -11,7 +11,7 @@ My customisations include:
 - Blufor vehicles and HC squads will be saved anywhere on the map.
 - Added persistent player squads, disconnect and reconnect and you will still have your squad!
 - Respawning at any time, or disconnecting while unconscious, will kill your squad. If you have never created any personal squad members, it will kill the last HC squad you created instead. No cheesing respawns or disconnects to save your squad.
-- Redeploy from anywhere as long as there are no enemies nearby.
+- Redeploy from anywhere, as long as there are no enemies nearby.
 - AI squad members will now redeploy with the player.
 - Added tents and landing craft as mobile respawn points (See recommended add-ons).
 
