@@ -159,7 +159,7 @@ class Mission
 	appId=1227700;
 	class Intel
 	{
-		briefingName="CTI 34 KP Liberation v0.96.7a Khe Sanh";
+		briefingName="@STR_MISSION_TITLE";
 		resistanceWest=0;
 		timeOfChanges=1800.0002;
 		startWeather=0.25;
