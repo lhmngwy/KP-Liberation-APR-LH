@@ -87,7 +87,7 @@ for (let preset of presets) {
                     }
 
                     // add version number and map name to mission name
-                    return content.replace(nameRegex, `$1KPLib ${preset.mapDisplay || preset.map} ${version}$3`);
+                    return content.replace(nameRegex, `$1- KPLib ${preset.mapDisplay || preset.map} ${version} -$3`);
                 }))
                 .pipe(gulp.dest(mission.getOutputDir(), { overwrite: true, }))
             ;
