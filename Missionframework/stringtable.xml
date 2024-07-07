@@ -1853,7 +1853,7 @@
             <Portuguese>Introdução cinemática de mobilização</Portuguese>
             <Korean>배포 영상</Korean>
             <Czech>Filmové scéna</Czech>
-            <Japanese>展開時の表現</Japanese>
+            <Japanese>展開時の演出</Japanese>
         </Key>
         <Key ID="STR_PARAMS_ENABLED">
             <Original>Enabled</Original>
@@ -1898,7 +1898,7 @@
             <Portuguese>Iniciar a campanha com a primeira FOB já construída</Portuguese>
             <Korean>이미 설치된 전초기지에서 시작하기</Korean>
             <Czech>Spustit kampaň s postaveným prvním FOB</Czech>
-            <Japanese>キャンペーン開始時からFOBを設置する</Japanese>
+            <Japanese>1個目のFOBが設置済みの状態でキャンペーンを開始</Japanese>
         </Key>
         <Key ID="STR_YES">
             <Original>Yes</Original>
@@ -1958,7 +1958,7 @@
             <Portuguese>50% - Recomendado para hospedagem local</Portuguese>
             <Korean>50% - 서버 실행 및 게임을 1대에서 실행할때 권장</Korean>
             <Czech>50% - Doporučeno pro lokální hraní</Czech>
-            <Japanese>50% - ローカルホスト推奨</Japanese>
+            <Japanese>50% - ローカルホスト時に推奨</Japanese>
         </Key>
         <Key ID="STR_PARAMS_UNITCAP2">
             <Original>75% - Dedicated server recommended</Original>
@@ -1973,7 +1973,7 @@
             <Portuguese>75% - Recomendado para servidor dedicado</Portuguese>
             <Korean>75% - 전용서버에서 실행할때 권장</Korean>
             <Czech>75% - Doporučeno pro dedikované servery</Czech>
-            <Japanese>75% - 専用サーバー推奨</Japanese>
+            <Japanese>75% - 専用サーバーを推奨</Japanese>
         </Key>
         <Key ID="STR_PARAMS_UNITCAP3">
             <Original>100% - Dedicated server recommended</Original>
@@ -1988,7 +1988,7 @@
             <Portuguese>100% - Recomendado para servidor dedicado</Portuguese>
             <Korean>100% - 전용서버에서 실행할때 권장</Korean>
             <Czech>100% - Doporučeno pro dedikované servery</Czech>
-            <Japanese>100% - 専用サーバー推奨</Japanese>
+            <Japanese>100% - 専用サーバーを推奨</Japanese>
         </Key>
         <Key ID="STR_PARAMS_UNITCAP4">
             <Original>125% - Dedicated server with headless client recommended</Original>
@@ -2003,7 +2003,7 @@
             <Portuguese>125% - Recomendado para servidor com headless client</Portuguese>
             <Korean>125% - 단일 CPU의 헤드리스서버(다른PC와 사용자에게 서비스를 제공하는 서버종류)에서 실행할때 권장</Korean>
             <Czech>125% - Doporučeno pro dedikované servery s Headless klienty</Czech>
-            <Japanese>125% - 専用サーバー・ヘッドレスクライアント推奨</Japanese>
+            <Japanese>125% - 専用サーバーとヘッドレスクライアントを推奨</Japanese>
         </Key>
         <Key ID="STR_PARAMS_UNITCAP5">
             <Original>150% - Dedicated server with headless client recommended</Original>
@@ -2018,7 +2018,7 @@
             <Portuguese>150% - Recomendado para servidor com mútiplos headless clients</Portuguese>
             <Korean>150% - CPU 2개 이상, 또는 다중 헤드리스서버에서 실행할때 권장</Korean>
             <Czech>150% - Doporučeno pro dedikované servery s vícero Headless klienty</Czech>
-            <Japanese>150% - 専用サーバー・ヘッドレスクライアント推奨</Japanese>
+            <Japanese>150% - 専用サーバーとヘッドレスクライアントを推奨</Japanese>
         </Key>
         <Key ID="STR_PARAMS_UNITCAP6">
             <Original>200% - Dedicated server with multiple headless clients recommended</Original>
@@ -2033,7 +2033,7 @@
             <Portuguese>200% - Recomendado para servidor com mútiplos headless clients</Portuguese>
             <Korean>200% - CPU 2개 이상, 또는 다중 헤드리스서버에서 실행할때 권장</Korean>
             <Czech>200% - Doporučeno pro dedikované servery s vícero Headless klienty</Czech>
-            <Japanese>200% - 専用サーバー・複数のヘッドレスクライアント推奨</Japanese>
+            <Japanese>200% - 専用サーバーと複数のヘッドレスクライアントを推奨</Japanese>
         </Key>
         <Key ID="STR_PARAMS_CIVILIANS">
             <Original>Civilian activity</Original>
@@ -2048,7 +2048,7 @@
             <Portuguese>Atividade Civil</Portuguese>
             <Korean>민간인 활동 정도</Korean>
             <Czech>Aktivita civilistů</Czech>
-            <Japanese>市民の活動性</Japanese>
+            <Japanese>市民の活発性</Japanese>
         </Key>
         <Key ID="STR_PARAMS_CIVILIANS1">
             <Original>None</Original>
@@ -2138,7 +2138,7 @@
             <Portuguese>Adaptar presença hostil de acordo com a quantidade de jogadores</Portuguese>
             <Korean>플레이어수에 따른 적군 활동 조절</Korean>
             <Czech>Počet nepřátel se adaptuje na počet hráčů</Czech>
-            <Japanese>プレイヤー数での敵数上下</Japanese>
+            <Japanese>プレイヤー数による敵人数の変化</Japanese>
         </Key>
         <Key ID="STR_BUILD1">
             <Original>Infantry units</Original>
@@ -6284,7 +6284,7 @@
             <Portuguese>Civis estão reclamando sobre %1 construções destruídas</Portuguese>
             <Korean>민간인들이 %1 건물이 파괴된 것에 대해 불평하고 있다. </Korean>
             <Czech>Civilisté si stěžují na %1 zničené budovy.</Czech>
-            <Japanese>市民は彼らの家財が %1 個所破壊されたと苦情を伝えています。</Japanese>
+            <Japanese>市民は彼らの家財が %1 個所破壊されたと遺憾の意を表明しています。</Japanese>
         </Key>
         <Key ID="STR_CR_HEALMSG">
             <Original>Civilian named %1 is thankful to %2 for help.</Original>

@@ -53,7 +53,7 @@ if (_spawnPos isEqualTo []) exitWith {
 // If it's a chopper, spawn it flying
 if (_classname in KPLIB_o_helicopters) then {
     _newvehicle = createVehicle [_classname, _spawnpos, [], 0, 'FLY'];
-    _newvehicle flyInHeight (80 + (random 120));
+    _newvehicle flyInHeight (100 + (random 120));
     _newvehicle allowDamage false;
 } else {
     _newvehicle = _classname createVehicle _spawnpos;

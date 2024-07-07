@@ -1,26 +1,29 @@
 scriptName "civinfo_escort";
 
 params ["_informant"];
+private [ "_nearestfob", "_is_near_fob", "_grp" ];
 
-waitUntil {sleep 0.5; local _unit};
+waitUntil {sleep 0.5; local _informant};
 
 if (KPLIB_civinfo_debug > 0) then {[format ["civinfo_escort called on: %1 - Parameters: [%2]", debug_source, _informant], "CIVINFO"] remoteExecCall ["KPLIB_fnc_log", 2];};
 
-private _is_near_fob = false;
+_is_near_fob = false;
+
 waitUntil {
     sleep 5;
-    private _nearestfob = [getPos _informant] call KPLIB_fnc_getNearestFob;
+    _nearestfob = [ getpos _informant ] call KPLIB_fnc_getNearestFob;
     _is_near_fob = false;
     if (count _nearestfob == 3) then {
         _is_near_fob = ((_informant distance _nearestfob) < 30);
     };
+
     !alive _informant || (_is_near_fob && (vehicle _informant == _informant))
 };
 
 if (alive _informant) then {
     if (_is_near_fob) then {
         sleep 5;
-        private _grp = createGroup [KPLIB_side_civilian, true];
+        _grp = createGroup [KPLIB_side_civilian, true];
         [_informant] joinSilent _grp;
         if (KPLIB_ace_captives) then {
             private _isCuffed = _informant getVariable ["ace_captives_isHandcuffed", false];

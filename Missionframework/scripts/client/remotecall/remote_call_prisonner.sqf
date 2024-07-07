@@ -1,25 +1,21 @@
 scriptName "remote_call_prisoner";
 
 params [ "_unit" ];
-private [ "_nearestfob", "_is_near_fob", "_is_near_blufor", "_grp", "_waypoint", "_nearblufor" ];
+private [ "_nearestfob", "_is_near_fob", "_is_near_blufor", "_grp", "_waypoint" ];
 
-waitUntil {
-    sleep 0.5;
-    local _unit
-};
+waitUntil {sleep 0.5; local _unit};
 
 if ( typeof _unit == KPLIB_b_heliPilotUnit ) exitWith {};
 
 _is_near_fob = false;
 _is_near_blufor = true;
 
-waitUntil { sleep 5;
-
+waitUntil {
+    sleep 5;
     _nearestfob = [ getpos _unit ] call KPLIB_fnc_getNearestFob;
-    if ( count _nearestfob == 3) then {
-        if ( ( _unit distance _nearestfob ) < 30 ) then {
-            _is_near_fob = true;
-        };
+    _is_near_fob = false;
+    if (count _nearestfob == 3) then {
+        _is_near_fob = ((_unit distance _nearestfob) < 30);
     };
 
     _is_near_blufor = false;

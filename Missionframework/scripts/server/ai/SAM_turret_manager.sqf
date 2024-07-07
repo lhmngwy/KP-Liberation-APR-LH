@@ -53,6 +53,9 @@ while {KPLIB_endgame == 0} do {
                 if (_groupDestroyed) exitWith {};
                 if (!alive _x || !alive gunner _x || side _x != KPLIB_side_enemy) then {
                     _groupDestroyed = true;
+                } else {
+                    _x setVehicleAmmo 1;
+                    _x setFuel 1;
                 };
             } forEach _groupVehicles;
             if (_groupDestroyed) then {

@@ -9,7 +9,7 @@ if (KPLIB_control_TimeWeather > 0) then {
     waitUntil {sleep 0.1; !dialog};
 
     if (KPLIB_control_TimeWeather == 1) then {
-        if (isNil KPLIB_inProgress_TimeWeather) then {KPLIB_inProgress_TimeWeather = false;};
+        if (isNil "KPLIB_inProgress_TimeWeather") then {KPLIB_inProgress_TimeWeather = false;};
         if (KPLIB_inProgress_TimeWeather) exitWith {};
         KPLIB_inProgress_TimeWeather = true;
         private _countdown = 15;
