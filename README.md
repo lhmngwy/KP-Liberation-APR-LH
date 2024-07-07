@@ -10,7 +10,7 @@ My customisations include:
 - Updated vanilla presets, factions have access to all guns. Uniforms and vehicles are still faction restricted.
 - Blufor vehicles and HC squads will be saved anywhere on the map.
 - Added persistent player squads, disconnect and reconnect and you will still have your squad!
-- Respawning or disconnecting while unconscious will kill your squad. If you have never created any personal squad members, it will kill the last HC squad you created instead. No cheesing respawns or disconnects to save your squad.
+- Respawning at any time, or disconnecting while unconscious, will kill your squad. If you have never created any personal squad members, it will kill the last HC squad you created instead. No cheesing respawns or disconnects to save your squad.
 - Redeploy from anywhere as long as there are no enemies nearby.
 - AI squad members will now redeploy with the player.
 - Added tents and landing craft as mobile respawn points (See recommended add-ons).
