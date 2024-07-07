@@ -196,8 +196,6 @@ while {KPLIB_endgame == 0} do {
                                 _j = _j + 1;
                             };
 
-                            if ((_j == _toProcess) && (_i != _toProcess)) exitWith {_x set [9,3];};
-
                             _x set [_locRes,[((_x select _locRes) select 0) - _getSupply,((_x select _locRes) select 1) - _getAmmo,((_x select _locRes) select 2) - _getFuel]];
                             _x set [6,[((_x select 6) select 0) + _getSupply,((_x select 6) select 1) + _getAmmo,((_x select 6) select 2) + _getFuel]];
                             _x set [8,((_x select 8) - 1)];
