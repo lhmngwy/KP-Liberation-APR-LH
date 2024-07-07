@@ -73,13 +73,13 @@
             <Original>[GREUH] and the Killah Potatoes present</Original>
         </Key>
         <Key ID="STR_MISSION_AUTHOR">
-            <Original>[GREUH] Zbug &amp; McKeewa, KP Liberation Dev Team, Apricot_ale, MoistBois, Lee</Original>
+            <Original>[GREUH] Zbug &amp; McKeewa, KP Liberation Dev Team, Apricot_ale, MoistBois, Lee H</Original>
         </Key>
         <Key ID="STR_MISSION_OVERVIEW">
-            <Original>APR Tweaked KP Liberation!&lt;br/&gt;Check github.com/Apricot-ale/KP-Liberation-APR to more info.</Original>
+            <Original>APR &amp; LH Tweaked KP Liberation!&lt;br/&gt;Check github.com/lhmngwy/KP-Liberation-APR-LH to more info.</Original>
         </Key>
         <Key ID="STR_MISSION_ONLOAD">
-            <Original>github.com/Apricot-ale/KP-Liberation-APR</Original>
+            <Original>github.com/lhmngwy/KP-Liberation-APR-LH</Original>
         </Key>
         <Key ID="STR_HURON01_NAME">
             <Original>Spartan 01</Original>
