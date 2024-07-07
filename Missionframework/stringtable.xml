@@ -49,7 +49,7 @@
 <Project name="Liberation">
     <Package name="Liberation">
         <Key ID="STR_MISSION_TITLE">
-            <Original>KP Liberation v0.96.8apr LH</Original>
+            <Original>KPLib v0.96.8apr LH</Original>
         </Key>
         <Key ID="STR_MISSION_VERSION">
             <Original>v0.96.8apr LH</Original>
@@ -73,7 +73,7 @@
             <Original>[GREUH] and the Killah Potatoes present</Original>
         </Key>
         <Key ID="STR_MISSION_AUTHOR">
-            <Original>[GREUH] Zbug &amp; McKeewa, KP Liberation Dev Team, Apricot_ale, MoistBois, Lee H</Original>
+            <Original>[GREUH]Zbug&amp;McKeewa, KPLib Team, Apricot_ale, MoistBois, Lee H</Original>
         </Key>
         <Key ID="STR_MISSION_OVERVIEW">
             <Original>APR &amp; LH Tweaked KP Liberation!&lt;br/&gt;Check github.com/lhmngwy/KP-Liberation-APR-LH for more info.</Original>

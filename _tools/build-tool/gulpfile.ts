@@ -87,7 +87,7 @@ for (let preset of presets) {
                     }
 
                     // add version number and map name to mission name
-                    return content.replace(nameRegex, `$1CTI 34 KP Liberation ${preset.mapDisplay || preset.map} ${version}$3`);
+                    return content.replace(nameRegex, `$1KPLib ${preset.mapDisplay || preset.map} ${version}$3`);
                 }))
                 .pipe(gulp.dest(mission.getOutputDir(), { overwrite: true, }))
             ;
