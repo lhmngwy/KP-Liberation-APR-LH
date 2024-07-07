@@ -7,12 +7,12 @@ Apricot_ale's fork is a uniquely modified version of [KP Liberation](https://git
 
 My customisations include:
 
-- Updated all vanilla presets, all factions have access to all guns. Armour and vehicles are still faction restricted.
+- Updated vanilla presets, factions have access to all guns. Uniforms and vehicles are still faction restricted.
 - Blufor vehicles and HC squads will be saved anywhere on the map.
 - Added persistent player squads, disconnect and reconnect and you will still have your squad!
+- Respawning or disconnecting while unconscious will kill your squad. If you have never created any personal squad members, it will kill the last HC squad you created instead. No cheesing respawns or disconnects to save your squad.
 - Redeploy from anywhere as long as there are no enemies nearby.
 - AI squad members will now redeploy with the player.
-- Respawning will kill your squad too, or the last HC squad you created if you have no squad. No cheesing respawns to save your squad.
 - Added tents and landing craft as mobile respawn points (See recommended add-ons).
 
 Integrated from others:
@@ -28,7 +28,7 @@ Integrated from others:
 - [CBA_A3](https://steamcommunity.com/sharedfiles/filedetails/?id=450814997)
 
 ### Recommended Add-ons
-- [ACE](https://steamcommunity.com/sharedfiles/filedetails/?id=463939057)
+- [ACE](https://steamcommunity.com/sharedfiles/filedetails/?id=463939057) with [ACE No Medical](https://steamcommunity.com/sharedfiles/filedetails/?id=3053169823)
 - [LAMBS Danger.fsm](https://steamcommunity.com/sharedfiles/filedetails/?id=1858075458)
 - [Tent Backpacks](https://steamcommunity.com/sharedfiles/filedetails/?id=2177826065)
 - [RKSL Studios - LCVP Mk5 Landing Craft](https://steamcommunity.com/sharedfiles/filedetails/?id=1752496126)
