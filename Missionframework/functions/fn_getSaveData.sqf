@@ -103,10 +103,11 @@ private _allCrates = [];
 // Get all blufor AI groups
 private _allBlueGroups = allGroups select {
     (side _x == west) &&                                    // Only BLUFOR groups (assuming west is BLUFOR side)
+    count units _x > 1 &&                                   // Groups with more than one member
+    {isPlayer _x} count units _x == 0 &&                    // No player units in the group
     {isNull objectParent (leader _x)} &&                    // Make sure it's an infantry group
     {!(((units _x) select {alive _x}) isEqualTo [])} &&     // At least one unit has to be alive
-    {isPlayer _x} count units _x == 0 &&                    // No player units in the group
-    (groupId _x) find "HQ" == -1                        // Group name does not contain "HQ"
+    (groupId _x) find "HQ" == -1                            // Group name does not contain "HQ"
 };
 
 
