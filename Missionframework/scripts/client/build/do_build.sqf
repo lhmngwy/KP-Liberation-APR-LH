@@ -50,13 +50,13 @@ while { true } do {
         _pos = [(getpos player select 0) + 1,(getpos player select 1) + 1, 0];
         _grp = group player;
         _classname createUnit [_pos, _grp,"this addMPEventHandler ['MPKilled', {params ['_unit']; [_unit] joinSilent grpNull; ['KPLIB_manageKills', _this] call CBA_fnc_localEvent}]", 0.5, "private"];
+        player setVariable ["KPLIB_lastHC", _grp, true];
         build_confirmed = 0;
     } else {
         if ( buildtype == 8 ) then {
             _pos = [(getpos player select 0) + 1,(getpos player select 1) + 1, 0];
             _grp = createGroup KPLIB_side_player;
             _grp deleteGroupWhenEmpty true;
-            player setVariable ["KPLIB_lastHC", _grp, true];
             _grp setGroupId [format ["%1 %2",KPLIB_b_squadNames select buildindex, groupId _grp]];
             _idx = 0;
             {
@@ -72,6 +72,9 @@ while { true } do {
 
             } foreach _classname;
             _grp setBehaviour "SAFE";
+            if (count units group player == 1) then {
+                player setVariable ["KPLIB_lastHC", _grp, true];
+            };
             build_confirmed = 0;
         } else {
             _posfob = getpos player;

@@ -70,6 +70,7 @@ class KPLIB {
         class isCapitalActive           {};
         class isClassUAV                {};
         class isRadio                   {};
+        class killSquad                 {};
         class lambs_enableReinforcements{};
         class log                       {};
         class potatoScan                {};

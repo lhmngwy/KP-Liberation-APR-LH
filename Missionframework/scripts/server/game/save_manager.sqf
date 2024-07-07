@@ -47,6 +47,8 @@ addMissionEventHandler ["PlayerDisconnected", {
 
     if (isNull _unit) exitWith {};
 
+    if(_unit getVariable ['PAR_isUnconscious', false]) then {_unit call KPLIB_fnc_killSquad; sleep 1;};
+
     // Get AI squad members
     _aiSquad = (units group _unit) select {!(isPlayer _x) && (alive _x) && !((typeOf _x) in KPLIB_o_inf_classes) && !((typeOf _x) in KPLIB_o_militiaInfantry)};
 
