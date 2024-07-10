@@ -197,18 +197,23 @@ while {true} do {
         player setDir (random 360);
 
         // Move AI squad members (exclude aircraft carrier)
-        private _aisquad = (units group player) select {alive _x && !isPlayer _x}; // Get all AI squad members
-        doStop _aisquad;
+        private _aiSquad = (units group player) select {alive _x && !isPlayer _x};
+        private _unconsciousAiSquad = (units group player) select {_x getVariable ['PAR_isUnconscious', false] && !isPlayer _x};
+        doStop _aiSquad;
         private _okToMove = true;
         if (_spawn_str == _basenamestr && surfaceIsWater _destpos) then {
             _okToMove = false; //exclude aircraft carrier
         };
         if (_okToMove) then {
             {
+                _x setDamage 1;
+                [_x] joinSilent grpNull;
+            } forEach _unconsciousAiSquad;
+            {
                 _x setposATL _destpos;
                 _x setDir (random 360);
-            } forEach _aisquad;
-            _aisquad doFollow player;
+            } forEach _aiSquad;
+            _aiSquad doFollow player;
         };
 
         if ((lbCurSel 203) > 0) then {
@@ -248,4 +253,7 @@ while {true} do {
         uiSleep 12;
         hint "";
     };
+
+    _lastFOB = [] call KPLIB_fnc_getNearestFob;
+    player setVariable ["KPLIB_lastFOB", _lastFOB, true];
 };

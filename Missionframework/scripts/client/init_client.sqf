@@ -39,7 +39,7 @@ player addMPEventHandler ["MPKilled", {
     params ["_unit", "_killer"];
     ["KPLIB_manageKills", [_unit, _killer]] call CBA_fnc_localEvent;
 
-    _unit call KPLIB_fnc_killSquad;
+    _unit call KPLIB_fnc_respawnPenalty;
 }];
 
 if (KPLIB_param_fuelconsumption) then {
