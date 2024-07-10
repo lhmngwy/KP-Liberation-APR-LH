@@ -253,7 +253,4 @@ while {true} do {
         uiSleep 12;
         hint "";
     };
-
-    _lastFOB = [] call KPLIB_fnc_getNearestFob;
-    player setVariable ["KPLIB_lastFOB", _lastFOB, true];
 };
