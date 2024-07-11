@@ -2,6 +2,8 @@ params ["_unit"];
 
 if(!isServer) exitWith {};
 
+if (([getPosATL player, 350, KPLIB_side_enemy ] call KPLIB_fnc_getUnitsCount) < 4) exitWith {};
+
 _nearFOB = [getPos _unit] call KPLIB_fnc_getNearestFob;
 if(count _nearFOB == 0) exitWith {};
 
