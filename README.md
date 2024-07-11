@@ -10,7 +10,7 @@ My customisations include:
 - Updated vanilla presets, factions have access to all guns. Uniforms and vehicles are still faction restricted.
 - Blufor vehicles and HC squads will be saved anywhere on the map.
 - Added persistent player squads, disconnect and reconnect and you will still have your squad!
-- Redeploy from anywhere, as long as there are no enemies nearby.
+- Redeploy from anywhere, as long as there are no enemies nearby, and no captured hostiles in your squad.
 - Alive AI squad members will now redeploy with the player. Unconscious AI squad members will die on redeploy, heal them first!
 - Resource penalty when you respawn, to add risk when going without an AI squad:
     - Calculation: "30 of each resource / (number of alive AI in your squad at respawn time + number of AI built in your squad since you respawned + 1)".

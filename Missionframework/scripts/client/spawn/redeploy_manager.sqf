@@ -38,7 +38,9 @@ while {true} do {
 
     KPLIB_force_redeploy = false;
 
-    if (([getPosATL player, 350, KPLIB_side_enemy ] call KPLIB_fnc_getUnitsCount) > 1 ) then {[localize "STR_REDEPLOY_ENEMIES_NEARBY"] remoteExecCall ["hint", player]; continue };
+    if (([getPosATL player, 350, KPLIB_side_enemy ] call KPLIB_fnc_getUnitsCount) > 1) then {[localize "STR_REDEPLOY_ENEMIES_NEARBY"] remoteExecCall ["hint", player]; continue };
+
+    if (({(typeOf _x) in KPLIB_o_inf_classes} count units group player) > 0 || ({(typeOf _x) in KPLIB_o_militiaInfantry} count units group player) > 0) then {[localize "STR_REDEPLOY_CAPTURED_HOSTILES"] remoteExecCall ["hint", player]; continue };
 
     private _backpack = backpack player;
 
