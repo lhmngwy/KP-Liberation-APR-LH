@@ -67,7 +67,7 @@
             <Portuguese>Libere a região da opressão inimiga! Estratégia será essencial! Boa sorte infantaria.</Portuguese>
             <Korean>적의 수중에서 이 지역을 탈환하자! 전략이 승리의 관건이다! 병사들이여, 행운을 빈다.</Korean>
             <Czech>Osvoboďte oblast od nepřátelského útisku. Strategie je klíčová! Hodně štěstí vojáci.</Czech>
-            <Japanese>この地域を敵軍の圧制から解放しろ!戦略がカギとなるぞ!兵士よ、幸運を祈る。</Japanese>
+            <Japanese>この地域を敵軍の圧制から解放しろ! 戦略がカギとなるぞ! 兵士よ、幸運を祈る。</Japanese>
         </Key>
         <Key ID="STR_MISSION_PRESENT">
             <Original>[GREUH] and the Killah Potatoes present</Original>
@@ -1054,7 +1054,7 @@
             <Portuguese>Próximo de</Portuguese>
             <Korean>부근</Korean>
             <Czech>Blízko</Czech>
-            <Japanese>近くに</Japanese>
+            <Japanese>直近に</Japanese>
         </Key>
         <Key ID="STR_RECYCLE">
             <Original>-- RECYCLE</Original>
@@ -1129,7 +1129,7 @@
             <Portuguese>Cancelar</Portuguese>
             <Korean>취소</Korean>
             <Czech>Zrušit</Czech>
-            <Japanese>やめる</Japanese>
+            <Japanese>取り消し</Japanese>
         </Key>
         <Key ID="STR_NOTIFICATION_SECTORCAPTURED_TITLE">
             <Original>SECTOR CAPTURED</Original>
@@ -3079,7 +3079,7 @@
             <Portuguese>-- MOBILIZAR FOB --</Portuguese>
             <Korean>-- 전초기지 재배치 --</Korean>
             <Czech>-- ZABALIT FOB --</Czech>
-            <Japanese>-- FOBを収納する --</Japanese>
+            <Japanese>-- FOBを撤収する --</Japanese>
         </Key>
         <Key ID="STR_FOB_REPACKAGE_TITLE">
             <Original>REPACKAGE FOB</Original>
@@ -3094,7 +3094,7 @@
             <Portuguese>MOBILIZAR FOB</Portuguese>
             <Korean>전초기지 재배치</Korean>
             <Czech>ZABALIT FOB</Czech>
-            <Japanese>FOBを収納します</Japanese>
+            <Japanese>FOBを撤収します</Japanese>
         </Key>
         <Key ID="STR_FOB_REPACKAGE_CONFIRM">
             <Original>Are you sure you want to repackage this FOB?</Original>
@@ -3109,7 +3109,7 @@
             <Portuguese>Você tem certeza que quer mobilizar esta FOB?</Portuguese>
             <Korean>이 전초기지를 재배치하시겠습니까?</Korean>
             <Czech>Jste si jistý že chcete zabalit FOB?</Czech>
-            <Japanese>FOBを収納しますか?</Japanese>
+            <Japanese>FOBを撤収しますか?</Japanese>
         </Key>
         <Key ID="STR_HALO_PARAM">
             <Original>HALO Jump</Original>
@@ -7556,7 +7556,7 @@
             <Italian>FOB ripiegata.\nL'autorizzazione eventualmente creata verrà ripristinata al riavvio del server.</Italian>
             <Korean>FOB가 재포장됩니다. 이 상태로 서버 재시작시 이 부근의 건물이나 장비들은 사라집니다.</Korean>
             <Czech>FOB je zabalen.\Po restartování serveru bude pravděpodobně vytvořené oprávnění zrušeno.</Czech>
-            <Japanese>FOBを収納しました。\n設置可能範囲はリスタートまで復活しない場合があります。</Japanese>
+            <Japanese>FOBを撤収しました。\n設置可能範囲はリスタートまで復活しない場合があります。</Japanese>
         </Key>
         <Key ID="STR_FOG_PARAM">
             <Original>Dynamic fog (A3 Vanilla)</Original>

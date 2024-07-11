@@ -5,7 +5,8 @@ params ["_unit", ["_sector", ""]];
 private _sectorPos = (markerPos _sector);
 //Check LAMBS_Danger.fsm is running. if running, skip KPLIB built in troop garrisoning and call lambs wp garrisoning.
 if (isClass (configfile >> "CfgPatches" >> "lambs_wp")) then {
-    [_unit, _sectorPos, (KPLIB_range_sectorCapture / 3 * 2), [], true, false, -1, false] call lambs_wp_fnc_taskGarrison;
+    _taskRange = round (KPLIB_range_sectorCapture / 3 * 2);
+    [_unit, _sectorPos, _taskRange, [], true, false, -1, false] call lambs_wp_fnc_taskGarrison;
 
     private _move_is_disabled = true;
     private _hostiles = 0;
