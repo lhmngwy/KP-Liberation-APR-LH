@@ -11,8 +11,10 @@ My customisations include:
 - Blufor vehicles and HC squads will be saved anywhere on the map.
 - Added persistent player squads, disconnect and reconnect and you will still have your squad!
 - Redeploy from anywhere, as long as there are no enemies nearby.
-- AI squad members will now redeploy with the player. Unconscious AI squad members will die on redeploy, heal them first!
-- Resource penalty when you respawn, equal to "100 / number of players on server / (number of AI squad members built since last respawn + 1)". This helps add some risk when going without an AI squad. The penalty is reduced when more players are on the server to avoid reducing resources too fast. It is also reduced the more AI squad members you build, as taking them on is already a risk. If only one player is on the server the penalty is halved again.
+- Alive AI squad members will now redeploy with the player. Unconscious AI squad members will die on redeploy, heal them first!
+- Resource penalty when you respawn, to add risk when going without an AI squad:
+    - Calculation: "30 of each resource / (number of alive AI in your squad at respawn time + number of AI built in your squad since you respawned + 1)".
+    - This means that the penalty reduces the more AI squad members you build, as taking them with you is already a risk.
 - Added tents and landing craft as mobile respawn points (See recommended add-ons).
 
 Integrated from others:
