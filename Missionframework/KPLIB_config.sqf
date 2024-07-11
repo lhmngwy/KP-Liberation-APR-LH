@@ -193,10 +193,10 @@ KPLIB_range_factoryActivation  = 1200;
 KPLIB_range_militaryActivation = 1600;
 KPLIB_range_towerActivation    = 1200;
 KPLIB_range_airSpawnActivation = 1600;
-KPLIB_range_pointActivation    = 1200;
+KPLIB_range_pointActivation    = 1000;
 
 // Range to capture a sector.
-KPLIB_range_sectorCapture = 250;
+KPLIB_range_sectorCapture = 200;
 
 // Radio Tower scanning range.
 KPLIB_range_radioTowerScan = 2500;
@@ -219,13 +219,13 @@ KPLIB_distance_sector = KPLIB_range_sectorCapture + KPLIB_range_fob;
 KPLIB_cap_playerSide = 150;
 
 // Cap for enemy units.
-KPLIB_cap_enemySide = 270;
+KPLIB_cap_enemySide = 300;
 
 // Cap for enemy battlegroups.
-KPLIB_cap_battlegroup = 225;
+KPLIB_cap_battlegroup = 300;
 
 // Cap for enemy patrols.
-KPLIB_cap_patrol = 225;
+KPLIB_cap_patrol = 300;
 
 // Size of enemy battlegroups.
 KPLIB_battlegroup_size = 6;
