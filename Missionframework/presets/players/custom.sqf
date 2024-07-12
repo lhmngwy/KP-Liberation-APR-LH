@@ -119,15 +119,16 @@ KPLIB_b_vehAir = [
     ["B_UAV_01_F",75,0,25],                                             // AR-2 Darter
     ["B_UAV_06_F",80,0,30],                                             // AL-6 Pelican (Cargo)
     ["B_Heli_Light_01_F",200,0,100],                                    // MH-9 Hummingbird
-    ["B_Heli_Light_01_dynamicLoadout_F",200,100,100],                   // AH-9 Pawnee
-    ["B_Heli_Attack_01_dynamicLoadout_F",500,400,200],                  // AH-99 Blackfoot
+    ["B_Heli_Light_01_armed_F",200,100,100],                            // AH-9 Pawnee
+    ["B_Heli_Attack_01_F",500,400,200],                                 // AH-99 Blackfoot
     ["B_Heli_Transport_01_F",250,80,150],                               // UH-80 Ghost Hawk
     ["B_Heli_Transport_01_camo_F",250,80,150],                          // UH-80 Ghost Hawk (Camo)
     ["B_Heli_Transport_03_F",300,80,175],                               // CH-67 Huron (Armed)
-    ["B_UAV_02_dynamicLoadout_F",400,400,200],                          // MQ-4A Greyhawk
-    ["B_T_UAV_03_dynamicLoadout_F",450,500,250],                        // MQ-12 Falcon
+    ["B_UAV_02_F",400,300,200],                                         // MQ-4A Greyhawk
+    ["B_UAV_02_CAS_F",400,300,200],                                     // MQ-4A Greyhawk (CAS)
+    ["B_T_UAV_03_F",450,500,250],                                       // MQ-12 Falcon
     ["B_UAV_05_F",500,500,200],                                         // UCAV Sentinel
-    ["B_Plane_CAS_01_dynamicLoadout_F",1000,800,400],                   // A-164 Wipeout (CAS)
+    ["B_Plane_CAS_01_F",1000,800,400],                                  // A-164 Wipeout (CAS)
     ["B_Plane_Fighter_01_F",1500,1750,450],                             // F/A-181 Black Wasp II
     ["B_Plane_Fighter_01_Stealth_F",1500,1750,450],                     // F/A-181 Black Wasp II (Stealth)
     ["B_T_VTOL_01_armed_F",750,1500,500],                               // V-44 X Blackfish (Armed)
@@ -356,11 +357,12 @@ KPLIB_b_vehToUnlock = [
     "B_MBT_01_TUSK_F",                                                  // M2A4 Slammer UP
     "B_MBT_01_arty_F",                                                  // M4 Scorcher
     "B_MBT_01_mlrs_F",                                                  // M5 Sandstorm MLRS
-    "B_Heli_Attack_01_dynamicLoadout_F",                                // AH-99 Blackfoot
-    "B_UAV_02_dynamicLoadout_F",                                        // MQ-4A Greyhawk
-    "B_T_UAV_03_dynamicLoadout_F",                                      // MQ-12 Falcon
+    "B_Heli_Attack_01_F",                                               // AH-99 Blackfoot
+    "B_UAV_02_F",                                                       // MQ-4A Greyhawk
+    "B_UAV_02_CAS_F",                                                   // MQ-4A Greyhawk
+    "B_T_UAV_03_F",                                                     // MQ-12 Falcon
     "B_UAV_05_F",                                                       // UCAV Sentinel
-    "B_Plane_CAS_01_dynamicLoadout_F",                                  // A-164 Wipeout (CAS)
+    "B_Plane_CAS_01_F",                                                 // A-164 Wipeout (CAS)
     "B_Plane_Fighter_01_F",                                             // F/A-181 Black Wasp II
     "B_Plane_Fighter_01_Stealth_F",                                     // F/A-181 Black Wasp II (Stealth)
     "B_T_VTOL_01_armed_F"                                               // V-44 X Blackfish (Armed)

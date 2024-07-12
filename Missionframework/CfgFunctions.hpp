@@ -6,6 +6,9 @@ class KPLIB {
         class addActionsFullHeal        {};
         class addActionsPlayer          {};
         class addArtyToSupport          {};
+        class addCASHeliToSupport       {};
+        class addCASBombingToSupport    {};
+        class addTransportToSupport     {};
         class addObjectInit             {};
         class addRopeAttachEh           {};
         class allowCrewInImmobile       {};

@@ -30,12 +30,14 @@ if ((side _grp) != KPLIB_side_player) then {
     deleteVehicleCrew _veh;
 
     _grp = createGroup [KPLIB_side_player, true];
-    while {count units _grp < 3} do {
+    while {count units _grp < 5} do {
         [KPLIB_b_crewUnit, getPos _veh, _grp] call KPLIB_fnc_createManagedUnit;
     };
     ((units _grp) select 0) moveInDriver _veh;
     ((units _grp) select 1) moveInGunner _veh;
-    ((units _grp) select 2) moveInCommander _veh;
+    ((units _grp) select 2) moveInGunner _veh;
+    ((units _grp) select 3) moveInGunner _veh;
+    ((units _grp) select 4) moveInCommander _veh;
 
     // Delete crew which isn't in the vehicle due to e.g. no commander seat
     {

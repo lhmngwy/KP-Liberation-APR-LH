@@ -570,6 +570,26 @@ KPLIB_param_supportModule_artyVeh = [
     "vn_b_army_static_mortar_m29"
 ];
 
+// Classnames of transport vehicles, which should be added to the support module
+KPLIB_param_supportModule_transportVeh = [
+    "B_Heli_Light_01_F",
+    "B_Heli_Transport_01_F",
+    "B_Heli_Transport_01_camo_F",
+    "B_Heli_Transport_03_F"
+];
+
+// Classnames of helicopters, which should be added to the support module
+KPLIB_param_supportModule_casHeliVeh = [
+    "B_Heli_Light_01_armed_F",
+    "B_Heli_Attack_01_F",
+    "B_T_VTOL_01_armed_F"
+];
+
+// Classnames of bombers, which should be added to the support module
+KPLIB_param_supportModule_casBombingVeh = [
+    "B_Plane_CAS_01_F"
+];
+
 // Objects which are spawned as intel objects for pickup
 KPLIB_intelObjectClasses = [
     "Land_Document_01_F",

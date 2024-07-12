@@ -159,6 +159,45 @@ KPLIB_objectInits = [
         }
     ],
 
+    [
+        KPLIB_param_supportModule_casHeliVeh,
+        {
+            if (KPLIB_param_supportModule > 0) then {
+                [_this] spawn {
+                    params ["_casHeli"];
+                    waitUntil {sleep 0.1; time > 0};
+                    [_casHeli] remoteExecCall ["KPLIB_fnc_addCASHeliToSupport", 0, _casHeli];
+                };
+            };
+        }
+    ],
+
+    [
+        KPLIB_param_supportModule_casBombingVeh,
+        {
+            if (KPLIB_param_supportModule > 0) then {
+                [_this] spawn {
+                    params ["_casBomber"];
+                    waitUntil {sleep 0.1; time > 0};
+                    [_casBomber] remoteExecCall ["KPLIB_fnc_addCASBombingToSupport", 0, _casBomber];
+                };
+            };
+        }
+    ],
+
+    [
+        KPLIB_param_supportModule_transportVeh,
+        {
+            if (KPLIB_param_supportModule > 0) then {
+                [_this] spawn {
+                    params ["_transport"];
+                    waitUntil {sleep 0.1; time > 0};
+                    [_transport] remoteExecCall ["KPLIB_fnc_addTransportToSupport", 0, _transport];
+                };
+            };
+        }
+    ],
+
     // add fullheal action to huron/taru medical container (mobile fullHeal)
     [
         ["B_Slingload_01_Medevac_F", "Land_Pod_Heli_Transport_04_medevac_F"],

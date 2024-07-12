@@ -23,6 +23,9 @@ if (!isServer || KPLIB_param_supportModule isEqualTo 0) exitWith {false};
 private _grp = createGroup sideLogic;
 KPLIB_param_supportModule_req = _grp createUnit ["SupportRequester", [0, 0, 0], [], 0, "NONE"];
 KPLIB_param_supportModule_arty = _grp createUnit ["SupportProvider_Artillery", [0, 0, 0], [], 0, "NONE"];
+KPLIB_param_supportModule_casHeli = _grp createUnit ["SupportProvider_CAS_Heli", [0, 0, 0], [], 0, "NONE"];
+KPLIB_param_supportModule_casBombing = _grp createUnit ["SupportProvider_CAS_Bombing", [0, 0, 0], [], 0, "NONE"];
+KPLIB_param_supportModule_transport = _grp createUnit ["SupportProvider_Transport", [0, 0, 0], [], 0, "NONE"];
 
 // Set variables which are normally set via eden object attributes
 {
@@ -32,6 +35,9 @@ KPLIB_param_supportModule_arty = _grp createUnit ["SupportProvider_Artillery", [
 // Publish global variables to clients
 publicVariable "KPLIB_param_supportModule_req";
 publicVariable "KPLIB_param_supportModule_arty";
+publicVariable "KPLIB_param_supportModule_casHeli";
+publicVariable "KPLIB_param_supportModule_casBombing";
+publicVariable "KPLIB_param_supportModule_transport";
 
 // Delay provider init until save is loaded, to catch synchronized units from loaded save
 [] spawn {
@@ -39,6 +45,9 @@ publicVariable "KPLIB_param_supportModule_arty";
     ["Init provider on server", "SUPPORTMODULES"] call KPLIB_fnc_log;
     [KPLIB_param_supportModule_req] call BIS_fnc_moduleSupportsInitRequester;
     [KPLIB_param_supportModule_arty] call BIS_fnc_moduleSupportsInitProvider;
+    [KPLIB_param_supportModule_casHeli] call BIS_fnc_moduleSupportsInitProvider;
+    [KPLIB_param_supportModule_casBombing] call BIS_fnc_moduleSupportsInitProvider;
+    [KPLIB_param_supportModule_transport] call BIS_fnc_moduleSupportsInitProvider;
 
     // Hide and move the three HQ entities created at zero pos to gamelogic position. BIS scripts only hides them local for the creator
     waitUntil {!isNil "BIS_SUPP_HQ_WEST" && !isNil "BIS_SUPP_HQ_EAST" && !isNil "BIS_SUPP_HQ_GUER"};
