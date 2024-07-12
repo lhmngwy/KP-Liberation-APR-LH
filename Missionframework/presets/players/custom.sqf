@@ -125,7 +125,7 @@ KPLIB_b_vehAir = [
     ["B_Heli_Transport_01_camo_F",250,80,150],                          // UH-80 Ghost Hawk (Camo)
     ["B_Heli_Transport_03_F",300,80,175],                               // CH-67 Huron (Armed)
     ["B_UAV_02_F",400,300,200],                                         // MQ-4A Greyhawk
-    ["B_UAV_02_CAS_F",800,600,200],                                     // MQ-4A Greyhawk (CAS)
+    ["B_UAV_02_CAS_F",700,500,300],                                     // MQ-4A Greyhawk (CAS)
     ["B_T_UAV_03_F",450,500,250],                                       // MQ-12 Falcon
     ["B_UAV_05_F",500,500,200],                                         // UCAV Sentinel
     ["B_Plane_CAS_01_F",1000,800,400],                                  // A-164 Wipeout (CAS)
