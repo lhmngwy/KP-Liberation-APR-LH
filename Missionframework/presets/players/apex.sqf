@@ -216,9 +216,7 @@ KPLIB_b_objectsDeco = [
     ["Land_Sign_WarningMilitaryVehicles_F",0,0,0],
     ["Land_Razorwire_F",0,0,0],
     ["Land_ClutterCutter_large_F",0,0,0],
-    ["Land_Hangar_F",0,0,0],
     ["Land_Shed_Small_F",0,0,0],
-    ["Land_TentHangar_V1_F",0,0,0],
     ["Land_Pier_F",0,0,0],
     ["Land_Sea_Wall_F",0,0,0]
 ];
