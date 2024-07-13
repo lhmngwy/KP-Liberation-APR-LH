@@ -93,6 +93,14 @@ while {true} do {
     {lbAdd [203, _x param [0]]} forEach _loadouts_data;
     lbSetCurSel [203, 0];
 
+    _tents = [];
+    {
+        if (!(_x in vehicles) && alive _x) then
+        {
+            _tents pushBack _x;
+        };
+    } forEach allMissionObjects "EO_TentDome_F";
+
     while {dialog && alive player && deploy == 0} do {
         // ARRAY - [[NAME, POSITION(, OBJECT)], ...]
         KPLIB_respawnPositionsList = [[_basenamestr, getposATL startbase]];
@@ -107,10 +115,10 @@ while {true} do {
         if (KPLIB_param_mobileRespawn) then {
             if (KPLIB_respawn_time <= time) then {
                 private _respawn_trucks = [] call KPLIB_fnc_getMobileRespawns;
-
+                _respawn_trucks = _tents + _respawn_trucks;
                 {
                     KPLIB_respawnPositionsList pushBack [
-                       format ["%1 - %2", localize "STR_RESPAWN_TRUCK",  [_x] call KPLIB_fnc_getMobileRespawnName],
+                       format ["%1 - %2", localize "STR_RESPAWN_TRUCK",  [_x, _tents] call KPLIB_fnc_getMobileRespawnName],
                         getPosATL _x,
                         _x
                     ];

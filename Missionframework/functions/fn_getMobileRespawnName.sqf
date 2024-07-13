@@ -15,16 +15,15 @@
         Mobile respawn name
 */
 
+private _tents = [];
 
-params [
-    ["_msp", nil]
-];
+params ["_msp", "_tents"];
 
 private _respawn_vehicles = [] call KPLIB_fnc_getMobileRespawns;
 private _name = "VEHICLE_NOT_FOUND";
 
 if (!isNil "_msp") then {
-    private _vehicle_idx = _respawn_vehicles find _msp;
+    private _vehicle_idx = _tents + _respawn_vehicles find _msp;
     if (_vehicle_idx != -1 && _vehicle_idx < count KPLIB_militaryAlphabet) then {
         _name = KPLIB_militaryAlphabet select _vehicle_idx;
     };
