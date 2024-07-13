@@ -33,6 +33,7 @@ if (PAR_ai_revive > 0 && !isPlayer _unit && local _unit) then {
 if (!alive _unit) exitWith {};
 
 _unit setVariable ["PAR_isUnconscious", true, true];
+_unit disableAI "RADIOPROTOCOL";
 if !(isPlayer _unit) then { sleep 3 };
 
 private _bld = [_unit] call PAR_spawn_blood;
