@@ -22,4 +22,6 @@ private _respawn_trucks = vehicles select {
     {abs (speed _x) < 5}
 };
 
+_respawn_trucks = _respawn_trucks + KPLIB_tents;
+
 [_respawn_trucks, [], {(getPos _x) select 0}, 'ASCEND'] call BIS_fnc_sortBy

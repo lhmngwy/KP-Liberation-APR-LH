@@ -8,6 +8,8 @@ do_load_box = compile preprocessFileLineNumbers "scripts\client\ammoboxes\do_loa
 kp_fuel_consumption = compile preprocessFileLineNumbers "scripts\client\misc\kp_fuel_consumption.sqf";
 kp_vehicle_permissions = compile preprocessFileLineNumbers "scripts\client\misc\vehicle_permissions.sqf";
 
+KPLIB_tents = [];
+
 execVM "scripts\client\actions\intel_manager.sqf";
 execVM "scripts\client\actions\recycle_manager.sqf";
 execVM "scripts\client\actions\unflip_manager.sqf";
