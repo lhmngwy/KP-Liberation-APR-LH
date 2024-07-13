@@ -575,18 +575,23 @@ KPLIB_param_supportModule_transportVeh = [
     "B_Heli_Light_01_F",
     "B_Heli_Transport_01_F",
     "B_Heli_Transport_01_camo_F",
-    "B_Heli_Transport_03_F"
+    "B_Heli_Transport_03_F",
+    "B_T_VTOL_01_armed_F",
+    "B_T_VTOL_01_infantry_F",
+    "B_T_VTOL_01_vehicle_F"
 ];
 
 // Classnames of helicopters, which should be added to the support module
 KPLIB_param_supportModule_casHeliVeh = [
     "B_Heli_Light_01_armed_F",
     "B_Heli_Attack_01_F",
+    "B_T_UAV_03_F",
     "B_T_VTOL_01_armed_F"
 ];
 
 // Classnames of bombers, which should be added to the support module
 KPLIB_param_supportModule_casBombingVeh = [
+    "B_UAV_02_CAS_F",
     "B_Plane_CAS_01_F"
 ];
 
