@@ -106,8 +106,12 @@ while {true} do {
         KPLIB_respawnPositionsList = [[_basenamestr, getposATL startbase]];
 
         {
+            _nearestSectorName = markerText ([2000, _x] call KPLIB_fnc_getNearestSector);
+            if (_nearestSectorName == "") then {
+                _nearestSectorName = mapGridPosition _x;
+            };
             KPLIB_respawnPositionsList pushBack [
-                format ["FOB %1 - %2", (KPLIB_militaryAlphabet select _forEachIndex), mapGridPosition _x],
+                format ["FOB %1 - %2", (KPLIB_militaryAlphabet select _forEachIndex), _nearestSectorName],
                 _x
             ];
         } forEach KPLIB_sectors_fob;
@@ -117,7 +121,7 @@ while {true} do {
                 private _respawn_trucks = [] call KPLIB_fnc_getMobileRespawns;
                 {
                     KPLIB_respawnPositionsList pushBack [
-                       format ["%1 - %2", localize "STR_RESPAWN_TRUCK",  [_x] call KPLIB_fnc_getMobileRespawnName],
+                       format ["%1 %2", localize "STR_RESPAWN_TRUCK",  [_x, true] call KPLIB_fnc_getMobileRespawnName],
                         getPosATL _x,
                         _x
                     ];
