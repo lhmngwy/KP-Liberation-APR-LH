@@ -111,11 +111,11 @@ KPLIB_o_battleGrpVehicles = [
     "O_MBT_02_railgun_F",                                               // T-100 Futura
     "O_MBT_04_cannon_F",                                                // T-140 Angara
     "O_MBT_04_command_F",                                               // T-140K Angara
-    "O_Heli_Light_02_dynamicLoadout_F",                                 // Po-30 Orca (Armed)
-    "O_Heli_Light_02_dynamicLoadout_F",                                 // Po-30 Orca (Armed)
+    "O_Heli_Light_02_F",                                                // Po-30 Orca (Armed)
+    "O_Heli_Light_02_F",                                                // Po-30 Orca (Armed)
     "O_Heli_Transport_04_bench_F",                                      // Mi-290 Taru (Bench)
     "O_Heli_Transport_04_covered_F",                                    // Mi-290 Taru (Transport)
-    "O_Heli_Attack_02_dynamicLoadout_F",                                // Mi-48 Kajman
+    "O_Heli_Attack_02_F",                                               // Mi-48 Kajman
     "O_T_VTOL_02_infantry_hex_F"                                        // Y-32 Xi'an (Infantry)
 ];
 
@@ -127,7 +127,7 @@ KPLIB_o_battleGrpVehiclesLight = [
     "O_APC_Wheeled_02_rcws_F",                                          // MSE-3 Marid
     "O_APC_Tracked_02_cannon_F",                                        // BTR-K Kamysh
     "O_APC_Tracked_02_AA_F",                                            // ZSU-39 Tigris
-    "O_Heli_Light_02_dynamicLoadout_F",                                 // Po-30 Orca (Armed)
+    "O_Heli_Light_02_F",                                                // Po-30 Orca (Armed)
     "O_Heli_Transport_04_bench_F"                                       // Mi-290 Taru (Bench)
 ];
 
@@ -139,7 +139,7 @@ KPLIB_o_troopTransports = [
     "O_APC_Wheeled_02_rcws_F",                                          // MSE-3 Marid
     "O_Heli_Transport_04_bench_F",                                      // Mi-290 Taru (Bench)
     "O_Heli_Transport_04_covered_F",                                    // Mi-290 Taru (Transport)
-    "O_Heli_Light_02_dynamicLoadout_F",                                 // Po-30 Orca (Armed)
+    "O_Heli_Light_02_F",                                                // Po-30 Orca (Armed)
     "O_T_VTOL_02_infantry_hex_F"                                        // Y-32 Xi'an (Infantry)
 ];
 
@@ -147,14 +147,14 @@ KPLIB_o_troopTransports = [
 KPLIB_o_helicopters = [
     "O_Heli_Transport_04_bench_F",                                      // Mi-290 Taru (Bench)
     "O_Heli_Transport_04_covered_F",                                    // Mi-290 Taru (Transport)
-    "O_Heli_Light_02_dynamicLoadout_F",                                 // Po-30 Orca (Armed)
-    "O_Heli_Attack_02_dynamicLoadout_F",                                // Mi-48 Kajman
+    "O_Heli_Light_02_F",                                                // Po-30 Orca (Armed)
+    "O_Heli_Attack_02_F",                                               // Mi-48 Kajman
     "O_T_VTOL_02_infantry_hex_F"                                        // Y-32 Xi'an (Infantry)
 ];
 
 // Enemy fixed-wings that will need to spawn in the air.
 KPLIB_o_planes = [
-    "O_Plane_CAS_02_dynamicLoadout_F",                                  // To-199 Neophron (CAS)
+    "O_Plane_CAS_02_F",                                                 // To-199 Neophron (CAS)
     "O_Plane_Fighter_02_F"                                              // To-201 Shikra
 ];
 

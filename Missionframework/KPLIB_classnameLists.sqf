@@ -572,6 +572,8 @@ KPLIB_param_supportModule_artyVeh = [
 
 // Classnames of transport vehicles, which should be added to the support module
 KPLIB_param_supportModule_transportVeh = [
+    "I_E_Heli_light_03_dynamicLoadout_F",
+    "I_E_Heli_light_03_unarmed_F",
     "B_Heli_Light_01_F",
     "B_Heli_Transport_01_F",
     "B_Heli_Transport_01_camo_F",
