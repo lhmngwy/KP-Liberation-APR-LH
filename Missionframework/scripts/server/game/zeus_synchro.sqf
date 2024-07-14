@@ -7,7 +7,6 @@ private _vehicleClassnames = [toLowerANSI KPLIB_b_potato01];
 {
     _vehicleClassnames append _x;
 } forEach [
-    KPLIB_crates,
     KPLIB_b_light_classes,
     KPLIB_b_heavy_classes,
     KPLIB_b_air_classes,

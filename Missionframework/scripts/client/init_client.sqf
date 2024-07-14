@@ -17,6 +17,7 @@ execVM "scripts\client\ammoboxes\ammobox_action_manager.sqf";
 execVM "scripts\client\build\build_overlay.sqf";
 execVM "scripts\client\build\do_build.sqf";
 execVM "scripts\client\commander\enforce_whitelist.sqf";
+execVM "scripts\client\commander\hide_from_zeus.sqf";
 if (KPLIB_param_mapMarkers) then {execVM "scripts\client\markers\empty_vehicles_marker.sqf";};
 execVM "scripts\client\markers\fob_markers.sqf";
 if (!KPLIB_param_highCommand && KPLIB_param_mapMarkers) then {execVM "scripts\client\markers\group_icons.sqf";};
@@ -79,10 +80,14 @@ if (player isEqualTo ([] call KPLIB_fnc_getCommander)) then {
     if (KPLIB_param_tutorial) then {
         [] call KPLIB_fnc_tutorial;
     };
-    // Request Zeus if enabled
-    if (KPLIB_param_zeusCommander) then {
-        [] spawn {
-            sleep 5;
+};
+
+[] spawn {
+    sleep 5;
+
+    if ((player == [] call KPLIB_fnc_getCommander) || (player getVariable ['KPLIB_hasDirectAccess', false])) then {
+        // Request Zeus if enabled
+        if (KPLIB_param_zeusCommander) then {
             [] call KPLIB_fnc_requestZeus;
         };
     };
