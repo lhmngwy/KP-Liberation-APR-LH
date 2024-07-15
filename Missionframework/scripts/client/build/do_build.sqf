@@ -49,6 +49,9 @@ while { true } do {
     if(buildtype == 1) then {
         _pos = [(getpos player select 0) + 1,(getpos player select 1) + 1, 0];
         _grp = group player;
+        if ( manned ) then {
+            _grp = createGroup KPLIB_side_player;
+        };
         _classname createUnit [_pos, _grp,"this addMPEventHandler ['MPKilled', {params ['_unit']; [_unit] joinSilent grpNull; ['KPLIB_manageKills', _this] call CBA_fnc_localEvent}]", 0.5, "private"];
         _unitsBought = player getVariable ["KPLIB_unitsBought", 1];
         player setVariable ["KPLIB_unitsBought", _unitsBought + 1, true];
