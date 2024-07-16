@@ -60,10 +60,20 @@ if ([
     };
 };
 
-_aiSquad = (units group player) select {alive _x && !isPlayer _x};
-player setVariable ["KPLIB_unitsBought", (count _aiSquad) + 1, true];
-
 player setUnitTrait ["engineer", true];
 player setUnitTrait ["explosiveSpecialist", true];
 player setUnitTrait ["medic", true];
 player setUnitTrait ["UAVHacker", true];
+
+_aiSquad = (units group player) select {alive _x && !isPlayer _x};
+player setVariable ["KPLIB_unitsBought", (count _aiSquad) + 1, true];
+_unconsciousAiSquad = (units group player) select {_x getVariable ['PAR_isUnconscious', false] && !isPlayer _x};
+doStop _aiSquad;
+{
+    _x setDamage 1;
+    [_x] joinSilent grpNull;
+} forEach _unconsciousAiSquad;
+{
+    _x setposATL getPosATL player;
+    _x setDir (random 360);
+} forEach _aiSquad;
