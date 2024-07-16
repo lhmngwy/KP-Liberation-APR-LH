@@ -85,7 +85,7 @@ private _spawnchances = [75,50,15];
 } foreach _vehtospawn;
 
 secondary_objective_position = getpos _helowreck;
-secondary_objective_position_marker = secondary_objective_position getPos [800, random 360];
+secondary_objective_position_marker = secondary_objective_position getPos [800 * (KPLIB_param_difficulty min 1), random 360];
 publicVariable "secondary_objective_position_marker";
 sleep 1;
 KPLIB_secondary_in_progress = 2; publicVariable "KPLIB_secondary_in_progress";

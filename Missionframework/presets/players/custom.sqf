@@ -94,8 +94,9 @@ KPLIB_b_vehLight = [
     ["B_MRAP_01_F",100,0,50],                                           // Hunter
     ["B_MRAP_01_hmg_F",100,40,50],                                      // Hunter (HMG)
     ["B_MRAP_01_gmg_F",100,60,50],                                      // Hunter (GMG)
-    ["B_Truck_01_transport_F",125,0,75],                                // HEMTT Transport
-    ["B_Truck_01_covered_F",125,0,75],                                  // HEMTT Transport (Covered)
+    ["B_Truck_01_transport_F",100,0,100],                               // HEMTT Transport
+    ["B_Truck_01_covered_F",100,0,100],                                 // HEMTT Transport (Covered)
+    ["B_Truck_01_flatbed_F",100,0,100],                                 // HEMTT Transport (Flatbed)
     ["B_UGV_01_F",150,0,50],                                            // UGV Stomper
     ["B_UGV_01_rcws_F",150,40,50],                                      // UGV Stomper (RCWS)
     ["B_Boat_Transport_01_F",100,0,25],                                 // Assault Boat

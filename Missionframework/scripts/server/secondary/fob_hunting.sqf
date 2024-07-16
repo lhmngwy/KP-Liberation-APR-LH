@@ -115,7 +115,7 @@ _waypoint setWaypointType "CYCLE";
 _objectives_alive = true;
 
 secondary_objective_position = _base_position;
-secondary_objective_position_marker = [(((secondary_objective_position select 0) + 800) - random 1600), (((secondary_objective_position select 1) + 800) - random 1600), 0];
+secondary_objective_position_marker = [(((secondary_objective_position select 0) + (800 * (KPLIB_param_difficulty min 1))) - random (1600 * (KPLIB_param_difficulty min 1))), (((secondary_objective_position select 1) + (800 * (KPLIB_param_difficulty min 1))) - random (1600 * (KPLIB_param_difficulty min 1))), 0];
 publicVariable "secondary_objective_position_marker";
 sleep 1;
 

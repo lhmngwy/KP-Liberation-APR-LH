@@ -59,7 +59,7 @@ while { KPLIB_endgame == 0 } do {
             private _vehicle_class = objNull;
             do {
                 _vehicle_class = [] call KPLIB_fnc_getAdaptiveVehicle;
-            } while (_vehicle_class in KPLIB_param_supportModule_artyVeh);
+            } while (_vehicle_class in KPLIB_param_supportModule_artyVeh || _vehicle_class in aa_vehicles);
             _vehicle_object = [_sector_spawn_pos, _vehicle_class] call KPLIB_fnc_spawnVehicle;
         };
 

@@ -401,6 +401,12 @@ boats_names = [
     "rksla3_lcvpmk5_viv_generic_grey"
 ];
 
+// Classnames of AA vehicles
+aa_vehicles = [
+    "O_APC_Tracked_02_AA_F",
+    "O_T_APC_Tracked_02_AA_ghex_F"
+];
+
 // Classnames of artillery vehicles, which should be added to the support module
 KPLIB_param_supportModule_artyVeh = [
     "sfp_robotbil15",

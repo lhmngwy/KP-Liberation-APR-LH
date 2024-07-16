@@ -20,7 +20,7 @@ switch (_notiftype) do {
         _secondary_marker_zone setMarkerColorLocal KPLIB_color_enemyActive;
         _secondary_marker_zone setMarkerShapeLocal "ELLIPSE";
         _secondary_marker_zone setMarkerBrushLocal "FDiagonal";
-        _secondary_marker_zone setMarkerSizeLocal [1500,1500];
+        _secondary_marker_zone setMarkerSizeLocal [1600 * (KPLIB_param_difficulty min 1),1600 * (KPLIB_param_difficulty min 1)];
     };
     case 3: {
         ["lib_secondary_fob_destroyed"] call BIS_fnc_showNotification;
@@ -43,7 +43,7 @@ switch (_notiftype) do {
         _secondary_marker_zone setMarkerColorLocal KPLIB_color_enemyActive;
         _secondary_marker_zone setMarkerShapeLocal "ELLIPSE";
         _secondary_marker_zone setMarkerBrushLocal "FDiagonal";
-        _secondary_marker_zone setMarkerSizeLocal [1500,1500];
+        _secondary_marker_zone setMarkerSizeLocal [1600 * (KPLIB_param_difficulty min 1),1600 * (KPLIB_param_difficulty min 1)];
     };
     case 7: {
         ["lib_intel_sar_failed"] call BIS_fnc_showNotification;

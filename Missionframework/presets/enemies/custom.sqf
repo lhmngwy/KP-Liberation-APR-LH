@@ -72,15 +72,14 @@ KPLIB_o_militiaVehicles = [
 // All enemy vehicles that can spawn as sector defenders and patrols at high enemy combat readiness (aggression levels).
 KPLIB_o_armyVehicles = [
     "O_MRAP_02_hmg_F",                                                  // Ifrit (HMG)
-    "O_MRAP_02_hmg_F",                                                  // Ifrit (GMG)
+    "O_MRAP_02_hmg_F",                                                  // Ifrit (HMG)
     "O_MRAP_02_gmg_F",                                                  // Ifrit (GMG)
     "O_LSV_02_AT_F",                                                    // Qilin (AT)
     "O_APC_Tracked_02_cannon_F",                                        // BTR-K Kamysh
     "O_APC_Tracked_02_cannon_F",                                        // BTR-K Kamysh
     "O_APC_Tracked_02_AA_F",                                            // ZSU-39 Tigris
-    "O_APC_Tracked_02_AA_F",                                            // ZSU-39 Tigris
     "O_MBT_02_cannon_F",                                                // T-100 Varsuk
-    "O_MBT_02_railgun_F",                                               // T-100 Futura
+    "O_MBT_02_cannon_F",                                                // T-100 Varsuk
     "O_MBT_04_cannon_F",                                                // T-140 Angara
     "O_MBT_04_command_F",                                               // T-140K Angara
     "O_MBT_02_arty_F"                                                   // 2S9 Sochor
@@ -106,7 +105,6 @@ KPLIB_o_battleGrpVehicles = [
     "O_APC_Tracked_02_cannon_F",                                        // BTR-K Kamysh
     "O_APC_Tracked_02_cannon_F",                                        // BTR-K Kamysh
     "O_APC_Tracked_02_AA_F",                                            // ZSU-39 Tigris
-    "O_APC_Tracked_02_AA_F",                                            // ZSU-39 Tigris
     "O_MBT_02_cannon_F",                                                // T-100 Varsuk
     "O_MBT_02_railgun_F",                                               // T-100 Futura
     "O_MBT_04_cannon_F",                                                // T-140 Angara
@@ -126,9 +124,16 @@ KPLIB_o_battleGrpVehiclesLight = [
     "O_Truck_03_transport_F",                                           // Tempest Transport
     "O_APC_Wheeled_02_rcws_F",                                          // MSE-3 Marid
     "O_APC_Tracked_02_cannon_F",                                        // BTR-K Kamysh
-    "O_APC_Tracked_02_AA_F",                                            // ZSU-39 Tigris
     "O_Heli_Light_02_F",                                                // Po-30 Orca (Armed)
-    "O_Heli_Transport_04_bench_F"                                       // Mi-290 Taru (Bench)
+    "O_Heli_Transport_04_bench_F",                                      // Mi-290 Taru (Bench)
+    "O_MRAP_02_hmg_F",                                                  // Ifrit (HMG)
+    "O_MRAP_02_hmg_F",                                                  // Ifrit (HMG)
+    "O_Truck_03_transport_F",                                           // Tempest Transport
+    "O_APC_Wheeled_02_rcws_F",                                          // MSE-3 Marid
+    "O_APC_Tracked_02_cannon_F",                                        // BTR-K Kamysh
+    "O_Heli_Light_02_F",                                                // Po-30 Orca (Armed)
+    "O_Heli_Transport_04_bench_F",                                      // Mi-290 Taru (Bench)
+    "O_APC_Tracked_02_AA_F"                                             // ZSU-39 Tigris
 ];
 
 /* All vehicles that spawn within battlegroups (see the above 2 arrays) and also hold 8 soldiers as passengers.

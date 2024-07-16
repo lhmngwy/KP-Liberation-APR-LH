@@ -11,7 +11,9 @@ switch (true) do {
 
 KPLIB_enemyReadiness = KPLIB_enemyReadiness + _KPLIB_enemyReadiness_increase;
 if (KPLIB_enemyReadiness > 100.0 && KPLIB_param_difficulty <= 2.0) then {KPLIB_enemyReadiness = 100.0};
-stats_readiness_earned = stats_readiness_earned + _KPLIB_enemyReadiness_increase;
+if (_KPLIB_enemyReadiness_increase > 0) then {
+    stats_readiness_earned = stats_readiness_earned + _KPLIB_enemyReadiness_increase;
+};
 
 [_liberated_sector, 0] remoteExecCall ["remote_call_sector"];
 KPLIB_sectors_player pushback _liberated_sector; publicVariable "KPLIB_sectors_player";
