@@ -83,7 +83,7 @@ if (player isEqualTo ([] call KPLIB_fnc_getCommander)) then {
 };
 
 [] spawn {
-    sleep 5;
+    waitUntil { player getVariable ["KPLIB_namespaceSet", false] };
 
     if ((player == [] call KPLIB_fnc_getCommander) || (player getVariable ['KPLIB_hasDirectAccess', false])) then {
         // Request Zeus if enabled

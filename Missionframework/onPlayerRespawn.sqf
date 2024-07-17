@@ -77,3 +77,8 @@ doStop _aiSquad;
     _x setposATL getPosATL player;
     _x setDir (random 360);
 } forEach _aiSquad;
+
+[] spawn {
+    waitUntil {isNull (player getVariable ['KPLIB_ownedZeusModule', objNull])};
+    [] call KPLIB_fnc_requestZeus;
+};

@@ -32,11 +32,11 @@ if (isServer) then {
         if (isNull _player) exitWith {};
         private _uid = getPlayerUID _player;
 
-        // check if there's already a managed zeus module for this player, if so we can just reassign
+        // check if there's already a managed zeus module for this player
         private _oldManagedZeus = missionNamespace getVariable [ZEUSVAR(_uid), objNull];
-        if (!isNull _oldManagedZeus && {_limited isEqualTo (_oldManagedZeus getVariable ["KPLIB_limited", -1])}) exitWith {
-            _player assignCurator _oldManagedZeus;
-            [true, "KPLIB_zeusAssigned", [_oldManagedZeus]] remoteExecCall ["BIS_fnc_callScriptedEventHandler", _player];
+        if (!isNull _oldManagedZeus) then {
+            unassignCurator _oldManagedZeus;
+            deleteVehicle _oldManagedZeus;
         };
 
         // remove currently assigned curator

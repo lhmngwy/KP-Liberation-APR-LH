@@ -65,5 +65,7 @@ while {true} do {
     // Update state in Discord rich presence
     [] call KPLIB_fnc_setDiscordState;
 
+    player setVariable ["KPLIB_namespaceSet", true, true];
+
     sleep 1;
 };
