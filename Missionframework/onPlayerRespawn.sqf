@@ -79,6 +79,6 @@ doStop _aiSquad;
 } forEach _aiSquad;
 
 [] spawn {
-    waitUntil {isNull (player getVariable ['KPLIB_ownedZeusModule', objNull])};
+    waitUntil { sleep 1; isNull (player getVariable ['KPLIB_ownedZeusModule', objNull]) };
     [] call KPLIB_fnc_requestZeus;
 };

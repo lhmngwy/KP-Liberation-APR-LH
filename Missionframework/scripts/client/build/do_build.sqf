@@ -306,6 +306,7 @@ while { true } do {
                 deleteVehicle _vehicle;
                 sleep 0.1;
                 _vehicle = _classname createVehicle _truepos;
+                _vehicle setVariable ["KPLIB_playerSide", true, true];
                 _vehicle allowDamage false;
                 _vehicle setdir _vehdir;
                 if ((toLowerANSI (typeOf _vehicle)) in KPLIB_b_static_classes) then {

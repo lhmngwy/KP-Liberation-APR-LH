@@ -526,6 +526,7 @@ if (!isNil "_saveData") then {
 
             // Create object without damage handling and simulation
             _object = createVehicle [_class, _pos, [], 0, "CAN_COLLIDE"];
+            _object setVariable ["KPLIB_playerSide", true, true];
             _object allowdamage false;
             _object enableSimulation false;
 
@@ -585,6 +586,8 @@ if (!isNil "_saveData") then {
                 _object setVariable ["KPLIB_seized", true, true];
             };
 
+            _object setVariable ["KPLIB_playerSide", true, true];
+
             // Determine if cargo should be cleared
             [_object] call KPLIB_fnc_clearCargo;
 
@@ -635,6 +638,7 @@ if (!isNil "_saveData") then {
 
             // Create object without damage handling and simulation
             _object = createVehicle [_class, _pos, [], 0, "CAN_COLLIDE"];
+            _object setVariable ["KPLIB_playerSide", true, true];
             _object allowdamage false;
             _object enableSimulation false;
 

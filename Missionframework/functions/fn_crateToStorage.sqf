@@ -51,6 +51,8 @@ if (!isNull _storage) then {
             publicVariable "recalculate_sectors";
         };
     };
+
+    _crate setVariable ["KPLIB_playerSide", true, true];
 } else {
     if (!isDedicated) then {
         [] spawn {
