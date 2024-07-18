@@ -4,8 +4,8 @@ class liberation_squad {
     controlsBackground[] = {};
 
     controls[] = {"OuterBG", "RecycleBG","OuterBG_F", "InnerBG", "InnerBG_F", "OuterCenterPanel","Header","SquadList","DeployMap", "ButtonClose",
-        "NameLabel", "ClassLabel", "HealthLabel", "DistanceLabel", "PrimaryLabel", "PrimaryMagsLabel", "SecondaryLabel", "SecondaryMagsLabel", "VehicleLabel",
-        "ResupplyButton", "RemoveButton", "ReplaceButton", "ConfirmButton", "CancelButton", "PiPZone"};
+        "NameLabel", "ClassLabel", "HealthLabel", "DistanceLabel", "PrimaryLabel", "PrimaryMagsLabel", "SecondaryLabel", "SecondaryMagsLabel", "VehicleLabel", "VehicleImmobileLabel", "IsPlayerLabel",
+        "ResupplyButton", "RemoveButton", "ReplaceButton", "ImmobileButton", "ImmobileOffButton", "ConfirmButton", "CancelButton", "PiPZone"};
 
     objects[] = {};
 
@@ -70,7 +70,7 @@ class liberation_squad {
         idc = 210;
         x = (0.2 * safezoneW + safezoneX);
         y = (0.6 * safezoneH + safezoneY);
-        w = (0.12 * safezoneW);
+        w = (0.055 * safezoneW);
         h = (0.04 * safezoneH);
         sizeEx = 0.025 * safezoneH;
         text = $STR_RESUPPLY;
@@ -80,7 +80,7 @@ class liberation_squad {
     class RemoveButton: StdButton {
         idc = 211;
         x = (0.2 * safezoneW + safezoneX);
-        y = (0.65 * safezoneH + safezoneY);
+        y = (0.7 * safezoneH + safezoneY);
         w = (0.12 * safezoneW);
         h = (0.04 * safezoneH);
         sizeEx = 0.025 * safezoneH;
@@ -90,14 +90,36 @@ class liberation_squad {
     };
     class ReplaceButton: StdButton {
         idc = 212;
-        x = (0.2 * safezoneW + safezoneX);
-        y = (0.7 * safezoneH + safezoneY) ;
-        w = (0.12 * safezoneW);
+        x = (0.265 * safezoneW + safezoneX);
+        y = (0.6 * safezoneH + safezoneY) ;
+        w = (0.055 * safezoneW);
         h = (0.04 * safezoneH);
         sizeEx = 0.025 * safezoneH;
         text = $STR_DEPLOY_ON_MEMBER;
         tooltip = $STR_DEPLOY_ON_MEMBER_TOOLTIP;
         action = "KPLIB_squadaction = 3";
+    };
+    class ImmobileButton: StdButton {
+        idc = 215;
+        x = (0.2 * safezoneW + safezoneX);
+        y = (0.65 * safezoneH + safezoneY) ;
+        w = (0.055 * safezoneW);
+        h = (0.04 * safezoneH);
+        sizeEx = 0.025 * safezoneH;
+        text = $STR_SQUAD_ALLOW_IMMOBILE;
+        tooltip = $STR_SQUAD_ALLOW_IMMOBILE_TOOLTIP;
+        action = "KPLIB_squadaction = 4";
+    };
+    class ImmobileOffButton: StdButton {
+        idc = 216;
+        x = (0.265 * safezoneW + safezoneX);
+        y = (0.65 * safezoneH + safezoneY) ;
+        w = (0.055 * safezoneW);
+        h = (0.04 * safezoneH);
+        sizeEx = 0.025 * safezoneH;
+        text = $STR_SQUAD_DISALLOW_IMMOBILE;
+        tooltip = $STR_SQUAD_DISALLOW_IMMOBILE_TOOLTIP;
+        action = "KPLIB_squadaction = 5";
     };
     class ConfirmButton: StdButton {
         idc = 213;
@@ -143,34 +165,42 @@ class liberation_squad {
     };
     class ClassLabel: StdSquadLabel {
         idc = 202;
-        y = 0.3 * safezoneH + safezoneY;
+        y = 0.275 * safezoneH + safezoneY;
     };
     class HealthLabel: StdSquadLabel {
         idc = 203;
-        y = 0.325 * safezoneH + safezoneY;
+        y = 0.3 * safezoneH + safezoneY;
     };
     class DistanceLabel: StdSquadLabel {
         idc = 204;
-        y = 0.35 * safezoneH + safezoneY;
+        y = 0.325 * safezoneH + safezoneY;
     };
     class PrimaryLabel: StdSquadLabel {
         idc = 205;
-        y = 0.4 * safezoneH + safezoneY;
+        y = 0.365 * safezoneH + safezoneY;
     };
     class PrimaryMagsLabel: StdSquadLabel {
         idc = 206;
-        y = 0.425 * safezoneH + safezoneY;
+        y = 0.39 * safezoneH + safezoneY;
     };
     class SecondaryLabel: StdSquadLabel {
         idc = 207;
-        y = 0.475 * safezoneH + safezoneY;
+        y = 0.425 * safezoneH + safezoneY;
     };
     class SecondaryMagsLabel: StdSquadLabel {
         idc = 208;
-        y = 0.5 * safezoneH + safezoneY;
+        y = 0.45 * safezoneH + safezoneY;
     };
     class VehicleLabel: StdSquadLabel {
         idc = 209;
+        y = 0.49 * safezoneH + safezoneY;
+    };
+    class VehicleImmobileLabel: StdSquadLabel {
+        idc = 219;
+        y = 0.515 * safezoneH + safezoneY;
+    };
+    class IsPlayerLabel: StdSquadLabel {
+        idc = 218;
         y = 0.55 * safezoneH + safezoneY;
     };
     class PiPZone {

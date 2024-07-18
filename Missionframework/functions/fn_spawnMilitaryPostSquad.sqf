@@ -31,13 +31,14 @@ if (_allPosts isEqualTo []) exitWith {[]};
 
 // Spawn units
 private _grp = createGroup [KPLIB_side_enemy, true];
+_grp setVariable ["acex_headless_blacklist", true, true];
 private _unit = objNull;
 private _units = [];
 {
     _unit = [[KPLIB_o_marksman, KPLIB_o_machinegunner] select (random 100 > 50), _pos, _grp] call KPLIB_fnc_createManagedUnit;
     _unit setdir (180 + (getdir _x));
     _unit setpos (([_x] call BIS_fnc_buildingPositions) select 1);
-    [_unit] spawn building_defence_ai;
+    [_unit, "", true] spawn building_defence_ai;
     _unit setUnitPos 'UP';
     _units pushback _unit;
 } forEach _allPosts;

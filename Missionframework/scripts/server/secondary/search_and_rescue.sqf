@@ -43,7 +43,7 @@ private _patrolcorners = [
     [_x, _patrolcorners select 0, _grppatrol, "PRIVATE", 0.5] call KPLIB_fnc_createManagedUnit;
 } foreach ([] call KPLIB_fnc_getSquadComp);
 
-while {(count (waypoints _grppatrol)) != 0} do {deleteWaypoint ((waypoints _grppatrol) select 0);};
+{ deleteWaypoint _x } forEachReversed waypoints _grppatrol;
 {
     private _nextcorner = _x;
     _waypoint = _grppatrol addWaypoint [_nextcorner,0];
@@ -105,7 +105,7 @@ if ( _alive_crew_count == 0 ) then {
     [8] remoteExec ["remote_call_intel"];
     private _grp = createGroup [KPLIB_side_player, true];
     { [_x ] joinSilent _grp; } foreach _pilotUnits;
-    while {(count (waypoints _grp)) != 0} do {deleteWaypoint ((waypoints _grp) select 0);};
+    { deleteWaypoint _x } forEachReversed waypoints _grp;
     {doStop _x; _x doFollow leader _grp} foreach units _grp;
     { [ _x ] spawn {
         sleep 600;

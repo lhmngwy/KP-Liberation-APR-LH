@@ -18,7 +18,7 @@ while { KPLIB_endgame == 0 } do {
 
     _grp = grpNull;
 
-    private _minSpawnRange = round (KPLIB_range_pointActivation * 0.5);
+    private _minSpawnRange = round (KPLIB_range_pointActivation * 1.5);
     private _maxSpawnRange = round (KPLIB_range_pointActivation * 4);
 
     _spawn_marker = "";
@@ -34,7 +34,7 @@ while { KPLIB_endgame == 0 } do {
     if (_is_infantry) then {
 
         private _minRange = round (KPLIB_range_pointActivation * 0.75);
-        private _maxRange = round (KPLIB_range_pointActivation * 3);
+        private _maxRange = round (KPLIB_range_pointActivation * 2.5);
 
         private _sectors_spawn = [];
         {

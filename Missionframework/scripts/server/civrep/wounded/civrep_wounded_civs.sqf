@@ -24,6 +24,7 @@ for "_i" from 1 to _count do {
     _marker setMarkerAlpha 0.35;
     _markers pushBack _marker;
 };
+_grp setVariable ["acex_headless_blacklist", true, true];
 
 waitUntil {count _civs isEqualTo _count};
 if (KPLIB_civrep_debug > 0) then {[format ["civrep_wounded_civs.sqf -> Spawned %1 wounded civilians at %2", _count, markerText _sector], "CIVREP"] remoteExecCall ["KPLIB_fnc_log", 2];};

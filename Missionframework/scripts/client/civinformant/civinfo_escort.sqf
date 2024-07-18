@@ -3,8 +3,6 @@ scriptName "civinfo_escort";
 params ["_informant"];
 private [ "_nearestfob", "_is_near_fob", "_grp" ];
 
-waitUntil {sleep 0.5; local _informant};
-
 if (KPLIB_civinfo_debug > 0) then {[format ["civinfo_escort called on: %1 - Parameters: [%2]", debug_source, _informant], "CIVINFO"] remoteExecCall ["KPLIB_fnc_log", 2];};
 
 _is_near_fob = false;

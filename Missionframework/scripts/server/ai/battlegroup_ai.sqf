@@ -8,9 +8,6 @@ private _objPos = [getPos (leader _grp)] call KPLIB_fnc_getNearestBluforObjectiv
 
 [_objPos] remoteExec ["remote_call_incoming"];
 
-private _startpos = getPos (leader _grp);
-
-
 private _waypoint = [];
 { deleteWaypoint _x } forEachReversed waypoints _grp;
 {_x doFollow leader _grp} forEach units _grp;

@@ -131,6 +131,7 @@ while { dialog && alive player } do {
 
             if ( vehicle _selectedmember == _selectedmember ) then {
                 ctrlSetText [ 209, "" ];
+                ctrlSetText [ 219, "" ];
             } else {
                 _vehstring = localize 'STR_PASSENGER';
                 if (driver vehicle _selectedmember == _selectedmember ) then { _vehstring = localize 'STR_DRIVER'; };
@@ -138,10 +139,21 @@ while { dialog && alive player } do {
                 if (commander vehicle _selectedmember == _selectedmember ) then { _vehstring = localize 'STR_COMMANDER'; };
                 _vehstring = _vehstring + format [ " (%1)", getText (_cfgVehicles >> (typeof vehicle _selectedmember) >> "displayName") ];
                 ctrlSetText [ 209, _vehstring ];
+                
+                if ( (isAllowedCrewInImmobile vehicle _selectedmember) && vehicle _selectedmember getVariable ["ace_vehicle_damage_allowCrewInImmobile", false] ) then {
+                    ctrlSetText [ 219, localize 'STR_ALLOW_INIMMOBILE' ];
+                } else {
+                    ctrlSetText [ 219, "" ];
+                };
+            };
+            if (isPlayer _selectedmember) then {
+                ctrlSetText [ 218, localize 'STR_SQUAD_IS_PLAYER' ];
+            } else {
+                ctrlSetText [ 218, "" ];
             };
         };
     } else {
-        { ctrlSetText [ _x, "" ] } foreach [ 201, 202, 203, 204, 205, 206, 207, 208, 209 ];
+        { ctrlSetText [ _x, "" ] } foreach [ 201, 202, 203, 204, 205, 206, 207, 208, 209 , 219 , 218 ];
         KPLIB_squadconfirm = -1;
         KPLIB_squadaction = -1;
     };
@@ -149,16 +161,33 @@ while { dialog && alive player } do {
     if ( KPLIB_squadaction == -1 ) then {
         ctrlEnable [ 213, false ];
         ctrlEnable [ 214, false ];
-        if ( !(isPlayer _selectedmember) && (vehicle _selectedmember == _selectedmember) ) then {
-            ctrlEnable [ 210, true ];
-            if ( leader group player == player ) then {
-                ctrlEnable [ 211, true ];
+        if (!(isPlayer _selectedmember)) then {
+            if (vehicle _selectedmember == _selectedmember) then {
+                ctrlEnable [ 210, true ];
+                if ( leader group player == player ) then {
+                    ctrlEnable [ 211, true ];
+                };
+                ctrlEnable [ 212, true ];
+                ctrlEnable [ 215, false ];
+                ctrlEnable [ 216, false ];
+            } else {
+                if ((isAllowedCrewInImmobile vehicle _selectedmember) && vehicle _selectedmember getVariable ["ace_vehicle_damage_allowCrewInImmobile", false]) then {
+                    ctrlEnable [ 215, false ];
+                    ctrlEnable [ 216, true ];
+                } else {
+                    ctrlEnable [ 215, true ];
+                    ctrlEnable [ 216, false ];
+                };
+                ctrlEnable [ 210, false ];
+                ctrlEnable [ 211, false ];
+                ctrlEnable [ 212, false ];
             };
-            ctrlEnable [ 212, true ];
         } else {
             ctrlEnable [ 210, false ];
             ctrlEnable [ 211, false ];
             ctrlEnable [ 212, false ];
+            ctrlEnable [ 215, false ];
+            ctrlEnable [ 216, false ];
         };
     } else {
         ctrlEnable [ 210, false ];
@@ -166,6 +195,8 @@ while { dialog && alive player } do {
         ctrlEnable [ 212, false ];
         ctrlEnable [ 213, true ];
         ctrlEnable [ 214, true ];
+        ctrlEnable [ 215, false ];
+        ctrlEnable [ 216, false ];
     };
 
     if( KPLIB_squadconfirm == 0 ) then {
@@ -236,6 +267,18 @@ while { dialog && alive player } do {
 
             [ localize 'STR_SQUAD_DEPLOY' ] spawn spawn_camera;
 
+        };
+
+        if (KPLIB_squadaction == 4) then {
+            closeDialog 0;
+            vehicle _selectedmember allowCrewInImmobile true;
+            vehicle _selectedmember setVariable ["ace_vehicle_damage_allowCrewInImmobile", true, true];
+        };
+
+        if (KPLIB_squadaction == 5) then {
+            closeDialog 0;
+            vehicle _selectedmember allowCrewInImmobile false;
+            vehicle _selectedmember setVariable ["ace_vehicle_damage_allowCrewInImmobile", false, true];
         };
 
         KPLIB_squadaction = -1;

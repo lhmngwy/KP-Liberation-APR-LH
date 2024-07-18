@@ -12,7 +12,7 @@ if (isNull _grp) exitWith {};
 if (vehicle (leader _grp) == (leader _grp)) then {_is_infantry = true;};
 
 sleep 5;
-while {(count (waypoints _grp)) != 0} do {deleteWaypoint ((waypoints _grp) select 0);};
+{ deleteWaypoint _x } forEachReversed waypoints _grp;
 sleep 1;
 {doStop _x; _x doFollow leader _grp} foreach units _grp;
 sleep 1;
@@ -63,7 +63,7 @@ waitUntil {
 };
 
 if (((units _grp) findIf {alive _x}) != -1) then {
-    while {(count (waypoints _grp)) != 0} do {deleteWaypoint ((waypoints _grp) select 0)};
+    { deleteWaypoint _x } forEachReversed waypoints _grp;
     sleep 1;
     {doStop _x; _x doFollow leader _grp} foreach units _grp;
     sleep 1;

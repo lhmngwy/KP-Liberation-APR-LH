@@ -75,7 +75,7 @@ while { KPLIB_endgame == 0 } do {
 
         };
 
-        while {(count (waypoints _grp)) != 0} do {deleteWaypoint ((waypoints _grp) select 0);};
+        { deleteWaypoint _x } forEachReversed waypoints _grp;
         {doStop _x; _x doFollow leader _grp} foreach units _grp;
 
         {

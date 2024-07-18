@@ -67,7 +67,7 @@ if (alive _unit) then {
             unAssignVehicle _unit;
         };
 
-        while {(count (waypoints _grp)) != 0} do {deleteWaypoint ((waypoints _grp) select 0);};
+        { deleteWaypoint _x } forEachReversed waypoints _grp;
         {doStop _x; _x doFollow leader _grp} foreach units _grp;
 
         _possible_sectors = (KPLIB_sectors_all - KPLIB_sectors_player);

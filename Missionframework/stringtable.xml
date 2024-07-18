@@ -2650,6 +2650,30 @@
             <Czech>Vybraný člen družstva není dostatečně blízko k FOB nebo mobilnímu spawnu.</Czech>
             <Japanese>選択した分隊員は補給地点の近くにいません。</Japanese>
         </Key>
+        <Key ID="STR_SQUAD_ALLOW_IMMOBILE">
+            <Original>No eject</Original>
+            <Japanese>脱出を不許可</Japanese>
+        </Key>
+        <Key ID="STR_SQUAD_ALLOW_IMMOBILE_TOOLTIP">
+            <Original>Prevents the selected squad member from attempting to escape when their vehicle becomes stuck.</Original>
+            <Japanese>選択した分隊員が乗っている車両が動けなくなった時に脱出しようとするのを阻止します。</Japanese>
+        </Key>
+        <Key ID="STR_SQUAD_DISALLOW_IMMOBILE">
+            <Original>Allow eject</Original>
+            <Japanese>脱出を許可</Japanese>
+        </Key>
+        <Key ID="STR_SQUAD_DISALLOW_IMMOBILE_TOOLTIP">
+            <Original>Re-allows selected squad members to eject from their vehicle when it becomes stuck.</Original>
+            <Japanese>選択した分隊員が乗っている車両が動けなくなった時に脱出するのを再び許可します。</Japanese>
+        </Key>
+        <Key ID="STR_ALLOW_INIMMOBILE">
+            <Original>Crew will NOT eject themselves</Original>
+            <Japanese>この乗員は自己判断で脱出しません</Japanese>
+        </Key>
+        <Key ID="STR_SQUAD_IS_PLAYER">
+            <Original>This soldier is Player</Original>
+            <Japanese>この兵士はプレイヤーです</Japanese>
+        </Key>
         <Key ID="STR_PERMISSIONS_TITLE">
             <Original>PERMISSIONS MANAGEMENT</Original>
             <French>GESTION DES PERMISSIONS</French>
@@ -7590,7 +7614,7 @@
             <Italian>FOB Container</Italian>
             <Korean>전초기지 설치박스</Korean>
             <Czech>FOB Kontejner</Czech>
-            <Japanese>FOB コンテナ―</Japanese>
+            <Japanese>FOB コンテナ</Japanese>
         </Key>
         <Key ID="STR_PARAMS_FIRSTFOBVEHICLE_TRUCK">
             <Original>FOB Truck</Original>

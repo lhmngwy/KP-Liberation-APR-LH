@@ -69,6 +69,7 @@ if (_classname in KPLIB_o_helicopters) then {
     _newvehicle setVectorUp surfaceNormal position _newvehicle;
 };
 
+_newVehicle lock true;
 // Clear cargo, if enabled
 [_newvehicle] call KPLIB_fnc_clearCargo;
 _newvehicle addItemCargoGlobal ["toolkit", 1];
@@ -98,5 +99,6 @@ _newvehicle addMPEventHandler ["MPKilled", {
 sleep 0.1;
 _newvehicle allowDamage true;
 _newvehicle setDamage 0;
+_newVehicle lock false;
 
 _newvehicle

@@ -23,7 +23,8 @@ while {true} do {
         private _grp = createGroup [KPLIB_side_civilian, true];
         private _informant = [selectRandom KPLIB_c_units, markerPos _sector, _grp] call KPLIB_fnc_createManagedUnit;
         private _waiting_time = KPLIB_civinfo_duration;
-        
+        _grp setVariable ["acex_headless_blacklist", true, true];
+
         _houses = (nearestObjects [[((markerPos _sector select 0) - 100 + (random 200)), ((markerPos _sector select 1) - 100 + (random 200))],["House", "Building"], 100]);
         if (count _houses == 0) then {
             _randomPos = ((markerPos _sector) getPos [random 150, random 360]) findEmptyPosition [3, 150, KPLIB_b_crateAmmo];

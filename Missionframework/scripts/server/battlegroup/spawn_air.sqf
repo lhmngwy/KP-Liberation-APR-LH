@@ -35,7 +35,7 @@ for "_i" from 1 to _planes_number do {
     sleep 1;
 };
 
-while {!((waypoints _grp) isEqualTo [])} do {deleteWaypoint ((waypoints _grp) select 0);};
+{ deleteWaypoint _x } forEachReversed waypoints _grp;
 sleep 1;
 {_x doFollow leader _grp} forEach (units _grp);
 sleep 1;
