@@ -594,6 +594,7 @@ if (!isNil "_saveData") then {
             // Add blufor crew, if it had crew or is a UAV
             if ((unitIsUAV _object) || _hascrew) then {
                 [_object] call KPLIB_fnc_forceBluforCrew;
+                _object allowCrewInImmobile true;
             };
 			
 			   // Reload inventory if necessary

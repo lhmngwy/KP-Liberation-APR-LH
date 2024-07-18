@@ -331,6 +331,7 @@ while { true } do {
 
                 if ( (unitIsUAV _vehicle) || manned ) then {
                     [ _vehicle ] call KPLIB_fnc_forceBluforCrew;
+                    _vehicle allowCrewInImmobile true;
                 };
 
                 sleep 0.3;
