@@ -79,6 +79,12 @@ doStop _aiSquad;
 } forEach _aiSquad;
 
 [] spawn {
-    waitUntil { sleep 1; isNull (player getVariable ['KPLIB_ownedZeusModule', objNull]) };
-    [] call KPLIB_fnc_requestZeus;
+    waitUntil { sleep 1; player getVariable ["KPLIB_namespaceSet", false] };
+
+    if ((player == [] call KPLIB_fnc_getCommander) || (player getVariable ['KPLIB_hasDirectAccess', false])) then {
+        // Request Zeus if enabled
+        if (KPLIB_param_zeusCommander) then {
+            [] call KPLIB_fnc_requestZeus;
+        };
+    };
 };
