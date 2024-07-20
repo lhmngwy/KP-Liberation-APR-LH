@@ -702,6 +702,7 @@ if (!isNil "_saveData") then {
         {
             _x params ["_spawnPos", "_units", "_groupId"];
             _grp = createGroup [KPLIB_side_player, true];
+            _grp deleteGroupWhenEmpty true;
             _grp setGroupIdGlobal [_groupId];
             {
                 [_x, [_spawnPos, _grp] select (_forEachIndex > 0), _grp] call KPLIB_fnc_createManagedUnit;

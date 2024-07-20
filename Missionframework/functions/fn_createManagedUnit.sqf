@@ -36,6 +36,7 @@ isNil {
     _unit = _groupTemp createUnit [_type, _spawnPos, [], _placement, "FORM"];
     _unit addMPEventHandler ["MPKilled", {
         params ["_unit", "_killer"];
+        [_unit] joinSilent grpNull;
         ["KPLIB_manageKills", [_unit, _killer]] call CBA_fnc_localEvent;
     }];
     _unit setRank _rank;
