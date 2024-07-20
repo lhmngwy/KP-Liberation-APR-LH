@@ -24,6 +24,7 @@ Integrated from others:
 - Additional map ports by stutpip123: https://github.com/KillahPotatoes/KP-Liberation/pull/854
 - pSiKO Ai Revive to enable AI medics to revive: https://steamcommunity.com/sharedfiles/filedetails/?id=2996342068
 - Advanced Towing: https://steamcommunity.com/sharedfiles/filedetails/?id=639837898
+- Soldier Tracker for better map icons: https://github.com/auQuiksilver/Soldier-Tracker
 
 - More changes to come...
 
