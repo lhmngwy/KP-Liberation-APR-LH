@@ -18,11 +18,8 @@ execVM "scripts\client\build\build_overlay.sqf";
 execVM "scripts\client\build\do_build.sqf";
 execVM "scripts\client\commander\enforce_whitelist.sqf";
 execVM "scripts\client\commander\hide_from_zeus.sqf";
-if (KPLIB_param_mapMarkers) then {execVM "scripts\client\markers\empty_vehicles_marker.sqf";};
 execVM "scripts\client\markers\fob_markers.sqf";
-if (!KPLIB_param_highCommand && KPLIB_param_mapMarkers) then {execVM "scripts\client\markers\group_icons.sqf";};
 execVM "scripts\client\markers\hostile_groups.sqf";
-if (KPLIB_param_mapMarkers) then {execVM "scripts\client\markers\huron_marker.sqf";} else {deleteMarkerLocal "huronmarker"};
 execVM "scripts\client\markers\sector_manager.sqf";
 execVM "scripts\client\markers\spot_timer.sqf";
 execVM "scripts\client\misc\broadcast_squad_colors.sqf";
@@ -37,6 +34,7 @@ execVM "scripts\client\ui\ui_manager.sqf";
 execVM "scripts\client\ui\tutorial_manager.sqf";
 execVM "scripts\client\markers\update_production_sites.sqf";
 execVM "addons\PAR\fn_init.sqf";
+if (KPLIB_param_mapMarkers) then { execVM "addons\SoliderTracker\QS_icons.sqf" };
 
 player addMPEventHandler ["MPKilled", {
     params ["_unit", "_killer"];

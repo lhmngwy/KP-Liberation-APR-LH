@@ -2,9 +2,7 @@ params ["_unit"];
 
 if (rating _unit < -2000) exitWith {_unit setDamage 1};
 
-if (isPlayer _unit) then {
-	[] call PAR_show_marker;
-} else {
+if !(isPlayer _unit) then {
 	[_unit] call PAR_fn_deathSound;
 };
 
@@ -68,9 +66,6 @@ while { alive _unit && (_unit getVariable ["PAR_isUnconscious", false]) && time 
 
 if (!isNull _bld) then { _bld spawn {sleep (30 + floor(random 30)); deleteVehicle _this} };
 [(_unit getVariable ["PAR_myMedic", objNull]), _unit] call PAR_fn_medicRelease;
-if (isPlayer _unit) then {
-	[] call PAR_del_marker;
-};
 
 // Bad end
 if (!alive _unit) exitWith {};

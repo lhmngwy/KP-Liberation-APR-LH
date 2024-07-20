@@ -587,6 +587,7 @@ if (!isNil "_saveData") then {
             };
 
             _object setVariable ["KPLIB_playerSide", true, true];
+            _object setVariable ['QS_ST_drawEmptyVehicle',TRUE,TRUE];
 
             // Determine if cargo should be cleared
             [_object] call KPLIB_fnc_clearCargo;

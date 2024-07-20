@@ -126,9 +126,6 @@ if(isServer) then {
     GET_PARAM_BOOL(KPLIB_param_deployCinematic, "DeploymentCinematic", 1);
     GET_PARAM_BOOL(KPLIB_param_cmdrWhitelist, "Whitelist", 0);
     GET_PARAM(KPLIB_param_restart, "ServerRestart", 0);
-
-    GREUH_allow_mapmarkers = KPLIB_param_mapMarkers; publicVariable "GREUH_allow_mapmarkers";
-    GREUH_allow_platoonview = KPLIB_param_mapMarkers; publicVariable "GREUH_allow_platoonview";
 };
 
 // Fix for not working float values in mission params
