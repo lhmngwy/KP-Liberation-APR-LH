@@ -61,7 +61,7 @@ while { true } do {
             _pos = [(getpos player select 0) + 1,(getpos player select 1) + 1, 0];
             _grp = createGroup KPLIB_side_player;
             _grp deleteGroupWhenEmpty true;
-            _grp setGroupId [format ["%1 %2",KPLIB_b_squadNames select buildindex, groupId _grp]];
+            _grp setGroupIdGlobal [format ["%1 %2",KPLIB_b_squadNames select buildindex, groupId _grp]];
             _idx = 0;
             {
                 _unitrank = "private";

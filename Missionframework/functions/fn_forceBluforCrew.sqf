@@ -24,6 +24,7 @@ if (isNull _veh) exitWith {["Null object given"] call BIS_fnc_error; false};
 
 // Create regular config crew
 private _grp = createVehicleCrew _veh;
+_grp deleteGroupWhenEmpty true;
 
 // If the config crew isn't the correct side, replace it with the crew classnames from the preset
 if ((side _grp) != KPLIB_side_player) then {
@@ -47,5 +48,9 @@ if ((side _grp) != KPLIB_side_player) then {
 
 // Set the crew to safe behaviour
 _grp setBehaviour "SAFE";
+
+// Name the squad after the vehicle
+_vehicleName = getText (configFile >> "CfgVehicles" >> (typeOf _veh) >> "displayName");
+_grp setGroupIdGlobal [format ["%1 %2",_vehicleName, groupId _grp]];
 
 true

@@ -700,8 +700,9 @@ if (!isNil "_saveData") then {
     private _grp = grpNull;
     if (((_saveData select 0) select 0) isEqualType 0) then {
         {
-            _x params ["_spawnPos", "_units"];
+            _x params ["_spawnPos", "_units", "_groupId"];
             _grp = createGroup [KPLIB_side_player, true];
+            _grp setGroupIdGlobal [_groupId];
             {
                 [_x, [_spawnPos, _grp] select (_forEachIndex > 0), _grp] call KPLIB_fnc_createManagedUnit;
             } forEach _units;

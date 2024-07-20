@@ -158,7 +158,7 @@ _allObjects = _allObjects + (vehicles select {
     // Get only living AI units
     _grpUnits = (units _x) select {alive _x};
     // Add to save array
-    _aiGroups pushBack [getPosATL (leader _x), (_grpUnits apply {typeOf _x})];
+    _aiGroups pushBack [getPosATL (leader _x), (_grpUnits apply {typeOf _x}), groupId _x];
 } forEach (_allBlueGroups);
 
 // Save all fetched objects
