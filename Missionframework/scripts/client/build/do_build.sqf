@@ -52,7 +52,7 @@ while { true } do {
         if ( manned ) then {
             _grp = createGroup KPLIB_side_player;
         };
-        _classname createUnit [_pos, _grp,"this addMPEventHandler ['MPKilled', {params ['_unit']; [_unit] joinSilent grpNull; ['KPLIB_manageKills', _this] call CBA_fnc_localEvent}]", 0.5, "private"];
+        _classname createUnit [_pos, _grp,"this setVariable ['KPLIB_playerSide', true, true]; this addMPEventHandler ['MPKilled', {params ['_unit']; [_unit] joinSilent grpNull; ['KPLIB_manageKills', _this] call CBA_fnc_localEvent}]", 0.5, "private"];
         _unitsBought = player getVariable ["KPLIB_unitsBought", 1];
         player setVariable ["KPLIB_unitsBought", _unitsBought + 1, true];
         build_confirmed = 0;

@@ -127,6 +127,11 @@ addMissionEventHandler ["PlayerConnected", {
         {
             _x createUnit [position _unit, group _unit];
         } forEach _aiData;
+
+        {
+            _x setVariable ["KPLIB_playerSide", true, true];
+        } forEach units group _unit;
+
     };
 }];
 
