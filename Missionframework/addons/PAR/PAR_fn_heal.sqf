@@ -33,11 +33,7 @@ while {
 
 	if (currentCommand _medic != "STOP") then {
 		[_medic] doFollow (leader group player);
-		if ((_wnded distance2D _medic) < 25) then {
-			_medic doMove (getPosATL _wnded);
-		} else {
-			_medic doMove (getPos _wnded);
-		};
+		_medic doMove (getPosATL _wnded);
 		sleep 5;
 		if (speed vehicle _medic < 1 && (_medic distance2D _wnded) > 5 && (currentCommand _medic != "STOP")) then {
 			_medic setPosATL (getPosATL _medic vectorAdd [([] call F_getRND), ([] call F_getRND), 0.5]);

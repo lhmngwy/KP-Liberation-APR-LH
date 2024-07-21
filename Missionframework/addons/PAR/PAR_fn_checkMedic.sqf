@@ -50,11 +50,7 @@ while {lifeState _wnded == "INCAPACITATED" || lifeState _medic != "INCAPACITATED
 		_medic playMoveNow "AmovPercMwlkSrasWrflDf";
 
 		if (_fail < 3) then {
-			if (_dist < 25) then {
-				_medic doMove (getPosATL _wnded);
-			} else {
-				_medic doMove (getPos _wnded);
-			};
+			_medic doMove (getPosATL _wnded);
 		};
 
 		if (_fail in [3, 4]) then {
