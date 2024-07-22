@@ -31,7 +31,7 @@ KPLIB_b_arsenal         = "B_supplyCrate_F";                            // This 
 KPLIB_b_mobileRespawn   = ["EO_TentDome_F", "B_Truck_01_medical_F", "B_Slingload_01_Medevac_F", "rksla3_lcvpmk5_viv_generic_grey"];
 
 KPLIB_b_potato01        = "B_Heli_Transport_03_unarmed_F";              // This is Potato 01, a multipurpose mobile respawn as a helicopter.
-KPLIB_b_crewUnit        = "B_crew_F";                                   // This defines the crew for vehicles.
+KPLIB_b_crewUnit        = "B_Soldier_F";                                // This defines the crew for vehicles.
 KPLIB_b_heliPilotUnit   = "B_Helipilot_F";                              // This defines the pilot for helicopters.
 KPLIB_b_addHeli         = "B_Heli_Light_01_F";                          // These are the additional helicopters which spawn on the Freedom or at Chimera base.
 KPLIB_b_addBoat         = "B_Boat_Transport_01_F";                      // These are the boats which spawn at the stern of the Freedom.
