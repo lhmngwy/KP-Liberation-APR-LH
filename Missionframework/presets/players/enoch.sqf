@@ -138,10 +138,7 @@ KPLIB_b_vehStatic = [
     ["I_E_Static_AT_F",50,100,0],                                       // Static Titan Launcher (AT)
     ["I_E_Static_AA_F",50,100,0],                                       // Static Titan Launcher (AA)
     ["I_E_Mortar_01_F",80,150,0],                                       // Mk6 Mortar
-    ["I_E_SAM_System_03_F",250,500,0],                                  // MIM-145 Defender
-    ["B_SAM_System_01_F",375,750,0],                                    // Mk49 Spartan
-    ["B_SAM_System_02_F",375,750,0],                                    // Mk21 Centurion
-    ["B_AAA_System_01_F",500,1000,0]                                    // Praetorian 1C
+    ["I_E_SAM_System_03_F",250,500,0]                                   // MIM-145 Defender
 ];
 
 KPLIB_b_objectsDeco = [
