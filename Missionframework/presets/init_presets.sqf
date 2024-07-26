@@ -151,6 +151,7 @@ KPLIB_r_vehicles                = KPLIB_r_vehicles                  select {[_x]
 
 // Civilians
 KPLIB_c_units                   = KPLIB_c_units                     select {[_x] call KPLIB_fnc_checkClass};
+KPLIB_c_workers                 = KPLIB_c_workers                   select {[_x] call KPLIB_fnc_checkClass};
 KPLIB_c_vehicles                = KPLIB_c_vehicles                  select {[_x] call KPLIB_fnc_checkClass};
 
 // Misc

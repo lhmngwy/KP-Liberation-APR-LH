@@ -42,6 +42,11 @@ KPLIB_c_units = [
     "C_man_polo_6_F"
 ];
 
+KPLIB_c_workers = [
+    "C_Man_UtilityWorker_01_F",
+    "C_man_w_worker_F"
+];
+
 // Civilian vehicle classnames.
 KPLIB_c_vehicles = [
     "C_Quadbike_01_F",

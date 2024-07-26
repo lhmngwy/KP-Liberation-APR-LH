@@ -132,7 +132,6 @@ tpw_air_fnc_flyby =
 sleep tpw_air_delay;
 while {true} do 
 	{
-		player sidechat "loop";
 		private ["_air","_counter"];
 		// Spawn new aircraft as necessary	
 		if (tpw_air_active && tpw_air_inflight < tpw_air_max) then 

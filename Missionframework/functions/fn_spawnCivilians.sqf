@@ -44,9 +44,13 @@ private _grp = grpNull;
 for "_i" from 1 to _amount do {
     _grp = createGroup [KPLIB_side_civilian, true];
 
+    _civ_class = selectRandom KPLIB_c_units;
+    if (_sector in KPLIB_sectors_factory) then {
+        _civ_class = selectRandom KPLIB_c_workers;
+    };
     _civs pushBack (
         [
-            selectRandom KPLIB_c_units,
+            _civ_class,
             [(((_sPos select 0) + (50 * _spread)) - (random (100 * _spread))), (((_sPos select 1) + (50 * _spread)) - (random (100 * _spread))), 0],
             _grp
         ] call KPLIB_fnc_createManagedUnit
