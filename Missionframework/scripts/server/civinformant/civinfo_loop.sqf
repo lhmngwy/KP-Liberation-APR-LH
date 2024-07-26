@@ -37,8 +37,11 @@ while {true} do {
         _informant setUnitPos "UP";
         sleep 1;
         
+        private _chemlight = objNull;
+        private _chemClass = "Chemlight_blue";
         if (KPLIB_ace_captives) then {
             ["ace_captives_setSurrendered", [_informant, true], _informant] remoteExecCall ["CBA_fnc_targetEvent", 2];
+            _chemClass = "ACE_Chemlight_HiBlue";
         } else {
             _informant disableAI "ANIM";
             _informant disableAI "MOVE";
@@ -47,6 +50,7 @@ while {true} do {
             _informant setCaptive true;
         };
         _informant setVariable ["KPLIB_prisonner_surrendered", true, true];
+        _chemlight = _chemClass createVehicle (getPos _informant);
 
         if (KPLIB_civinfo_debug > 0) then {[format ["Informant %1 spawned on: %2 - Position: %3", name _informant, debug_source, getPos _informant], "CIVINFO"] remoteExecCall ["KPLIB_fnc_log", 2];};
 
@@ -86,7 +90,7 @@ while {true} do {
         
         private _isCaptured = _informant getVariable ["KPLIB_prisonner_captured", false];
         private _isCuffed = _informant getVariable ["ace_captives_isHandcuffed", false];
-        KPLIB_civinfo_under_control = false;
+        private _not_under_control = true;
         if (_isCaptured || _isCuffed) then {
             private _capturedPlayer = _informant getVariable ["KPLIB_prisonner_whois", objNull];
             if (isNull _capturedPlayer) then {
@@ -121,13 +125,15 @@ while {true} do {
             doStop _informant;
             _informant doFollow _capturedPlayer;
 
+            _not_under_control = false;
             [_informant] remoteExec ["civinfo_escort", _informant];
             [7, [0,0,0], _capturedPlayer] remoteExec ["civinfo_notifications"];
         };
+        deleteVehicle _chemlight;
         
         waitUntil {!alive _informant || _timeover};
         
-        if (!alive _informant && !KPLIB_civinfo_under_control) exitWith {
+        if (!alive _informant && _not_under_control) exitWith {
             if (KPLIB_civinfo_debug > 0) then {[format ["civinfo_loop is reset by: %1 - Informant isn't alive", debug_source], "CIVINFO"] remoteExecCall ["KPLIB_fnc_log", 2];};
             [3] remoteExec ["civinfo_notifications"];
         };

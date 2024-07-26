@@ -111,7 +111,7 @@
             <Portuguese>Mobilizar</Portuguese>
             <Korean>배치</Korean>
             <Czech>Výsadek</Czech>
-            <Japanese>展開</Japanese>
+            <Japanese>出撃</Japanese>
         </Key>
         <Key ID="STR_Deploy_InProgress">
             <Original>Deployment in progress ...</Original>
@@ -126,7 +126,7 @@
             <Portuguese>Mobilização em andamento...</Portuguese>
             <Korean>배치중입니다...</Korean>
             <Czech>Probíhá Výsadek...</Czech>
-            <Japanese>戦地へ展開中です ...</Japanese>
+            <Japanese>戦地へ出撃中です ...</Japanese>
         </Key>
         <Key ID="STR_CLOSE">
             <Original>Close</Original>
@@ -171,7 +171,7 @@
             <Portuguese>-- CONSTRUIR --</Portuguese>
             <Korean>-- 건 설 --</Korean>
             <Czech>-- STAVĚT --</Czech>
-            <Japanese>-- 建造 --</Japanese>
+            <Japanese>-- 製造 --</Japanese>
         </Key>
         <Key ID="STR_BUILD_TITLE">
             <Original>BUILD MENU</Original>
@@ -186,7 +186,7 @@
             <Portuguese>MENU DE CONSTRUÇÃO</Portuguese>
             <Korean>건설메뉴</Korean>
             <Czech>MENU STAVĚNÍ</Czech>
-            <Japanese>建造メニュー</Japanese>
+            <Japanese>製造メニュー</Japanese>
         </Key>
         <Key ID="STR_BUILD_BUTTON">
             <Original>Build</Original>
@@ -201,7 +201,7 @@
             <Portuguese>Construir</Portuguese>
             <Korean>건설/배치</Korean>
             <Czech>Postavit</Czech>
-            <Japanese>建造</Japanese>
+            <Japanese>製造する</Japanese>
         </Key>
         <Key ID="STR_MANPOWER">
             <Original>Supplies</Original>
@@ -306,7 +306,7 @@
             <Portuguese>-- Construir</Portuguese>
             <Korean>-- 건설(설치)</Korean>
             <Czech>-- Postavit</Czech>
-            <Japanese>-- 建造</Japanese>
+            <Japanese>-- 製造</Japanese>
         </Key>
         <Key ID="STR_PLACEMENT_BIS">
             <Original>-- Build and Repeat</Original>
@@ -321,7 +321,7 @@
             <Portuguese>-- Construir e repetir</Portuguese>
             <Korean>-- 반복 건설(설치)</Korean>
             <Czech>-- Postavit a Opakovat</Czech>
-            <Japanese>-- 連続して建造</Japanese>
+            <Japanese>-- 連続して製造</Japanese>
         </Key>
         <Key ID="STR_CANCEL">
             <Original>-- Cancel</Original>
@@ -351,7 +351,7 @@
             <Portuguese>Construção cancelada.</Portuguese>
             <Korean>건설(설치) 취소</Korean>
             <Czech>Stavění zrušeno</Czech>
-            <Japanese>建造を取り消した。</Japanese>
+            <Japanese>製造を取り消した。</Japanese>
         </Key>
         <Key ID="STR_CONFIRM_HINT">
             <Original>Building confirmed.</Original>
@@ -366,7 +366,7 @@
             <Portuguese>Construção confirmada.</Portuguese>
             <Korean>건설(설치) 완료</Korean>
             <Czech>Stavění potvrzeno</Czech>
-            <Japanese>建造を完了した。</Japanese>
+            <Japanese>製造を完了した。</Japanese>
         </Key>
         <Key ID="STR_PLACEMENT_IMPOSSIBLE">
             <Original>Can't place here: there are %1 object(s) within %2 meters of the object position.</Original>
@@ -653,7 +653,7 @@
             <Portuguese>Não é possível instalar a FOB aqui, você precisa estar no mínimo a %1 metros de distância de outra FOB. A FOB mais próxima está a %2 metros.</Portuguese>
             <Korean>전초기지를 설치할 수 없습니다. 다른 전초기지로부터 %1 미터 떨어져 있어야 합니다. 현재 가장 가까운 전초기지와 %2 미터 떨어져 있습니다.</Korean>
             <Czech>Zde Nelze postavit nové FOB, musí být vzdáleno %1 metrů od jakékoliv jiné FOB. Nejbližší FPB je vzdáleno %2 metrů.</Czech>
-            <Japanese>FOBをここに設置することはできません。 %1 メートル以上他のFOBから離す必要があります。最も近いFOBは %2 にあります。</Japanese>
+            <Japanese>FOBをここに設置することはできません。 %1 メートル以上他のFOBから離す必要があります。 最も近いFOBは %2 にあります。</Japanese>
         </Key>
         <Key ID="STR_FOB_BUILDING_IMPOSSIBLE_SECTOR">
             <Original>Can't deploy a new FOB here, you must be at least %1 meters away from every capturable zone. Nearest zone is %2 meters away.</Original>
@@ -668,7 +668,7 @@
             <Portuguese>Não é possível instalar a FOB aqui, você precisa estar no mínimo a %1 metros de distância de qualquer setor capturável. O setor mais próima está a %2 metros.</Portuguese>
             <Korean>전초기지를 설치할 수 없습니다. 점령지에서 %1 미터 떨어져 있어야 합니다. 현재 가장 가까운 점령지는 %2 미터 떨어져 있습니다.</Korean>
             <Czech>Zde Nelze postavit nové FOB, musí být vzdáleno %1 metrů od jakékoliv zabratelné zóny. Nejbližší zóna je vzdálena %2 metrů.</Czech>
-            <Japanese>FOBをここに設置することはできません。 %1 メートル以上他のセクターから離す必要があります。最も近いセクターは %2 にあります。</Japanese>
+            <Japanese>FOBをここに設置することはできません。 %1 メートル以上他のセクターから離す必要があります。 最も近いセクターは %2 にあります。</Japanese>
         </Key>
         <Key ID="STR_BUILD_ERROR_WATER">
             <Original>Can't build on water.</Original>
@@ -683,7 +683,7 @@
             <Portuguese>Não é possível construir na água.</Portuguese>
             <Korean>물에는 전초기지를 설치 할 수 없습니다.</Korean>
             <Czech>Nemůžeš stavět na vodě</Czech>
-            <Japanese>水上に建造することはできません。</Japanese>
+            <Japanese>水上に製造することはできません。</Japanese>
         </Key>
         <Key ID="STR_BUILD_ERROR_DISTANCE">
             <Original>Can't build further than %1 meters away from the FOB.</Original>
@@ -698,7 +698,7 @@
             <Portuguese>Não é possível construir com mais de %1 metros de distância da FOB.</Portuguese>
             <Korean>전초기지에서 %1 미터 이상 떨어지면 건설(설치)할 수 없습니다. </Korean>
             <Czech>Nemůžeš stavět dál než %1 metrů od FOB.</Czech>
-            <Japanese>%1 メートル以上離れて建造することはできません。</Japanese>
+            <Japanese>%1 メートル以上離れて製造することはできません。</Japanese>
         </Key>
         <Key ID="STR_FOBBOX">
             <Original>FOB Container</Original>
@@ -773,7 +773,7 @@
             <Portuguese>MOBILIZAÇÃO</Portuguese>
             <Korean>배치될 전초기지 선택</Korean>
             <Czech>VÝSADEK</Czech>
-            <Japanese>展開</Japanese>
+            <Japanese>出撃</Japanese>
         </Key>
         <Key ID="STR_DEPLOY_BUTTON">
             <Original>Deploy</Original>
@@ -788,7 +788,7 @@
             <Portuguese>Mobilizar</Portuguese>
             <Korean>배치</Korean>
             <Czech>Výsadek</Czech>
-            <Japanese>展開</Japanese>
+            <Japanese>出撃</Japanese>
         </Key>
         <Key ID="STR_DEPLOY_ACTION">
             <Original>-- REDEPLOY --</Original>
@@ -803,7 +803,7 @@
             <Portuguese>-- REMOBILIZAR --</Portuguese>
             <Korean>-- 재배치 --</Korean>
             <Czech>-- ZNOVUNASAZENÍ --</Czech>
-            <Japanese>-- 再展開 --</Japanese>
+            <Japanese>-- 再出撃 --</Japanese>
         </Key>
         <Key ID="STR_BUILD_CREW">
             <Original>Build with crew</Original>
@@ -818,7 +818,7 @@
             <Portuguese>Construir (tripulado)</Portuguese>
             <Korean>배치(승무원포함)</Korean>
             <Czech>Postavit (Mužstvo)</Czech>
-            <Japanese>製造 (兵士)</Japanese>
+            <Japanese>製造する (乗員を含む)</Japanese>
         </Key>
         <Key ID="STR_LIGHT_RIFLE_SQUAD">
             <Original>Light Rifle Squad</Original>
@@ -1461,7 +1461,7 @@
             <Portuguese>Os suprimentos foram entregues. Os civis agradecem a sua ajuda!</Portuguese>
             <Korean>물품이 배송되었습니다. 시민 여러분의 도움에 감사드립니다!</Korean>
             <Czech>Dodávky byly dodány. Civilisté jsou vděční za vaši pomoc!</Czech>
-            <Japanese>サプライの輸送に成功した。民間人は支援に感謝しています!</Japanese>
+            <Japanese>サプライの輸送に成功した。 民間人は支援に感謝しています!</Japanese>
         </Key>
         <Key ID="STR_NOTIFICATION_CIV_SUPPLIES_NO_ROOM">
             <Original>No friendly towns in the area to deliver supplies to. Liberate one!</Original>
@@ -1476,7 +1476,7 @@
             <Portuguese>Não há cidades amigáveis ​​na área para entregar suprimentos. Libere um antes de tentar esta missão.</Portuguese>
             <Korean>이 지역에는 보급품을 배달할 우호적인 마을이 없습니다. 이 임무를 시도하기 전에 하나를 해방하십시오.</Korean>
             <Czech>V této oblasti neexistují žádná spřátelená města, kam byste dodávali zásoby. Před pokusem o tuto misi jednoho osvobodte.</Czech>
-            <Japanese>この地域にはサプライを必要としている友好的な町がありません。解放する必要があります!</Japanese>
+            <Japanese>この地域にはサプライを必要としている友好的な町がありません。 解放する必要があります!</Japanese>
         </Key>
         <Key ID="STR_NOTIFICATION_BINGO_FUEL_TEXT">
             <Original>Our factory request fuel at %1.</Original>
@@ -1484,11 +1484,11 @@
         </Key>
         <Key ID="STR_NOTIFICATION_BINGO_FUEL_COMPLETE_TEXT">
             <Original>Fuel have been delivered. The factory was thanked and produced several resources!</Original>
-            <Japanese>燃料の輸送に成功した。工場は感謝しいくつかの資源を生産しました!</Japanese>
+            <Japanese>燃料の輸送に成功した。 工場は感謝し、いくつかの資源を生産しました!</Japanese>
         </Key>
         <Key ID="STR_NOTIFICATION_BINGO_FUEL_NO_ROOM">
             <Original>No friendly factory in the area to deliver fuel to. Liberate one!</Original>
-            <Japanese>この地域には燃料を必要としている友好的な工場がありません。解放する必要があります!</Japanese>
+            <Japanese>この地域には燃料を必要としている友好的な工場がありません。 解放する必要があります!</Japanese>
         </Key>
         <Key ID="STR_NOTIFICATION_REARM_OUTPOST_TEXT">
             <Original>Our outpost request ammunition at %1.</Original>
@@ -1496,11 +1496,11 @@
         </Key>
         <Key ID="STR_NOTIFICATION_REARM_OUTPOST_COMPLETE_TEXT">
             <Original>Ammunition have been delivered. OPFOR alert level reduced by outpost!</Original>
-            <Japanese>弾薬の輸送に成功した。軍事基地によって敵の警戒度は減少した!</Japanese>
+            <Japanese>弾薬の輸送に成功した。 軍事基地によって敵の警戒度は減少した!</Japanese>
         </Key>
         <Key ID="STR_NOTIFICATION_REARM_OUTPOST_NO_ROOM">
             <Original>No friendly outpost in the area to deliver ammunition to. Liberate one!</Original>
-            <Japanese>この地域には弾薬を必要としている友軍の軍事基地がありません。解放する必要があります!</Japanese>
+            <Japanese>この地域には弾薬を必要としている友軍の軍事基地がありません。 解放する必要があります!</Japanese>
         </Key>
         <Key ID="STR_NOTIFICATION_PRISONER_TEXT">
             <Original>We have interrogated a prisoner.</Original>
@@ -1545,7 +1545,7 @@
             <Portuguese>OBJETIVO SECUNDÁRIO</Portuguese>
             <Korean>부차적인 임무</Korean>
             <Czech>VEDLEJŠÍ ÚKOL</Czech>
-            <Japanese>副次目標</Japanese>
+            <Japanese>副次任務</Japanese>
         </Key>
         <Key ID="STR_NOTIFICATION_SECONDARY_TEXT">
             <Original>Hostile FOB destroyed</Original>
@@ -1857,7 +1857,7 @@
             <Portuguese>Introdução cinemática de mobilização</Portuguese>
             <Korean>배포 영상</Korean>
             <Czech>Filmové scéna</Czech>
-            <Japanese>展開時の演出</Japanese>
+            <Japanese>出撃時の演出</Japanese>
         </Key>
         <Key ID="STR_PARAMS_ENABLED">
             <Original>Enabled</Original>
@@ -2367,7 +2367,7 @@
             <Portuguese>Substituir</Portuguese>
             <Korean>분대원 교체</Korean>
             <Czech>Nahradit</Czech>
-            <Japanese>置き換え</Japanese>
+            <Japanese>置き換わる</Japanese>
         </Key>
         <Key ID="STR_DEPLOY_ON_MEMBER_TOOLTIP">
             <Original>You will deploy on the selected squad member and replace them while keeping your current loadout.</Original>
@@ -2381,7 +2381,7 @@
             <Turkish>Şuanki ekipmanınız ile seçilen kişinin yerinde doğacaksınız.</Turkish>
             <Portuguese>Você irá reaparecer no membro selecionado e o substituir enquanto mantém seu equipamento atual.</Portuguese>
             <Czech>Budeš nasazen na místo člena družstva a nahradíš ho se svým aktuálním vybavením.</Czech>
-            <Japanese>選択した分隊員の装備をあなたの装備で置き換えます。</Japanese>
+            <Japanese>選択した分隊員と置き換わる形で現在の装備を維持したまま出撃します。</Japanese>
         </Key>
         <Key ID="STR_REMOVE_MEMBER">
             <Original>Remove</Original>
@@ -2603,7 +2603,7 @@
             <Portuguese>Mobilizar Grupo de Combate</Portuguese>
             <Korean>분대 배치</Korean>
             <Czech>Výsadek družstva</Czech>
-            <Japanese>分隊配置</Japanese>
+            <Japanese>分隊員位置に出撃</Japanese>
         </Key>
         <Key ID="STR_REMOVE_OK">
             <Original>You have deleted the selected squad member.</Original>
@@ -2867,7 +2867,7 @@
             <Portuguese>Permite ao jogador utilizar o menu de CONTRUÇÃO.</Portuguese>
             <Korean>플레이어가 전초기지에서 건설메뉴를 사용할 수 있는 권한를 허가 합니다.</Korean>
             <Czech>Povolí hráči používat menu STAVĚNÍ.</Czech>
-            <Japanese>プレイヤーが建造メニューを使用することを許可します。</Japanese>
+            <Japanese>プレイヤーが製造メニューを使用することを許可します。</Japanese>
         </Key>
         <Key ID="STR_PERMISSIONS_TOOLTIP_RECYCLING">
             <Original>Allows the player to use the RECYCLE action.</Original>
@@ -2897,7 +2897,7 @@
             <Portuguese>Permite ao jogador executar outras ações: Desvirar veículo, manipular caixas de recursos, captura de prisioneiros, etc.</Portuguese>
             <Korean>플레이어가 차량을 바로잡거나, 군수물자를 조작하거나 포로를 생포하거나 문서를 획득할 수 있는 권한를 허가 합니다.</Korean>
             <Czech>Povolí hráči používat funkce jako: převrátit, manipulace s bednami, zajmutí zajatce, atd.</Czech>
-            <Japanese>プレイヤーがその他のアクションを使用することを許可します。(ひっくり返す、資源貨物の管理、捕虜の確保など)</Japanese>
+            <Japanese>プレイヤーがその他のアクションを使用することを許可します。 (ひっくり返す、資源貨物の管理、捕虜の確保など)</Japanese>
         </Key>
         <Key ID="STR_PERMISSIONS_TOOLTIP_ALL">
             <Original>Gives all permissions to the player.</Original>
@@ -3032,7 +3032,7 @@
             <Portuguese>Nenhuma permissão foi liberada. O comandante precisa alterar as permissões para permitir que o jogador execute ações e utiliza veículos. Alternativamente, o sistema de permissão pode ser desabilitado no menu de opções da missão.</Portuguese>
             <Korean>사용 권한를 허가 받지 못하였습니다. 관리자는 플레이어들이 장비를 사용할 수 있는 권한을 설정해야 합니다. 사용 권한 설정 메뉴에서 권한을 허가 하거나 제거할 수 있습니다.</Korean>
             <Czech>Nejsou nastaveny pravomoce. Komandér musí nastavit pravomoce na používání funkcí a vozidel. Alternativně lze pravomoce úplně vypnou v nastaveni mise.</Czech>
-            <Japanese>権限が設定されていません。指揮官は各プレイヤーに権限を与える必要があります。権限システムはミッション設定から無効化することもできます。</Japanese>
+            <Japanese>権限が設定されていません。 指揮官は各プレイヤーに権限を与える必要があります。 権限システムはミッション設定から無効化することもできます。</Japanese>
         </Key>
         <Key ID="STR_ARSENAL_TITLE">
             <Original>ARSENAL</Original>
@@ -3352,7 +3352,7 @@
             <Turkish>Atlama süreci devam ediyor...</Turkish>
             <Portuguese>Mobilização em andamento...</Portuguese>
             <Czech>Probíhá výsadek...</Czech>
-            <Japanese>戦地へ展開中です ...</Japanese>
+            <Japanese>戦地へ出撃中です ...</Japanese>
         </Key>
         <Key ID="STR_WHITELIST_PARAM">
             <Original>Use the commander whitelist</Original>
@@ -3397,7 +3397,7 @@
             <Portuguese>Não é possível construir: Forças hostis na proximidade.</Portuguese>
             <Korean>근처에 방해물이 있어 건설(설치)할 수 없습니다.</Korean>
             <Czech>Nemůžeš stavět: nepřátelské jednotky poblíž.</Czech>
-            <Japanese>建造できません: 敵軍が近くにいます。</Japanese>
+            <Japanese>製造できません: 敵軍が近くにいます。</Japanese>
         </Key>
         <Key ID="STR_CLEANUP_PARAM">
             <Original>Cleanup abandoned vehicles outside FOBs</Original>
@@ -3592,7 +3592,7 @@
             <Portuguese>Local para mobilização:</Portuguese>
             <Korean>재투입 위치:</Korean>
             <Czech>Lokace pro výsadek:</Czech>
-            <Japanese>展開地点:</Japanese>
+            <Japanese>出撃地点:</Japanese>
         </Key>
         <Key ID="STR_AGGRESSIVITY_PARAM">
             <Original>OPFOR aggressivity</Original>
@@ -3832,7 +3832,7 @@
             <Portuguese>-- OBJETIVOS SECUNDÁRIOS</Portuguese>
             <Korean>-- 부차적인 작전목표</Korean>
             <Czech>-- VEDLEJŠÍ ÚKOLY</Czech>
-            <Japanese>-- 副次目標</Japanese>
+            <Japanese>-- 副次任務</Japanese>
         </Key>
         <Key ID="STR_SECONDARY_OBJECTIVES_TITLE">
             <Original>SECONDARY OBJECTIVES</Original>
@@ -3847,7 +3847,7 @@
             <Portuguese>OBJETIVOS SECUNDÁRIOS</Portuguese>
             <Korean>부차적인 작전목표</Korean>
             <Czech>VEDLEJŠÍ ÚKOLY</Czech>
-            <Japanese>副次目標</Japanese>
+            <Japanese>副次任務</Japanese>
         </Key>
         <Key ID="STR_SECONDARY_OBJECTIVES_START">
             <Original>Start</Original>
@@ -3877,7 +3877,7 @@
             <Portuguese>Inteligência atual: %1</Portuguese>
             <Korean>현재 정보: %1</Korean>
             <Czech>Zpravodajské body: %1</Czech>
-            <Japanese>現在の情報: %1</Japanese>
+            <Japanese>現在の情報ポイント: %1</Japanese>
         </Key>
         <Key ID="STR_SECONDARY_NOT_ENOUGH_INTEL">
             <Original>Insufficient intel points</Original>
@@ -3907,7 +3907,7 @@
             <Portuguese>A missão secundária já está em andamento</Portuguese>
             <Korean>이미 진행중인 부차적인 작전목표가 있습니다.</Korean>
             <Czech>Vedlejší mise již probíhá</Czech>
-            <Japanese>副次目標作戦はすでに遂行中です</Japanese>
+            <Japanese>副次任務作戦はすでに遂行中です</Japanese>
         </Key>
         <Key ID="STR_NOTIFICATION_INCOMING_TEXT">
             <Original>Hostile forces are heading towards %1.</Original>
@@ -3984,6 +3984,14 @@
             <Czech>OPFOR Konvoj poblíž %1.</Czech>
             <Japanese>敵輸送部隊を %1 付近に発見。</Japanese>
         </Key>
+        <Key ID="STR_SECONDARY_LOGIMISSION_WAITING">
+            <Original>%4 in area: %1/%2\nNext check will run after %3 seconds...</Original>
+            <Japanese>エリア内の %4 の数: %1/%2\n %3 秒後に次のチェックが行われます...</Japanese>
+        </Key>
+        <Key ID="STR_SECONDARY_LOGIMISSION_CHECKING">
+            <Original>%3 in area: %1/%2\nChecking...</Original>
+            <Japanese>エリア内の %3 の数: %1/%2\nチェック中...</Japanese>
+        </Key>
         <Key ID="STR_TUTO_GOTIT">
             <Original>Got it!</Original>
             <French>J'ai pigé!</French>
@@ -4057,7 +4065,7 @@
             <Portuguese>&lt;t size='1.3' color='#ffa000'&gt;CAÇA À FOB&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1'&gt;As forças de oposição (FOROP) utilizam um conjunto de pequenas bases de logística situadas além do fronte de batalha. Destruindo tais recursos desestabilizaria consideravelmente suas linhas de suprimento e afetaria sua capacidade de reagir às nossas ações.&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1'&gt;Sua missão é destruir todas as fontes de recurso (caminhões, contêineres) que estão no objetivo, a qualquer custo. Infelizmente, nossa inteligência não foi capaz de fornecer dados da localização precisa da base. Dessa forma, você deverá localizar o objetivo dentro da zona vermelha identificada em seu mapa.&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1.15' color='#00a0ff'&gt;Cost: 15&lt;img image='\A3\Ui_f\data\GUI\Cfg\Ranks\general_gs.paa'/&gt;&lt;/t&gt;&lt;br/&gt;&lt;t size='1.15' color='#ffa000'&gt;Recompensa: Alerta das forças de oposição reduzidos em 40%.&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='10'&gt;&lt;img image='res\secondary\fob_obj.jpg'/&gt;&lt;/t&gt;</Portuguese>
             <Korean>&lt;t size='1.3' color='#ffa000'&gt;병참기지 기습&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1'&gt;현재 적군은 후방지역에 병참 기지를 운영하고 있습니다. 이 병참 기지를 파괴하면 전방 적군의 작전 수행능력을 저하시켜 아군의 작전 행동에 대응할 수 있는 역량이 약해질 것입니다.&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1'&gt;아군의 작전 목표는 모든 군수물자을 파괴하는 것입니다.(트럭, 컨테이너 등) 아쉽게도 아군 정찰팀이 해당지역을 정찰하였으나 찾지 못하여 정확한 위치를 제공할 수 없기 때문에 당신의 지도에 표기된 빨간 영역 안에 위치한 적군 병참 기지를 찾아야 합니다.&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1.15' color='#00a0ff'&gt;소모되는 정보 점수: 15&lt;img image='\A3\Ui_f\data\GUI\Cfg\Ranks\general_gs.paa'/&gt;&lt;/t&gt;&lt;br/&gt;&lt;t size='1.15' color='#ffa000'&gt;보상: 경고 수준이 40% 감소합니다.&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='10'&gt;&lt;img image='res\secondary\fob_obj.jpg'/&gt;&lt;/t&gt;</Korean>
             <Czech>&lt;t size='1.3' color='#ffa000'&gt;HON NA FOB&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1'&gt;Jednotky OPFOR používají řadu menších logistických základen za hlavní linii. Zničení těchto prostředků výrazně naruší zásobováni OPFOR jednotek a naruší jejich schopnost reagovat na naše akce.&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1'&gt;Cílem mise je zničit všechny zásobovací prostředky (náklaďáky, kontejnery) libovolnými prostředky. Bohužel naše rozvědka není schopna vám poskytnout přesnou polohou pro základny, budete ji muset najít v červené zóně na mapě.&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1.15' color='#00a0ff'&gt;Cena: 15&lt;img image='\A3\Ui_f\data\GUI\Cfg\Ranks\general_gs.paa'/&gt;&lt;/t&gt;&lt;br/&gt;&lt;t size='1.15' color='#ffa000'&gt;Odměna: Snížení bojové pohotovosti OPFOR o 40%&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='10'&gt;&lt;img image='res\secondary\fob_obj.jpg'/&gt;&lt;/t&gt;</Czech>
-            <Japanese>&lt;t size='1.3' color='#ffa000'&gt;前線基地攻撃&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1'&gt;敵軍部隊は小規模な物流基地を後方に設置している。 これらの資源を破壊すれば敵補給船への打撃を与え、敵軍の警戒度を下げることが出来るはずだ。&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1'&gt;諸君の任務は目標に存在するすべての補給用品(トラックやコンテナ)の破壊だ。 残念ながら我々の情報網では敵基地の正確な位置を特定するには至らなかった。 諸君には赤い範囲内で目標を捜索し、破壊してほしい。&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1.15' color='#00a0ff'&gt;費用: 15&lt;img image='\A3\Ui_f\data\GUI\Cfg\Ranks\general_gs.paa'/&gt;&lt;/t&gt;&lt;br/&gt;&lt;t size='1.15' color='#ffa000'&gt;報酬: 敵部隊警戒度が40%低下。&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='10'&gt;&lt;img image='res\secondary\fob_obj.jpg'/&gt;&lt;/t&gt;</Japanese>
+            <Japanese>&lt;t size='1.3' color='#ffa000'&gt;前線基地攻撃&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1'&gt;敵軍部隊は小規模な物流基地を後方に設置している。 これらの資源を破壊すれば敵補給船への打撃を与え、敵軍の警戒度を下げることが出来るはずだ。&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1'&gt;諸君の任務は目標に存在するすべての補給用品(トラックやコンテナ)の破壊だ。 残念ながら我々の情報網では敵基地の正確な位置を特定するには至らなかった。 諸君には赤い範囲内で目標を捜索し、破壊してほしい。&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1.15' color='#00a0ff'&gt;費用: 15&lt;img image='\A3\Ui_f\data\GUI\Cfg\Ranks\general_gs.paa'/&gt;&lt;/t&gt;&lt;br/&gt;&lt;t size='1.15' color='#ffa000'&gt;報酬: 敵部隊警戒度が 40% 低下。&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='10'&gt;&lt;img image='res\secondary\fob_obj.jpg'/&gt;&lt;/t&gt;</Japanese>
         </Key>
         <Key ID="STR_SECONDARY_MISSION1">
             <Original>Convoy Hijack</Original>
@@ -4087,7 +4095,7 @@
             <Portuguese>&lt;t size='1.3' color='#ffa000'&gt;INTERCEPTAÇÃO DE COMBOIO&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1'&gt;As forças de oposição (FOROP) utilizam comboios terrestres para reabastecer suas posições defensivas. Interceptando um desses comboios afetaria efetivamente suas linhas de suprimento, e poderíamos usar a ocasião para recuperar uma grande quantidade de munições.&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1'&gt;Sua missão é deter o comboio das forças de oposição utilizando qualquer meio possível. Você pode destruí-lo ou sequestrá-lo para recuperar toda a munição que conseguir transportar. O alvo será identificado em coordenadas específicas no seu mapa.&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1.15' color='#00a0ff'&gt;Cost: 10&lt;img image='\A3\Ui_f\data\GUI\Cfg\Ranks\general_gs.paa'/&gt;&lt;/t&gt;&lt;br/&gt;&lt;t size='1.15' color='#ffa000'&gt;Recompensa: Nível de alerta das forças de oposição reduzido em 15%.&lt;/t&gt;&lt;br/&gt;&lt;t size='1.15' color='#ffa000'&gt;Recompensa aliada: Toda a munição que conseguir.&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='10'&gt;&lt;img image='res\secondary\convoy_obj.jpg'/&gt;&lt;/t&gt;</Portuguese>
             <Korean>&lt;t size='1.3' color='#ffa000'&gt;수송부대 무력화&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1'&gt;현재 적군은 수송부대를 동원하여 그들의 방어 거점에 군수물자를 수송하고 있습니다. 수송부대 중 하나를 공격하여 그들의 보급선을 끊고, 많은 양의 군수물자를 노획하십시요.&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1'&gt;아군의 임무는 수단과 방법을 가리지 않고 적 수송부대를 멈추게 하는 것입니다. 군수물자를 파괴할 것인지, 노획하여 아군의 군수물자로 확보할 것인지는 당신의 선택입니다. 당신의 지도에 위치가 표시될 것입니다.&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1.15' color='#00a0ff'&gt;소모되는 정보 점수: 10&lt;img image='\A3\Ui_f\data\GUI\Cfg\Ranks\general_gs.paa'/&gt;&lt;/t&gt;&lt;br/&gt;&lt;t size='1.15' color='#ffa000'&gt;보상: 경고 수준이 15% 감소합니다.&lt;/t&gt;&lt;br/&gt;&lt;t size='1.15' color='#ffa000'&gt;추가 보상: 수송부대에서 노획할 수 있는 모든 군수물자.&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='10'&gt;&lt;img image='res\secondary\convoy_obj.jpg'/&gt;&lt;/t&gt;</Korean>
             <Czech>&lt;t size='1.3' color='#ffa000'&gt;PŘEPADENÍ KONVOJE&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1'&gt;Jednotky OPFOR používají konvoje k zásobení obraných pozic. Přerušením jediného konvoje můžete efektivně narušit zásobování, a také můžeme využít teto příležitosti k získání značného množství munice.&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1'&gt;Cílem mise je zastavit konvoj libovolnými prostředky. Můžete je zničit nebo zajmout a získat tak munici. Pozice konvoje bude zaznačena do mapy.&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1.15' color='#00a0ff'&gt;Cena: 10&lt;img image='\A3\Ui_f\data\GUI\Cfg\Ranks\general_gs.paa'/&gt;&lt;/t&gt;&lt;br/&gt;&lt;t size='1.15' color='#ffa000'&gt;Odměna: Bojová pohotovost OPFOR snížena o 15%&lt;/t&gt;&lt;br/&gt;&lt;t size='1.15' color='#ffa000'&gt;Vedlejší odměna: Veškerá munice kterou zvládnete odnést.&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='10'&gt;&lt;img image='res\secondary\convoy_obj.jpg'/&gt;&lt;/t&gt;</Czech>
-            <Japanese>&lt;t size='1.3' color='#ffa000'&gt;輸送車列強襲&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1'&gt;敵軍部隊は車列を用い防衛地点への補給を行っている。 この車列を襲撃すれば奴らの補給網に打撃を与えられるだろう。 そのうえ、敵の資源を接収することが出来るかもしれない。&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1'&gt;諸君の任務は敵軍補給車列をいかなる手を使ってでも停止させることだ。 車両を破壊、もしくは強奪し資源を基地へ持ち帰れ。 目標は発見され次第マップに記載される。&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1.15' color='#00a0ff'&gt;費用: 10&lt;img image='\A3\Ui_f\data\GUI\Cfg\Ranks\general_gs.paa'/&gt;&lt;/t&gt;&lt;br/&gt;&lt;t size='1.15' color='#ffa000'&gt;報酬: 敵部隊警戒度が 15%低下。&lt;/t&gt;&lt;br/&gt;&lt;t size='1.15' color='#ffa000'&gt;副次報酬: 手に入れた資源全て。&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='10'&gt;&lt;img image='res\secondary\convoy_obj.jpg'/&gt;&lt;/t&gt;</Japanese>
+            <Japanese>&lt;t size='1.3' color='#ffa000'&gt;輸送車列強襲&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1'&gt;敵軍部隊は車列を用い防衛地点への補給を行っている。 この車列を襲撃すれば奴らの補給網に打撃を与えられるだろう。 そのうえ、敵の資源を接収することが出来るかもしれない。&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1'&gt;諸君の任務は敵軍補給車列をいかなる手を使ってでも停止させることだ。 車両を破壊、もしくは強奪し資源を基地へ持ち帰れ。 目標は発見され次第マップに記載される。&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1.15' color='#00a0ff'&gt;費用: 10&lt;img image='\A3\Ui_f\data\GUI\Cfg\Ranks\general_gs.paa'/&gt;&lt;/t&gt;&lt;br/&gt;&lt;t size='1.15' color='#ffa000'&gt;報酬: 敵部隊警戒度が 15% 低下。&lt;/t&gt;&lt;br/&gt;&lt;t size='1.15' color='#ffa000'&gt;副次報酬: 手に入れた資源全て。&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='10'&gt;&lt;img image='res\secondary\convoy_obj.jpg'/&gt;&lt;/t&gt;</Japanese>
         </Key>
         <!-- Added in v0.922 -->
         <Key ID="STR_PARAM_BLUFOR_DEFENDERS">
@@ -4193,7 +4201,7 @@
             <Portuguese>&lt;t size='1.3' color='#ffa000'&gt;BUSCA E RESGATE&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1'&gt;Perdemos contato com um helicóptero de reconhecimento presente em uma missão atrás das linhas inimigas. Acreditamos que o helicóptero foi abatido por forças hostis.&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1'&gt;O helicóptero pode ter feito um pouso forçado em local próximo de sua última posição conhecida. Sua missão é recuperar a tripulação do helicóptero e sua preciosa inteligência. Forças hostis podem tê-los localizado primeiro, portanto seja rápido, cuidadoso e esteja pronto para engajar o inimigo.&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1.15' color='#00a0ff'&gt;Cost: 8&lt;img image='\A3\Ui_f\data\GUI\Cfg\Ranks\general_gs.paa'/&gt;&lt;/t&gt;&lt;br/&gt;&lt;t size='1.15' color='#ffa000'&gt;Recompensa: 20 pontos de inteligência (10 para cada membro vivo da tripulação).&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='10'&gt;&lt;img image='res\secondary\fob_obj.jpg'/&gt;&lt;/t&gt;</Portuguese>
             <Korean>&lt;t size='1.3' color='#ffa000'&gt;수색 및 구출&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1'&gt;적군 후방지역에서 정찰임무를 수행하던 아군 정찰기와 교신이 끊어졌습니다. 현 상황으로 판단할때 적군에게 격추당한 것 같습니다.&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1'&gt;아군의 임무는 마지막 교신 위치를 중심으로 아군 정찰기의 흔적을 찾는 것입니다. 적군이 먼저 발견하기전에 아군 정찰기의 흔적을 찾아 승무원 구출 및 다른 정보들을 획득, 복귀해야 합니다. 교전이 벌어질 수 있습니다.&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1.15' color='#00a0ff'&gt;소요되는 정보 점수: 8&lt;img image='\A3\Ui_f\data\GUI\Cfg\Ranks\general_gs.paa'/&gt;&lt;/t&gt;&lt;br/&gt;&lt;t size='1.15' color='#ffa000'&gt;보상: 정보 점수가 20점 추가됩니다. 또한 구출한 인원 1명당 정보 점수가 10점 추가됩니다.&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='10'&gt;&lt;img image='res\secondary\fob_obj.jpg'/&gt;&lt;/t&gt;</Korean>
             <Czech>&lt;t size='1.3' color='#ffa000'&gt;ZÁCHRANNÁ MISE&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1'&gt;Ztratili jsme kontakt s průzkumným vrtulníkem za nepřátelskými liniemi. Věříme že ji sestřelily nepřátelské jednotky.&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1'&gt;Vrtulník mohl havarovat kdekoliv ve velké vzdálenosti od místa kde jsme s ní ztratily kontakt. Cílem mise je najít a zachránit přeživší posádku. Nepřátelské jednotky tam mohou být jako první, proto musíme jednat rychle, opatrně a být připraveni k boji.&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1.15' color='#00a0ff'&gt;Cena: 8&lt;img image='\A3\Ui_f\data\GUI\Cfg\Ranks\general_gs.paa'/&gt;&lt;/t&gt;&lt;br/&gt;&lt;t size='1.15' color='#ffa000'&gt;Odměna: 20 zpravodajských bodů (10 za každého člena posádky).&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='10'&gt;&lt;img image='res\secondary\fob_obj.jpg'/&gt;&lt;/t&gt;</Czech>
-            <Japanese>&lt;t size='1.3' color='#ffa000'&gt;捜索救難&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1'&gt;我々の偵察ヘリコプターとの連絡が敵前線の後方で断たれた。 恐らく敵軍部隊に撃墜させられたものと思われる。&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1'&gt;ヘリコプターは最後に連絡のあったこの地域のどこかに不時着した可能性がある。 諸君の任務はヘリコプター乗員を救出し彼らの入手した情報を回収することだ。 恐らく敵軍部隊は彼らを先に発見し拘束している可能性がある。そのため注意深く・素早い救助が必要となる。 交戦することを想定せよ。&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1.15' color='#00a0ff'&gt;費用: 8&lt;img image='\A3\Ui_f\data\GUI\Cfg\Ranks\general_gs.paa'/&gt;&lt;/t&gt;&lt;br/&gt;&lt;t size='1.15' color='#ffa000'&gt;報酬: 20 情報ポイント 。(乗員一人当たり10ポイント)&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='10'&gt;&lt;img image='res\secondary\fob_obj.jpg'/&gt;&lt;/t&gt;</Japanese>
+            <Japanese>&lt;t size='1.3' color='#ffa000'&gt;捜索救難&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1'&gt;我々の偵察ヘリコプターとの連絡が敵前線の後方で断たれた。 恐らく敵軍部隊に撃墜させられたものと思われる。&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1'&gt;ヘリコプターは最後に連絡のあったこの地域のどこかに不時着した可能性がある。 諸君の任務はヘリコプター乗員を救出し彼らの入手した情報を回収することだ。 恐らく敵軍部隊は彼らを先に発見し拘束している可能性がある。 そのため注意深く・素早い救助が必要となる。 交戦することを想定せよ。&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1.15' color='#00a0ff'&gt;費用: 8&lt;img image='\A3\Ui_f\data\GUI\Cfg\Ranks\general_gs.paa'/&gt;&lt;/t&gt;&lt;br/&gt;&lt;t size='1.15' color='#ffa000'&gt;報酬: 20 情報ポイント (乗員一人当たり10ポイント)&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='10'&gt;&lt;img image='res\secondary\fob_obj.jpg'/&gt;&lt;/t&gt;</Japanese>
         </Key>
         <Key ID="STR_SECONDARY_MISSION3">
             <Original>Humanitarian Aid</Original>
@@ -4201,14 +4209,14 @@
         </Key>
         <Key ID="STR_SECONDARY_BRIEFING3">
             <Original>&lt;t size='1.3' color='#ffa000'&gt;HUMANITARIAN AID&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1'&gt;Local civilians in our occupied sector are requesting supplies as humanitarian aid. This is an opportunity for us to show compassion and empathy towards the people of this region. They may eventually act as guerrilla allies and support us in our attacks.&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1'&gt;Your mission is to transport and deliver our supplies to the requested sector. Resources required are 200 supplies (2 crates). Load the supplies onto the vehicle, head to the target location, and unload upon arrival.&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1.15' color='#00a0ff'&gt;Cost: 8&lt;img image='\A3\Ui_f\data\GUI\Cfg\Ranks\general_gs.paa'/&gt;&lt;br/&gt;200 Supplies (2 crates)&lt;/t&gt;&lt;br/&gt;&lt;t size='1.15' color='#ffa000'&gt;Reward: increase in Civil Reputation by 10pt.&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='10'&gt;&lt;img image='res\secondary\humaid_obj.jpg'/&gt;&lt;/t&gt;</Original>
-            <Japanese>&lt;t size='1.3' color='#ffa000'&gt;人道支援&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1'&gt;我々の占領したセクターの地元市民が支援物資としてサプライを要求している。我々がこの地域の市民に対して友好的であることをを示すチャンスだ。彼らは最終的には我々の攻撃に加勢するゲリラとして活動してくれるかもしれない。&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1'&gt;諸君の任務は要請のあったセクターに我々のサプライを輸送し、譲渡することだ。資源は200サプライ (最低2箱) 必要となる。車両に物資を積み込み目標地点に向かい到着したら荷下ろしするだけでいい。&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1.15' color='#00a0ff'&gt;費用: 8&lt;img image='\A3\Ui_f\data\GUI\Cfg\Ranks\general_gs.paa'/&gt;&lt;br/&gt;200 サプライ (最低2箱)&lt;/t&gt;&lt;br/&gt;&lt;t size='1.15' color='#ffa000'&gt;報酬: 市民評価が10ポイント上昇。&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='10'&gt;&lt;img image='res\secondary\humaid_obj.jpg'/&gt;&lt;/t&gt;</Japanese>
+            <Japanese>&lt;t size='1.3' color='#ffa000'&gt;人道支援&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1'&gt;我々の占領したセクターの地元市民が支援物資としてサプライを要求している。 我々がこの地域の市民に対して友好的であることをを示すチャンスだ。 彼らは最終的には我々の攻撃に加勢するゲリラとして活動してくれるかもしれない。&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1'&gt;諸君の任務は要請のあったセクターに我々のサプライを輸送し、譲渡することだ。 資源は200サプライ (最低2箱) 必要となる。 車両に物資を積み込み目標地点に向かい到着したら荷下ろしすれば良い。&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1.15' color='#00a0ff'&gt;費用: 8&lt;img image='\A3\Ui_f\data\GUI\Cfg\Ranks\general_gs.paa'/&gt;&lt;br/&gt;200 サプライ (最低2箱)&lt;/t&gt;&lt;br/&gt;&lt;t size='1.15' color='#ffa000'&gt;報酬: 市民評価が10ポイント上昇。&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='10'&gt;&lt;img image='res\secondary\humaid_obj.jpg'/&gt;&lt;/t&gt;</Japanese>
         </Key>
         <Key ID="STR_SECONDARY_MISSION4">
             <Japanese>燃料切れ (Bingo Fuel)</Japanese>
             <Original>Bingo Fuel</Original>
         </Key>
         <Key ID="STR_SECONDARY_BRIEFING4">
-            <Japanese>&lt;t size='1.3' color='#ffa000'&gt;燃料切れ&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1'&gt;我々の占領した友好的な工場が燃料を要請している。燃料があれば工場は我々の為に各種の資源をすぐさま生産してくれるだろう。&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1'&gt;諸君の任務は要請のあった工場に我々の燃料を輸送し、譲渡することだ。資源は200燃料 (最低2箱) 必要となる。車両に物資を積み込み目標地点に向かい到着したら荷下ろしするだけでいい。&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1.15' color='#00a0ff'&gt;費用: 8&lt;img image='\A3\Ui_f\data\GUI\Cfg\Ranks\general_gs.paa'/&gt;&lt;br/&gt;200 燃料(最低2箱)&lt;/t&gt;&lt;br/&gt;&lt;t size='1.15' color='#ffa000'&gt;報酬: ランダムな資源最大6個。&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='10'&gt;&lt;img image='res\secondary\humaid_obj.jpg'/&gt;&lt;/t&gt;</Japanese>
+            <Japanese>&lt;t size='1.3' color='#ffa000'&gt;燃料切れ&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1'&gt;我々の占領した友好的な工場が燃料を要請している。 燃料があれば工場は我々の為に各種の資源をすぐさま生産してくれるだろう。&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1'&gt;諸君の任務は要請のあった工場に我々の燃料を輸送し、譲渡することだ。 資源は200燃料 (最低2箱) 必要となる。 車両に物資を積み込み目標地点に向かい到着したら荷下ろしすれば良い。&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1.15' color='#00a0ff'&gt;費用: 8&lt;img image='\A3\Ui_f\data\GUI\Cfg\Ranks\general_gs.paa'/&gt;&lt;br/&gt;200 燃料 (最低2箱)&lt;/t&gt;&lt;br/&gt;&lt;t size='1.15' color='#ffa000'&gt;報酬: ランダムな資源最大6個。&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='10'&gt;&lt;img image='res\secondary\humaid_obj.jpg'/&gt;&lt;/t&gt;</Japanese>
             <Original>&lt;t size='1.3' color='#ffa000'&gt;BINGO FUEL&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1'&gt;Our occupied friendly factories are requesting fuel. With fuel, the factories will quickly produce various resources for us.&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1'&gt;Your mission is to transport and deliver our fuel to the requested sector. Resources required are 200 fuel (2 crates). Load the fuel onto the vehicle, head to the target location, and unload upon arrival.&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1.15' color='#00a0ff'&gt;Cost: 8&lt;img image='\A3\Ui_f\data\GUI\Cfg\Ranks\general_gs.paa'/&gt;&lt;br/&gt;200 Fuel (2 crates)&lt;/t&gt;&lt;br/&gt;&lt;t size='1.15' color='#ffa000'&gt;Reward: 6x Random resources.&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='10'&gt;&lt;img image='res\secondary\humaid_obj.jpg'/&gt;&lt;/t&gt;</Original>
         </Key>
         <Key ID="STR_SECONDARY_MISSION5">
@@ -4216,7 +4224,7 @@
             <Original>Outpost Rearming</Original>
         </Key>
         <Key ID="STR_SECONDARY_BRIEFING5">
-            <Japanese>&lt;t size='1.3' color='#ffa000'&gt;前哨基地補給&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1'&gt;友軍の軍事基地が弾薬を要請している。弾薬があれば敵軍の注意や戦力を分散し、敵の警戒度を減少させることが出来るかもしれない。&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1'&gt;諸君の任務は要請のあった軍事基地に我々の弾薬を輸送し、譲渡することだ。資源は200弾薬 (最低2箱) 必要となる。車両に物資を積み込み目標地点に向かい到着したら荷下ろしするだけでいい。&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1.15' color='#00a0ff'&gt;費用: 8&lt;img image='\A3\Ui_f\data\GUI\Cfg\Ranks\general_gs.paa'/&gt;&lt;br/&gt;200 弾薬(最低2箱)&lt;/t&gt;&lt;br/&gt;&lt;t size='1.15' color='#ffa000'&gt;報酬: 敵部隊警戒度が 8ポイント低下。&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='10'&gt;&lt;img image='res\secondary\humaid_obj.jpg'/&gt;&lt;/t&gt;</Japanese>
+            <Japanese>&lt;t size='1.3' color='#ffa000'&gt;前哨基地補給&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1'&gt;友軍の軍事基地が弾薬を要請している。 弾薬があれば敵軍の注意や戦力を分散し、敵の警戒度を減少させることが出来るかもしれない。&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1'&gt;諸君の任務は要請のあった軍事基地に我々の弾薬を輸送し、譲渡することだ。 資源は200弾薬 (最低2箱) 必要となる。 車両に物資を積み込み目標地点に向かい到着したら荷下ろしすれば良い。&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1.15' color='#00a0ff'&gt;費用: 8&lt;img image='\A3\Ui_f\data\GUI\Cfg\Ranks\general_gs.paa'/&gt;&lt;br/&gt;200 弾薬 (最低2箱)&lt;/t&gt;&lt;br/&gt;&lt;t size='1.15' color='#ffa000'&gt;報酬: 敵部隊警戒度が 8ポイント 低下。&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='10'&gt;&lt;img image='res\secondary\humaid_obj.jpg'/&gt;&lt;/t&gt;</Japanese>
             <Original>&lt;t size='1.3' color='#ffa000'&gt;OUTPOST REARMING&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1'&gt;Friendly military outpost request ammunition. Ammunition may help to disperse the attention and forces of OPFOR and reduce the OPFOR alert level.&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1'&gt;Your mission is to transport and deliver our ammunition to the requested sector. Resources required are 200 ammunition (2 crates). Load the ammunitions onto the vehicle, head to the target location, and unload upon arrival.&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='1.15' color='#00a0ff'&gt;Cost: 8&lt;img image='\A3\Ui_f\data\GUI\Cfg\Ranks\general_gs.paa'/&gt;&lt;br/&gt;200 Ammunition (2 crates)&lt;/t&gt;&lt;br/&gt;&lt;t size='1.15' color='#ffa000'&gt;Reward: OPFOR alert level reduced by 8pt&lt;/t&gt;&lt;br/&gt;&lt;br/&gt;&lt;t size='10'&gt;&lt;img image='res\secondary\humaid_obj.jpg'/&gt;&lt;/t&gt;</Original>
         </Key>
         <!-- Added in v0.924 -->
@@ -4263,7 +4271,7 @@
             <Portuguese>A missão de busca e resgate falhou, ambos os tripulantes morreram em combate.</Portuguese>
             <Korean>구조작전 실패, 승무원 전원 사망.</Korean>
             <Czech>Záchranná mise selhala, všichni jsou mrtví.</Czech>
-            <Japanese>捜索救難作戦は失敗だ。乗員はどちらも死亡してしまった。</Japanese>
+            <Japanese>捜索救難作戦は失敗だ。 乗員はどちらも死亡してしまった。</Japanese>
         </Key>
         <Key ID="STR_NOTIFICATION_SAR_SUCCESS">
             <Original>SAR mission succeeded.</Original>
@@ -4536,7 +4544,7 @@
             <Portuguese>-- Mudar alinhamento</Portuguese>
             <Korean>-- 땅에 맞춰 정렬</Korean>
             <Czech>-- Změnit zarovnání</Czech>
-            <Japanese>-- 位置を変更</Japanese>
+            <Japanese>-- アライメント方式を変更</Japanese>
         </Key>
         <Key ID="STR_CANCEL_ERROR">
             <Original>Not enough free storage space</Original>
@@ -4564,7 +4572,7 @@
             <Portuguese>Você não pode reciclar objetos pré inseridos</Portuguese>
             <Korean>사전에 배치된 객체들은 재활용 할 수 없습니다.</Korean>
             <Czech>Nelze rozebrat představené objekty</Czech>
-            <Japanese>最初から設置されているオブジェクトは解体できません。</Japanese>
+            <Japanese>ミッション開始時から設置済のオブジェクトは解体できません。</Japanese>
         </Key>
         <Key ID="STR_NORECBUILDING_ERROR">
             <Original>Can't recycle:\nNo Salvage Depot in FOB area</Original>
@@ -4648,7 +4656,7 @@
             <Portuguese>-- Definições de Produção</Portuguese>
             <Korean>-- 생산 설정</Korean>
             <Czech>-- Nastavení produkce</Czech>
-            <Japanese>-- 製造設定</Japanese>
+            <Japanese>-- 生産設定</Japanese>
         </Key>
         <Key ID="STR_PRODUCTION_HEADER">
             <Original>Production Settings</Original>
@@ -4662,7 +4670,7 @@
             <Portuguese>Definições de Produção</Portuguese>
             <Korean>생산 설정</Korean>
             <Czech>Nastavení produkce</Czech>
-            <Japanese>製造設定</Japanese>
+            <Japanese>生産設定</Japanese>
         </Key>
         <Key ID="STR_PRODUCTION_TYPE">
             <Original>Sector Type:</Original>
@@ -4718,7 +4726,7 @@
             <Portuguese>Produzindo:</Portuguese>
             <Korean>생산:</Korean>
             <Czech>Produkce:</Czech>
-            <Japanese>製造中:</Japanese>
+            <Japanese>生産中:</Japanese>
         </Key>
         <Key ID="STR_PRODUCTION_NOTHING">
             <Original>Nothing</Original>
@@ -4774,7 +4782,7 @@
             <Portuguese>Tempo restante:</Portuguese>
             <Korean>남은 시간:</Korean>
             <Czech>Zbývající čas:</Czech>
-            <Japanese>製造時間:</Japanese>
+            <Japanese>所要時間:</Japanese>
         </Key>
         <Key ID="STR_PRODUCTION_NOTIMER">
             <Original>No production</Original>
@@ -4788,7 +4796,7 @@
             <Portuguese>Sem produção</Portuguese>
             <Korean>생산 없음</Korean>
             <Czech>Žádná produkce</Czech>
-            <Japanese>製造していません</Japanese>
+            <Japanese>生産していません</Japanese>
         </Key>
         <Key ID="STR_PRODUCTION_MINUTES">
             <Original>%1 minutes</Original>
@@ -4816,7 +4824,7 @@
             <Portuguese>Instalações disponíveis</Portuguese>
             <Korean>가용 공장</Korean>
             <Czech>Dostupné továrny</Czech>
-            <Japanese>工場が使用可能</Japanese>
+            <Japanese>利用可能な工場</Japanese>
         </Key>
         <Key ID="STR_PRODUCTION_STORAGEDETAIL">
             <Original>Stock Overview</Original>
@@ -4830,7 +4838,7 @@
             <Portuguese>Visão geral do armazém</Portuguese>
             <Korean>보관내역</Korean>
             <Czech>Stav skladů</Czech>
-            <Japanese>倉庫の概要</Japanese>
+            <Japanese>倉庫の備蓄状況</Japanese>
         </Key>
         <Key ID="STR_PRODUCTION_CRATE">
             <Original>%1 Crate</Original>
@@ -4872,7 +4880,7 @@
             <Portuguese>Selecione a produção</Portuguese>
             <Korean>생산품 선택</Korean>
             <Czech>Vyberte produkci</Czech>
-            <Japanese>製造種類</Japanese>
+            <Japanese>生産する資源</Japanese>
         </Key>
         <Key ID="STR_PRODUCTION_SAVED">
             <Original>Sector setting saved.</Original>
@@ -4956,7 +4964,7 @@
             <Portuguese>É necessária uma fábrica não construída neste setor</Portuguese>
             <Korean>이 지역에는 생산에 필요한 공장이 없습니다.</Korean>
             <Czech>Továrna nemůže být postavena v sektoru.</Czech>
-            <Japanese>このセクターに必要な工場はありません。</Japanese>
+            <Japanese>生産に必要な設備が セクターに建築されていません。</Japanese>
         </Key>
         <Key ID="STR_PRODUCTION_FACBUILD_ERROR">
             <Original>Not enough resources.\n\nYou need:\n%1 Supplies\n%2 Ammo\n%3 Fuel</Original>
@@ -5012,7 +5020,7 @@
             <Portuguese>-- Visão Geral da Logística</Portuguese>
             <Korean>-- 물류 개요</Korean>
             <Czech>-- Logistický přehled</Czech>
-            <Japanese>-- 物流概要</Japanese>
+            <Japanese>-- 物流管理</Japanese>
         </Key>
         <Key ID="STR_LOGISTIC_HEADER">
             <Original>Logistic Overview</Original>
@@ -5026,7 +5034,7 @@
             <Portuguese>Visão Geral da Logística</Portuguese>
             <Korean>물류 개요</Korean>
             <Czech>Logistický přehled</Czech>
-            <Japanese>物流概要</Japanese>
+            <Japanese>物流管理</Japanese>
         </Key>
         <Key ID="STR_ADD">
             <Original>Add</Original>
@@ -5292,7 +5300,7 @@
             <Portuguese>Sem recursos suficientes</Portuguese>
             <Korean>군수물자가 충분하지 않습니다.</Korean>
             <Czech>Nedostatek surovin</Czech>
-            <Japanese>資源不足</Japanese>
+            <Japanese>資源が不足しています</Japanese>
         </Key>
         <Key ID="STR_LOGISTIC_ROUTETITLE">
             <Original>Mission planning</Original>
@@ -5320,7 +5328,7 @@
             <Portuguese>Destino A</Portuguese>
             <Korean>출발지역-A-</Korean>
             <Czech>Cíl A</Czech>
-            <Japanese>出発地(A)</Japanese>
+            <Japanese>目的地点 A</Japanese>
         </Key>
         <Key ID="STR_LOGISTIC_LABELB">
             <Original>Destination B</Original>
@@ -5334,7 +5342,7 @@
             <Portuguese>Destino B</Portuguese>
             <Korean>도착지역-B-</Korean>
             <Czech>Cíl B</Czech>
-            <Japanese>目的地(B)</Japanese>
+            <Japanese>目的地点 B</Japanese>
         </Key>
         <Key ID="STR_LOGISTIC_TT_SUPPLY">
             <Original>Supplies value from here to the other destination. (only whole numbers)</Original>
@@ -5348,7 +5356,7 @@
             <Portuguese>Valores de suprimento daqui para o outro destino. (apenas valores inteiros)</Portuguese>
             <Korean>출발지에서 도착지로 운반되는 보급품(S) 수량(정수만 입력)</Korean>
             <Czech>Hodnota zásob odtud do cílového místa. (pouze celá čísla)</Czech>
-            <Japanese>輸送したいサプライの数(そこにある資源の数まで)</Japanese>
+            <Japanese>ここから次の目的地点まで輸送したいサプライの数 (整数で入力)</Japanese>
         </Key>
         <Key ID="STR_LOGISTIC_TT_AMMO">
             <Original>Ammo value from here to the other destination. (only whole numbers)</Original>
@@ -5362,7 +5370,7 @@
             <Portuguese>Valores de munição daqui para o outro destino. (apenas valores inteiros)</Portuguese>
             <Korean>출발지에서 도착지로 운반되는 탄약(A) 수량(정수만 입력)</Korean>
             <Czech>Hodnota munice odtud do cílového místa. (pouze celá čísla)</Czech>
-            <Japanese>輸送したい弾薬の数(そこにある資源の数まで)</Japanese>
+            <Japanese>ここから次の目的地点まで輸送したい弾薬の数 (整数で入力)</Japanese>
         </Key>
         <Key ID="STR_LOGISTIC_TT_FUEL">
             <Original>Fuel value from here to the other destination. (only whole numbers)</Original>
@@ -5376,7 +5384,7 @@
             <Portuguese>Valores de combustível daqui para o outro destino. (apenas valores inteiros)</Portuguese>
             <Korean>출발지에서 도착지로 운반되는 연료(F) 수량(정수만 입력)</Korean>
             <Czech>Hodnota paliva odtud do cílového místa. (pouze celá čísla)</Czech>
-            <Japanese>輸送したい燃料の数(そこにある資源の数まで)</Japanese>
+            <Japanese>ここから次の目的地点まで輸送したい燃料の数 (整数で入力)</Japanese>
         </Key>
         <Key ID="STR_LOGISTIC_SAVE_ERROR">
             <Original>Your mission is not possible.</Original>
@@ -5463,7 +5471,7 @@
             <Portuguese>&lt;br/&gt;&lt;br/&gt;Você iniciará a campanha abordo do porta-aviões USS Fredom ou na base operacional Chimera, instalações que o inimigo não se atreverá a atacar. Sua primeira escolha será definir onde irá mobilizar. Primeiramente somente poderá mobilizar na sua posição inicial, entretanto, conforme progredir, mais alternativas se tornarão disponíveis, como a Base de Operações Avançadas (FOB) e os respawns móveis.&lt;br/&gt; &lt;br/&gt;Em sua posição inicial, você poderá escolher seu equipamento através de um arsenal completo. Você terá à sua disposição sua primeira FOB transportável, dentro de um contêiner. Também estará disponível o transporte aéreo de callsign Spartan-01 e mais alguns helicópteros de transporte.&lt;br/&gt; &lt;br/&gt;Você deverá mover o mencionado contêiner utilizando a Spartan-01 (ou escolha começar com a primeira FOB já construída). Você poderá mobilizar esta FOB para onde desejar (desde que esteja a 1km do ponto inicial e a 300 metros de qualquer setor). Assim, depende apenas de você escolher o local ideal para iniciar sua campanha ofensiva.&lt;br/&gt; &lt;br/&gt;</Portuguese>
             <Korean>&lt;br/&gt;&lt;br/&gt;최초의 작전 기지는 적이 절대로 건드리지 못할 안전지대로, 아군의 반격 나팔 소리의 첫 음표이기도 하며, 이번 반격 작전의 출발점이 될 것이다. 처음에는 작전 기지만 배치할 수 있었으나, 반격작전이 진행됨에 따라 FOB(전초기지) 또는 재투입차량에도 배치될 것이다.&lt;br/&gt; &lt;br/&gt;또한 최초의 작전 기지에서 '무기고'를 이용하여 무장을 갖출수 있고, 이미 건설된 건초기지가 있거나 또는 전초기지(FOB)차량을 1대 찾을 수 있을 것이다. 또한 운이 좋다면 재투입차량 또는 트럭이나 공중 탑재 장비등도 찾을 수 있을 것이다.&lt;br/&gt; &lt;br/&gt;당신이 처음으로 해야할 일은 무장을 갖추고, 이미 건설된 건초기지가 있다면 거기에서부터, 만약 전초기지(FOB)차량이 있다면 그 것을 찾아 FOB(전초기지)를 적당한 곳(최초의 작전기지로부터 1km, 도시로부터 300m 떨어진 곳)에 설치해야 한다. 이 지점이 바로 첫번째 반격이 시작되는 곳으로 반격을 시작하는 지점은 전적으로 당신의 선택에 달려 있다.&lt;br/&gt; &lt;br/&gt;만약 당신이 반격작전이 진행중인 상황에서 투입된다면, 먼저 지도를 살펴보라. 현재 아군이 어디서 전투중인지 알 것이다. 아군에게 무전으로 물어보거나 채팅으로 물어보면서 전투에 참여하라. 행운을 빈다.&lt;br/&gt; &lt;br/&gt;</Korean>
             <Czech>&lt;br/&gt;&lt;br/&gt;Zahájíte kampaň buď na palubě USS Freedom, nebo na základně Chimera, v bezpečných zónách, které se nepřítel neodváží zaútočit. První volbou je vybrat, kam chcete nasadit. Zpočátku se můžete nasadit pouze na vaší výchozí pozici, ale jak postupujete, budou k dispozici další možnosti, jako jsou Forward Operating Bases (FOB) a mobilní respawns.&lt;br/&gt; &lt;br/&gt;Na své počáteční pozici si můžete vybrat vybavení z kompletního Arsenalu. Také najdete svůj první FOB zabalený v kontejneru, vrtulník Spartan-01 a několik dalších malých transportních vrtulníků.&lt;br/&gt; &lt;br/&gt;Budete se muset přepravit s pomocí Spartan-01 (nebo se rozhodnete začít  s první postavenou FOB již postavenou). Tento první FOB můžete nasadit kamkoli budete chtít (pokud jste 1 km od výchozí pozice a 300 m od jakéhokoli sektoru), takže je na vás, abyste vybrali správné místo pro zahájení ofenzivy.&lt;br/&gt; &lt;br/&gt;</Czech>
-            <Japanese>&lt;br/&gt;&lt;br/&gt;あなたは、USS Freedomに乗り込むか、もしくはキメラ基地にいる状態からキャンペーンを開始します。これらは敵が攻撃しない安全地帯です。最初に、展開地点を選ぶことができます。最初は初期地点のみでの展開しかできませんが、キャンペーンを進めるにつれて、前線基地(FOB)やモバイルリスポーンなど、より多くの選択肢が利用可能になります。&lt;br/&gt;&lt;br/&gt;初期地点では、完全なアーセナルから装備を選ぶことができます。また、最初のFOBが含まれたコンテナ、スパルタン-01ヘリコプター、およびいくつかの小型輸送ヘリコプターを見つけることができます。&lt;br/&gt;&lt;br/&gt;あなたは、スパルタン-01でそのコンテナを輸送しなければなりません (または最初のFOBをすでに建てた状態でスタートすることもできます)。この最初のFOBは、任意の場所に展開することができます (ただし、初期地点から1km以上かつ各セクターから300m以上離れている必要があります)。キャンペーン攻勢を開始するための適切な場所を選択するのはあなた次第です。&lt;br/&gt;&lt;br/&gt;</Japanese>
+            <Japanese>&lt;br/&gt;&lt;br/&gt;あなたは、USS Freedomに乗り込むか、もしくはキメラ基地にいる状態からキャンペーンを開始します。これらは敵が攻撃しない安全地帯です。最初に、出撃地点を選ぶことができます。始めは初期地点でしか出撃できませんが、キャンペーンを進めるにつれて、前線基地(FOB)やモバイルリスポーンなど、より多くの選択肢が利用可能になります。&lt;br/&gt;&lt;br/&gt;初期地点では、完全なアーセナルから装備を選ぶことができます。また、最初のFOBが含まれたコンテナ、スパルタン-01ヘリコプター、およびいくつかの小型輸送ヘリコプターを見つけることができます。&lt;br/&gt;&lt;br/&gt;あなたは、スパルタン-01でそのコンテナを輸送しなければなりません (または最初のFOBをすでに建てた状態でスタートすることもできます)。この最初のFOBは、任意の場所に展開することができます (ただし、初期地点から1km以上かつ各セクターから300m以上離れている必要があります)。キャンペーン攻勢を開始するための適切な場所を選択するのはあなた次第です。&lt;br/&gt;&lt;br/&gt;</Japanese>
         </Key>
         <Key ID="STR_TUTO_TITLE3">
             <Original>3. Objective</Original>
@@ -5575,7 +5583,7 @@
             <Portuguese>&lt;br/&gt;&lt;br/&gt;O inimigo não irá permitir a conquista de seu território sem uma reação. Quando iniciar sua campanha, forças hostis serão apenas compostas por guarnições dentro de bases militares. No entanto, ao liberar mais setores, as forças inimigas chamarão mais reforços e equipamentos para tentar te combater.&lt;br/&gt; &lt;br/&gt;Para limitar a capacidade operacional das forças de oposição, você deverá cumprir objetivos secundários que consistem na destruição de bases logísticas e no assalto aos comboios inimigos. Isto não é obrigatório para lograr êxito na campanha, todavia se o nível de alerta for ignorado por muito tempo, você enfrentará uma forte resistência inimiga.&lt;br/&gt; &lt;br/&gt;</Portuguese>
             <Korean>&lt;br/&gt;&lt;br/&gt;처음 반격 작전을 시작할 때에 적군들은 우리를 우습게 여길 것이다! 하지만 작전이 진행될 수록 적군들은 우리를 위험하게 느끼게 될 것이고 점점 더 많은 적군부대와 부딛치게 될 것이다.&lt;br/&gt; &lt;br/&gt;적군의 작전 능력을 억제하려면, 부차적인 임무수행을 통해 적의 후방보급기지를 파괴하거나, 보급차량을 습격, 전방으로 향하는 군수물자를 파괴하여야 한다.&lt;br/&gt; &lt;br/&gt;만약에 강력한 적군과 부딛치는 것을 두려워하지 않는다면, 부차적인 임무는 무시하고 오로지 적진을 향해 돌격하라!!!&lt;br/&gt; &lt;br/&gt;</Korean>
             <Czech>&lt;br/&gt;&lt;br/&gt;Jednotky OPFOR vás nenechají obsazovat nové sektory bez jakékoliv reakce. Na začátku kampaně jsou nepřátelé schováni pouze v nepřátelských základnách. Nebezpečí však vzrůstá s každým obsazeným sektorem, jednotky OPFOR si častěji přivolají posily, vozidla a jiné vybavení proti vám.&lt;br/&gt; &lt;br/&gt;Ke snížení nebezpečí musíte plnit vedlejší mise, například zničení logistické základny. Tohle není nutné k vyhrání kampaně a však pokud budete ignorovat vzrůstající nebezpečí, mohou přijít velké problémy.&lt;br/&gt; &lt;br/&gt;</Czech>
-            <Japanese>&lt;br/&gt;&lt;br/&gt;敵はあなたが新たなセクターを解放することを許さず、必ず反応してくるでしょう。キャンペーンを開始すると、敵軍は最初、軍事基地の駐屯部隊で構成されています。しかし、我々がますます脅威となり、より多くのセクターを解放すると、敵軍は反撃のためにより多くの増援と装備を要請するようになります。&lt;br/&gt;&lt;br/&gt;敵の作戦能力を制限するために、物流基地を破壊したり、輸送車列を襲撃するといった副次目標を達成する必要があります。これはキャンペーンを勝利するために必要なことではありませんが、警戒度を無視し続けると、かなりの抵抗に遭うことになります。&lt;br/&gt;&lt;br/&gt;</Japanese>
+            <Japanese>&lt;br/&gt;&lt;br/&gt;敵はあなたが新たなセクターを解放することを許さず、必ず反応してくるでしょう。キャンペーンを開始すると、敵軍は最初、軍事基地の駐屯部隊で構成されています。しかし、我々がますます脅威となり、より多くのセクターを解放すると、敵軍は反撃のためにより多くの増援と装備を要請するようになります。&lt;br/&gt;&lt;br/&gt;敵の作戦能力を制限するために、物流基地を破壊したり、輸送車列を襲撃するといった副次任務を達成する必要があります。これはキャンペーンを勝利するために必要なことではありませんが、警戒度を無視し続けると、かなりの抵抗に遭うことになります。&lt;br/&gt;&lt;br/&gt;</Japanese>
         </Key>
         <Key ID="STR_TUTO_TITLE7">
             <Original>7. Construction</Original>
@@ -5603,7 +5611,7 @@
             <Portuguese>&lt;br/&gt;&lt;br/&gt;Para auxiliar no sucesso de sua iniciativa, você terá a capacidade de construir em todas suas bases avançadas, que o permitirá mobilizar infantaria, veículos, defesas, fortificações e etc para sua localidade.&lt;br/&gt; &lt;br/&gt;Embora infantaria, veículos e defesas exijam recursos para seu desenvolvimento, fortificações como estruturas, sacos de areia e muros não terão custo.&lt;br/&gt; &lt;br/&gt;O sistema de construção estará disponível quando você estiver a 100 metros de qualquer FOB.&lt;br/&gt; &lt;br/&gt;</Portuguese>
             <Korean>&lt;br/&gt;&lt;br/&gt;전초기지나 장비 또는 AI 보병을 건설(배치)하기 위해선 우선 관리자로부터 권한을 획득해야 한다. 권한을 획득한 후 제한된 갯수의 전초기지를 건설 할 수 있고, 전초기지를 건설한 후 125m거리 이내에서 장비를 생산(배치) 할 수 있다.&lt;br/&gt; &lt;br/&gt;전초기지를 건설하게 되면 제일 먼저 소형 또는 대형 저장 창고부터 건설해야 한다. 이 창고로 AI 수송부대를 이용하여 각 거점에서 생산된 군수물자를 운반, 필요한 장비를 건설(배치)해야 한다. 각 전초기지에 보관중인 보급품은 공유할 수 없다.&lt;br/&gt; &lt;br/&gt;따라서 전선이 이동하게 되면, 후방의 전초기지에 저장중인 군수물자를 새로이 건설한 전방의 전초기지로 AI 수송부대를 이용하여 운반해야 한다.&lt;br/&gt; &lt;br/&gt;아군 AI 수송부대의 트럭은 1회에 1대당 최대 200개의 군수물자를 운반할 수 있다.&lt;br/&gt; &lt;br/&gt;주의! 지역 민간인들의 지지가 없다면 적 민병대가 출현하여 아군 AI 수송부대를 습격, 군수물자를 파괴하거나 도난 당할 수 있으니 작전시 민간인을 학살하거나 재산을 약탈하지 않는다.&lt;br/&gt; &lt;br/&gt;</Korean>
             <Czech>&lt;br/&gt;&lt;br/&gt;Abyste uspěly ve své snaze, máte možnost stavět jednotky, vozidla a opevnění. Samozřejmě v závislosti na zdrojích.&lt;br/&gt; &lt;br/&gt;Ačkoli pěchota, vozidla a obrana budou stát zdroje, opevnění, jako jsou budovy, pytle s pískem a zdi, nikoliv.&lt;br/&gt; &lt;br/&gt;Systém stavění je dostupný do 100 metrů od FOB. Tehdy se vám objeví možnost stavět v kontextové nabídce.&lt;br/&gt; &lt;br/&gt;</Czech>
-            <Japanese>&lt;br/&gt;&lt;br/&gt;あなたが目的を達成するために、各FOBには建造能力があり、歩兵、車両、固定火器、構築物などを特定の場所に建造できます。&lt;br/&gt; &lt;br/&gt;歩兵、車両、固定火器は資源が必要ですが、構築物（建物、土のう、壁など）は必要ありません。&lt;br/&gt; &lt;br/&gt;建設システムは、どのFOBでも100メートル以内にいる場合に利用可能です。&lt;br/&gt; &lt;br/&gt;</Japanese>
+            <Japanese>&lt;br/&gt;&lt;br/&gt;あなたが目的を達成するために、各FOBには製造能力があり、歩兵、車両、固定火器、構築物などを特定の場所に製造できます。&lt;br/&gt; &lt;br/&gt;歩兵、車両、固定火器は資源が必要ですが、構築物（建物、土のう、壁など）は必要ありません。&lt;br/&gt; &lt;br/&gt;建設システムは、どのFOBでも100メートル以内にいる場合に利用可能です。&lt;br/&gt; &lt;br/&gt;</Japanese>
         </Key>
         <Key ID="STR_TUTO_TITLE8">
             <Original>8. Deploying another FOB</Original>
@@ -5631,7 +5639,7 @@
             <Portuguese>&lt;br/&gt;&lt;br/&gt;Para construir uma nova FOB, acesse o menu de construção, selecione a aba de logística e então construir FOB no conteiner ou uma FOB transportável (é a mesma coisa, mas com rodas). Em seguida, poderá posicionar sua linda e nova FOB (transportável ou no conteiner) onde desejar. No entanto, esteja ciente de que não poderá construir a FOB dentro de 1km da sua posição inicial, dentro de 300 metros de qualquer setor ou dentro de 2km de outra FOB.&lt;br/&gt; &lt;br/&gt;Seria simplesmente redundante!&lt;br/&gt; &lt;br/&gt;</Portuguese>
             <Korean>&lt;br/&gt;&lt;br/&gt;최초 작전 기지 또는 이미 건설된 전초기지의 건설(배치)메뉴에서 FOB container 또는 FOB truck을 찾을 수 있을 것이다. FOB truck을 선택하여 생산한 후 배치하고 싶은 지역으로 이동하여 건설(설치)하면 된다.&lt;br/&gt; &lt;br/&gt;단, 최초 작전기지로 부터 1Km, 거점으로부터 300m, 다른 전초기지로부터 2Km 이내에는 설치를 할 수 없다.&lt;br/&gt; &lt;br/&gt;7항 건설(배치)에서 설명하였듯이 전초기지를 건설하게 되면 제일 먼저 소형 또는 대형 저장 창고부터 건설해야 한다. 이 후 AI 수송부대를 이용하여 각 거점 또는 후방의 전초기지에 보관중인 군수물자를 운반, 필요한 장비를 건설(배치) 하면 된다.&lt;br/&gt; &lt;br/&gt;주의! 지역 민간인들의 지지가 없다면 적 민병대가 출현하여 아군 AI 수송부대를 습격, 군수물자를 파괴하거나 도난 당할 수 있으니 작전시 민간인을 학살하거나 재산을 약탈하지 않는다.&lt;br/&gt; &lt;br/&gt;</Korean>
             <Czech>&lt;br/&gt;&lt;br/&gt;K postavení nového FOB, jděte do stavebního menu a pote do logistické záložky, poté postavte FOB kontejner nebo FOB náklaďák (to je to samé ale na kolech).&lt;br/&gt; &lt;br/&gt;Poté přesuňte kontejner na místo kde rozložíte z brusu nové FOB. Mějte se však na pozoru, FOB nelze postavit uvnitř obsazeného sektoru nebo ve vzdálenosti 2km od jiného FOB a 1km od startovní základny.&lt;br/&gt; &lt;br/&gt;To by bylo prostě zbytečné!&lt;br/&gt; &lt;br/&gt;</Czech>
-            <Japanese>&lt;br/&gt;&lt;br/&gt;新しいFOBを建設するには、建造メニューに移動し、物流タブでFOBコンテナまたはFOBトラック（同じ性能、ただし自走可能）を建造します。次に、FOBコンテナ/トラックを展開したい場所に配置します。ただし、開始位置から1km以内、セクターから300m以内、他のFOBから2km以内にFOBを建設することはできないことに注意してください。&lt;br/&gt; &lt;br/&gt;それは予算が下りません！&lt;br/&gt; &lt;br/&gt;</Japanese>
+            <Japanese>&lt;br/&gt;&lt;br/&gt;新しいFOBを建設するには、製造メニューに移動し、物流タブでFOBコンテナまたはFOBトラック（同じ性能、ただし自走可能）を製造します。次に、FOBコンテナ/トラックを設置したい場所に配置します。ただし、開始位置から1km以内、セクターから300m以内、他のFOBから2km以内にFOBを建設することはできないことに注意してください。&lt;br/&gt; &lt;br/&gt;それは予算が下りません！&lt;br/&gt; &lt;br/&gt;</Japanese>
         </Key>
         <Key ID="STR_TUTO_TITLE9">
             <Original>9. Secondary Objectives</Original>
@@ -5646,7 +5654,7 @@
             <Portuguese>9. Objetivos Secundários</Portuguese>
             <Korean>9. 부차적인 임무</Korean>
             <Czech>9. Vedlejší úkoly</Czech>
-            <Japanese>9. 副次目標</Japanese>
+            <Japanese>9. 副次任務</Japanese>
         </Key>
         <Key ID="STR_TUTO_TEXT9">
             <Original>&lt;br/&gt;&lt;br/&gt;When you capture sectors, sometimes the few hostiles forces remaining will surrender. You can then capture those prisoners and take them back to a nearby FOB to be interrogated.&lt;br/&gt; &lt;br/&gt;That interrogation, executed in the utmost respect of the Geneva Convention, will allow you to obtain information which can be used to reveal the rough position of an enemy logistics base, enemy convoy or friendly search and rescue.&lt;br/&gt; &lt;br/&gt;After going there you will need to find the exact position of your target, then use any means at your disposal to complete your objective. Succeeding at this task will be rewarded, reducing the alert level consequently and with it the efficiency of all hostile forces.&lt;br/&gt; &lt;br/&gt;</Original>
@@ -5687,7 +5695,7 @@
             <Portuguese>&lt;br/&gt;&lt;br/&gt;Quando um jogador assume a função de comandante, ele recebem acesso à interface Zeus ao pressionar a tecla correspondente (a tecla padrão é 'Y'). Essa interface permite o comando de forças aliadas na plataforma 3D ou através do mapa.&lt;br/&gt; &lt;br/&gt;Ademais, o comandante recebe opções adicionais de construção que o permitirão obter veículos tripulados ou grupos predeterminados.&lt;br/&gt; &lt;br/&gt;Tal função é agora obrigatória, pois possibilita acesso direto à gestão dos setores de produção e logísticas automatizadas. Quando estiver posicionado numa FOB, você poderá observar as opções "Configuração de Produção" e "Visão Geral de Logística".&lt;br/&gt; &lt;br/&gt; A primeira habilita a capacidade de decidir que fabrica/refinaria irá produzir qual recurso específico, bem como uma visão geral detalhada sobre o serviço.&lt;br/&gt; &lt;br/&gt; O último permite a você comandar o sistema automatizado de comboio logístico, onde você poderá "adicionar" grupos logísticos, adquirir quantos transportes desejar e os comandar para transportar quantidades específicas de recursos através do território.&lt;br/&gt; &lt;br/&gt;</Portuguese>
             <Korean>&lt;br/&gt;&lt;br/&gt;- 지휘 :&lt;br/&gt; &lt;br/&gt;지휘권한은 관리자가 허가한 자만이 획득할 수 있다. 지휘자는 각 거점에서 생산되고 있는 군수물자를 지정하거나 내역을 살펴 볼 수 있고, 각 군수물자를 AI수송부대를 이용하여 운반할 수 있다. 또한 제우스 기능을 사용할 수 있다.&lt;br/&gt; &lt;br/&gt;- 기타 정보 :&lt;br/&gt; &lt;br/&gt;항공기를 사용하기 위해서는 반드시 '비행 관제소'를 먼저 만들어야만 한다. 이후 '항공기 격납고'를 만들고 항공기를 배치한다. 항공기 격납고 수에 따라 운행할 수 있는 항공기 숫자가 결정된다.&lt;br/&gt; &lt;br/&gt;비행장은 평지라 할지라도 습기가 많은 지역은 항공기 이착률이 힘들기 때문에 적군 비행장을 점령하여 사용하기를 권한다.&lt;br/&gt; &lt;br/&gt;고급 장비는 특정한 군사기지를 점령해야만 전초기지에서 생산(배치)할 수 있다. 지도에 보면 군사기지 이름 옆에 원이 그려져 있고 체크가 된 곳이 있는데 이 곳을 점령하게되면 체크 옆에 표기되어 있는 장비를 생산(배치)할 수 있게 된다.&lt;br/&gt; &lt;br/&gt;전투에 사용한 장비는 반드시 전초기지로 가지고 귀환해야 한다. 전초기지범위 밖에 있으면 사라지기 때문이다. 노획장비 또한 없어지지 않기 때문에 반드시 전초기지로 귀환해서 접속종료를 하기 바란다.&lt;br/&gt; &lt;br/&gt;AI은 1플레이어가 최대 12명까지 뽑아서 사용할 수있으나, 지휘하기엔 의무병과 공병을 포함하여 3~5명정도를 추천한다.&lt;br/&gt; &lt;br/&gt;함부로 민간인을 학살하거나 재산(특히 집)을 파괴하거나 약탈(차량같은 것)하지 말라. 민병대 출현하게 되면 머리 아프다.&lt;br/&gt; &lt;br/&gt;민간인들에게 환영받기 위해서는 부상당한 민간인(간혹 지도에 보라색이 생김)들을 도와줘라.&lt;br/&gt; &lt;br/&gt;끝으로 재미있는 게임 시간이 되길 바란다!&lt;br/&gt; &lt;br/&gt;</Korean>
             <Czech>&lt;br/&gt;&lt;br/&gt;Když hráč použije roli Velitele, získá přístup k rozhraní Zeus stisknutím odpovídající klávesy (ve výchozím nastavení Y). Toto rozhraní umožňuje velení přátelských sil v zobrazení 3D nebo mapy.&lt;br/&gt; &lt;br/&gt;Navíc komandér získá přístup postavit vozidla s posádkou nebo celé předvytvořené družstva.&lt;br/&gt; &lt;br/&gt;Tato role je důležitá, a jako taková dává přímý přístup k spravování produkce v sektorech a logistice AI. Pokud budete stát na FOB, dostanete možnosti "Nastavení produkce" a "Logistický přehled".&lt;br/&gt; &lt;br/&gt; První vám dá možnost nastavit která továrna bude produkovat kterou surovinu, jako také detailní přehled.&lt;br/&gt; &lt;br/&gt; Písmena vám dovolí rozkazovat AI logistickým konvojům, kde můžete "Přidat" logistické skupiny, koupit jakékoliv množství náklaďáků na skupinu a přikázat jim převážet specifické množství surovin napříč celou oblastí pro vás.&lt;br/&gt; &lt;br/&gt;</Czech>
-            <Japanese>&lt;br/&gt;&lt;br/&gt;プレイヤーが司令官役割を使用すると、対応するキー（デフォルトではY）を押すことでZeusインターフェースにアクセスできます。このインターフェースにより、3Dまたはマップビューで友好部隊を指揮することができます。&lt;br/&gt; &lt;br/&gt;さらに、司令官は、クルー付きの車両や完全に作成された分隊などの追加の建造オプションを取得できます。&lt;br/&gt; &lt;br/&gt;この役割は今では必須であり、生産セクターの管理とAIロジスティクスへの直接的なアクセスを提供するためです。あなたがFOBに配置されているということを考慮すると、「生産設定」と「物流概要」のオプションが表示されます。&lt;br/&gt; &lt;br/&gt;前者は、どの工場がどの資源を生産するかを決定し、現在の詳細な概要を示す能力を提供します。&lt;br/&gt; &lt;br/&gt;後者は、AIロジスティクス輸送隊を指揮でき、輸送グループを「追加」し、グループごとにトラックの数量を購入し、特定の量の資源を地域全体で移動させることができます。&lt;br/&gt; &lt;br/&gt;</Japanese>
+            <Japanese>&lt;br/&gt;&lt;br/&gt;プレイヤーが司令官役割を使用すると、対応するキー（デフォルトではY）を押すことでZeusインターフェースにアクセスできます。このインターフェースにより、3Dまたはマップビューで友好部隊を指揮することができます。&lt;br/&gt; &lt;br/&gt;さらに、司令官は、クルー付きの車両や完全に作成された分隊などの追加の製造オプションを取得できます。&lt;br/&gt; &lt;br/&gt;この役割は今では必須であり、生産セクターの管理とAIロジスティクスへの直接的なアクセスを提供するためです。あなたがFOBに配置されているということを考慮すると、「生産設定」と「物流管理」のオプションが表示されます。&lt;br/&gt; &lt;br/&gt;前者は、どの工場がどの資源を生産するかを決定し、現在の詳細な概要を示す能力を提供します。&lt;br/&gt; &lt;br/&gt;後者は、AIロジスティクス輸送隊を指揮でき、輸送グループを「追加」し、グループごとにトラックの数量を購入し、特定の量の資源を地域全体で移動させることができます。&lt;br/&gt; &lt;br/&gt;</Japanese>
         </Key>
         <Key ID="STR_PARAMS_ARSENALUSEPRESET">
             <Original>Arsenal mode</Original>
@@ -6800,7 +6808,7 @@
             <Italian>Carica/Salva Parametri</Italian>
             <Korean>매개변수설정 저장/불러오기</Korean>
             <Czech>Uložit/načíst parametry</Czech>
-            <Japanese>パラメーターのロードとセーブ</Japanese>
+            <Japanese>パラメーターのロード/セーブ</Japanese>
         </Key>
         <Key ID="STR_PARAMS_LOADSAVEPARAMS_SAVE">
             <Original>SAVE selected parameters</Original>
@@ -6810,7 +6818,7 @@
             <Italian>SALVA i parametri</Italian>
             <Korean>매개변수설정 저장</Korean>
             <Czech>Uložit vybrané parametry</Czech>
-            <Japanese>選択したパラメーターをセーブ</Japanese>
+            <Japanese>選択したパラメーターをセーブして使用</Japanese>
         </Key>
         <Key ID="STR_PARAMS_LOADSAVEPARAMS_LOAD">
             <Original>LOAD parameters or use selected if no saved value found</Original>
@@ -6820,7 +6828,7 @@
             <Italian>CARICA parametri o utilizza selezionati se non è stato trovato alcun valore salvato</Italian>
             <Korean>매개변수설정 불러오기/ 저장된 설정이 없는 경우 현재 선택된 설정 사용</Korean>
             <Czech>Načíst parametry nebo použít vybrané pokud nebyly nalezeny žádné uložené.</Czech>
-            <Japanese>セーブを読み込みます。またはセーブがない場合は選択したパラメーターを使用します。</Japanese>
+            <Japanese>パラメーターをロードし、保存されていない場合は選択したパラメータを使用</Japanese>
         </Key>
         <Key ID="STR_PARAMS_LOADSAVEPARAMS_SELECTED">
             <Original>Use selected parameters without saving</Original>
@@ -6830,7 +6838,7 @@
             <Italian>Usa i parametri selezionati senza salvare</Italian>
             <Korean>현재 설정을 저장하지 않고 선택한 설정을 사용</Korean>
             <Czech>Použít vybrané parametry bez ukládání</Czech>
-            <Japanese>選択したパラメーターをセーブせず使用します。</Japanese>
+            <Japanese>選択したパラメータをセーブせず使用</Japanese>
         </Key>
         <Key ID="STR_RAISE">
             <Original>-- Raise</Original>
@@ -7417,7 +7425,7 @@
             <Portuguese>Objetivos secundários alcançados: %1</Portuguese>
             <Korean>부차적인 임무 달성 : %1</Korean>
             <Czech>Dosažené sekundární cíle: %1</Czech>
-            <Japanese>完了した副次目標の数: %1</Japanese>
+            <Japanese>完了した副次任務の数: %1</Japanese>
         </Key>
         <Key ID="STR_STATS_PRISONERS">
             <Original>Prisoners captured: %1</Original>
@@ -7584,7 +7592,7 @@
             <Italian>FOB ripiegata.\nL'autorizzazione eventualmente creata verrà ripristinata al riavvio del server.</Italian>
             <Korean>FOB가 재포장됩니다. 이 상태로 서버 재시작시 이 부근의 건물이나 장비들은 사라집니다.</Korean>
             <Czech>FOB je zabalen.\Po restartování serveru bude pravděpodobně vytvořené oprávnění zrušeno.</Czech>
-            <Japanese>FOBを撤収しました。\n設置可能範囲はリスタートまで復活しない場合があります。</Japanese>
+            <Japanese>FOBを撤収しました。\nFOBの周辺を一掃していた場合は、サーバーの再起動後に原状復帰します。</Japanese>
         </Key>
         <Key ID="STR_FOG_PARAM">
             <Original>Dynamic fog (A3 Vanilla)</Original>
@@ -7835,7 +7843,7 @@
             <German>Nun hast du Zugriff zum Baumenü über die Mausrad-Aktionen.&lt;br/&gt;Benutze diese Aktion, um einen Lagerbereich zu errichten. Die Lagerbereich sind im Unterstützungs-Reiter des Baumenüs.&lt;br/&gt;Dieser ist notwendig, um die Startressourcen, die wir dir im Anschluss an diese Aufgabe zukommen lassen, einzulagern.</German>
             <Italian>Ora hai accesso al menu di costruzione tramite le azioni della rotella di scorrimento.&lt;br/&gt;Usa questa azione per posizionare un'area di stoccaggio. Puoi trovarlo nella scheda Supporto del menu di costruzione.&lt;br/&gt;Questo è necessario per memorizzare le casse di risorse che ti invieremo dopo questa attività.</Italian>
             <Czech>Nyní máte přístup k nabídce sestavení prostřednictvím akcí rolovacího kolečka.&lt;br/&gt; Tato akce slouží k umístění skladovacího prostoru. Najdete ji na kartě budovy v nabídce stavení.&lt;br/&gt; To je nutné k uložení beden prostředků, které vám pošleme po tomto úkolu.</Czech>
-            <Japanese>現在、アクションメニュー(マウスホイール)を使用して建造メニューにアクセスできるようになっています。&lt;br/&gt;このアクションを使用して倉庫を配置してください。倉庫はビルドメニューの物流タブにあります。&lt;br/&gt;この倉庫は、この任務の後に送られてくる資源箱を保管するために必要です。</Japanese>
+            <Japanese>現在、アクションメニュー(マウスホイール)を使用して製造メニューにアクセスできるようになっています。&lt;br/&gt;このアクションを使用して倉庫を配置してください。倉庫はビルドメニューの物流タブにあります。&lt;br/&gt;この倉庫は、この任務の後に送られてくる資源箱を保管するために必要です。</Japanese>
         </Key>
         <Key ID="STR_TUTORIAL_TASK_FOB_03_TITLE">
             <Original>Collect start resources</Original>
@@ -7849,7 +7857,7 @@
             <German>Wir haben dir ein paar Kisten mit Startressourcen per Fallschirmabwurf zukommen lassen. Sammel sie ein und lagere sie in deinen Lagerbereich ein, um sie den verfügbaren Ressourcen der FOB hinzuzufügen.&lt;br/&gt;Ressourcen müssen übrigens immer in solche Bereiche eingelagert werden, damit sie zum bauen verwendet werden können. Es reicht nicht aus, die Kisten einfach in der Nähe der FOB zu haben. Bist du in der Nähe einer Kiste, hast du unter anderem eine "Einlagern" und "Schieben" Mausrad-Aktion, welche dir helfen werden.</German>
             <Italian>Ti abbiamo inviato alcune casse di risorse iniziali tramite paradrop. Raccoglili e conservali nella tua area di stoccaggio per aggiungerli al pool di risorse FOB.&lt;br/&gt;Le risorse devono sempre essere immagazzinate in tali aree per usarle per la costruzione. Non basta averli vicino al FOB. Se ti avvicini a una cassa, avrai un negozio e una rotella di scorrimento, che ti aiuterà.</Italian>
             <Czech>Poslali jsme vám přes paradrop nějaké bedny se startem. Shromážděte je a uložte je do úložiště a přidejte je do fondu zdrojů FOB.&lt;br/&gt; Zdroje musí být vždy uloženy v těchto oblastech, aby je mohly používat pro stavbu. Nestačí je mít blízko FOB. Pokud se přiblížíte k bedně, budete mít možnost a akci push rolovacího kolečka, která vám pomůže.</Czech>
-            <Japanese>私たちは貴方に空中投下で開始時用資源箱を送りました。それらを収集して倉庫に収容し、FOBの資源プールに追加してください。&lt;br/&gt;建造に使用するために、資源は常にそのようなエリアに保管する必要があります。FOBの近くにあるだけでは十分ではありません。資源箱の近くに移動すると、貨物を押す、運ぶ、収納する等のアクション(マウスホイールで選択)が表示されます。それらを役立ててください。</Japanese>
+            <Japanese>私たちは貴方に空中投下で開始時用資源箱を送りました。それらを収集して倉庫に収容し、FOBの資源プールに追加してください。&lt;br/&gt;製造に使用するために、資源は常にそのようなエリアに保管する必要があります。FOBの近くにあるだけでは十分ではありません。資源箱の近くに移動すると、貨物を押す、運ぶ、収納する等のアクション(マウスホイールで選択)が表示されます。それらを役立ててください。</Japanese>
         </Key>
         <Key ID="STR_TUTORIAL_TASK_SECTOR_TITLE">
             <Original>Capture your first factory</Original>
@@ -7877,7 +7885,7 @@
             <German>Es ist immer eine gute Entscheidung die Kampagne mit der Eroberung einer Fabrik zu beginnen. Dadurch wirst du in der Lage sein weitere Ressourcen zu produzieren, um weitere Bodenfahrzeuge und später auch Luftfahrzeuge zu bauen.&lt;br/&gt;Wir haben bis zu drei nahe Fabriken für dich auf der Karte markiert. Entscheide selbst, welche du angehen möchtest.&lt;br/&gt;Wir fahren fort, wenn du in der Nähe einer der markierten Fabriken bist.&lt;br/&gt;&lt;br/&gt;Mehr Informationen über die verschiedenen Sektortypen findest du in unserem &lt;a href="https://github.com/KillahPotatoes/KP-Liberation/wiki/EN_Sectors"&gt;Wiki&lt;/a&gt;.</German>
             <Italian>È sempre una buona decisione iniziare la tua campagna con l'acquisizione di una fabbrica. In questo modo sarai in grado di produrre più risorse, di cui avrai bisogno per costruire più veicoli e successivamente risorse aeree.&lt;br/&gt;Abbiamo contrassegnato per te fino a tre settori vicini alla fabbrica sulla mappa. Decidi da solo a quale ti vuoi avvicinare.&lt;br/&gt;Continueremo, se sei vicino a una delle fabbriche contrassegnate.&lt;br/&gt;&lt;br/&gt;Maggiori informazioni sui diversi tipi di settore possono essere trovate nel nostro &lt;a href="https://github.com/KillahPotatoes/KP-Liberation/wiki/EN_Sectors"&gt;Wiki&lt;/a&gt;.</Italian>
             <Czech>Je vždy dobré začít kampaň se zachycením továrny. Tímto způsobem budete moci produkovat více zdrojů, které budete potřebovat, abyste mohli postavit více vozidel a později letecké prostředky.&lt;br/&gt; Označili jsme na mapě až tři blízké výrobní sektory. Rozhodněte se sami, který z nich chcete přistupovat.&lt;br/&gt; Budeme pokračovat, pokud jste poblíž jedné z označených továren.&lt;br/&gt;&lt;br/&gt; Více informací o různých typech odvětví naleznete v našem &lt;a href="https://github.com/KillahPotatoes/KP-Liberation/wiki/EN_Sectors"&gt; Wiki&lt;/a&gt;.</Czech>
-            <Japanese>工場を占領することからキャンペーンを始めるのは常に良い決断です。そうすれば、より多くの資源を生産できるようになり、より多くの資源が必要な車両や後には航空機を建造することが出来ます。&lt;br/&gt;私たちはあなたのために、マップ上に最大3つの工場付近のセクターをマークしました。どの工場に接近するかは、あなたが決めてください。&lt;br/&gt;マークされた工場の近くにいるのであれば、作業を続けましょう。&lt;br/&gt;&lt;br/&gt;異なるセクターの種類の詳細は、&lt;a href="https://github.com/KillahPotatoes/KP-Liberation/wiki/EN_Sectors"&gt;Wiki&lt;/a&gt;で確認できます。</Japanese>
+            <Japanese>工場を占領することからキャンペーンを始めるのは常に良い決断です。そうすれば、より多くの資源を生産できるようになり、より多くの資源が必要な車両や後には航空機を製造することが出来ます。&lt;br/&gt;私たちはあなたのために、マップ上に最大3つの工場付近のセクターをマークしました。どの工場に接近するかは、あなたが決めてください。&lt;br/&gt;マークされた工場の近くにいるのであれば、作業を続けましょう。&lt;br/&gt;&lt;br/&gt;異なるセクターの種類の詳細は、&lt;a href="https://github.com/KillahPotatoes/KP-Liberation/wiki/EN_Sectors"&gt;Wiki&lt;/a&gt;で確認できます。</Japanese>
         </Key>
         <Key ID="STR_TUTORIAL_TASK_SECTOR_02_TITLE">
             <Original>Conquer the factory</Original>

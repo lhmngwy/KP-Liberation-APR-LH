@@ -25,7 +25,7 @@ _objective_outpost = selectRandom _player_outpost;
 secondary_objective_position = getMarkerPos _objective_outpost;
 secondary_objective_position_marker = secondary_objective_position;
 publicVariable "secondary_objective_position_marker";
-sleep 1;
+uiSleep 1;
 
 // Start the secondary mission
 KPLIB_secondary_in_progress = 3; publicVariable "KPLIB_secondary_in_progress";
@@ -57,7 +57,7 @@ while {!_ammo_present} do {
     // If there are no ammo, wait for a period of time and check again
     if (count _ammo_in_zone isEqualTo 0) then {
         hintSilent "";
-        sleep 5;
+        uiSleep 5;
     } else {
     
         // Loop through all ammo crates in the zone and add up their values
@@ -67,18 +67,18 @@ while {!_ammo_present} do {
         if (_total_value < _required_value) then {
         
             // Notify players of current ammo status in area
-            hintSilent format ["Ammo in area: %1/%2\nNext check will run after %3 seconds...", _total_value, _required_value, 5];
-            sleep 1;
-            hintSilent format ["Ammo in area: %1/%2\nNext check will run after %3 seconds...", _total_value, _required_value, 4];
-            sleep 1;
-            hintSilent format ["Ammo in area: %1/%2\nNext check will run after %3 seconds...", _total_value, _required_value, 3];
-            sleep 1;
-            hintSilent format ["Ammo in area: %1/%2\nNext check will run after %3 seconds...", _total_value, _required_value, 2];
-            sleep 1;
-            hintSilent format ["Ammo in area: %1/%2\nNext check will run after %3 seconds...", _total_value, _required_value, 1];
-            sleep 1;
-            hintSilent format ["Ammo in area: %1/%2\nChecking...", _total_value, _required_value];
-            sleep 1;
+            hintSilent format [localize "STR_SECONDARY_LOGIMISSION_WAITING", _total_value, _required_value, 5, localize "STR_AMMO"];
+            uiSleep 1;
+            hintSilent format [localize "STR_SECONDARY_LOGIMISSION_WAITING", _total_value, _required_value, 4, localize "STR_AMMO"];
+            uiSleep 1;
+            hintSilent format [localize "STR_SECONDARY_LOGIMISSION_WAITING", _total_value, _required_value, 3, localize "STR_AMMO"];
+            uiSleep 1;
+            hintSilent format [localize "STR_SECONDARY_LOGIMISSION_WAITING", _total_value, _required_value, 2, localize "STR_AMMO"];
+            uiSleep 1;
+            hintSilent format [localize "STR_SECONDARY_LOGIMISSION_WAITING", _total_value, _required_value, 1, localize "STR_AMMO"];
+            uiSleep 1;
+            hintSilent format [localize "STR_SECONDARY_LOGIMISSION_CHECKING", _total_value, _required_value, localize "STR_AMMO"];
+            uiSleep 1;
             
         } else {
             
@@ -101,14 +101,12 @@ while {!_ammo_present} do {
         };
     };
 };
-hintSilent "Secondary Objective Completed!";
+hintSilent "";
 
 KPLIB_enemyReadiness = round (KPLIB_enemyReadiness - 8);
 [16] remoteExec ["remote_call_intel"];
 stats_secondary_objectives = stats_secondary_objectives + 1;
 KPLIB_secondary_in_progress = -1; publicVariable "KPLIB_secondary_in_progress";
-sleep 1;
+uiSleep 1;
 [] spawn KPLIB_fnc_doSave;
 [format ["Rearm Outpost secondary objective complete at %1. reduced enemy readiness to %2",_objective_outpost, KPLIB_enemyReadiness], "NOTIFICATION"] call KPLIB_fnc_log;
-sleep 5;
-hintSilent "";

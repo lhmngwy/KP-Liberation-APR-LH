@@ -91,7 +91,7 @@ params ["_unit", "_killer"];
                 // Killed by BLUFOR
                 if (side _killer == KPLIB_side_player) then {
                     if (KPLIB_asymmetric_debug > 0) then {[format ["Guerilla unit killed by: %1", name _killer], "ASYMMETRIC"] call KPLIB_fnc_log;};
-                    [3, [(name _unit)]] remoteExec ["KPLIB_fnc_crGlobalMsg"];
+                    [3, [(name _unit), (name _killer)]] remoteExec ["KPLIB_fnc_crGlobalMsg"];
                     stats_resistance_teamkills = stats_resistance_teamkills + 1;
                     [KPLIB_cr_resistance_penalty, true] spawn F_cr_changeCR;
                 };

@@ -300,8 +300,8 @@ KPLIB_civinfo_duration = 1800;
 // Chance (0-100) that the delivered informant will spawn a time critical task
 KPLIB_civinfo_task_chance = 35;
 
-// Time until the task will despawn if no player is near. (seconds, default 15 min)
-KPLIB_civinfo_task_duration = 900;
+// Time until the task will despawn if no player is near. (seconds, default 30 min)
+KPLIB_civinfo_task_duration = 1800;
 
 
 /*

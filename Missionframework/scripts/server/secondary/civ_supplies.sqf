@@ -34,7 +34,7 @@ _objective_town = selectRandom _player_towns;
 secondary_objective_position = getMarkerPos _objective_town;
 secondary_objective_position_marker = secondary_objective_position;
 publicVariable "secondary_objective_position_marker";
-sleep 1;
+uiSleep 1;
 
 // Start the secondary mission
 KPLIB_secondary_in_progress = 3; publicVariable "KPLIB_secondary_in_progress";
@@ -66,7 +66,7 @@ while {!_supplies_present} do {
     // If there are no supplies, wait for a period of time and check again
     if (count _supplies_in_zone isEqualTo 0) then {
         hintSilent "";
-        sleep 5;
+        uiSleep 5;
     } else {
     
         // Loop through all supply crates in the zone and add up their values
@@ -76,18 +76,18 @@ while {!_supplies_present} do {
         if (_total_value < _required_value) then {
         
             // Notify players of current supply status in area
-            hintSilent format ["Supplies in area: %1/%2\nNext check will run after %3 seconds...", _total_value, _required_value, 5];
-            sleep 1;
-            hintSilent format ["Supplies in area: %1/%2\nNext check will run after %3 seconds...", _total_value, _required_value, 4];
-            sleep 1;
-            hintSilent format ["Supplies in area: %1/%2\nNext check will run after %3 seconds...", _total_value, _required_value, 3];
-            sleep 1;
-            hintSilent format ["Supplies in area: %1/%2\nNext check will run after %3 seconds...", _total_value, _required_value, 2];
-            sleep 1;
-            hintSilent format ["Supplies in area: %1/%2\nNext check will run after %3 seconds...", _total_value, _required_value, 1];
-            sleep 1;
-            hintSilent format ["Supplies in area: %1/%2\nChecking...", _total_value, _required_value];
-            sleep 1;
+            hintSilent format [localize "STR_SECONDARY_LOGIMISSION_WAITING", _total_value, _required_value, 5, localize "STR_MANPOWER"];
+            uiSleep 1;
+            hintSilent format [localize "STR_SECONDARY_LOGIMISSION_WAITING", _total_value, _required_value, 4, localize "STR_MANPOWER"];
+            uiSleep 1;
+            hintSilent format [localize "STR_SECONDARY_LOGIMISSION_WAITING", _total_value, _required_value, 3, localize "STR_MANPOWER"];
+            uiSleep 1;
+            hintSilent format [localize "STR_SECONDARY_LOGIMISSION_WAITING", _total_value, _required_value, 2, localize "STR_MANPOWER"];
+            uiSleep 1;
+            hintSilent format [localize "STR_SECONDARY_LOGIMISSION_WAITING", _total_value, _required_value, 1, localize "STR_MANPOWER"];
+            uiSleep 1;
+            hintSilent format [localize "STR_SECONDARY_LOGIMISSION_CHECKING", _total_value, _required_value, localize "STR_MANPOWER"];
+            uiSleep 1;
             
         } else {
             
@@ -110,7 +110,7 @@ while {!_supplies_present} do {
         };
     };
 };
-hintSilent "Secondary Objective Completed!";
+hintSilent "";
 
 // Add civilian rep for a completed mission based on value in KPLIB_config
 [KPLIB_secondary_objective_civ_supplies_impact] spawn F_cr_changeCR;
@@ -125,10 +125,8 @@ stats_secondary_objectives = stats_secondary_objectives + 1;
 KPLIB_secondary_in_progress = -1; publicVariable "KPLIB_secondary_in_progress";
 
 // execute a save
-sleep 1;
+uiSleep 1;
 [] spawn KPLIB_fnc_doSave;
 
 //create note in log
 [format ["Humanitarian Aid secondary objective complete at %1. Increasing civ rep by %2",_objective_town, KPLIB_secondary_objective_civ_supplies_impact], "NOTIFICATION"] call KPLIB_fnc_log;
-sleep 5;
-hintSilent "";

@@ -8,6 +8,10 @@ private _count = 2 + (ceil (random 2));
 private _grp = creategroup [KPLIB_side_civilian, true];
 private _civs = [];
 private _markers = [];
+private _chemlight = objNull;
+private _chemlights = [];
+private _chemClass = "Chemlight_blue";
+if (KPLIB_ace) then {_chemClass = "ACE_Chemlight_HiBlue";};
 
 for "_i" from 1 to _count do {
     private _pos = (markerPos _sector) getPos [(50 + (random 150)), (random 360)];
@@ -17,7 +21,9 @@ for "_i" from 1 to _count do {
     private _civ = [selectRandom KPLIB_c_units, _pos, _grp] call KPLIB_fnc_createManagedUnit;
     _civ setDamage 0.75;
     _civs pushBack _civ;
-    private _marker = createMarker ["wounded_marker_" + str _i, [((_pos select 0) - 20 + (random 40)),((_pos select 1) - 20 + (random 40))]];
+    _chemlight = _chemClass createVehicle (getPos _civ);
+    _chemlights pushBack _chemlight;
+    private _marker = createMarker [format ["wounded_marker_%1_%2", round time, _i], [((_pos select 0) - 20 + (random 40)),((_pos select 1) - 20 + (random 40))]];
     _marker setMarkerShape "ELLIPSE";
     _marker setMarkerSize [25,25];
     _marker setMarkerColor "ColorCIV";
@@ -88,13 +94,14 @@ while {true} do {
         };
     } forEach _civs;
     if ((count _healed_civs) isEqualTo (count _civs)) exitWith {
-        if (KPLIB_civrep_debug > 0) then {["civrep_wounded_civs.sqf -> all wounded units healed. exit heal wait loop", "CIVREP"] remoteExecCall ["KPLIB_fnc_log", 2]};
+        if (KPLIB_civrep_debug > 0) then {["civrep_wounded_civs.sqf -> all wounded units healed or died. exit heal wait loop", "CIVREP"] remoteExecCall ["KPLIB_fnc_log", 2]};
         sleep 60;
     };
     sleep 1;
 };
 
 {deleteVehicle _x} forEach _civs;
+{deleteVehicle _x} forEach _chemlights;
 {deleteMarker _x} forEach _markers;
 
 if (KPLIB_civrep_debug > 0) then {[format ["civrep_wounded_civs.sqf -> dropped at %1", markerText _sector], "CIVREP"] remoteExecCall ["KPLIB_fnc_log", 2]};
