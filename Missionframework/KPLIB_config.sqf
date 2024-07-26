@@ -196,7 +196,7 @@ KPLIB_range_airSpawnActivation = 1600;
 KPLIB_range_pointActivation    = 1000;
 
 // Range to capture a sector.
-KPLIB_range_sectorCapture = 200;
+KPLIB_range_sectorCapture = 100;
 
 // Radio Tower scanning range.
 KPLIB_range_radioTowerScan = 2500;

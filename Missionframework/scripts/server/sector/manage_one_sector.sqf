@@ -14,6 +14,7 @@ waitUntil {!isNil "KPLIB_enemyReadiness"};
 [format ["Sector %1 (%2) activated - Managed on: %3", (markerText _sector), _sector, debug_source], "SECTORSPAWN"] remoteExecCall ["KPLIB_fnc_log", 2];
 
 private _sectorpos = markerPos _sector;
+private _hostile = false;
 private _stopit = false;
 private _spawncivs = false;
 private _building_ai_max = 0;
@@ -49,7 +50,29 @@ KPLIB_sectors_active pushback _sector; publicVariable "KPLIB_sectors_active";
 private _opforcount = [] call KPLIB_fnc_getOpforCap;
 [_sector, _opforcount] call wait_to_spawn_sector;
 
+if (_sector in KPLIB_sectors_capital) then {
+    _spawncivs = true;
+};
+if (_sector in KPLIB_sectors_city) then {
+    _spawncivs = true;
+};
+if (_sector in KPLIB_sectors_military) then {
+    _spawncivs = false;
+};
+if (_sector in KPLIB_sectors_factory) then {
+    _spawncivs = true;
+};
+if (_sector in KPLIB_sectors_tower) then {
+    _spawncivs = false;
+};
+
+if (_spawncivs && KPLIB_param_civActivity > 0) then {
+    _managed_units = _managed_units + ([_sector] call KPLIB_fnc_spawnCivilians);
+};
+
 if ((!(_sector in KPLIB_sectors_player)) && (([markerPos _sector, [_opforcount, _sector] call KPLIB_fnc_getSectorRange, KPLIB_side_player] call KPLIB_fnc_getUnitsCount) > 0)) then {
+
+    _hostile = true;
 
     if (_sector in KPLIB_sectors_capital) then {
         if (KPLIB_enemyReadiness < 30) then {_infsquad = "militia";};
@@ -72,8 +95,6 @@ if ((!(_sector in KPLIB_sectors_player)) && (([markerPos _sector, [_opforcount, 
             if ((random 100) > (33 / KPLIB_param_difficulty)) then {_vehtospawn pushback (selectRandom KPLIB_o_turrets_AA);};
             if ((random 100) > (33 / KPLIB_param_difficulty)) then {_vehtospawn pushback (selectRandom KPLIB_o_turrets_GMG);};
         };
-
-        _spawncivs = true;
 
         if (((random 100) <= KPLIB_resistance_sector_chance) && (([] call KPLIB_fnc_crGetMulti) > 0)) then {
             _guerilla = true;
@@ -111,8 +132,6 @@ if ((!(_sector in KPLIB_sectors_player)) && (([markerPos _sector, [_opforcount, 
             };
         };
 
-        _spawncivs = true;
-
         if (((random 100) <= KPLIB_resistance_sector_chance) && (([] call KPLIB_fnc_crGetMulti) > 0)) then {
             _guerilla = true;
         };
@@ -147,8 +166,6 @@ if ((!(_sector in KPLIB_sectors_player)) && (([markerPos _sector, [_opforcount, 
             _vehtospawn pushback ((selectRandom KPLIB_o_turrets_AA));
         };
 
-        _spawncivs = false;
-
         _building_ai_max = round ((floor (18 + (round (KPLIB_enemyReadiness / 4 )))) * _popfactor);
         _building_range = 120;
     };
@@ -163,8 +180,6 @@ if ((!(_sector in KPLIB_sectors_player)) && (([markerPos _sector, [_opforcount, 
         if ((random 100) > 33) then {_vehtospawn pushback (selectRandom KPLIB_o_militiaVehicles);};
         if ((random 100) > 33) then {_vehtospawn pushback (selectRandom KPLIB_o_turrets_HMG);};
         if (KPLIB_enemyReadiness > 50) then {_vehtospawn pushback (selectRandom KPLIB_o_turrets_HMG);};
-
-        _spawncivs = false;
 
         if (((random 100) <= KPLIB_resistance_sector_chance) && (([] call KPLIB_fnc_crGetMulti) > 0)) then {
             _guerilla = true;
@@ -188,8 +203,6 @@ if ((!(_sector in KPLIB_sectors_player)) && (([markerPos _sector, [_opforcount, 
 
         if((random 100) > 95) then {_vehtospawn pushback ([] call KPLIB_fnc_getAdaptiveVehicle);};
         if (KPLIB_enemyReadiness > 50) then {_vehtospawn pushback (selectRandom KPLIB_o_turrets_HMG);};
-
-        _spawncivs = false;
 
         _building_ai_max = 0;
     };
@@ -255,10 +268,6 @@ if ((!(_sector in KPLIB_sectors_player)) && (([markerPos _sector, [_opforcount, 
         _managed_units = _managed_units + (units _grp);
     };
 
-    if (_spawncivs && KPLIB_param_civActivity > 0) then {
-        _managed_units = _managed_units + ([_sector] call KPLIB_fnc_spawnCivilians);
-    };
-
     if (KPLIB_asymmetric_debug > 0) then {[format ["Sector %1 (%2) - Range: %3 - Count: %4", (markerText _sector), _sector, _building_range, _iedcount], "ASYMMETRIC"] remoteExecCall ["KPLIB_fnc_log", 2];};
     [_sector, _building_range, _iedcount] spawn ied_manager;
 
@@ -271,81 +280,78 @@ if ((!(_sector in KPLIB_sectors_player)) && (([markerPos _sector, [_opforcount, 
     if ((_sector in KPLIB_sectors_factory) || (_sector in KPLIB_sectors_city) || (_sector in KPLIB_sectors_capital) || (_sector in KPLIB_sectors_military)) then {
         [_sector] remoteExec ["reinforcements_remote_call",2];
     };
+};
 
-    if (KPLIB_sectorspawn_debug > 0) then {[format ["Sector %1 (%2) - populating done", (markerText _sector), _sector], "SECTORSPAWN"] remoteExecCall ["KPLIB_fnc_log", 2];};
+if (KPLIB_sectorspawn_debug > 0) then {[format ["Sector %1 (%2) - populating done", (markerText _sector), _sector], "SECTORSPAWN"] remoteExecCall ["KPLIB_fnc_log", 2];};
 
-    private _activationTime = time;
-    // sector lifetime loop
-    while {!_stopit} do {
-        // sector was captured
-        if (([_sectorpos, _local_capture_size] call KPLIB_fnc_getSectorOwnership == KPLIB_side_player) && (KPLIB_endgame == 0)) then {
-            if (isServer) then {
-                [_sector] spawn sector_liberated_remote_call;
+private _activationTime = time;
+// sector lifetime loop
+while {!_stopit} do {
+    // sector was captured
+    if (_hostile && ([_sectorpos, _local_capture_size] call KPLIB_fnc_getSectorOwnership == KPLIB_side_player) && (KPLIB_endgame == 0)) then {
+        if (isServer) then {
+            [_sector] spawn sector_liberated_remote_call;
+        } else {
+            [_sector] remoteExec ["sector_liberated_remote_call",2];
+        };
+
+        _stopit = true;
+
+        {
+            if (captive _x) then {
+                [_x, true] spawn prisonner_ai;
             } else {
-                [_sector] remoteExec ["sector_liberated_remote_call",2];
+                [_x] spawn prisonner_ai;
             };
+        } forEach ((markerPos _sector) nearEntities [["CAManBase"], _local_capture_size * 1.2]);
+        
+        sleep 60;
 
-            _stopit = true;
+        KPLIB_sectors_active = KPLIB_sectors_active - [_sector]; publicVariable "KPLIB_sectors_active";
 
-            {
-                if (captive _x) then {
-                    [_x, true] spawn prisonner_ai;
-                } else {
-                    [_x] spawn prisonner_ai;
+        sleep 600;
+
+        {
+            if (_x isKindOf "CAManBase") then {
+                if (side group _x != KPLIB_side_player) then {
+                    if (isNull objectParent _x) then {deleteVehicle _x} else {(objectParent _x) deleteVehicleCrew _x};
                 };
-            } forEach ((markerPos _sector) nearEntities [["CAManBase"], _local_capture_size * 1.2]);
-            
-            sleep 60;
+            } else {
+                if (!isNull _x) then {
+                    [_x] call KPLIB_fnc_cleanOpforVehicle;
+                };
+            };
+        } forEach _managed_units;
+    } else {
+        if (([_sectorpos, (([_opforcount, _sector] call KPLIB_fnc_getSectorRange) + 300), KPLIB_side_player] call KPLIB_fnc_getUnitsCount) == 0) then {
+            _sector_despawn_tickets = _sector_despawn_tickets - 1;
+        } else {
+            // start counting running minutes after ADDITIONAL_TICKETS_DELAY
+            private _runningMinutes = (floor ((time - _activationTime) / 60)) - ADDITIONAL_TICKETS_DELAY;
+            private _additionalTickets = (_runningMinutes * BASE_TICKETS);
 
-            KPLIB_sectors_active = KPLIB_sectors_active - [_sector]; publicVariable "KPLIB_sectors_active";
+            // clamp from 0 to "_maximum_additional_tickets"
+            _additionalTickets = (_additionalTickets max 0) min _maximum_additional_tickets;
 
-            sleep 600;
+            _sector_despawn_tickets = BASE_TICKETS + _additionalTickets;
+        };
 
+        if (_sector_despawn_tickets <= 0) then {
             {
                 if (_x isKindOf "CAManBase") then {
-                    if (side group _x != KPLIB_side_player) then {
-                        if (isNull objectParent _x) then {deleteVehicle _x} else {(objectParent _x) deleteVehicleCrew _x};
-                    };
+                    if (isNull objectParent _x) then {deleteVehicle _x} else {(objectParent _x) deleteVehicleCrew _x};
                 } else {
                     if (!isNull _x) then {
                         [_x] call KPLIB_fnc_cleanOpforVehicle;
                     };
                 };
             } forEach _managed_units;
-        } else {
-          if (([_sectorpos, (([_opforcount, _sector] call KPLIB_fnc_getSectorRange) + 300), KPLIB_side_player] call KPLIB_fnc_getUnitsCount) == 0) then {
-                _sector_despawn_tickets = _sector_despawn_tickets - 1;
-            } else {
-                // start counting running minutes after ADDITIONAL_TICKETS_DELAY
-                private _runningMinutes = (floor ((time - _activationTime) / 60)) - ADDITIONAL_TICKETS_DELAY;
-                private _additionalTickets = (_runningMinutes * BASE_TICKETS);
 
-                // clamp from 0 to "_maximum_additional_tickets"
-                _additionalTickets = (_additionalTickets max 0) min _maximum_additional_tickets;
-
-                _sector_despawn_tickets = BASE_TICKETS + _additionalTickets;
-            };
-
-            if (_sector_despawn_tickets <= 0) then {
-                {
-                    if (_x isKindOf "CAManBase") then {
-                        if (isNull objectParent _x) then {deleteVehicle _x} else {(objectParent _x) deleteVehicleCrew _x};
-                    } else {
-                        if (!isNull _x) then {
-                            [_x] call KPLIB_fnc_cleanOpforVehicle;
-                        };
-                    };
-                } forEach _managed_units;
-
-                _stopit = true;
-                KPLIB_sectors_active = KPLIB_sectors_active - [_sector]; publicVariable "KPLIB_sectors_active";
-            };
+            _stopit = true;
+            KPLIB_sectors_active = KPLIB_sectors_active - [_sector]; publicVariable "KPLIB_sectors_active";
         };
-        sleep SECTOR_TICK_TIME;
     };
-} else {
-    sleep 40;
-    KPLIB_sectors_active = KPLIB_sectors_active - [_sector]; publicVariable "KPLIB_sectors_active";
+    sleep SECTOR_TICK_TIME;
 };
 
 [format ["Sector %1 (%2) deactivated - Was managed on: %3", (markerText _sector), _sector, debug_source], "SECTORSPAWN"] remoteExecCall ["KPLIB_fnc_log", 2];

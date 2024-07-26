@@ -146,7 +146,7 @@ class FSM
                 {
                         name = "Start_new_monitoring";
                         itemno = 6;
-                        init = /*%FSM<STATEINIT""">*/"_allSectors = KPLIB_sectors_all - KPLIB_sectors_player;" \n
+                        init = /*%FSM<STATEINIT""">*/"_allSectors = KPLIB_sectors_all;" \n
                          "_allSectors = _allSectors - KPLIB_sectors_active;"/*%FSM</STATEINIT""">*/;
                         precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
                         class Links
@@ -284,7 +284,7 @@ class FSM
                          "};" \n
                          "" \n
                          "// Spawn resource crates" \n
-                         "if (_sector in KPLIB_sectors_factory || _sector in KPLIB_sectors_city) then {" \n
+                         "if ((_sector in KPLIB_sectors_factory || _sector in KPLIB_sectors_city) && !(_sector in KPLIB_sectors_player)) then {" \n
                          "    [_sector] call KPLIB_fnc_spawnSectorCrates;" \n
                          "};" \n
                          "" \n

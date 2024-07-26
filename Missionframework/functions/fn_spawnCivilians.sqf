@@ -29,9 +29,15 @@ private _amount = round ((3 + (floor (random 7))) * KPLIB_param_civActivity);
 private _spread = 1;
 if (_sector in KPLIB_sectors_capital) then {
     _amount = _amount + 10;
-    _spread = 2.5;
+    _spread = 2;
 };
-_amount = _amount * (sqrt (KPLIB_param_unitcap));
+if (_sector in KPLIB_sectors_factory) then {
+    _amount = _amount * 0.5;
+    _spread = 0.5
+};
+if (_sector in KPLIB_sectors_player) then {
+    amount = _amount * 1.5;
+};
 
 // Spawn civilians
 private _grp = grpNull;
@@ -41,7 +47,7 @@ for "_i" from 1 to _amount do {
     _civs pushBack (
         [
             selectRandom KPLIB_c_units,
-            [(((_sPos select 0) + (75 * _spread)) - (random (150 * _spread))), (((_sPos select 1) + (75 * _spread)) - (random (150 * _spread))), 0],
+            [(((_sPos select 0) + (50 * _spread)) - (random (100 * _spread))), (((_sPos select 1) + (50 * _spread)) - (random (100 * _spread))), 0],
             _grp
         ] call KPLIB_fnc_createManagedUnit
     );
