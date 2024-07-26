@@ -95,12 +95,12 @@ if (typeName KPLIB_b_mobileRespawn == typeName "") then {
 
 // Prices for the blufor infantry squads (supplies, ammo, fuel)
 KPLIB_b_allSquads = [
-    [KPLIB_b_squadLight,120,0,0],
-    [KPLIB_b_squadInf,140,0,0],
-    [KPLIB_b_squadAT,130,30,0],
-    [KPLIB_b_squadAA,130,30,0],
-    [KPLIB_b_squadRecon,140,0,0],
-    [KPLIB_b_squadPara,100,0,0]
+    [KPLIB_b_squadLight,70,0,0],
+    [KPLIB_b_squadInf,90,0,0],
+    [KPLIB_b_squadAT,90,30,0],
+    [KPLIB_b_squadAA,90,30,0],
+    [KPLIB_b_squadRecon,90,0,0],
+    [KPLIB_b_squadPara,70,0,0]
 ];
 
 // Squad names for build menu
