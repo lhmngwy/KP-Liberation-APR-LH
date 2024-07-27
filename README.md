@@ -17,6 +17,7 @@ My customisations include:
     - This means that the penalty reduces the more AI squad members you build, as taking them with you is already a risk.
     - If there's less than 4 enemies nearby you can respawn without penalty.
 - Added tents and landing craft as mobile respawn points (See recommended add-ons).
+- Civilians will spawn in player sectors. Improved civilian waypoints.
 
 Integrated from others:
 
@@ -25,6 +26,7 @@ Integrated from others:
 - pSiKO Ai Revive to enable AI medics to revive: https://steamcommunity.com/sharedfiles/filedetails/?id=2996342068
 - Advanced Towing: https://steamcommunity.com/sharedfiles/filedetails/?id=639837898
 - Soldier Tracker for better map icons: https://github.com/auQuiksilver/Soldier-Tracker
+- Air, Animals, furniture and soap from TPW Mods: https://steamcommunity.com/sharedfiles/filedetails/?id=2586787720
 
 - More changes to come...
 
