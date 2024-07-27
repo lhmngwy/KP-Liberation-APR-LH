@@ -45,6 +45,7 @@ tpw_animal_exclude = false; // player near exlusion object
 tpw_animal_active = true; // global activate/deactivate
 tpw_animal_shark = 1; // 0 = no sharks
 tpw_birdtype  = ["Kestrel_random_F","seagull"];
+tpw_sounds = isClass (configfile >> "CfgPatches" >> "TPW_SOUNDS");
 
 // TIME
 tpw_animal_sunrise = ([] call BIS_fnc_sunriseSunsetTime) select 0;
@@ -1277,30 +1278,32 @@ if (isclass (configfile/"CfgVehicles"/"dbo_horse_Base_F")) then
 			};
 		};	
 	};
-sleep 10;	
-if (tpw_animal_boars) then
-	{
-	[] spawn tpw_animal_fnc_boargrunt;
-	};
-if (tpw_animal_bears) then
-	{
-	[] spawn tpw_animal_fnc_beargrunt;
-	};	
-[] spawn tpw_animal_fnc_dogbark;
-[] spawn tpw_animal_fnc_dogpant;
-[] spawn tpw_animal_fnc_catmeow;
-[] spawn tpw_animal_fnc_wolfhowl;
-[] spawn tpw_animal_fnc_foxscream;
-[] spawn tpw_animal_fnc_owlhoot;
-[] spawn tpw_animal_fnc_dawnchorus;
-[] spawn tpw_animal_fnc_birds;
-[] spawn tpw_animal_fnc_frogs;
-[] spawn tpw_animal_fnc_insects;
-[] spawn tpw_animal_fnc_goatbleat;
-[] spawn tpw_animal_fnc_sheepbaa;
-[] spawn tpw_animal_fnc_chickencluck;
+sleep 10;
+if (tpw_sounds) then {
+	if (tpw_animal_boars) then
+		{
+		[] spawn tpw_animal_fnc_boargrunt;
+		};
+	if (tpw_animal_bears) then
+		{
+		[] spawn tpw_animal_fnc_beargrunt;
+		};	
+	[] spawn tpw_animal_fnc_dogbark;
+	[] spawn tpw_animal_fnc_dogpant;
+	[] spawn tpw_animal_fnc_catmeow;
+	[] spawn tpw_animal_fnc_wolfhowl;
+	[] spawn tpw_animal_fnc_foxscream;
+	[] spawn tpw_animal_fnc_owlhoot;
+	[] spawn tpw_animal_fnc_dawnchorus;
+	[] spawn tpw_animal_fnc_birds;
+	[] spawn tpw_animal_fnc_frogs;
+	[] spawn tpw_animal_fnc_insects;
+	[] spawn tpw_animal_fnc_goatbleat;
+	[] spawn tpw_animal_fnc_sheepbaa;
+	[] spawn tpw_animal_fnc_chickencluck;
+	[] spawn tpw_animal_fnc_crowcall;
+};
 [] spawn tpw_animal_fnc_crows;
-[] spawn tpw_animal_fnc_crowcall;
 [] spawn tpw_animal_fnc_birdsflybyloop;
 if (worldname in ["oski_corran","kaska"]) then
 	{

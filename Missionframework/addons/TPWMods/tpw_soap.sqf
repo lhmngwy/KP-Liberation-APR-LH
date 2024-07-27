@@ -25,6 +25,8 @@ To use:
 1 = siren volume (0 = no sirens)
 */
 
+if !(isClass (configfile >> "CfgPatches" >> "TPW_SOUNDS")) exitWith {};
+
 WaitUntil {!isNull FindDisplay 46};
 if (count _this < 11) exitwith {player sidechat "TPW soap incorrect/no config, exiting."};
 
