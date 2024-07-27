@@ -17,7 +17,8 @@ My customisations include:
     - This means that the penalty reduces the more AI squad members you build, as taking them with you is already a risk.
     - If there's less than 4 enemies nearby you can respawn without penalty.
 - Added tents and landing craft as mobile respawn points (See recommended add-ons).
-- Civilians will spawn in player sectors. Improved civilian waypoints.
+- Civilians will spawn in player sectors.
+- Improved civilian waypoints, they will move around the general area and between buildings. They will go indoors at night or during rain. They will also try to avoid active vehicles.
 
 Integrated from others:
 

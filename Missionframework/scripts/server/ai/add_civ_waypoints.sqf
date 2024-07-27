@@ -1,94 +1,130 @@
 private _grp = _this select 0;
 private _basepos = getpos (leader _grp);
 
-{ deleteWaypoint _x } forEachReversed waypoints _grp;
-{_x doFollow leader _grp} foreach units _grp;
+fn_setWaypoints = {
+    { deleteWaypoint _x } forEachReversed waypoints _grp;
+    {_x doFollow leader _grp} foreach units _grp;
 
-private _houses = _basePos nearObjects ["House", 125];
-private _wpPositions = [
-        _basepos getPos [random 125, random 360],
-        _basepos getPos [random 125, random 360],
-        _basepos getPos [random 125, random 360],
-        _basepos getPos [random 125, random 360],
-        _basepos getPos [random 125, random 360]
-];
-_houses = _houses call BIS_fnc_arrayShuffle;
-{
-    if !(alive _x) then {continue};
-    if (count (_x buildingPos -1) > 0) then {
-	    _wpPositions pushBack (AGLtoASL (selectRandom (_x buildingPos -1)));
+    _wpPositions = [];
+    for "_i" from 1 to 5 do {
+        _position = _basepos getPos [random 125, random 360];
+        while {surfaceIsWater _position} do {
+            _position = _basepos getPos [random 125, random 360];
+        };
+        _wpPositions pushBack (_basepos getPos [random 125, random 360]);
     };
-    if (count _wpPositions == 10) then { break; };
-} forEach _houses;
-_wpPositions = _wpPositions call BIS_fnc_arrayShuffle;
 
-private _waypoint = _grp addWaypoint [_wpPositions select 0, -1];
-_waypoint setWaypointType "MOVE";
-_waypoint setWaypointBehaviour "SAFE";
-_waypoint setWaypointSpeed "LIMITED";
-_waypoint setWaypointCombatMode "BLUE";
-_waypoint setWaypointCompletionRadius 1;
-if (_waypoint in _houses) then {
-    _waypoint setWaypointTimeout [15, 30, 60];
-} else {
-    _waypoint setWaypointTimeout [5, 10, 20];
-};
-
-_waypoint = _grp addWaypoint [_wpPositions select 1, -1];
-_waypoint setWaypointType "MOVE";
-_waypoint setWaypointBehaviour "SAFE";
-_waypoint setWaypointSpeed "LIMITED";
-_waypoint setWaypointCombatMode "BLUE";
-_waypoint setWaypointCompletionRadius 1;
-if (_waypoint in _houses) then {
-    _waypoint setWaypointTimeout [15, 30, 60];
-} else {
-    _waypoint setWaypointTimeout [5, 10, 20];
-};
-
-_waypoint = _grp addWaypoint [_wpPositions select 2, -1];
-_waypoint setWaypointType "MOVE";
-_waypoint setWaypointBehaviour "SAFE";
-_waypoint setWaypointSpeed "LIMITED";
-_waypoint setWaypointCombatMode "BLUE";
-_waypoint setWaypointCompletionRadius 1;
-if (_waypoint in _houses) then {
-    _waypoint setWaypointTimeout [15, 30, 60];
-} else {
-    _waypoint setWaypointTimeout [5, 10, 20];
-};
-
-_waypoint = _grp addWaypoint [_wpPositions select 3, -1];
-_waypoint setWaypointType "MOVE";
-_waypoint setWaypointBehaviour "SAFE";
-_waypoint setWaypointSpeed "LIMITED";
-_waypoint setWaypointCombatMode "BLUE";
-_waypoint setWaypointCompletionRadius 1;
-if (_waypoint in _houses) then {
-    _waypoint setWaypointTimeout [15, 30, 60];
-} else {
-    _waypoint setWaypointTimeout [5, 10, 20];
-};
-
-_waypoint = _grp addWaypoint [_wpPositions select 4, -1];
-_waypoint setWaypointType "CYCLE";
-_waypoint setWaypointBehaviour "SAFE";
-_waypoint setWaypointSpeed "LIMITED";
-_waypoint setWaypointCombatMode "BLUE";
-_waypoint setWaypointCompletionRadius 1;
-if (_waypoint in _houses) then {
-    _waypoint setWaypointTimeout [15, 30, 60];
-} else {
-    _waypoint setWaypointTimeout [5, 10, 20];
-};
-
-while { count units _grp > 0 } do {
+    _minus = nearestObjects [_basePos, ["PowerLines_Wires_base_F","Lamps_base_F","Piers_base_F","Land_NavigLight"], 125];
+    _houses = (_basePos nearObjects ["House", 125]) - _minus;
+    _houses = _houses call BIS_fnc_arrayShuffle;
     {
-        _nearcars = (_x nearentities [["car","tank"],8]) select {simulationenabled _x};
-        if (count _nearcars > 0) then
-        {
-            _x domove (position nearestbuilding _x);
+        if !(alive _x) then {continue};
+        if (count (_x buildingPos -1) > 0) then {
+            _wpPositions pushBack (AGLtoASL (selectRandom (_x buildingPos -1)));
+        };
+        if (count _wpPositions == 10) then { break; };
+    } forEach _houses;
+    _wpPositions = _wpPositions call BIS_fnc_arrayShuffle;
+
+    _waypoint = _grp addWaypoint [_wpPositions select 0, -1];
+    _waypoint setWaypointType "MOVE";
+    _waypoint setWaypointBehaviour "SAFE";
+    _waypoint setWaypointSpeed "LIMITED";
+    _waypoint setWaypointCombatMode "BLUE";
+    _waypoint setWaypointCompletionRadius 1;
+    if (_waypoint in _houses) then {
+        _waypoint setWaypointTimeout [15, 30, 60];
+    } else {
+        _waypoint setWaypointTimeout [5, 10, 20];
+    };
+
+    _waypoint = _grp addWaypoint [_wpPositions select 1, -1];
+    _waypoint setWaypointType "MOVE";
+    _waypoint setWaypointBehaviour "SAFE";
+    _waypoint setWaypointSpeed "LIMITED";
+    _waypoint setWaypointCombatMode "BLUE";
+    _waypoint setWaypointCompletionRadius 1;
+    if (_waypoint in _houses) then {
+        _waypoint setWaypointTimeout [15, 30, 60];
+    } else {
+        _waypoint setWaypointTimeout [5, 10, 20];
+    };
+
+    _waypoint = _grp addWaypoint [_wpPositions select 2, -1];
+    _waypoint setWaypointType "MOVE";
+    _waypoint setWaypointBehaviour "SAFE";
+    _waypoint setWaypointSpeed "LIMITED";
+    _waypoint setWaypointCombatMode "BLUE";
+    _waypoint setWaypointCompletionRadius 1;
+    if (_waypoint in _houses) then {
+        _waypoint setWaypointTimeout [15, 30, 60];
+    } else {
+        _waypoint setWaypointTimeout [5, 10, 20];
+    };
+
+    _waypoint = _grp addWaypoint [_wpPositions select 3, -1];
+    _waypoint setWaypointType "MOVE";
+    _waypoint setWaypointBehaviour "SAFE";
+    _waypoint setWaypointSpeed "LIMITED";
+    _waypoint setWaypointCombatMode "BLUE";
+    _waypoint setWaypointCompletionRadius 1;
+    if (_waypoint in _houses) then {
+        _waypoint setWaypointTimeout [15, 30, 60];
+    } else {
+        _waypoint setWaypointTimeout [5, 10, 20];
+    };
+
+    _waypoint = _grp addWaypoint [_wpPositions select 4, -1];
+    _waypoint setWaypointType "CYCLE";
+    _waypoint setWaypointBehaviour "SAFE";
+    _waypoint setWaypointSpeed "LIMITED";
+    _waypoint setWaypointCombatMode "BLUE";
+    _waypoint setWaypointCompletionRadius 1;
+    if (_waypoint in _houses) then {
+        _waypoint setWaypointTimeout [15, 30, 60];
+    } else {
+        _waypoint setWaypointTimeout [5, 10, 20];
+    };
+};
+
+[] call fn_setWaypoints;
+
+_sunriseTime = date call BIS_fnc_sunriseSunsetTime select 0;
+_sunsetTime = date call BIS_fnc_sunriseSunsetTime select 1;
+_atHome = false;
+while { ({alive _x} count units _grp) > 0 } do {
+    {
+        _nearcars = count ((_x nearentities [["Car", "Tank"], 15]) select {simulationenabled _x});
+        _raining = rain > 0.2;
+        _night = dayTime > _sunsetTime || dayTime < _sunriseTime;
+
+        if (_atHome) then {
+            if (!(_nearcars > 0 || _raining || _night) && (count waypoints _grp == 1)) then {
+                [] call fn_setWaypoints;
+                _atHome = false;
+                diag_log format ["[KP LIBERATION] [AI CIVILIAN] _atHome = %1", _atHome];
+            };
+        } else {
+            if (_nearcars > 0 || _raining || _night) then {
+                _minus = nearestObjects [_x,["PowerLines_Wires_base_F","Lamps_base_F","Piers_base_F","Land_NavigLight"], 125];
+                _houses = (_x nearObjects ["House", 125]) - _minus;
+                _houses = _houses call BIS_fnc_arrayShuffle;
+                {
+                    if (count (_x buildingPos -1) > 0) then {
+                        { deleteWaypoint _x } forEachReversed waypoints _grp;
+                        _waypoint = _grp addWaypoint [AGLtoASL (selectRandom (_x buildingPos -1)), -1];
+                        _waypoint setWaypointType "MOVE";
+                        _waypoint setWaypointBehaviour "SAFE";
+                        _waypoint setWaypointSpeed "LIMITED";
+                        _waypoint setWaypointCombatMode "BLUE";
+                        _waypoint setWaypointCompletionRadius 1;
+                        _atHome = true;
+                        diag_log format ["[KP LIBERATION] [AI CIVILIAN] _atHome = %1", _atHome];
+                        break;
+                    };
+                } forEach _houses;
+            };
         };
     } forEach units _grp;
-    sleep random 5;
+    sleep 3;
 };
