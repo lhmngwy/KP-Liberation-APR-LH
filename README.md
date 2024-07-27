@@ -21,12 +21,12 @@ My customisations include:
 
 Integrated from others:
 
-- Persistent vehicle cargo, fuel and damage, plus some other changes from https://github.com/moistbois/Moist-Liberation-APR
-- Additional map ports by stutpip123: https://github.com/KillahPotatoes/KP-Liberation/pull/854
 - pSiKO Ai Revive to enable AI medics to revive: https://steamcommunity.com/sharedfiles/filedetails/?id=2996342068
 - Advanced Towing: https://steamcommunity.com/sharedfiles/filedetails/?id=639837898
 - Soldier Tracker for better map icons: https://github.com/auQuiksilver/Soldier-Tracker
 - Air, Animals, furniture and soap from TPW Mods: https://steamcommunity.com/sharedfiles/filedetails/?id=2586787720
+- Persistent vehicle cargo, fuel and damage, plus some other changes from https://github.com/moistbois/Moist-Liberation-APR
+- Additional map ports by stutpip123: https://github.com/KillahPotatoes/KP-Liberation/pull/854
 
 - More changes to come...
 
