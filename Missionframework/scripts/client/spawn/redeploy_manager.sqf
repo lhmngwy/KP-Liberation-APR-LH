@@ -172,7 +172,7 @@ while {true} do {
                 _transition_map_pos = [(_transition_map_pos select 0) - _fullscreen_map_offset,  (_transition_map_pos select 1) + (_fullscreen_map_offset * 0.75), 0];
             };
             (DEPLOY_DISPLAY displayCtrl 251) ctrlMapAnimAdd [0, 0.3,_transition_map_pos];
-            ctrlMapAnimCommit (DEPLOY_DISPLAY displayCtrl 251);
+            ctrlMapAnimCommit (DEPLOY_DISPLAY displayCtrl 251);  
 
             respawn_camera camSetPos [(getpos respawn_object select 0) - 70, (getpos respawn_object select 1) + _startdist, (getpos respawn_object select 2) + _alti];
             respawn_camera camcommit 0;
@@ -237,6 +237,7 @@ while {true} do {
                 [player, [profileNamespace, _selectedLoadout]] call BIS_fnc_loadInventory;
             };
         };
+
     };
 
     respawn_camera cameraEffect ["Terminate","back"];
@@ -254,6 +255,13 @@ while {true} do {
         if (KPLIB_respawn_mobile_done) then {
             KPLIB_respawn_time = time + KPLIB_param_mobileRespawnCooldown;
             KPLIB_respawn_mobile_done = false;
+        };
+
+        [] spawn
+        {
+            waitUntil { sleep 0.2; visibleMap};
+            mapAnimAdd [0, 0.1, player];
+            mapAnimCommit;
         };
     };
 
