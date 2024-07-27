@@ -39,7 +39,7 @@ execVM "addons\PAR\fn_init.sqf";
 if (KPLIB_param_mapMarkers) then { execVM "addons\SoliderTracker\QS_icons.sqf" };
 
 [["C_MAN","C_MAN","CUP_C","CAF_AG","CAF_AG","C_MAN"],[],5,23,1] execvm "addons\TPWMods\tpw_core.sqf";
-[10,600,2,[50,250,500],2,[]] execvm "addons\TPWMods\tpw_air.sqf";
+[10,600,2,[100,250,500],2,[]] execvm "addons\TPWMods\tpw_air.sqf";
 [10,15,200,75,60,10,1] execvm "addons\TPWMods\tpw_animals.sqf";
 [50,5] execvm "addons\TPWMods\tpw_furniture.sqf";
 [1,1,1,1,1,0,0,[0],12,1,1] execvm "addons\TPWMods\tpw_soap.sqf";
