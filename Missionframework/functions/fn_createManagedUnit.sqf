@@ -34,7 +34,9 @@ isNil {
     private _groupTemp = createGroup [CIVILIAN, true];
 
     _unit = _groupTemp createUnit [_type, _spawnPos, [], _placement, "FORM"];
-    _unit setVariable ['KPLIB_playerSide', true, true];
+    if (side _group == KPLIB_side_player) then {
+        _unit setVariable ['KPLIB_playerSide', true, true];
+    };
     _unit addMPEventHandler ["MPKilled", {
         params ["_unit", "_killer"];
         [_unit] joinSilent grpNull;

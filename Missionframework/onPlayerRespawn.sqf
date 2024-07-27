@@ -1,4 +1,4 @@
-waitUntil {!isNil "KPLIB_initServerDone"};
+waitUntil { sleep 0.2; !isNil "KPLIB_initServerDone" && !isNil "KPLIB_b_basic_uniform" && !isNil "KPLIB_whitelist_supportModule"};
 
 params ["_newUnit", "_oldUnit"];
 
@@ -35,7 +35,7 @@ if ([
     player isEqualTo ([] call KPLIB_fnc_getCommander) || (getPlayerUID player) in KPLIB_whitelist_supportModule,
     true
 ] select KPLIB_param_supportModule) then {
-    waitUntil {!isNil "KPLIB_param_supportModule_req" && !isNil "KPLIB_param_supportModule_arty" && !isNil "KPLIB_param_supportModule_casHeli"
+    waitUntil { sleep 0.2; !isNil "KPLIB_param_supportModule_req" && !isNil "KPLIB_param_supportModule_arty" && !isNil "KPLIB_param_supportModule_casHeli"
                && !isNil "KPLIB_param_supportModule_casBombing" && !isNil "KPLIB_param_supportModule_transport" && time > 5};
 
     // Remove link to corpse, if respawned

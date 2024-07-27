@@ -102,7 +102,6 @@ while { ({alive _x} count units _grp) > 0 } do {
             if (!(_nearcars > 0 || _raining || _night) && (count waypoints _grp == 1)) then {
                 [] call fn_setWaypoints;
                 _atHome = false;
-                diag_log format ["[KP LIBERATION] [AI CIVILIAN] _atHome = %1", _atHome];
             };
         } else {
             if (_nearcars > 0 || _raining || _night) then {
@@ -119,7 +118,6 @@ while { ({alive _x} count units _grp) > 0 } do {
                         _waypoint setWaypointCombatMode "BLUE";
                         _waypoint setWaypointCompletionRadius 1;
                         _atHome = true;
-                        diag_log format ["[KP LIBERATION] [AI CIVILIAN] _atHome = %1", _atHome];
                         break;
                     };
                 } forEach _houses;

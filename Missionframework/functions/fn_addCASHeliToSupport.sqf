@@ -23,6 +23,8 @@ params [
 if (isNull _obj) exitWith {["Null object given"] call BIS_fnc_error; false};
 if (!canSuspend) exitWith {_this spawn KPLIB_fnc_addCASHeliToSupport};
 
+waitUntil { sleep 0.2; !isNil "KPLIB_side_player"};
+
 private _objcrew = crew _obj;
 
 if (!(player in _objcrew) && side _obj == KPLIB_side_player) then {
