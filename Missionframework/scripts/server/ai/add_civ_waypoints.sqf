@@ -1,7 +1,7 @@
 private _grp = _this select 0;
 private _basepos = getpos (leader _grp);
 
-while {(count (waypoints _grp)) != 0} do {deleteWaypoint ((waypoints _grp) select 0);};
+{ deleteWaypoint _x } forEachReversed waypoints _grp;
 {_x doFollow leader _grp} foreach units _grp;
 
 private _houses = _basePos nearObjects ["House", 125];
@@ -80,4 +80,15 @@ if (_waypoint in _houses) then {
     _waypoint setWaypointTimeout [15, 30, 60];
 } else {
     _waypoint setWaypointTimeout [5, 10, 20];
+};
+
+while { count units _grp > 0 } do {
+    {
+        _nearcars = (_x nearentities [["car","tank"],8]) select {simulationenabled _x};
+        if (count _nearcars > 0) then
+        {
+            _x domove (position nearestbuilding _x);
+        };
+    } forEach units _grp;
+    sleep random 5;
 };

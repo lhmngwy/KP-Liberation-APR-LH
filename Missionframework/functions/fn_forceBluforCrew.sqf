@@ -46,8 +46,9 @@ if ((side _grp) != KPLIB_side_player) then {
     } forEach (units _grp);
 };
 
-// Set the crew to safe behaviour
-_grp setBehaviour "SAFE";
+// Set the crew to combat behaviour
+_grp setBehaviour "COMBAT";
+_grp setSpeedMode "FULL";
 
 // Name the squad after the vehicle
 _vehicleName = getText (configFile >> "CfgVehicles" >> (typeOf _veh) >> "displayName");
