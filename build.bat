@@ -16,7 +16,4 @@ rem Install dependencies and build missions
 call npm install --silent
 call npx gulp
 
-echo.
-
-pause
 exit /b
