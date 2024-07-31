@@ -26,6 +26,7 @@ My customisations include:
 Integrated from others:
 
 - pSiKO Ai Revive to enable AI medics to revive: https://steamcommunity.com/sharedfiles/filedetails/?id=2996342068
+- VcomAI 3.4.1: https://github.com/genesis92x/VcomAI-3.0/tree/3.4.1---Dev-Build/
 - Advanced Towing: https://steamcommunity.com/sharedfiles/filedetails/?id=639837898
 - Soldier Tracker for better map icons: https://github.com/auQuiksilver/Soldier-Tracker
 - Air, Animals, furniture, and soap from TPW Mods for better ambience: https://steamcommunity.com/sharedfiles/filedetails/?id=2586787720
