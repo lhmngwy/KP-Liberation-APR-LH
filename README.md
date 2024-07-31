@@ -21,6 +21,7 @@ My customisations include:
 - Improved civilian waypoints, they will move around the general area and between buildings. They will also go indoors at night or during rain.
 - All players on the commander actions whitelist will have access to Zeus. Zeus will be regained automatically on respawn.
 - Enemy units and structures are hidden from Zeus to prevent it from being used for scouting.
+- The enemy now knows how to use ground troop transports to drop off reinforcements.
 
 Integrated from others:
 
