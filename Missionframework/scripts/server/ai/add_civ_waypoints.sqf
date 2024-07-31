@@ -94,17 +94,16 @@ _sunsetTime = date call BIS_fnc_sunriseSunsetTime select 1;
 _atHome = false;
 while { ({alive _x} count units _grp) > 0 } do {
     {
-        _nearcars = count ((_x nearentities [["Car", "Tank"], 15]) select {simulationenabled _x});
         _raining = rain > 0.2;
         _night = dayTime > _sunsetTime || dayTime < _sunriseTime;
 
         if (_atHome) then {
-            if (!(_nearcars > 0 || _raining || _night) && (count waypoints _grp == 1)) then {
+            if (!(_raining || _night) && (count waypoints _grp == 1)) then {
                 [] call fn_setWaypoints;
                 _atHome = false;
             };
         } else {
-            if (_nearcars > 0 || _raining || _night) then {
+            if (_raining || _night) then {
                 _minus = nearestObjects [_x,["PowerLines_Wires_base_F","Lamps_base_F","Piers_base_F","Land_NavigLight"], 125];
                 _houses = (_x nearObjects ["House", 125]) - _minus;
                 _houses = _houses call BIS_fnc_arrayShuffle;
@@ -124,5 +123,5 @@ while { ({alive _x} count units _grp) > 0 } do {
             };
         };
     } forEach units _grp;
-    sleep 3;
+    sleep 30 + random 30;
 };

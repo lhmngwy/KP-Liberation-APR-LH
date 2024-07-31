@@ -18,7 +18,7 @@ My customisations include:
     - If there's less than 4 enemies nearby you can respawn without penalty.
 - Added tents and landing craft as mobile respawn points (See recommended add-ons).
 - Civilians will spawn in player sectors.
-- Improved civilian waypoints, they will move around the general area and between buildings. They will go indoors at night or during rain. They will also try to avoid active vehicles.
+- Improved civilian waypoints, they will move around the general area and between buildings. They will also go indoors at night or during rain.
 - All players on the commander actions whitelist will have access to Zeus. Zeus will be regained automatically on respawn.
 - Enemy units and structures are hidden from Zeus to prevent it from being used for scouting.
 
