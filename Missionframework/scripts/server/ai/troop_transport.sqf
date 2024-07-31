@@ -8,7 +8,7 @@ if (isNull _transVeh) exitWith {};
 sleep 1;
 
 private _transGrp = (group (driver _transVeh));
-private _unload_distance = random [KPLIB_range_sectorCapture, KPLIB_range_sectorCapture * 1.5, KPLIB_range_sectorCapture * 2];
+private _unload_distance = KPLIB_range_sectorCapture + random KPLIB_range_sectorCapture;
 
 if (isNull _start_pos) then {
     _start_pos = getpos _transVeh;
