@@ -91,6 +91,26 @@ if (_classname in KPLIB_o_militiaVehicles) then {
     } forEach _crew;
 };
 
+// Spawn troop cargo if transport
+if (_classname in KPLIB_o_troopTransports) then {
+    _newvehicle setUnloadInCombat [true, false];
+    _infGrp = createGroup [KPLIB_side_enemy, true];
+    _seats = count fullCrew [_newvehicle, "cargo", true];
+    _spawned = 0;
+    {
+        [_x, _spawnPos, _infGrp, "PRIVATE", 0.5] call KPLIB_fnc_createManagedUnit;
+        _spawned = _spawned + 1;
+        if (_spawned == _seats) then { break; };
+    } foreach (([] call KPLIB_fnc_getSquadComp) + ([] call KPLIB_fnc_getSquadComp));
+
+    {_x assignAsCargo _newvehicle; sleep 0.2; _x moveInCargo _newvehicle; sleep 0.2;} forEach (units _infGrp);
+
+    // Delete crew that isn't in the vehicle
+    {
+        if (isNull objectParent _x) then {deleteVehicle _x};
+    } forEach (units _infGrp);
+};
+
 // Add Killed and GetIn EHs and enable damage again
 _newvehicle addMPEventHandler ["MPKilled", {
     params ["_unit", "_killer"];

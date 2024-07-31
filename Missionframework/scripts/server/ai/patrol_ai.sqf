@@ -1,6 +1,7 @@
 if (!isServer) exitWith {};
 
 private _grp = _this select 0;
+private _patrol_startpos = getpos (leader _grp);
 private _waypoint = [];
 if ( isNil "reinforcements_sector_under_attack" ) then { reinforcements_sector_under_attack = "" };
 
@@ -11,33 +12,37 @@ while { count (units _grp) > 0 } do {
         { deleteWaypoint _x } forEachReversed waypoints _grp;
         {doStop _x; _x doFollow leader _grp} foreach units _grp;
 
-        _waypoint = _grp addWaypoint [markerpos reinforcements_sector_under_attack, 50];
-        _waypoint setWaypointType "MOVE";
-        _waypoint setWaypointSpeed "FULL";
-        _waypoint setWaypointBehaviour "SAFE";
-        _waypoint setWaypointCombatMode "YELLOW";
-        _waypoint setWaypointCompletionRadius 30;
-        _waypoint = _grp addWaypoint [markerpos reinforcements_sector_under_attack, 50];
-        _waypoint setWaypointSpeed "LIMITED";
-        _waypoint setWaypointType "SAD";
-        _waypoint = _grp addWaypoint [markerpos reinforcements_sector_under_attack, 50];
-        _waypoint setWaypointSpeed "LIMITED";
-        _waypoint setWaypointType "SAD";
-        _waypoint = _grp addWaypoint [markerpos reinforcements_sector_under_attack, 50];
-        _waypoint setWaypointSpeed "LIMITED";
-        _waypoint setWaypointType "CYCLE";
+        if (_vehicle in KPLIB_o_troopTransports) then {
+            [_vehicle, _patrol_startpos, markerpos reinforcements_sector_under_attack] spawn troop_transport;
+        } else {
+            _waypoint = _grp addWaypoint [markerpos reinforcements_sector_under_attack, 50];
+            _waypoint setWaypointType "MOVE";
+            _waypoint setWaypointSpeed "FULL";
+            _waypoint setWaypointBehaviour "SAFE";
+            _waypoint setWaypointCombatMode "YELLOW";
+            _waypoint setWaypointCompletionRadius 30;
+            _waypoint = _grp addWaypoint [markerpos reinforcements_sector_under_attack, 50];
+            _waypoint setWaypointSpeed "LIMITED";
+            _waypoint setWaypointType "SAD";
+            _waypoint = _grp addWaypoint [markerpos reinforcements_sector_under_attack, 50];
+            _waypoint setWaypointSpeed "LIMITED";
+            _waypoint setWaypointType "SAD";
+            _waypoint = _grp addWaypoint [markerpos reinforcements_sector_under_attack, 50];
+            _waypoint setWaypointSpeed "LIMITED";
+            _waypoint setWaypointType "CYCLE";
+        };
 
         sleep 300;
 
     } else {
     
         private _sectors_patrol = [];
-        private _patrol_startpos = getpos (leader _grp);
         {
             if ( _patrol_startpos distance (markerpos _x) < 2500) then {
                 _sectors_patrol pushBack _x;
             };
         } foreach (KPLIB_sectors_all - KPLIB_sectors_player);
+        _sectors_patrol = _sectors_patrol call BIS_fnc_arrayShuffle;
 
         { deleteWaypoint _x } forEachReversed waypoints _grp;
         {doStop _x; _x doFollow leader _grp} foreach units _grp;

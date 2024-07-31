@@ -186,17 +186,17 @@ KPLIB_range_fob = 125;
 KPLIB_height_halo = 2500;
 
 // Range to activate a sector.
-KPLIB_range_sectorActivation   = 1200;
-KPLIB_range_capitalActivation  = 1400;
-KPLIB_range_cityActivation     = 1200;
-KPLIB_range_factoryActivation  = 1200;
-KPLIB_range_militaryActivation = 1600;
-KPLIB_range_towerActivation    = 1200;
-KPLIB_range_airSpawnActivation = 1600;
+KPLIB_range_sectorActivation   = 1100;
+KPLIB_range_capitalActivation  = 1300;
+KPLIB_range_cityActivation     = 1100;
+KPLIB_range_factoryActivation  = 1100;
+KPLIB_range_militaryActivation = 1500;
+KPLIB_range_towerActivation    = 1100;
+KPLIB_range_airSpawnActivation = 1500;
 KPLIB_range_pointActivation    = 1000;
 
 // Range to capture a sector.
-KPLIB_range_sectorCapture = 100;
+KPLIB_range_sectorCapture = 125;
 
 // Radio Tower scanning range.
 KPLIB_range_radioTowerScan = 2500;
@@ -367,7 +367,7 @@ KPLIB_recycling_percentage = 0.5;
 KPLIB_defended_buildingpos_part = 0.4;
 
 // Time in seconds how long a captured sector is vulnerable to enemy troops.
-KPLIB_vulnerability_timer = 1200;
+KPLIB_vulnerability_timer = 1800;
 
 // Chance that enemy infantry will surrender after heavy losses are encountered.
 KPLIB_surrender_chance = 80;

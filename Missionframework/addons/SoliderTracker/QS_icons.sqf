@@ -78,22 +78,22 @@ _QS_ST_friendlySides_Dynamic = TRUE;						// BOOL. Set TRUE to allow faction all
 _QS_ST_friendlySides_EAST = [								// ARRAY (NUMBER). Uncomment the relevant number(s). Remove comma after last used entry (important!).
 	//1,					//EAST is friendly to WEST
 	//2,					//EAST is friendly to INDEPENDENT/RESISTANCE
-	3						//EAST is friendly to CIVILIANS
+	//3						//EAST is friendly to CIVILIANS
 ];
 _QS_ST_friendlySides_WEST = [								// ARRAY (NUMBER). Uncomment the relevant number(s). Remove comma after last used entry (important!).
 	//0,					//WEST is friendly to EAST
-	//2						//WEST is friendly to INDEP/RESISTANCE
-	3						//WEST is friendly to CIVILIAN
+	//2,					//WEST is friendly to INDEP/RESISTANCE
+	//3						//WEST is friendly to CIVILIAN
 ];
 _QS_ST_friendlySides_RESISTANCE = [							// ARRAY (NUMBER). Uncomment the relevant number(s). Remove comma after last used entry (important!).
 	//0,					//RESISTANCE is friendly to EAST
 	//1,     				//RESISTANCE is friendly to WEST
-	3						//RESISTANCE is friendly to CIVILIAN
+	//3						//RESISTANCE is friendly to CIVILIAN
 ];
 _QS_ST_friendlySides_CIVILIAN = [							// ARRAY (NUMBER). Uncomment the relevant number(s). Remove comma after last used entry (important!).
-	0,						//CIVILIAN is friendly to EAST
-	1,   					//CIVILIAN is friendly to WEST
-	2						//CIVILIAN is friendly to INDEP/RESISTANCE
+	//0,					//CIVILIAN is friendly to EAST
+	//1,   					//CIVILIAN is friendly to WEST
+	//2						//CIVILIAN is friendly to INDEP/RESISTANCE
 ];
 
 //================= DEFAULT ICON COLORS by FACTION

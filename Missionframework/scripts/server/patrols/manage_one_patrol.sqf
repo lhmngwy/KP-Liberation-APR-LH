@@ -56,10 +56,7 @@ while { KPLIB_endgame == 0 } do {
         if ((KPLIB_enemyReadiness > 75) && ((random 100) > 85) && !(KPLIB_o_helicopters isEqualTo [])) then {
             _vehicle_object = [_sector_spawn_pos, selectRandom KPLIB_o_helicopters] call KPLIB_fnc_spawnVehicle;
         } else {
-            private _vehicle_class = [] call KPLIB_fnc_getAdaptiveVehicle;
-            while {_vehicle_class in KPLIB_param_supportModule_artyVeh || _vehicle_class in aa_vehicles} do {
-                _vehicle_class = [] call KPLIB_fnc_getAdaptiveVehicle;
-            };
+            private _vehicle_class = ["patrol"] call KPLIB_fnc_getAdaptiveVehicle;
             _vehicle_object = [_sector_spawn_pos, _vehicle_class] call KPLIB_fnc_spawnVehicle;
         };
 

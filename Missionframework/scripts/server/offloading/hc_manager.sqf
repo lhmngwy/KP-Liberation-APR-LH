@@ -4,7 +4,7 @@ battlegroup_ai = compile preprocessFileLineNumbers "scripts\server\ai\battlegrou
 building_defence_ai = compile preprocessFileLineNumbers "scripts\server\ai\building_defence_ai.sqf";
 patrol_ai = compile preprocessFileLineNumbers "scripts\server\ai\patrol_ai.sqf";
 prisonner_ai = compile preprocessFileLineNumbers "scripts\server\ai\prisonner_ai.sqf";
-troup_transport = compile preprocessFileLineNumbers "scripts\server\ai\troup_transport.sqf";
+troop_transport = compile preprocessFileLineNumbers "scripts\server\ai\troop_transport.sqf";
 
 ied_manager = compile preprocessFileLineNumbers "scripts\server\sector\ied_manager.sqf";
 manage_one_sector = compile preprocessFileLineNumbers "scripts\server\sector\manage_one_sector.sqf";

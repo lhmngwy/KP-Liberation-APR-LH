@@ -21,7 +21,7 @@ params [
 
 private _name = [_pos] call KPLIB_fnc_getFobName;
 
-if (_name isEqualTo "") then {
+if ((isNil _name) || (_name isEqualTo "")) then {
     markerText ([50, _pos] call KPLIB_fnc_getNearestSector)
 } else {
     ["FOB", _name] joinString " "

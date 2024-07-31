@@ -144,7 +144,7 @@ KPLIB_ace_crates = [
     "ACE_medicalSupplyCrate_advanced"
 ];
 
-// Everything the AI troups should be able to resupply from.
+// Everything the AI troops should be able to resupply from.
 KPLIB_aiResupplySources = [
     "cwr3_b_uk_fv620_reammo",
     "PRACS_M88",

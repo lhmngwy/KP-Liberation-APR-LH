@@ -38,7 +38,7 @@ KPLIB_o_expSpecialist = "O_soldier_exp_F";                              // Explo
 // Enemy vehicles used by secondary objectives.
 KPLIB_o_mrap = "O_MRAP_02_F";                                           // Ifrit
 KPLIB_o_mrapArmed = "O_MRAP_02_hmg_F";                                  // Ifrit (HMG)
-KPLIB_o_transportHeli = "O_Heli_Transport_04_bench_F";                  // Mi-290 Taru (Bench)
+KPLIB_o_transportHeli = "O_Heli_Transport_04_covered_F";                // Mi-290 Taru (Transport)
 KPLIB_o_transportTruck = "O_Truck_03_covered_F";                        // Tempest Transport (Covered)
 KPLIB_o_transportTruckAmmo = "O_Truck_03_transport_F";                  // Tempest Transport (Open) -> Has to be able to transport resource crates!
 KPLIB_o_fuelTruck = "O_Truck_03_fuel_F";                                // Tempest Fuel
@@ -75,6 +75,9 @@ KPLIB_o_armyVehicles = [
     "O_MRAP_02_hmg_F",                                                  // Ifrit (HMG)
     "O_MRAP_02_gmg_F",                                                  // Ifrit (GMG)
     "O_LSV_02_AT_F",                                                    // Qilin (AT)
+    "O_Truck_03_transport_F",                                           // Tempest Transport
+    "O_Truck_03_transport_F",                                           // Tempest Transport
+    "O_Truck_03_covered_F",                                             // Tempest Transport (Covered)
     "O_APC_Tracked_02_cannon_F",                                        // BTR-K Kamysh
     "O_APC_Tracked_02_cannon_F",                                        // BTR-K Kamysh
     "O_APC_Tracked_02_AA_F",                                            // ZSU-39 Tigris
@@ -90,6 +93,7 @@ KPLIB_o_armyVehiclesLight = [
     "O_MRAP_02_hmg_F",                                                  // Ifrit (HMG)
     "O_MRAP_02_hmg_F",                                                  // Ifrit (HMG)
     "O_LSV_02_AT_F",                                                    // Qilin (AT)
+    "O_Truck_03_transport_F",                                           // Tempest Transport
     "O_APC_Wheeled_02_rcws_F",                                          // MSE-3 Marid
     "O_APC_Tracked_02_cannon_F"                                         // BTR-K Kamysh
 ];
@@ -101,38 +105,40 @@ KPLIB_o_battleGrpVehicles = [
     "O_MRAP_02_gmg_F",                                                  // Ifrit (GMG)
     "O_LSV_02_AT_F",                                                    // Qilin (AT)
     "O_Truck_03_transport_F",                                           // Tempest Transport
+    "O_Truck_03_transport_F",                                           // Tempest Transport
     "O_Truck_03_covered_F",                                             // Tempest Transport (Covered)
     "O_APC_Tracked_02_cannon_F",                                        // BTR-K Kamysh
     "O_APC_Tracked_02_cannon_F",                                        // BTR-K Kamysh
     "O_APC_Tracked_02_AA_F",                                            // ZSU-39 Tigris
+    "O_APC_Tracked_02_AA_F",                                            // ZSU-39 Tigris
     "O_MBT_02_cannon_F",                                                // T-100 Varsuk
-    "O_MBT_02_railgun_F",                                               // T-100 Futura
+    "O_MBT_02_cannon_F",                                                // T-100 Varsuk
     "O_MBT_04_cannon_F",                                                // T-140 Angara
     "O_MBT_04_command_F",                                               // T-140K Angara
     "O_Heli_Light_02_F",                                                // Po-30 Orca (Armed)
     "O_Heli_Light_02_F",                                                // Po-30 Orca (Armed)
-    "O_Heli_Transport_04_bench_F",                                      // Mi-290 Taru (Bench)
+    "O_Heli_Transport_04_covered_F",                                    // Mi-290 Taru (Transport)
     "O_Heli_Transport_04_covered_F",                                    // Mi-290 Taru (Transport)
     "O_Heli_Attack_02_F",                                               // Mi-48 Kajman
     "O_T_VTOL_02_infantry_hex_F"                                        // Y-32 Xi'an (Infantry)
 ];
 
-// All enemy vehicles that can spawn as battlegroups, either assaulting or as reinforcements, at lower enemy combat readiness (aggression levels).
+//All enemy vehicles that can spawn as battlegroups, either assaulting or as reinforcements, at lower enemy combat readiness (aggression levels).
 KPLIB_o_battleGrpVehiclesLight = [
     "O_MRAP_02_hmg_F",                                                  // Ifrit (HMG)
     "O_MRAP_02_hmg_F",                                                  // Ifrit (HMG)
-    "O_Truck_03_transport_F",                                           // Tempest Transport
-    "O_APC_Wheeled_02_rcws_F",                                          // MSE-3 Marid
-    "O_APC_Tracked_02_cannon_F",                                        // BTR-K Kamysh
-    "O_Heli_Light_02_F",                                                // Po-30 Orca (Armed)
-    "O_Heli_Transport_04_bench_F",                                      // Mi-290 Taru (Bench)
     "O_MRAP_02_hmg_F",                                                  // Ifrit (HMG)
     "O_MRAP_02_hmg_F",                                                  // Ifrit (HMG)
     "O_Truck_03_transport_F",                                           // Tempest Transport
+    "O_Truck_03_transport_F",                                           // Tempest Transport
+    "O_Truck_03_covered_F",                                             // Tempest Transport (Covered)
+    "O_APC_Wheeled_02_rcws_F",                                          // MSE-3 Marid
     "O_APC_Wheeled_02_rcws_F",                                          // MSE-3 Marid
     "O_APC_Tracked_02_cannon_F",                                        // BTR-K Kamysh
+    "O_APC_Tracked_02_cannon_F",                                        // BTR-K Kamysh
     "O_Heli_Light_02_F",                                                // Po-30 Orca (Armed)
-    "O_Heli_Transport_04_bench_F",                                      // Mi-290 Taru (Bench)
+    "O_Heli_Light_02_F",                                                // Po-30 Orca (Armed)
+    "O_Heli_Transport_04_covered_F",                                    // Mi-290 Taru (Transport)
     "O_APC_Tracked_02_AA_F"                                             // ZSU-39 Tigris
 ];
 
@@ -142,7 +148,7 @@ KPLIB_o_troopTransports = [
     "O_Truck_03_transport_F",                                           // Tempest Transport
     "O_Truck_03_covered_F",                                             // Tempest Transport (Covered)
     "O_APC_Wheeled_02_rcws_F",                                          // MSE-3 Marid
-    "O_Heli_Transport_04_bench_F",                                      // Mi-290 Taru (Bench)
+    "O_APC_Tracked_02_cannon_F",                                        // BTR-K Kamysh
     "O_Heli_Transport_04_covered_F",                                    // Mi-290 Taru (Transport)
     "O_Heli_Light_02_F",                                                // Po-30 Orca (Armed)
     "O_T_VTOL_02_infantry_hex_F"                                        // Y-32 Xi'an (Infantry)
@@ -150,7 +156,6 @@ KPLIB_o_troopTransports = [
 
 // Enemy rotary-wings that will need to spawn in flight.
 KPLIB_o_helicopters = [
-    "O_Heli_Transport_04_bench_F",                                      // Mi-290 Taru (Bench)
     "O_Heli_Transport_04_covered_F",                                    // Mi-290 Taru (Transport)
     "O_Heli_Light_02_F",                                                // Po-30 Orca (Armed)
     "O_Heli_Attack_02_F",                                               // Mi-48 Kajman

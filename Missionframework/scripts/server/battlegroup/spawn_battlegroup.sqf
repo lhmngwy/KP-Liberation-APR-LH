@@ -1,12 +1,17 @@
 // TODO Refactor and create function
 params [
     ["_spawn_marker", "", [""]],
-    ["_infOnly", false, [false]]
+    ["_infOnly", false, [false]],
+    ["_objective", objNull, [objNull]]
 ];
 
 if (KPLIB_endgame == 1) exitWith {};
 
 _spawn_marker = [[1000, 800] select _infOnly, [2200, 1600] select _infOnly, false, markerPos _spawn_marker] call KPLIB_fnc_getOpforSpawnPoint;
+
+if (isNull _objective) then {
+    _objective = [markerPos _spawn_marker] call KPLIB_fnc_getNearestBluforObjective;
+};
 
 if !(_spawn_marker isEqualTo "") then {
     KPLIB_last_battlegroup_time = diag_tickTime;
@@ -47,29 +52,29 @@ if !(_spawn_marker isEqualTo "") then {
             _selected_opfor_battlegroup pushback (selectRandom _vehicle_pool);
         };
 
-        private ["_nextgrp", "_vehicle"];
         {
-            _nextgrp = createGroup [KPLIB_side_enemy, true];
-            _vehicle = [markerpos _spawn_marker, _x] call KPLIB_fnc_spawnVehicle;
+            if ((_x in KPLIB_o_helicopters) && (_x in KPLIB_o_troopTransports)) then {
+                [_objective, _x] spawn send_paratroopers;
+            } else {
+                _vehicle = [markerpos _spawn_marker, _x] call KPLIB_fnc_spawnVehicle;
 
-            sleep 0.5;
+                sleep 0.5;
 
-            (crew _vehicle) joinSilent _nextgrp;
-            [_nextgrp] call battlegroup_ai;
-            _nextgrp setVariable ["KPLIB_isBattleGroup", true];
-            _bg_groups pushback _nextgrp;
+                _nextgrp = group driver _vehicle;
+                _nextgrp setVariable ["KPLIB_isBattleGroup", true];
+                _bg_groups pushback _nextgrp;
 
-            if ((_x in KPLIB_o_troopTransports) && ([] call KPLIB_fnc_getOpforCap < KPLIB_cap_battlegroup)) then {
-                if (_vehicle isKindOf "Air") then {
-                    [[markerPos _spawn_marker] call KPLIB_fnc_getNearestBluforObjective, _vehicle] spawn send_paratroopers;
+                if (_x in KPLIB_o_troopTransports) then {
+                    [_vehicle] spawn troop_transport;
                 } else {
-                    [_vehicle] spawn troup_transport;
+                    [_nextgrp] call battlegroup_ai;
                 };
             };
+            sleep 20;
         } forEach _selected_opfor_battlegroup;
 
-        if (KPLIB_param_aggressivity > 0.9) then {
-            [[markerPos _spawn_marker] call KPLIB_fnc_getNearestBluforObjective] spawn spawn_air;
+        if ((KPLIB_param_aggressivity > 0.9) && (random 2 > 0)) then {
+            [_objective] spawn spawn_air;
         };
     };
 
