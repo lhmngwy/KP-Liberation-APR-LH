@@ -991,12 +991,9 @@ tpw_soap_fnc_scream =
 			_pitch = 0.9 + random 0.2;
 			if (random 1 > 0.5) then
 				{
-				//_sound = format ["TPW_SOUNDS\sounds\fear\%1.ogg",(ceil random 12)]; // screams, babies
-				} else
-				{
 				_sound = format ["TPW_SOUNDS\sounds\animal\dog%1.ogg",ceil (random 20)]; // barks
+				playsound3d [_sound,_house,false,getposasl _house,_vol,_pitch,100];
 				};
-			playsound3d [_sound,_house,false,getposasl _house,_vol,_pitch,100];
 			
 			if (tpw_soap_city) then
 				{
