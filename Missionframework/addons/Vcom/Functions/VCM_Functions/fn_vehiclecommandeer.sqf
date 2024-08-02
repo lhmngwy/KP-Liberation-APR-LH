@@ -51,10 +51,10 @@ if (VCM_ClassSteal) then
 
 	
 	{
-	
+		_noGunner = (side driver _x == side _this) && ((isNull gunner _x) || (!alive gunner _x));
 		if (count _Crewmen > 0) then
 		{
-			if (_x iskindof "Tank" && {crew _x isEqualTo []} && {_x distance _Leader < VCM_AIDISTANCEVEHPATH} && {locked _x != 2}) then
+			if (_x iskindof "Tank" && (count allTurrets [_x, false] > 0) && ((crew _x isEqualTo [] || _noGunner)) && (_x distance _Leader < VCM_AIDISTANCEVEHPATH) && (locked _x != 2)) then
 			{
 				_this addvehicle _x;
 			};				
@@ -62,14 +62,13 @@ if (VCM_ClassSteal) then
 		
 		if (count _Pilots > 0) then
 		{
-			if (_x iskindof "Air" && {crew _x isEqualTo []} && {_x distance _Leader < VCM_AIDISTANCEVEHPATH} && {locked _x != 2}) then
+			if (_x iskindof "Air" && (count allTurrets [_x, false] > 0) && ((crew _x isEqualTo [] || _noGunner)) && (_x distance _Leader < VCM_AIDISTANCEVEHPATH) && (locked _x != 2)) then
 			{
 				_this addvehicle _x;
 			};			
 		};
 
-	
-		if (_x iskindof "Car" && {crew _x isEqualTo []} && {_x distance _Leader < VCM_AIDISTANCEVEHPATH} && {locked _x != 2}) then
+		if (_x iskindof "Car" && (count allTurrets [_x, false] > 0) && ((crew _x isEqualTo [] || _noGunner)) && (_x distance _Leader < VCM_AIDISTANCEVEHPATH) && (locked _x != 2)) then
 		{
 			_this addvehicle _x;
 		};
@@ -80,9 +79,10 @@ else
 {
 	
 	{
-	
-		if (_x iskindof "LandVehicle" && {crew _x isEqualTo []} && {_x distance _Leader < VCM_AIDISTANCEVEHPATH} && {locked _x != 2}) then
+		_noGunner = (side driver _x == side _this) && ((isNull gunner _x) || (!alive gunner _x));
+		if ((_x isKindOf "LandVehicle" || _x isKindOf "Air") && (count allTurrets [_x, false] > 0) && ((crew _x isEqualTo [] || _noGunner)) && (_x distance _Leader < VCM_AIDISTANCEVEHPATH) && (locked _x != 2)) then
 		{
+			_this addVehicle _x;
 			_this addvehicle _x;
 		};
 	

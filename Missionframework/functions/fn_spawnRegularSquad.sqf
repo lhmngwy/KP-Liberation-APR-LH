@@ -24,7 +24,7 @@ params [
 if (_sector isEqualTo "") exitWith {["Empty string given"] call BIS_fnc_error; grpNull};
 
 // Get spawn position for squad
-private _sectorPos = (markerPos _sector) getPos [random 100, random 360];
+private _sectorPos = (markerPos _sector) getPos [random 150, random 360];
 private _spawnPos = [];
 private _i = 0;
 while {_spawnPos isEqualTo []} do {

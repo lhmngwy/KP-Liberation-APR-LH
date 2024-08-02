@@ -61,7 +61,8 @@ KPLIB_o_militiaInfantry = [
     "O_soldierU_AR_F",                                                  // Autorifleman
     "O_soldierU_M_F",                                                   // Marksman
     "O_soldierU_medic_F",                                               // Medic
-    "O_engineer_U_F"                                                    // Engineer
+    "O_engineer_U_F",                                                   // Engineer
+    "O_soldierU_exp_F"                                                  // Explosive specialist
 ];
 
 // Militia vehicles. Lightweight vehicle classnames the game will pick from randomly as sector defenders. Can also be empty for only infantry milita.

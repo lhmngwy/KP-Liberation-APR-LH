@@ -12,6 +12,8 @@
 		NOTHING
 */
 
+if (VCM_AIMagLimit == 0) exitWith {};
+
 private _magLimit = VCM_AIMagLimit;
 {
 	private _orgUnit = _x;

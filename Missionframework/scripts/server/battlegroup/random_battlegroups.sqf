@@ -19,8 +19,8 @@ while {KPLIB_param_aggressivity > 0.9 && KPLIB_endgame == 0} do {
     };
 
     if (
-        (count (allPlayers - entities "HeadlessClient_F") >= (random 7 / KPLIB_param_aggressivity))
-        && {KPLIB_enemyReadiness >= (50 - (5 * KPLIB_param_aggressivity))}
+        (count (allPlayers - entities "HeadlessClient_F") >= (random 6 / KPLIB_param_aggressivity))
+        && {KPLIB_enemyReadiness >= (35 - (5 * KPLIB_param_aggressivity))}
         && {[] call KPLIB_fnc_getOpforCap < KPLIB_cap_battlegroup}
         && {diag_fps > 25.0}
     ) then {

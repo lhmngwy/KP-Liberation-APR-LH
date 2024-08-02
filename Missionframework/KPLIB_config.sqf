@@ -216,16 +216,16 @@ KPLIB_distance_sector = KPLIB_range_sectorCapture + KPLIB_range_fob;
 */
 
 // Cap for BLUFOR.
-KPLIB_cap_playerSide = 150;
+KPLIB_cap_playerSide = 200;
 
 // Cap for enemy units.
-KPLIB_cap_enemySide = 300;
+KPLIB_cap_enemySide = 400;
 
 // Cap for enemy battlegroups.
-KPLIB_cap_battlegroup = 300;
+KPLIB_cap_battlegroup = 400;
 
 // Cap for enemy patrols.
-KPLIB_cap_patrol = 300;
+KPLIB_cap_patrol = 400;
 
 // Size of enemy battlegroups.
 KPLIB_battlegroup_size = 6;
@@ -242,13 +242,13 @@ KPLIB_civilians_amount = 15;
 */
 
 // Civil Reputation penalty for killing a civilian.
-KPLIB_cr_kill_penalty = 5;
+KPLIB_cr_kill_penalty = 4;
 
 // Civil Reputation penalty for destroying/damaging a building.
-KPLIB_cr_building_penalty = 3;
+KPLIB_cr_building_penalty = 2;
 
 // Civil Reputation penalty for stealing a civilian vehicle.
-KPLIB_cr_vehicle_penalty = 2;
+KPLIB_cr_vehicle_penalty = 1;
 
 // Civil Reputation penalty for killing a friendly resistance soldier.
 KPLIB_cr_resistance_penalty = 3;
@@ -260,7 +260,7 @@ KPLIB_cr_sector_gain = 5;
 KPLIB_cr_wounded_chance = 35;
 
 // Civil Reputation gain for providing medical assistance for wounded civilians.
-KPLIB_cr_wounded_gain = 2;
+KPLIB_cr_wounded_gain = 3;
 
 
 /*

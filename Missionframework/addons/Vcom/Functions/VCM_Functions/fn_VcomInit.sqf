@@ -35,9 +35,6 @@ if (isServer) then
 //waitUntil {!(isNil "VCM_AIMagLimit")};
 
 //Mod checks
-//ACE CHECK
-if (!(isNil "ACE_Medical_enableFor") && {ACE_Medical_enableFor isEqualTo 1}) then {VCM_MEDICALACTIVE = true;} else {VCM_MEDICALACTIVE = false;};
-VCM_MEDICALACTIVE = false;
 //CBA CHECK
 if (isClass(configFile >> "CfgPatches" >> "cba_main")) then {CBAACT = true;} else {CBAACT = false;};
 //ENHANCED MOVEMENT CHECK
@@ -51,8 +48,3 @@ Vcm_SM = compileFinal "(_this select 0) switchMove (_this select 1);";
 Vcm_PAN = compileFinal "(_this select 0) playActionNow (_this select 1);";
 VCOM_MINEARRAY = [];
 VCM_CoverQueue = [];
-
-
-
-
-

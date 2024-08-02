@@ -19,7 +19,7 @@ private _stopit = false;
 private _spawncivs = false;
 private _building_ai_max = 0;
 private _infsquad = "army";
-private _building_range = 50;
+private _building_range = 200;
 private _local_capture_size = KPLIB_range_sectorCapture;
 private _iedcount = 0;
 private _vehtospawn = [];
@@ -75,7 +75,7 @@ if ((!(_sector in KPLIB_sectors_player)) && (([markerPos _sector, [_opforcount, 
     _hostile = true;
 
     if (_sector in KPLIB_sectors_capital) then {
-        if (KPLIB_enemyReadiness < 30) then {_infsquad = "militia";};
+        if (KPLIB_enemyReadiness < 20) then {_infsquad = "militia";};
 
         _squad1 = ([_infsquad] call KPLIB_fnc_getSquadComp);
         _squad2 = ([_infsquad] call KPLIB_fnc_getSquadComp);
@@ -113,12 +113,13 @@ if ((!(_sector in KPLIB_sectors_player)) && (([markerPos _sector, [_opforcount, 
     };
 
     if (_sector in KPLIB_sectors_city) then {
-        if (KPLIB_enemyReadiness < 50) then {_infsquad = "militia";};
+        if (KPLIB_enemyReadiness < 30) then {_infsquad = "militia";};
 
         _squad1 = ([_infsquad] call KPLIB_fnc_getSquadComp);
         if (KPLIB_param_unitcap >= 1.25) then {_squad2 = ([_infsquad] call KPLIB_fnc_getSquadComp);};
+        if (KPLIB_param_unitcap >= 1.5) then {_squad3 = ([] call KPLIB_fnc_getSquadComp);};
 
-        if ((random 100) > (66 / KPLIB_param_difficulty)) then {_vehtospawn pushback (selectRandom KPLIB_o_militiaVehicles);};
+        if ((random 100) > (33 / KPLIB_param_difficulty)) then {_vehtospawn pushback (selectRandom KPLIB_o_militiaVehicles);};
         if ((random 100) > (33 / KPLIB_param_difficulty)) then {_vehtospawn pushback (selectRandom KPLIB_o_militiaVehicles);};
         if ((random 100) > (33 / KPLIB_param_difficulty)) then {_vehtospawn pushback (selectRandom KPLIB_o_turrets_HMG);};
         if (KPLIB_enemyReadiness > 50) then {_vehtospawn pushback (selectRandom KPLIB_o_turrets_HMG);};
@@ -128,7 +129,10 @@ if ((!(_sector in KPLIB_sectors_player)) && (([markerPos _sector, [_opforcount, 
             if ((random 100) > (33 / KPLIB_param_difficulty)) then {
                 _vehtospawn pushback (["defense"] call KPLIB_fnc_getAdaptiveVehicle);
                 _vehtospawn pushback (selectRandom KPLIB_o_turrets_AT);
-                _squad3 = ([_infsquad] call KPLIB_fnc_getSquadComp);
+                _squad4 = ([_infsquad] call KPLIB_fnc_getSquadComp);
+            };
+            if ((random 100) > (66 / KPLIB_param_difficulty)) then {
+                _vehtospawn pushback (["defense"] call KPLIB_fnc_getAdaptiveVehicle);
             };
         };
 
@@ -137,7 +141,7 @@ if ((!(_sector in KPLIB_sectors_player)) && (([markerPos _sector, [_opforcount, 
         };
 
         _building_ai_max = round ((floor (18 + (round (KPLIB_enemyReadiness / 10 )))) * _popfactor);
-        _building_range = 120;
+        _building_range = 200;
 
         if (KPLIB_civ_rep < 0) then {
             _iedcount = round ((ceil (random 4)) * (round ((KPLIB_civ_rep * -1) / 33)) * KPLIB_param_difficulty);
@@ -167,26 +171,33 @@ if ((!(_sector in KPLIB_sectors_player)) && (([markerPos _sector, [_opforcount, 
         };
 
         _building_ai_max = round ((floor (18 + (round (KPLIB_enemyReadiness / 4 )))) * _popfactor);
-        _building_range = 120;
+        _building_range = 200;
     };
 
     if (_sector in KPLIB_sectors_factory) then {
-        if (KPLIB_enemyReadiness < 40) then {_infsquad = "militia";};
+        if (KPLIB_enemyReadiness < 30) then {_infsquad = "militia";};
 
         _squad1 = ([_infsquad] call KPLIB_fnc_getSquadComp);
         if (KPLIB_param_unitcap >= 1.25) then {_squad2 = ([_infsquad] call KPLIB_fnc_getSquadComp);};
+        if (KPLIB_param_unitcap >= 1.5) then {_squad3 = ([] call KPLIB_fnc_getSquadComp);};
 
-        if ((random 100) > 66) then {_vehtospawn pushback (["defense"] call KPLIB_fnc_getAdaptiveVehicle);};
-        if ((random 100) > 33) then {_vehtospawn pushback (selectRandom KPLIB_o_militiaVehicles);};
-        if ((random 100) > 33) then {_vehtospawn pushback (selectRandom KPLIB_o_turrets_HMG);};
+        if ((random 100) > 33 / KPLIB_param_difficulty) then {_vehtospawn pushback (selectRandom KPLIB_o_militiaVehicles);};
+        if ((random 100) > 33 / KPLIB_param_difficulty) then {_vehtospawn pushback (selectRandom KPLIB_o_militiaVehicles);};
+        if ((random 100) > 33 / KPLIB_param_difficulty) then {_vehtospawn pushback (selectRandom KPLIB_o_turrets_HMG);};
         if (KPLIB_enemyReadiness > 50) then {_vehtospawn pushback (selectRandom KPLIB_o_turrets_HMG);};
+        if (_infsquad == "army") then {
+            if ((random 100) > (33 / KPLIB_param_difficulty)) then {
+                _vehtospawn pushback (["defense"] call KPLIB_fnc_getAdaptiveVehicle);
+                _vehtospawn pushback (selectRandom KPLIB_o_turrets_AT);
+            };
+        };
 
         if (((random 100) <= KPLIB_resistance_sector_chance) && (([] call KPLIB_fnc_crGetMulti) > 0)) then {
             _guerilla = true;
         };
 
         _building_ai_max = round ((floor (18 + (round (KPLIB_enemyReadiness / 10 )))) * _popfactor);
-        _building_range = 120;
+        _building_range = 200;
 
         if (KPLIB_civ_rep < 0) then {
             _iedcount = round ((ceil (random 3)) * (round ((KPLIB_civ_rep * -1) / 33)) * KPLIB_param_difficulty);
@@ -201,7 +212,7 @@ if ((!(_sector in KPLIB_sectors_player)) && (([markerPos _sector, [_opforcount, 
         if (KPLIB_enemyReadiness > 30) then {_squad2 = ([] call KPLIB_fnc_getSquadComp);};
         if (KPLIB_param_unitcap >= 1.5) then {_squad3 = ([] call KPLIB_fnc_getSquadComp);};
 
-        if((random 100) > 95) then {_vehtospawn pushback (["defense"] call KPLIB_fnc_getAdaptiveVehicle);};
+        if((random 100) > 66) then {_vehtospawn pushback (["defense"] call KPLIB_fnc_getAdaptiveVehicle);};
         if (KPLIB_enemyReadiness > 50) then {_vehtospawn pushback (selectRandom KPLIB_o_turrets_HMG);};
 
         _building_ai_max = 0;
@@ -236,6 +247,7 @@ if ((!(_sector in KPLIB_sectors_player)) && (([markerPos _sector, [_opforcount, 
         {
             _buildingpositions = _buildingpositions + ([_x] call BIS_fnc_buildingPositions);
         } forEach _allbuildings;
+        _buildingpositions = _buildingpositions call BIS_fnc_arrayShuffle;
         if (KPLIB_sectorspawn_debug > 0) then {[format ["Sector %1 (%2) - manage_one_sector found %3 building positions", (markerText _sector), _sector, (count _buildingpositions)], "SECTORSPAWN"] remoteExecCall ["KPLIB_fnc_log", 2];};
         if (count _buildingpositions > _minimum_building_positions) then {
             _managed_units = _managed_units + ([_infsquad, _building_ai_max, _buildingpositions, _sector] call KPLIB_fnc_spawnBuildingSquad);

@@ -27,6 +27,8 @@
 		}];
 */
 
+if (VCM_HEARINGDISTANCE == 0) exitWith {};
+
 params ["_unit","_weapon","_muzzle","_mode","_ammo","_magazine","_bullet","_gunner"];
 
 if (_weapon isEqualTo "Put" || {_weapon isEqualTo "Throw"} || {!(Vcm_ActivateAI)}) exitwith {};

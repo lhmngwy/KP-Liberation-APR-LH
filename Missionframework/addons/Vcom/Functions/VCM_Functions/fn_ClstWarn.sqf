@@ -13,6 +13,8 @@
 		NOTHING
 */
 
+if (VCM_WARNDIST == 0) exitWith {};
+
 params ["_unit","_killer"];
 
 private _unitGroup = (group _unit);

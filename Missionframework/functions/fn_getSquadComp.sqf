@@ -25,6 +25,9 @@ if (_type == "army") then {
     private _selected = false;
     private _randomchance = 0;
     _squadcomp = KPLIB_o_squadStd;
+    if (random 1 > 0.5) then {
+        _squadcomp = KPLIB_o_squadStd2;
+    };
 
     if (armor_weight > 40 && !_selected) then {
         _randomchance = (armor_weight - 35) * 1.4;
