@@ -68,7 +68,7 @@ else
 				[_unit,"AinvPknlMstpSnonWnonDnon_Putdown_AmovPknlMstpSnonWnonDnon"] remoteExec ["Vcm_PMN",0];
 				[_Unit, (_Mine#2), _closestRoad] spawn
 				{
-					params ["_Unit","_Mine"];
+					params ["_Unit","_Mine","_closestRoad"];
 					private _Pos = getpos _Unit;
 					sleep 3;
 					private _NrstMine = nearestObjects [_Pos,[],1];
