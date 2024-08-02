@@ -216,16 +216,16 @@ KPLIB_distance_sector = KPLIB_range_sectorCapture + KPLIB_range_fob;
 */
 
 // Cap for BLUFOR.
-KPLIB_cap_playerSide = 200;
+KPLIB_cap_playerSide = 150;
 
 // Cap for enemy units.
-KPLIB_cap_enemySide = 400;
+KPLIB_cap_enemySide = 300;
 
 // Cap for enemy battlegroups.
-KPLIB_cap_battlegroup = 400;
+KPLIB_cap_battlegroup = 300;
 
 // Cap for enemy patrols.
-KPLIB_cap_patrol = 400;
+KPLIB_cap_patrol = 300;
 
 // Size of enemy battlegroups.
 KPLIB_battlegroup_size = 6;
