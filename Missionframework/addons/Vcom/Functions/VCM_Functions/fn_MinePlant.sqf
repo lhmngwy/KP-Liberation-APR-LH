@@ -66,7 +66,7 @@ else
 				private _Mine = VCM_MineList#_Index; 
 				_Unit fire [(_Mine#3),(_Mine#3),(_Mine#1)];
 				[_unit,"AinvPknlMstpSnonWnonDnon_Putdown_AmovPknlMstpSnonWnonDnon"] remoteExec ["Vcm_PMN",0];
-				[_Unit,(_Mine#2)] spawn
+				[_Unit, (_Mine#2), _closestRoad] spawn
 				{
 					params ["_Unit","_Mine"];
 					private _Pos = getpos _Unit;
