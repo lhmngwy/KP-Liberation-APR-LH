@@ -18,8 +18,8 @@ private _check_sortie = {
 		if (surfaceIsWater (getPos _wnded)) then {
 			_medic setPosASL (getPosASL _wnded);
 		} else {
-			if ((getPosATL _wnded) select 2 > 5) then {
-				_medic doMove (getPosATL _wnded);
+			if ((getPos _wnded) select 2 > 5) then {
+				_medic doMove (getPos _wnded);
 				sleep 3;
 			};
 			waitUntil {sleep 0.5; round (speed vehicle _medic) == 0};
@@ -50,7 +50,7 @@ while {lifeState _wnded == "INCAPACITATED" || lifeState _medic != "INCAPACITATED
 		_medic playMoveNow "AmovPercMwlkSrasWrflDf";
 
 		if (_fail < 3) then {
-			_medic doMove (getPosATL _wnded);
+			_medic doMove (getPos _wnded);
 		};
 
 		if (_fail in [3, 4]) then {
