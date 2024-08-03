@@ -7,12 +7,12 @@ waitUntil { !isNil "KPLIB_sectors_player" };
 waitUntil { !isNil "KPLIB_enemyReadiness" };
 
 while { KPLIB_endgame == 0 } do {
-    waitUntil { sleep 0.3; count KPLIB_sectors_player >= 3; };
-    waitUntil { sleep 0.3; KPLIB_enemyReadiness >= (_minimum_readiness / KPLIB_param_difficulty); };
+    waitUntil { sleep 1; count KPLIB_sectors_player >= 3 };
+    waitUntil { sleep 1; KPLIB_enemyReadiness >= (_minimum_readiness / KPLIB_param_difficulty) };
 
     sleep (random 30);
 
-    while {  [] call KPLIB_fnc_getOpforCap > KPLIB_cap_patrol } do {
+    while {  ([] call KPLIB_fnc_getOpforCap > KPLIB_cap_patrol) || (diag_fps < 30.0) } do {
             sleep (random 30);
     };
 

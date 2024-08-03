@@ -22,7 +22,8 @@ params [
     ["_pos", [0, 0, 0], [[]], [2, 3]],
     ["_classname", "", [""]],
     ["_precise", false, [false]],
-    ["_rndDir", true, [false]]
+    ["_rndDir", true, [false]],
+    ["_range", 150, [0]]
 ];
 
 if (_pos isEqualTo [0, 0, 0]) exitWith {["No or zero pos given"] call BIS_fnc_error; objNull};
@@ -39,7 +40,7 @@ if (_precise) then {
     private _i = 0;
     while {_spawnPos isEqualTo []} do {
         _i = _i + 1;
-        _spawnpos = (_pos getPos [random 150, random 360]) findEmptyPosition [10, 100, _classname];
+        _spawnpos = (_pos getPos [random _range, random 360]) findEmptyPosition [10, 100, _classname];
         if (_i isEqualTo 10) exitWith {_spawnPos = zeroPos};
     };
 };
@@ -103,7 +104,7 @@ if (_classname in KPLIB_o_troopTransports) then {
         if (_spawned == _seats) then { break; };
     } foreach (([] call KPLIB_fnc_getSquadComp) + ([] call KPLIB_fnc_getSquadComp));
 
-    {_x assignAsCargo _newvehicle; sleep 0.2; _x moveInCargo _newvehicle; sleep 0.2;} forEach (units _infGrp);
+    {_x assignAsCargo _newvehicle; sleep 0.1; _x moveInCargo _newvehicle; sleep 0.1;} forEach (units _infGrp);
 
     // Delete crew that isn't in the vehicle
     {

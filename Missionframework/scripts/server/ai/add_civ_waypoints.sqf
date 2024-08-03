@@ -123,5 +123,5 @@ while { ({alive _x} count units _grp) > 0 } do {
             };
         };
     } forEach units _grp;
-    sleep 30 + random 30;
+    sleep 60 + random 60;
 };

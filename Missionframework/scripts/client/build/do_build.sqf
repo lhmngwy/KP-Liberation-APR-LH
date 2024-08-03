@@ -74,7 +74,7 @@ while { true } do {
                     _x createUnit [_pos, _grp,"this setVariable ['KPLIB_playerSide', true, true]; this addMPEventHandler ['MPKilled', {params ['_unit']; [_unit] joinSilent grpNull; ['KPLIB_manageKills', _this] call CBA_fnc_localEvent}]", 0.5, _unitrank];
                 };
                 _idx = _idx + 1;
-
+                sleep 0.1;
             } foreach _classname;
             build_confirmed = 0;
         } else {

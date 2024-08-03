@@ -21,6 +21,8 @@ params [
 
 if (isNull _veh) exitWith {["Null object given"] call BIS_fnc_error; false};
 
+sleep 0.1;
+
 if !(_veh getVariable ["KPLIB_captured", false]) then {
     deleteVehicleCrew _veh;
     deleteVehicle _veh;

@@ -164,7 +164,7 @@ switch (KPLIB_param_civActivity) do {
     case 0: {KPLIB_param_civActivity = 0;};
     case 1: {KPLIB_param_civActivity = 0.5;};
     case 2: {KPLIB_param_civActivity = 1;};
-    case 3: {KPLIB_param_civActivity = 2;};
+    case 3: {KPLIB_param_civActivity = 1.5;};
     default {KPLIB_param_civActivity = 1;};
 };
 

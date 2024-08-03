@@ -125,7 +125,8 @@ addMissionEventHandler ["PlayerConnected", {
 
         // Recreate AI squad members at the player's position
         {
-            _x createUnit [position _unit, group _unit];
+            _x createUnit [position _unit, group _unit,"this setVariable ['KPLIB_playerSide', true, true]; this addMPEventHandler ['MPKilled', {params ['_unit']; [_unit] joinSilent grpNull; ['KPLIB_manageKills', _this] call CBA_fnc_localEvent}]", 0.5, "private"];
+            sleep 0.1;
         } forEach _aiData;
 
         {

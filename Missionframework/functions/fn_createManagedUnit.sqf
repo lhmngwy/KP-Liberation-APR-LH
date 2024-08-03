@@ -59,4 +59,6 @@ isNil {
     [_unit] call KPLIB_fnc_addObjectInit;
 };
 
+sleep 0.1;
+
 _unit

@@ -8,6 +8,7 @@ private _start = diag_tickTime;
 private _corrected_size = [_opforcount, _sector] call KPLIB_fnc_getSectorRange;
 sleep 0.1;
 private _unitscount = [markerPos _sector, _corrected_size , KPLIB_side_player] call KPLIB_fnc_getUnitsCount;
+private _return = true;
 
 if (_unitscount > 0 && _unitscount <= 10) then {
     sleep 5;
@@ -43,4 +44,11 @@ if (_unitscount == 1) then {
     sleep 5;
 };
 
+_unitscount = [markerPos _sector, _corrected_size, KPLIB_side_player] call KPLIB_fnc_getUnitsCount;
+if (_unitscount == 0) then {
+    _return = false;
+};
+
 [format ["Sector %1 (%2) - Waiting done - Time needed: %3 seconds", (markerText _sector), _sector, diag_tickTime - _start], "SECTORSPAWN"] remoteExecCall ["KPLIB_fnc_log", 2];
+
+_return
