@@ -7,7 +7,7 @@ private _is_infantry = false;
 private _wpPositions = [];
 private _waypoint = [];
 
-if (isNull _grp) exitWith {};
+if ((isNull _grp) || (typeName _grp != "GROUP")) exitWith {};
 
 if (vehicle (leader _grp) == (leader _grp)) then {_is_infantry = true;};
 
@@ -59,7 +59,7 @@ _grp setCurrentWaypoint [_grp, 0];
 
 waitUntil {
     sleep 10;
-    ({alive _x} count (units _grp) == 0) || !isNull (leader _grp) && !(isNull ((leader _grp) findNearestEnemy (leader _grp)))
+    ({alive _x} count (units _grp) == 0) || !(isNull ((leader _grp) findNearestEnemy (leader _grp)))
 };
 
 if (((units _grp) findIf {alive _x}) != -1) then {
