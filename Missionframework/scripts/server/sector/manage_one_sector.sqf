@@ -1,4 +1,7 @@
 scriptName "manage_one_sector";
+
+KPLIB_spawningSector = true; publicVariable "KPLIB_spawningSector";
+
 // base amount of sector lifetime tickets
 // if there are no enemies one ticket is removed every SECTOR_TICK_TIME seconds
 // 12 * 5 = 60s by default
@@ -295,6 +298,8 @@ if ((!(_sector in KPLIB_sectors_player)) && (([markerPos _sector, [_opforcount, 
 };
 
 if (KPLIB_sectorspawn_debug > 0) then {[format ["Sector %1 (%2) - populating done", (markerText _sector), _sector], "SECTORSPAWN"] remoteExecCall ["KPLIB_fnc_log", 2];};
+
+KPLIB_spawningSector = false; publicVariable "KPLIB_spawningSector";
 
 private _activationTime = time;
 // sector lifetime loop

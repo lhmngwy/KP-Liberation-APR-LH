@@ -37,6 +37,7 @@ wait_to_spawn_sector = compile preprocessFileLineNumbers "scripts\server\sector\
 
 // Globals
 KPLIB_sectors_active = []; publicVariable "KPLIB_sectors_active";
+KPLIB_spawningSector = false; publicVariable "KPLIB_spawningSector";
 
 execVM "scripts\server\base\startgame.sqf";
 execVM "scripts\server\base\huron_manager.sqf";

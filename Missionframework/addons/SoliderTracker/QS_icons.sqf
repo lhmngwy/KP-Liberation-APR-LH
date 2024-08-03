@@ -69,7 +69,7 @@ _QS_ST_enableGroupIcons = TRUE;								// BOOL. TRUE to enable Map+GPS+HUD GROUP
 
 //================= ADMIN
 
-_QS_ST_admin = FALSE;										// BOOL. TRUE to enable showing all units (even enemies) if logged in as admin on a server. Default FALSE;
+_QS_ST_admin = TRUE;										// BOOL. TRUE to enable showing all units (even enemies) if logged in as admin on a server. Default FALSE;
 _QS_ST_showAll = 0;											// NUMBER. Intended for Debug / Development use only! Caution: Will cause lag if 1 or 2! Settings -  0 = Disabled (Recommended). 1 = Reveal all Units + vehicles. 2 = Reveal all mission objects + vehicles + units. May override below configurations if set at 1 or 2.
 	
 //================= DIPLOMACY - set the Friendly factions for each faction.
