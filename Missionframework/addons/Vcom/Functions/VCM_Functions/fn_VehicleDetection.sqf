@@ -157,9 +157,9 @@
 	private _NearestUnit = [_Livingobstacles, _x, true,"Driving"] call VCM_fnc_ClstObj;
 	if (_NearestUnit distance2D _x < 20) then
 	{
-		if (_NearestUnit distance2D _x < 5) then
+		if (_NearestUnit distance2D _x < 10) then
 		{
-			_Unit forcespeed 0;
+			_Unit forcespeed 1;
 			_Unit spawn
 			{
 				sleep 5;
