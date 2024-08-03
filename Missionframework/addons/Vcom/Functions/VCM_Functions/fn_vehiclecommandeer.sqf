@@ -22,6 +22,7 @@ private _Leader = leader _this;
 private _Pilots = [];
 private _Crewmen = [];
 
+if !((behaviour _Leader == "COMBAT") || (behaviour _Leader == "STEALTH")) exitWith {};
 
 if (VCM_ClassSteal) then
 {

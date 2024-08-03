@@ -57,7 +57,7 @@
 
 	if (count _obstacles > 0) then
 	{
-		_x forcespeed 10;
+		_x forcespeed 12;
 		{
 			
 			if !(_x getVariable ["VCM_AVOID", false] || {_x isKindOf "man"} || {_x isKindOf "Helper_Base_F"} || {_x isKindOf "Logic"}) then 
@@ -155,11 +155,11 @@
 	} foreach _Remove;
 	
 	private _NearestUnit = [_Livingobstacles, _x, true,"Driving"] call VCM_fnc_ClstObj;
-	if (_NearestUnit distance2D _x < 20) then
+	if ((!isNull _NearestUnit) && (_NearestUnit distance2D _x < 20)) then
 	{
 		if (_NearestUnit distance2D _x < 10) then
 		{
-			_Unit forcespeed 1;
+			_Unit forcespeed 2;
 			_Unit spawn
 			{
 				sleep 5;
@@ -168,7 +168,7 @@
 		}
 		else
 		{
-			_Unit forcespeed 5;
+			_Unit forcespeed 6;
 			_Unit spawn
 			{
 				sleep 2;

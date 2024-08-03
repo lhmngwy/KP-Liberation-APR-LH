@@ -18,7 +18,7 @@
 params ["_list","_object",["_order",true]];
 
 private _position = [0,0,0];
-if (isNil "_object" || {isNil "_list"}) exitWith {_closestObject = [0,0,0];_closestObject};
+if (isNil "_object" || {isNil "_list"}) exitWith {_closestObject = objNull;_closestObject};
 
 switch (TypeName _object) do 
 {
@@ -51,5 +51,5 @@ _distanceArray sort _order;
 
 private _closestObject = ((_distanceArray # 0) # 1);
 
-if (isNil "_closestObject") then {_closestObject = [0,0,0];};
+if (isNil "_closestObject") then {_closestObject = objNull;};
 _closestObject
