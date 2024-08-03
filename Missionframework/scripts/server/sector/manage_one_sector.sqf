@@ -350,12 +350,6 @@ if (_spawn) then {
         } else {
             if (([_sectorpos, (([_opforcount, _sector] call KPLIB_fnc_getSectorRange)), KPLIB_side_player] call KPLIB_fnc_getUnitsCount) == 0) then {
                 _sector_despawn_tickets = _sector_despawn_tickets - 1;
-                if (([_sectorpos, (([_opforcount, _sector] call KPLIB_fnc_getSectorRange) * 2), KPLIB_side_player] call KPLIB_fnc_getUnitsCount) == 0) then {
-                    _sector_despawn_tickets = _sector_despawn_tickets - 1;
-                    if (([_sectorpos, (([_opforcount, _sector] call KPLIB_fnc_getSectorRange) * 1.5), KPLIB_side_player] call KPLIB_fnc_getUnitsCount) == 0) then {
-                        _sector_despawn_tickets = _sector_despawn_tickets - 1;
-                    };
-                };
             } else {
                 // start counting running minutes after ADDITIONAL_TICKETS_DELAY
                 private _runningMinutes = (floor ((time - _activationTime) / 60)) - ADDITIONAL_TICKETS_DELAY;
