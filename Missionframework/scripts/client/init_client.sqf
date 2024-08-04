@@ -86,3 +86,15 @@ if (player isEqualTo ([] call KPLIB_fnc_getCommander)) then {
         [] call KPLIB_fnc_tutorial;
     };
 };
+
+if ((KPLIB_param_zeusLimited) && (isClass (configfile >> "CfgPatches" >> "zen_context_actions"))) then {
+    ["HealUnits"] call zen_context_menu_fnc_removeAction;
+    ["Captives"] call zen_context_menu_fnc_removeAction;
+    ["Loadout"] call zen_context_menu_fnc_removeAction;
+    ["Inventory"] call zen_context_menu_fnc_removeAction;
+    ["VehicleAppearance"] call zen_context_menu_fnc_removeAction;
+    ["VehicleLogistics"] call zen_context_menu_fnc_removeAction;
+    ["EditableObjects"] call zen_context_menu_fnc_removeAction;
+    ["TeleportPlayers"] call zen_context_menu_fnc_removeAction;
+    ["TeleportZeus"] call zen_context_menu_fnc_removeAction;
+};
