@@ -19,7 +19,6 @@ if ((_medic getVariable ["isLeader",false]) && (isplayer _medic)) then {
 _medic setVariable ["PAR_busy", nil];
 if (lifeState _medic != "INCAPACITATED") then {
   _medic doFollow leader _medic;
-  _medic forceSpeed (-1);
   _medic setSpeedMode (speedMode group player);
   _medic setCaptive false;
 };

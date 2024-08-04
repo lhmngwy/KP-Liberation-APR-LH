@@ -55,7 +55,6 @@ if (_wnded == player) then {
 } else {
 	_wnded switchMove "amovpknlmstpsraswrfldnon"; // go up
 	_wnded playMoveNow "amovpknlmstpsraswrfldnon";
-	_medic forceSpeed (-1);
 	_wnded setSpeedMode (speedMode group player);
 	_wnded doFollow player;
 };

@@ -39,7 +39,7 @@ if (count (_wounded_list) > 0) then {
 		(behaviour _wounded) != "COMBAT" &&
 		(round (_medic distance2D _wounded) > 3 && round (_medic distance2D _wounded) < _search_radius)
 	} do {
-		_medic doMove (getPos _wounded);
+		_medic doMove (getPosATL _wounded);
 		sleep 4;
 	};
 
