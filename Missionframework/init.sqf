@@ -1,4 +1,3 @@
-waitUntil { sleep 0.2; !isNil KPLIB_fnc_z };
 
 KPLIB_init = false;
 KPLIB_endgame = 0;

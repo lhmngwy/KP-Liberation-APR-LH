@@ -94,7 +94,6 @@ class KPLIB {
         class spawnRegularSquad         {};
         class spawnVehicle              {};
         class swapInventory             {};
-        class z                         {};
     };
     class functions_curator {
         file = "functions\curator";
