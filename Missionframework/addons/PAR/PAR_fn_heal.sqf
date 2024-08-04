@@ -34,6 +34,8 @@ while {
 	if (currentCommand _medic != "STOP") then {
 		[_medic] doFollow (leader group player);
 		_medic doMove (getPosATL _wnded);
+		_medic forceSpeed (_medic getSpeed "FULL");
+  		_medic setSpeedMode "FULL";
 		sleep 5;
 		if (speed vehicle _medic < 1 && (_medic distance2D _wnded) > 5 && (currentCommand _medic != "STOP")) then {
 			_medic setPosATL (getPosATL _medic vectorAdd [([] call F_getRND), ([] call F_getRND), 0.5]);
@@ -64,3 +66,5 @@ _wnded stop false;
 _medic setVariable ['PAR_heal', nil];
 _wnded setVariable ['PAR_healed', nil];
 [_medic, _wnded] doFollow (leader group player);
+_medic forceSpeed (-1);
+_medic setSpeedMode (speedMode group player);

@@ -62,6 +62,8 @@ PAR_unblock_AI = {
 				[_unit] joinSilent (group player);
 				sleep 0.2;
 				_unit doFollow player;
+				_unit forceSpeed (-1);
+  				_unit setSpeedMode (speedMode group player);
 				if (surfaceIsWater (getPos _unit)) then {
 					_unit switchMove "";
 					_unit playMoveNow "";

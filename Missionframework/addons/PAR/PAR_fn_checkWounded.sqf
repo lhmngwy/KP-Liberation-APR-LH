@@ -40,6 +40,8 @@ if (count (_wounded_list) > 0) then {
 		(round (_medic distance2D _wounded) > 3 && round (_medic distance2D _wounded) < _search_radius)
 	} do {
 		_medic doMove (getPosATL _wounded);
+		_medic forceSpeed (_medic getSpeed "FULL");
+  		_medic setSpeedMode "FULL";
 		sleep 4;
 	};
 
@@ -61,6 +63,8 @@ if (count (_wounded_list) > 0) then {
 	sleep 2;
 	_medic setVariable ['PAR_heal', nil];
 	_medic doFollow leader player;
+	_medic forceSpeed (-1);
+  	_medic setSpeedMode (speedMode group player);
 	_wounded setVariable ['PAR_healed', nil];
 	_wounded doFollow leader player;
 };

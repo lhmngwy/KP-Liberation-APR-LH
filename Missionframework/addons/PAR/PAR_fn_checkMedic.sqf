@@ -20,6 +20,8 @@ private _check_sortie = {
 		} else {
 			if ((getPosATL _wnded) select 2 > 5) then {
 				_medic doMove (getPosATL _wnded);
+				_medic forceSpeed (_medic getSpeed "FULL");
+  				_medic setSpeedMode "FULL";
 				sleep 3;
 			};
 			waitUntil {sleep 0.5; round (speed vehicle _medic) == 0};
@@ -51,21 +53,16 @@ while {lifeState _wnded == "INCAPACITATED" || lifeState _medic != "INCAPACITATED
 
 		if (_fail < 3) then {
 			_medic doMove (getPosATL _wnded);
+			_medic forceSpeed (_medic getSpeed "FULL");
+  			_medic setSpeedMode "FULL";
 		};
 
-		if (_fail in [3, 4]) then {
+		if (_fail >= 3) then {
 			_medic setDir (_medic getDir _wnded);
 			_relpos = _medic getRelPos [_dist/2, 0];
 			_medic doMove _relpos;
-		};
-
-		if (_fail > 4) then {
-			_medic allowDamage false;
-			_newpos = _medic getPos [3, _medic getDir _wnded];
-			_newpos = _newpos vectorAdd [0, 0, 3];
-			_medic setPos _newpos;
-			sleep 1;
-			_medic allowDamage true;
+			_medic forceSpeed (_medic getSpeed "FULL");
+  			_medic setSpeedMode "FULL";
 		};
 
 		_msg = format [localize "STR_PAR_CM_01", name _wnded, name _medic, _dist, _fail];
