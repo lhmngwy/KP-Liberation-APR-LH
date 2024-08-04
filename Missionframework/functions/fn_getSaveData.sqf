@@ -124,7 +124,8 @@ private ["_fobPos", "_fobObjects", "_grpUnits", "_fobMines"];
         {((getpos _x) select 2) < 10} &&                            // Exclude hovering helicopters and the like
         {!(_x getVariable ["KPLIB_edenObject", false])} &&  // Exclude all objects placed via editor in mission.sqm
         {!(_x getVariable ["KPLIB_preplaced", false])} &&   // Exclude preplaced (e.g. little birds from carrier)
-        {!((toLowerANSI (typeOf _x)) in KPLIB_crates)}                  // Exclude storage crates (those are handled separately)
+        {!((toLowerANSI (typeOf _x)) in KPLIB_crates)} &&                 // Exclude storage crates (those are handled separately)
+        typeOf _x != "Land_ClutterCutter_large_F"
     };
 
     _allObjects = _allObjects + (_fobObjects select {!((toLowerANSI (typeOf _x)) in KPLIB_storageBuildings)});
