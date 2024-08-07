@@ -713,6 +713,7 @@ if (!isNil "_saveData") then {
             {
                 [_x, [_spawnPos, _grp] select (_forEachIndex > 0), _grp] call KPLIB_fnc_createManagedUnit;
             } forEach _units;
+            _grp setSpeedMode "FULL";
         } forEach _aiGroups;
     } else {
         // Pre 0.96.5 compatibility
@@ -728,6 +729,7 @@ if (!isNil "_saveData") then {
                 _unit setDir _dir;
                 _unit setPosATL _pos;
             } forEach _x;
+            _grp setSpeedMode "FULL";
         } forEach _aiGroups;
     };
     ["Saved AI units placed", "SAVE"] call KPLIB_fnc_log;

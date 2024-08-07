@@ -76,6 +76,7 @@ while { true } do {
                 _idx = _idx + 1;
                 sleep 0.1;
             } foreach _classname;
+            _grp setSpeedMode "FULL";
             build_confirmed = 0;
         } else {
             _posfob = getpos player;

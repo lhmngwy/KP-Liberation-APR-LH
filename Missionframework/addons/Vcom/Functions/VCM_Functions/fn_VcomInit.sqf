@@ -35,8 +35,6 @@ if (isServer) then
 //waitUntil {!(isNil "VCM_AIMagLimit")};
 
 //Mod checks
-//CBA CHECK
-if (isClass(configFile >> "CfgPatches" >> "cba_main")) then {CBAACT = true;} else {CBAACT = false;};
 //ENHANCED MOVEMENT CHECK
 if !(isNil "EM_debug") then {VCOM_EM_ENABLED = true;} else {VCOM_EM_ENABLED = false;};
 if !(isNil "emr_main_climbingenabled") then {VCOM_EMR_ENABLED = true;} else {VCOM_EMR_ENABLED = false;};

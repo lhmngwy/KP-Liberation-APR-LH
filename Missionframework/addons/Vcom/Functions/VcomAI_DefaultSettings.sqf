@@ -23,14 +23,14 @@ Vcm_Settings =
 	VCM_ARTYWT = -(VCM_ARTYDELAY);
 	VCM_ARTYET = -(VCM_ARTYDELAY);
 	VCM_ARTYRT = -(VCM_ARTYDELAY);
-	VCM_ARTYSIDES = [west,east,resistance];  //Sides that will use VCOM artillery
+	VCM_ARTYSIDES = [east,resistance];  //Sides that will use VCOM artillery
 	VCM_AIMagLimit = 0; //Number of mags remaining before AI looks for ammo.
 	VCM_DebugOld = false; //Enable debug mode.
 	VCM_DebugFSM = false; //Enable FSM debug code.
 	VCM_DebugAIPathing = false; //Enable FSM debug code.
 	VCM_DebugSuppression = false; //Enable debug code for suppression
 	VCM_DebugCombatMove = false; //Enable debuging of combat movement.
-	VCM_MINECHANCE = 10; //Chance to lay a mine every 30 seconds or so
+	VCM_MINECHANCE = 5; //Chance to lay a mine every 30 seconds or so
 	VCM_SIDEENABLED = [west,east,resistance]; //Sides that will activate Vcom AI
 	VCM_RAGDOLL = false; //Should AI have a chance to ragdoll when hit
 	VCM_RAGDOLLCHC = 100; //CHANCE AI RAGDOLL	
@@ -41,11 +41,10 @@ Vcm_Settings =
 	VCM_STATICARMT = 300; //How long AI stay on static weapons when initially arming them. This is just for AI WITHOUT static bags. They will stay for this duration when NO ENEMIES ARE SEEN, or their group gets FAR away.	
 	VCM_StealVeh = true; //Will the AI steal vehicles.
 	VCM_ClassSteal = false; //If true, crewmen are required to steal tracked vehicles. Pilots are required to steal aircraft. false = anyone can steal any vehicle.
-	VCM_AIDISTANCEVEHPATH = 125; //Distance AI check from the squad leader to steal vehicles
+	VCM_AIDISTANCEVEHPATH = 60; //Distance AI check from the squad leader to steal vehicles
 	VCM_ADVANCEDMOVEMENT = false; //True means AI will actively generate waypoints if no other waypoints are generated for the AI group (2 or more). False disables this advanced movements.
 	VCM_FRMCHANGE = false; //AI GROUPS WILL CHANGE FORMATIONS TO THEIR BEST GUESS.
 	VCM_SKILLCHANGE = false; //AI Groups will have their skills changed by Vcom.
-	VCM_USECBASETTINGS = false;//If CBA is enabled on the host, use the CBA default settings. If false, use the filepatching settings instead.
 	VCM_CARGOCHNG = true; //If true, Vcom will handle disembarking/re-embarking orders instead of vanilla. This is with the intention to prevent the endless embark/disembark loops AI are given.	
 	VCM_TURRETUNLOAD = false;//If false = Prevents AI vehicle turret positions from leaving a vehicle just beecause it is slightly damaged. Example: leaving a tank when just the tracks are damaged.	
 	VCM_DISEMBARKRANGE = 125; //How far AI will disembark from their enemies. If the vehicle is damaged, they will disembark.
@@ -59,7 +58,7 @@ Vcm_Settings =
 	Vcm_SmokeCooldown = 60;		//Cooldown between each smoke grenade throw. This does not impact vanilla throwing.
 	Vcm_DisableAIRadio = false; //Setting this to true will disable AI talking to each other via the radio. This is only a sound effect, and will make the AI execute orders faster if disabled.
 	Vcm_UseStaticWeapons = true; //AI will deploy/garrison static weapons
-	Vcm_AI_EM = true; //Will the AI use enhanced movement to navigate around.
+	Vcm_AI_EM = false; //Will the AI use enhanced movement to navigate around.
 	Vcm_AI_EM_CHN = 10; //Chance a group will attempt to jump over an obstacle  - every 0.5 secs
 	VCM_AI_EM_CLDWN = 10; //Time in seconds before a group will consider jumping over obstacles;	
 	Vcm_IdleAnimationChnc = 2; //Chance an AI will play an idle animation.
@@ -159,12 +158,4 @@ Vcm_Settings =
 	};
 	
 	diag_log "VCOM: Using default Settings";
-
-if (VCM_USECBASETTINGS) then 
-{
-	diag_log "VCOM: Loading CBA settings from Default Settings config";
-    [] call VCM_fnc_CBASettings;
-};
-
-
 };

@@ -171,9 +171,6 @@ class VCOM
 
 		//[_pos,_dist,_params] call VCM_fnc_isFlatEmpty;
 		class isFlatEmpty {};	
-
-		//[] call VCM_fnc_CBASettings;
-		class CBASettings {};
 		
 		//[] call VCM_fnc_SniperList
 		class SniperList {};

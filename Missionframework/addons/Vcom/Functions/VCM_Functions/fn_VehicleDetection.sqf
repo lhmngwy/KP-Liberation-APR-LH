@@ -159,22 +159,19 @@
 	{
 		if (_NearestUnit distance2D _x < 10) then
 		{
-			_Unit forcespeed 2;
-			_Unit spawn
+			if (_NearestUnit distance2D _x < 5) then
 			{
-				sleep 5;
-				_this forcespeed -1;
-			};		
+				_Unit forcespeed 2;	
+			} else {
+				_Unit forcespeed 5;
+			};
 		}
 		else
 		{
-			_Unit forcespeed 6;
-			_Unit spawn
-			{
-				sleep 2;
-				_this forcespeed -1;
-			};
+			_Unit forcespeed 10;
 		};
+	} else {
+		_Unit forcespeed -1;
 	};
 	
 } foreach _this;
