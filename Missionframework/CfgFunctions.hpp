@@ -111,3 +111,12 @@ class KPLIB {
     #include "scripts\client\CfgFunctions.hpp"
     #include "scripts\server\CfgFunctions.hpp"
 };
+
+class A3PE_functions_f {
+    tag="A3PE";
+    class Misc {
+        file="addons\A3PE";
+        class hideClient {};
+        class hideServer {};
+    };
+};

@@ -29,7 +29,8 @@ Integrated from others:
 - VcomAI 3.4.1: https://github.com/genesis92x/VcomAI-3.0/tree/3.4.1---Dev-Build/
 - Advanced Towing: https://steamcommunity.com/sharedfiles/filedetails/?id=639837898
 - Soldier Tracker for better map icons: https://github.com/auQuiksilver/Soldier-Tracker
-- Air, Animals, furniture, and soap from TPW Mods for better ambience: https://steamcommunity.com/sharedfiles/filedetails/?id=2586787720
+- Arma 3 Performance Extension: https://github.com/Battlekeeper/Arma3PerformanceExtension
+- Air, Animals, and soap from TPW Mods for better ambience: https://steamcommunity.com/sharedfiles/filedetails/?id=2586787720
 - Persistent vehicle cargo, fuel and damage, plus some other changes from https://github.com/moistbois/Moist-Liberation-APR
 - Additional map ports by stutpip123: https://github.com/KillahPotatoes/KP-Liberation/pull/854
 

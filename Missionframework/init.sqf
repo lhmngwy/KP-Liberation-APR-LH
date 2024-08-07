@@ -115,6 +115,8 @@ if ( isServer) then {
 };
 ////////////////////////////////
 
+[] execVM "addons\A3PE\A3PEInit.sqf";
+
 KPLIB_init = true;
 
 // Notify clients that server is ready
