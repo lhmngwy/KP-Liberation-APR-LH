@@ -1,11 +1,11 @@
 params [
     ["_grp", grpNull, [grpNull]],
-    ["_objective", objNull, [objNull]]
+    ["_objective", [0, 0, 0], [[]], [3]]
 ];
 
 if (isNull _grp) exitWith {};
 
-if (isNull _objective) then {
+if (_objective == [0, 0, 0]) then {
     _objective = [getPos (leader _grp)] call KPLIB_fnc_getNearestBluforObjective;
 };
 

@@ -2,14 +2,14 @@
 params [
     ["_spawn_marker", "", [""]],
     ["_infOnly", false, [false]],
-    ["_objective", objNull, [objNull]]
+    ["_objective", [0, 0, 0], [[]], [3]]
 ];
 
 if (KPLIB_endgame == 1) exitWith {};
 
 _spawn_marker = [[1000, 800] select _infOnly, [2200, 1600] select _infOnly, false, markerPos _spawn_marker] call KPLIB_fnc_getOpforSpawnPoint;
 
-if (isNull _objective) then {
+if (_objective == [0, 0, 0]) then {
     _objective = [markerPos _spawn_marker] call KPLIB_fnc_getNearestBluforObjective;
 };
 

@@ -1,7 +1,7 @@
 params [
     ["_transVeh", objNull, [objNull]],
-    ["_start_pos", objNull, [objNull]],
-    ["_objective", objNull, [objNull]]
+    ["_start_pos", [0, 0, 0], [[]], [3]],
+    ["_objective", [0, 0, 0], [[]], [3]]
 ];
 
 if (isNull _transVeh) exitWith {};
@@ -10,10 +10,10 @@ sleep 1;
 private _transGrp = (group (driver _transVeh));
 private _unload_distance = KPLIB_range_sectorCapture + random KPLIB_range_sectorCapture;
 
-if (isNull _start_pos) then {
+if (_start_pos == [0, 0, 0]) then {
     _start_pos = getpos _transVeh;
 };
-if (isNull _objective) then {
+if (_objective = [0, 0, 0]) then {
     _objective = [getpos _transVeh] call KPLIB_fnc_getNearestBluforObjective;
 };
 
