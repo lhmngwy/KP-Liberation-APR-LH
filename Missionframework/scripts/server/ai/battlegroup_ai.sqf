@@ -5,7 +5,7 @@ params [
 
 if (isNull _grp) exitWith {};
 
-if (_objective == [0, 0, 0]) then {
+if ((_objective select 0) == 0 && (_objective select 1) == 0 && (_objective select 2) == 0) then {
     _objective = [getPos (leader _grp)] call KPLIB_fnc_getNearestBluforObjective;
 };
 

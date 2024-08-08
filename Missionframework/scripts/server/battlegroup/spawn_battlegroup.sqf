@@ -9,7 +9,7 @@ if (KPLIB_endgame == 1) exitWith {};
 
 _spawn_marker = [[1000, 800] select _infOnly, [2200, 1600] select _infOnly, false, markerPos _spawn_marker] call KPLIB_fnc_getOpforSpawnPoint;
 
-if (_objective == [0, 0, 0]) then {
+if ((_objective select 0) == 0 && (_objective select 1) == 0 && (_objective select 2) == 0) then {
     _objective = [markerPos _spawn_marker] call KPLIB_fnc_getNearestBluforObjective;
 };
 

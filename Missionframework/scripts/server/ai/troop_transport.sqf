@@ -10,10 +10,10 @@ sleep 1;
 private _transGrp = (group (driver _transVeh));
 private _unload_distance = KPLIB_range_sectorCapture + random KPLIB_range_sectorCapture;
 
-if (_start_pos == [0, 0, 0]) then {
+if ((_start_pos select 0) == 0 && (_start_pos select 1) == 0 && (_start_pos select 2) == 0) then {
     _start_pos = getpos _transVeh;
 };
-if (_objective = [0, 0, 0]) then {
+if ((_objective select 0) == 0 && (_objective select 1) == 0 && (_objective select 2) == 0) then {
     _objective = [getpos _transVeh] call KPLIB_fnc_getNearestBluforObjective;
 };
 
