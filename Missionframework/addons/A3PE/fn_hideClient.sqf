@@ -15,4 +15,5 @@ player setVariable ["A3PE_Hiding", true, [2,clientOwner,_HCNetworkID]];
   };
 } forEach _allObjsShow;
 
+player setVariable ["A3PE_ViewDistance", viewDistance, [2,clientOwner,_HCNetworkID]];
 player setVariable ["A3PE_Hiding", false, [2,clientOwner,_HCNetworkID]];

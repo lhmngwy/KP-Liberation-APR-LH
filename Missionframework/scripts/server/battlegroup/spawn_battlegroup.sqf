@@ -73,7 +73,7 @@ if !(_spawn_marker isEqualTo "") then {
             sleep 20;
         } forEach _selected_opfor_battlegroup;
 
-        if ((KPLIB_param_aggressivity > 0.9) && (random 2 > 0)) then {
+        if ((KPLIB_param_aggressivity > 0.9) && (random 1 > 0.5)) then {
             [_objective] spawn spawn_air;
         };
     };

@@ -12,7 +12,8 @@ while { count (units _grp) > 0 } do {
         { deleteWaypoint _x } forEachReversed waypoints _grp;
         {doStop _x; _x doFollow leader _grp} foreach units _grp;
 
-        if (_vehicle in KPLIB_o_troopTransports) then {
+        _vehicle = objectParent (leader _grp);
+        if (!(isNull _vehicle) && ((typeOf _vehicle) in KPLIB_o_troopTransports)) then {
             [_vehicle, _patrol_startpos, markerpos reinforcements_sector_under_attack] spawn troop_transport;
         } else {
             _waypoint = _grp addWaypoint [markerpos reinforcements_sector_under_attack, 50];

@@ -18,7 +18,7 @@ while {KPLIB_param_aggressivity >= 0.9 && KPLIB_endgame == 0} do {
     sleep _sleeptime;
 
     waitUntil {sleep 5;
-        KPLIB_enemyReadiness >= 70 && {armor_weight >= 50 || air_weight >= 50}
+        KPLIB_enemyReadiness >= 60 && {armor_weight >= 50 || air_weight >= 50}
     };
 
     _target_player = objNull;
@@ -34,7 +34,7 @@ while {KPLIB_param_aggressivity >= 0.9 && KPLIB_endgame == 0} do {
     if (!isNull _target_player) then {
         _target_pos = [99999, getPos _target_player] call KPLIB_fnc_getNearestSector;
         if !(_target_pos isEqualTo "") then {
-            [_target_pos] spawn spawn_air;
+            ["", false, _target_pos] spawn spawn_battlegroup;
         };
     };
 };

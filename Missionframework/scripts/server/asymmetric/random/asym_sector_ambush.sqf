@@ -4,7 +4,8 @@ if (KPLIB_asymmetric_debug > 0) then {[format ["asym_sector_ambush.sqf for %1 sp
 
 waitUntil {sleep 1; _sector in KPLIB_asymmetric_sectors};
 
-private _buildings = (nearestObjects [(markerPos _sector), ["House"], 75]) select {(alive _x) && !((typeOf _x) in KPLIB_cr_ign_buildings)};
+private _minus = nearestObjects [(markerPos _sector), ["PowerLines_Wires_base_F","Lamps_base_F","Piers_base_F","Land_NavigLight"], 75];
+private _buildings = ((nearestObjects [(markerPos _sector), ["House"], 75]) select {(alive _x)}) - _minus;
 private _positions = [];
 {
     _positions = _positions + ([_x] call BIS_fnc_buildingPositions);

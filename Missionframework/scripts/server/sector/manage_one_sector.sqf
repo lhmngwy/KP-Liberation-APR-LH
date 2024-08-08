@@ -86,7 +86,7 @@ if (_spawn) then {
             _squad1 = ([_infsquad] call KPLIB_fnc_getSquadComp);
             _squad2 = ([_infsquad] call KPLIB_fnc_getSquadComp);
             if (KPLIB_param_unitcap >= 1) then {_squad3 = ([_infsquad] call KPLIB_fnc_getSquadComp);};
-            if (KPLIB_param_unitcap >= 1.5) then {_squad4 = ([_infsquad] call KPLIB_fnc_getSquadComp);};
+            if (KPLIB_param_unitcap >= 1.25) then {_squad4 = ([_infsquad] call KPLIB_fnc_getSquadComp);};
 
             _vehtospawn = [(selectRandom KPLIB_o_militiaVehicles),(selectRandom KPLIB_o_militiaVehicles),(selectRandom KPLIB_o_turrets_HMG)];
             if ((random 100) > (66 / KPLIB_param_difficulty)) then {_vehtospawn pushback (selectRandom KPLIB_o_militiaVehicles);};
@@ -123,8 +123,9 @@ if (_spawn) then {
             if (KPLIB_enemyReadiness < 30) then {_infsquad = "militia";};
 
             _squad1 = ([_infsquad] call KPLIB_fnc_getSquadComp);
-            if (KPLIB_param_unitcap >= 1.25) then {_squad2 = ([_infsquad] call KPLIB_fnc_getSquadComp);};
-            if (KPLIB_param_unitcap >= 1.5) then {_squad3 = ([] call KPLIB_fnc_getSquadComp);};
+            _squad2 = ([_infsquad] call KPLIB_fnc_getSquadComp);
+            if (KPLIB_param_unitcap >= 1) then {_squad3 = ([_infsquad] call KPLIB_fnc_getSquadComp);};
+            if (KPLIB_param_unitcap >= 1.5 && ((random 100) > (33 / KPLIB_param_difficulty))) then {_squad4 = ([_infsquad] call KPLIB_fnc_getSquadComp);};
 
             if ((random 100) > (33 / KPLIB_param_difficulty)) then {_vehtospawn pushback (selectRandom KPLIB_o_militiaVehicles);};
             if ((random 100) > (33 / KPLIB_param_difficulty)) then {_vehtospawn pushback (selectRandom KPLIB_o_militiaVehicles);};
@@ -162,17 +163,19 @@ if (_spawn) then {
         if (_sector in KPLIB_sectors_military) then {
             _squad1 = ([] call KPLIB_fnc_getSquadComp);
             _squad2 = ([] call KPLIB_fnc_getSquadComp);
-            if (KPLIB_param_unitcap >= 1.5) then {_squad3 = ([] call KPLIB_fnc_getSquadComp);};
+            if (KPLIB_param_unitcap >= 1) then {_squad3 = ([] call KPLIB_fnc_getSquadComp);};
+            if (KPLIB_param_unitcap >= 1.5 && ((random 100) > (33 / KPLIB_param_difficulty))) then {_squad4 = ([] call KPLIB_fnc_getSquadComp);};
 
             _vehtospawn = [(["defense"] call KPLIB_fnc_getAdaptiveVehicle),(["defense"] call KPLIB_fnc_getAdaptiveVehicle),(selectRandom KPLIB_o_turrets_HMG),(selectRandom KPLIB_o_turrets_AT),(selectRandom KPLIB_o_turrets_MORTAR)];
             if ((random 100) > (33 / KPLIB_param_difficulty)) then {
                 _vehtospawn pushback (["defense"] call KPLIB_fnc_getAdaptiveVehicle);
                 _vehtospawn pushback ((selectRandom KPLIB_o_turrets_HMG));
                 _vehtospawn pushback ((selectRandom KPLIB_o_turrets_MORTAR));
-                _squad4 = ([] call KPLIB_fnc_getSquadComp);
+            };
+            if ((random 100) > (33 / KPLIB_param_difficulty)) then {
+                _vehtospawn pushback (["defense"] call KPLIB_fnc_getAdaptiveVehicle);
             };
             if ((random 100) > (66 / KPLIB_param_difficulty)) then {
-                _vehtospawn pushback (["defense"] call KPLIB_fnc_getAdaptiveVehicle);
                 _vehtospawn pushback (["defense"] call KPLIB_fnc_getAdaptiveVehicle);
                 _vehtospawn pushback ((selectRandom KPLIB_o_turrets_GMG));
                 _vehtospawn pushback ((selectRandom KPLIB_o_turrets_AA));
@@ -187,8 +190,9 @@ if (_spawn) then {
             if (KPLIB_enemyReadiness < 30) then {_infsquad = "militia";};
 
             _squad1 = ([_infsquad] call KPLIB_fnc_getSquadComp);
-            if (KPLIB_param_unitcap >= 1.25) then {_squad2 = ([_infsquad] call KPLIB_fnc_getSquadComp);};
-            if (KPLIB_param_unitcap >= 1.5) then {_squad3 = ([] call KPLIB_fnc_getSquadComp);};
+            _squad2 = ([_infsquad] call KPLIB_fnc_getSquadComp);
+            if (KPLIB_param_unitcap >= 1) then {_squad3 = ([_infsquad] call KPLIB_fnc_getSquadComp);};
+            if (KPLIB_param_unitcap >= 1.5 && ((random 100) > (33 / KPLIB_param_difficulty))) then {_squad4 = ([_infsquad] call KPLIB_fnc_getSquadComp);};
 
             if ((random 100) > 33 / KPLIB_param_difficulty) then {_vehtospawn pushback (selectRandom KPLIB_o_militiaVehicles);};
             if ((random 100) > 33 / KPLIB_param_difficulty) then {_vehtospawn pushback (selectRandom KPLIB_o_militiaVehicles);};
@@ -220,10 +224,10 @@ if (_spawn) then {
         if (_sector in KPLIB_sectors_tower) then {
             _squad1 = ([] call KPLIB_fnc_getSquadComp);
             if (KPLIB_enemyReadiness > 30) then {_squad2 = ([] call KPLIB_fnc_getSquadComp);};
-            if (KPLIB_param_unitcap >= 1.5) then {_squad3 = ([] call KPLIB_fnc_getSquadComp);};
+            if (KPLIB_param_unitcap >= 1.25 && ((random 100) > (33 / KPLIB_param_difficulty))) then {_squad3 = ([] call KPLIB_fnc_getSquadComp);};
 
             if((random 100) > 66) then {_vehtospawn pushback (["defense"] call KPLIB_fnc_getAdaptiveVehicle);};
-            if (KPLIB_enemyReadiness > 50) then {_vehtospawn pushback (selectRandom KPLIB_o_turrets_HMG);};
+            if (KPLIB_enemyReadiness > 30) then {_vehtospawn pushback (selectRandom KPLIB_o_turrets_HMG);};
 
             _spawn_range = 100;
             _building_ai_max = 0;
@@ -231,11 +235,11 @@ if (_spawn) then {
 
         _vehtospawn = _vehtospawn select {!(isNil "_x")};
 
-        if (KPLIB_sectorspawn_debug > 0) then {[format ["Sector %1 (%2) - manage_one_sector calculated -> _infsquad: %3 - _squad1: %4 - _squad2: %5 - _squad3: %6 - _squad4: %7 - _vehtospawn: %8 - _building_ai_max: %9", (markerText _sector), _sector, _infsquad, (count _squad1), (count _squad2), (count _squad3), (count _squad4), (count _vehtospawn), _building_ai_max], "SECTORSPAWN"] remoteExecCall ["KPLIB_fnc_log", 2];};
-
         if (_building_ai_max > 0 && KPLIB_param_adaptive) then {
             _building_ai_max = round (_building_ai_max * ([] call KPLIB_fnc_getOpforFactor));
         };
+
+        if (KPLIB_sectorspawn_debug > 0) then {[format ["Sector %1 (%2) - manage_one_sector calculated -> _infsquad: %3 - _squad1: %4 - _squad2: %5 - _squad3: %6 - _squad4: %7 - _vehtospawn: %8 - _building_ai_max: %9", (markerText _sector), _sector, _infsquad, (count _squad1), (count _squad2), (count _squad3), (count _squad4), (count _vehtospawn), _building_ai_max], "SECTORSPAWN"] remoteExecCall ["KPLIB_fnc_log", 2];};
 
         {
             if (_x isEqualTo "Turret_Array_Empty") exitWith {};
@@ -253,7 +257,8 @@ if (_spawn) then {
         } forEach _vehtospawn;
 
         if (_building_ai_max > 0) then {
-            _allbuildings = (nearestObjects [_sectorpos, ["House"], _building_range]) select {alive _x};
+            _minus = nearestObjects [_sectorpos, ["PowerLines_Wires_base_F","Lamps_base_F","Piers_base_F","Land_NavigLight"], _building_range];
+            _allbuildings = ((nearestObjects [_sectorpos, ["House"], _building_range]) select {alive _x}) - _minus;
             _buildingpositions = [];
             {
                 _buildingpositions = _buildingpositions + ([_x] call BIS_fnc_buildingPositions);
