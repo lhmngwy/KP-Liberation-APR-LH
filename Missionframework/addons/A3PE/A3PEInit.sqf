@@ -6,7 +6,7 @@ if (!isDedicated && hasInterface) then {
   player setVariable ["A3PE_ViewDistance", 10000, [2,clientOwner,_HCNetworkID]];
   player setVariable ["A3PE_IsConnectedUav", UAVControl (getConnectedUAV player), [2,clientOwner,_HCNetworkID]];
   player setVariable ["A3PE_ShownUAVFeed", shownUAVFeed, [2,clientOwner,_HCNetworkID]];
-  player setVariable ["A3PE_ForceRenderDistance", 200, [2,clientOwner,_HCNetworkID]];
+  player setVariable ["A3PE_ForceRenderDistance", 100, [2,clientOwner,_HCNetworkID]];
   player setVariable ["A3PE_HigherQualityAI", false, [2,clientOwner,_HCNetworkID]];
   player setVariable ["A3PE_HigherQualityDead", false, [2,clientOwner,_HCNetworkID]];
   player setVariable ["A3PE_HigherQualityPlayer", false, [2,clientOwner,_HCNetworkID]];
