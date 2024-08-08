@@ -33,7 +33,7 @@ KPPLM_viewVeh = viewDistance;
 KPPLM_viewAir = viewDistance;
 
 // Terrain detail setting
-KPPLM_terrain = 2;
+KPPLM_terrain = 1;
 
 // Auto 3rd Person setting
 KPPLM_tpv = 0;
