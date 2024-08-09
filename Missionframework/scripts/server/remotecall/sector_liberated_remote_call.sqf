@@ -62,9 +62,8 @@ sleep 45;
 
 if (KPLIB_endgame == 0) then {
     if (
-        !(_liberated_sector in KPLIB_sectors_tower)
-        && {
-            (random (150 / (KPLIB_param_difficulty * KPLIB_param_aggressivity))) < (KPLIB_enemyReadiness - 15)
+        {
+            (random (150 / (KPLIB_param_difficulty * KPLIB_param_aggressivity))) < (KPLIB_enemyReadiness)
             || _liberated_sector in KPLIB_sectors_capital
         }
         && {[] call KPLIB_fnc_getOpforCap < KPLIB_cap_battlegroup}

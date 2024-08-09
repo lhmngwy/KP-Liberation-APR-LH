@@ -15,14 +15,14 @@ while {KPLIB_param_aggressivity > 0.9 && KPLIB_endgame == 0} do {
         waitUntil {
             sleep 5;
             diag_tickTime > (KPLIB_last_battlegroup_time + (2100 / KPLIB_param_aggressivity))
+            && {KPLIB_enemyReadiness >= (35 - (5 * KPLIB_param_aggressivity))}
+            && {[] call KPLIB_fnc_getOpforCap < KPLIB_cap_battlegroup}
+            && {diag_fps > 30.0}
         };
     };
 
     if (
         (count (allPlayers - entities "HeadlessClient_F") >= (random 6 / KPLIB_param_aggressivity))
-        && {KPLIB_enemyReadiness >= (35 - (5 * KPLIB_param_aggressivity))}
-        && {[] call KPLIB_fnc_getOpforCap < KPLIB_cap_battlegroup}
-        && {diag_fps > 30.0}
     ) then {
         ["", (random 100) < 45] spawn spawn_battlegroup;
     };
