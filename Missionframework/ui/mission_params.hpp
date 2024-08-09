@@ -183,7 +183,7 @@ class Params {
         title = $STR_PARAM_RESPAWN_COOLDOWN;
         values[] = {0, 300, 600, 900, 1200, 1800, 3600};
         texts[] = {$STR_PARAMS_DISABLED, 5, 10, 15, 20, 30, 60};
-        default = 0;
+        default = 600;
     };
     class MobileArsenal {
         title = $STR_PARAMS_MOBILEARSENAL;
