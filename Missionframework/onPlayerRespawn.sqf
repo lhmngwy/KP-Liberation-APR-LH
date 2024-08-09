@@ -65,9 +65,9 @@ player setUnitTrait ["explosiveSpecialist", true];
 player setUnitTrait ["medic", true];
 player setUnitTrait ["UAVHacker", true];
 
-_aiSquad = (units group player) select {alive _x && !isPlayer _x};
-player setVariable ["KPLIB_unitsBought", (count _aiSquad) + 1, true];
-_unconsciousAiSquad = (units group player) select {_x getVariable ['PAR_isUnconscious', false] && !isPlayer _x};
+private _aiSquad = (units group player) select {alive _x && !isPlayer _x};
+player setVariable ["KPLIB_unitsBought", count _aiSquad, true];
+private _unconsciousAiSquad = (units group player) select {_x getVariable ['PAR_isUnconscious', false] && !isPlayer _x};
 doStop _aiSquad;
 {
     _x setDamage 1;

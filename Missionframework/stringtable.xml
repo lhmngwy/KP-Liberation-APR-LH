@@ -549,10 +549,6 @@
             <Original>Cannot redeploy: hostile forces nearby.</Original>
             <Japanese>再展開できません: 敵軍が近くにいます。</Japanese>
         </Key>
-        <Key ID="STR_REDEPLOY_CAPTURED_HOSTILES">
-            <Original>Cannot redeploy: captured hostiles in group.</Original>
-            <Japanese>再展開できません: 捕らえられた敵対者グループ</Japanese>
-        </Key>
         <Key ID="STR_FULLHEAL_DONE">
             <Original>You have fully healed</Original>
             <Japanese>負傷が完全に治療されました</Japanese>

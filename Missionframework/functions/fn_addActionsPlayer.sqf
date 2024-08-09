@@ -71,6 +71,11 @@ _player addAction [
     "
         isNull (objectParent _originalTarget)
         && {alive _originalTarget}
+        && {
+            _originalTarget getVariable ['KPLIB_fobDist', 99999] < 20
+            || {_originalTarget getVariable ['KPLIB_isNearMobRespawn', false]}
+            || {_originalTarget getVariable ['KPLIB_isNearStart', false]}
+        }
         && {build_confirmed isEqualTo 0}
     "
 ];

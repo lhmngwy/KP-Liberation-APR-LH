@@ -9,6 +9,7 @@ kp_fuel_consumption = compile preprocessFileLineNumbers "scripts\client\misc\kp_
 kp_vehicle_permissions = compile preprocessFileLineNumbers "scripts\client\misc\vehicle_permissions.sqf";
 
 KPLIB_tents = [];
+publicVariable "KPLIB_tents";
 
 execVM "scripts\client\actions\intel_manager.sqf";
 execVM "scripts\client\actions\recycle_manager.sqf";

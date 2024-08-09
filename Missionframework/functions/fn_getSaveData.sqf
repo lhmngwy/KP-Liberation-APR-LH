@@ -154,6 +154,8 @@ _allObjects = _allObjects + (vehicles select {
     !(_x in _allObjects)                                        // Exclude vehicles already in _allObjects
 });
 
+_allObjects = _allObjects + KPLIB_tents;
+
 // Fetch all infantry groups
 {
     // Get only living AI units

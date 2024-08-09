@@ -40,8 +40,6 @@ while {true} do {
 
     if (([getPosATL player, 350, KPLIB_side_enemy ] call KPLIB_fnc_getUnitsCount) > 3) then {[localize "STR_REDEPLOY_ENEMIES_NEARBY"] remoteExecCall ["hint", player]; continue };
 
-    if (({(typeOf _x) in KPLIB_o_inf_classes} count units group player) > 0 || ({(typeOf _x) in KPLIB_o_militiaInfantry} count units group player) > 0) then {[localize "STR_REDEPLOY_CAPTURED_HOSTILES"] remoteExecCall ["hint", player]; continue };
-
     private _backpack = backpack player;
 
     fullmap = 0;
@@ -100,6 +98,7 @@ while {true} do {
             KPLIB_tents pushBack _x;
         };
     } forEach allMissionObjects "EO_TentDome_F";
+    publicVariable "KPLIB_tents";
 
     while {dialog && alive player && deploy == 0} do {
         // ARRAY - [[NAME, POSITION(, OBJECT)], ...]
