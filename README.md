@@ -8,7 +8,8 @@ Apricot_ale's fork is a uniquely modified version of [KP Liberation](https://git
 My customisations include:
 
 - Updated vanilla presets, factions have access to all guns. Uniforms and vehicles are still faction restricted.
-- Blufor vehicles and HC squads will be saved anywhere on the map.
+- Blufor vehicles, captured vehicles and HC squads will be saved anywhere on the map.
+- Enemy and civilian vehicles must be taken to a FOB at least once to count as captured.
 - Added persistent player squads, disconnect and reconnect and you will still have your squad!
 - AI squad members will now redeploy with the player. Unconscious AI squad members will die on redeploy, heal them first!
 - Resource penalty of up to 40 of each resource when you respawn:

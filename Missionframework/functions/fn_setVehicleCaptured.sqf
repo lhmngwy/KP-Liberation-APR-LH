@@ -26,7 +26,7 @@ private _type = typeOf _veh;
 
 if !((toLowerANSI _type) in KPLIB_o_allVeh_classes) exitWith {false};
 
-if !(_veh getVariable ["KPLIB_captured", false]) then {
+if (!(_veh getVariable ["KPLIB_captured", false]) && (player getVariable ['KPLIB_fobDist', 99999] < KPLIB_range_fob)) then {
     _veh setVariable ["KPLIB_captured", true, true];
     _object setVariable ["KPLIB_playerSide", true, true];
     _object setVariable ['QS_ST_drawEmptyVehicle',TRUE,TRUE];

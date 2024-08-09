@@ -56,6 +56,7 @@ if (KPLIB_param_fuelconsumption) then {
 };
 player addEventHandler ["GetInMan", {[_this select 2, _this select 0] call KPLIB_fnc_setVehicleSeized;}];
 player addEventHandler ["GetInMan", {[_this select 2] call KPLIB_fnc_setVehicleCaptured;}];
+player addEventHandler ["GetOutMan", {[_this select 2] call KPLIB_fnc_setVehicleCaptured;}];
 player addEventHandler ["GetInMan", {[_this select 2] call kp_vehicle_permissions;}];
 player addEventHandler ["GetInMan", {
     params ["_player"];
