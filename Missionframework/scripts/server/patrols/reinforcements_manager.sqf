@@ -4,10 +4,12 @@ if (KPLIB_enemyReadiness > 15) then {
 
     private _init_units_count = (([markerPos _targetsector, KPLIB_range_sectorCapture, KPLIB_side_enemy] call KPLIB_fnc_getUnitsCount));
 
-    if !(_targetsector in KPLIB_sectors_capital) then {
-        while {(_init_units_count * 0.75) <= ([markerPos _targetsector, KPLIB_range_sectorCapture, KPLIB_side_enemy] call KPLIB_fnc_getUnitsCount)} do {
-            sleep 5;
-        };
+    private _reinforce_threshold = 0.75;
+    if (_targetsector in KPLIB_sectors_capital) then {
+        _reinforce_threshold = 0.9;
+    };
+    while {(_init_units_count * _reinforce_threshold) <= ([markerPos _targetsector, KPLIB_range_sectorCapture, KPLIB_side_enemy] call KPLIB_fnc_getUnitsCount)} do {
+        sleep 5;
     };
 
     if (_targetsector in KPLIB_sectors_active) then {
