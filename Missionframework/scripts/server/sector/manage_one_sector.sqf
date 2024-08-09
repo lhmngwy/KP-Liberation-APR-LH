@@ -137,7 +137,7 @@ if (_spawn) then {
                 if ((random 100) > (33 / KPLIB_param_difficulty)) then {
                     _vehtospawn pushback (["defense"] call KPLIB_fnc_getAdaptiveVehicle);
                     _vehtospawn pushback (selectRandom KPLIB_o_turrets_AT);
-                    _squad4 = ([_infsquad] call KPLIB_fnc_getSquadComp);
+                    _squad3 = ([_infsquad] call KPLIB_fnc_getSquadComp);
                 };
                 if ((random 100) > (66 / KPLIB_param_difficulty)) then {
                     _vehtospawn pushback (["defense"] call KPLIB_fnc_getAdaptiveVehicle);
