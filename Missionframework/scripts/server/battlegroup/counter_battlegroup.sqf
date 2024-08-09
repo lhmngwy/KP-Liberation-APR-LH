@@ -11,8 +11,8 @@ private _target_pos = "";
 while {KPLIB_param_aggressivity >= 0.9 && KPLIB_endgame == 0} do {
     _sleeptime = (1800 + (random 1800)) / (([] call KPLIB_fnc_getOpforFactor) * KPLIB_param_aggressivity);
 
-    if (KPLIB_enemyReadiness >= 80) then {_sleeptime = _sleeptime * 0.75;};
-    if (KPLIB_enemyReadiness >= 90) then {_sleeptime = _sleeptime * 0.75;};
+    if (KPLIB_enemyReadiness >= 75) then {_sleeptime = _sleeptime * 0.75;};
+    if (KPLIB_enemyReadiness >= 85) then {_sleeptime = _sleeptime * 0.75;};
     if (KPLIB_enemyReadiness >= 95) then {_sleeptime = _sleeptime * 0.75;};
 
     sleep _sleeptime;
@@ -34,7 +34,7 @@ while {KPLIB_param_aggressivity >= 0.9 && KPLIB_endgame == 0} do {
     if (!isNull _target_player) then {
         _target_pos = [99999, getPos _target_player] call KPLIB_fnc_getNearestSector;
         if !(_target_pos isEqualTo "") then {
-            ["", false, _target_pos] spawn spawn_battlegroup;
+            ["", false, _target_pos, (air_weight >= 50 && {(objectParent _target_player) isKindOf "Air"})] spawn spawn_battlegroup;
         };
     };
 };

@@ -2,7 +2,8 @@
 params [
     ["_spawn_marker", "", [""]],
     ["_infOnly", false, [false]],
-    ["_objective", [0, 0, 0], [[]], [3]]
+    ["_objective", [0, 0, 0], [[]], [3]],
+    ["_forceAir", false, [false]],
 ];
 
 if (KPLIB_endgame == 1) exitWith {};
@@ -73,7 +74,7 @@ if !(_spawn_marker isEqualTo "") then {
             sleep 20;
         } forEach _selected_opfor_battlegroup;
 
-        if ((KPLIB_param_aggressivity > 0.9) && (random 1 > 0.5)) then {
+        if ((KPLIB_param_aggressivity > 0.9) && ((random (KPLIB_enemyReadiness max 50) > 25) || _forceAir)) then {
             [_objective] spawn spawn_air;
         };
     };
