@@ -56,3 +56,9 @@ KPLIB_c_vehicles = [
     "C_Truck_02_covered_F",
     "C_Truck_02_box_F"
 ];
+
+// Civillian air vehicle classnames.
+KPLIB_c_vehAir = [
+    "C_Heli_Light_01_civil_F",
+    "C_Plane_Civil_01_F"
+];
