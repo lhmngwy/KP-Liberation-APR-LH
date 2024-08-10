@@ -32,6 +32,8 @@ private _squad1 = [];
 private _squad2 = [];
 private _squad3 = [];
 private _squad4 = [];
+private _squad5 = [];
+private _squad6 = [];
 private _minimum_building_positions = 5;
 private _sector_despawn_tickets = BASE_TICKETS;
 private _maximum_additional_tickets = (KPLIB_param_maxDespawnDelay * 60 / SECTOR_TICK_TIME);
@@ -87,6 +89,8 @@ if (_spawn) then {
             _squad2 = ([_infsquad] call KPLIB_fnc_getSquadComp);
             if (KPLIB_param_unitcap >= 1) then {_squad3 = ([_infsquad] call KPLIB_fnc_getSquadComp);};
             if (KPLIB_param_unitcap >= 1.25) then {_squad4 = ([_infsquad] call KPLIB_fnc_getSquadComp);};
+            if (KPLIB_param_unitcap >= 1 && ((random 100) > (33 / KPLIB_param_difficulty))) then {_squad5 = ([_infsquad] call KPLIB_fnc_getSquadComp);};
+            if (KPLIB_param_unitcap >= 1.25 && ((random 100) > (33 / KPLIB_param_difficulty))) then {_squad6 = ([_infsquad] call KPLIB_fnc_getSquadComp);};
 
             _vehtospawn = [(selectRandom KPLIB_o_militiaVehicles),(selectRandom KPLIB_o_militiaVehicles),(selectRandom KPLIB_o_turrets_HMG)];
             if ((random 100) > (66 / KPLIB_param_difficulty)) then {_vehtospawn pushback (selectRandom KPLIB_o_militiaVehicles);};
@@ -107,7 +111,7 @@ if (_spawn) then {
             };
 
             _spawn_range = 250;
-            _building_ai_max = round (50 * _popfactor);
+            _building_ai_max = round (40 * _popfactor);
             _local_capture_size = _local_capture_size * 1.5;
             _building_range = 300;
 
@@ -125,7 +129,9 @@ if (_spawn) then {
             _squad1 = ([_infsquad] call KPLIB_fnc_getSquadComp);
             _squad2 = ([_infsquad] call KPLIB_fnc_getSquadComp);
             if (KPLIB_param_unitcap >= 1 && ((random 100) > (33 / KPLIB_param_difficulty))) then {_squad3 = ([_infsquad] call KPLIB_fnc_getSquadComp);};
-            if (KPLIB_param_unitcap >= 1.5 && ((random 100) > (66 / KPLIB_param_difficulty))) then {_squad3 = ([_infsquad] call KPLIB_fnc_getSquadComp);};
+            if (KPLIB_param_unitcap >= 1.5 && ((random 100) > (66 / KPLIB_param_difficulty))) then {_squad4 = ([_infsquad] call KPLIB_fnc_getSquadComp);};
+            if (KPLIB_param_unitcap >= 1 && ((random 100) > (66 / KPLIB_param_difficulty))) then {_squad5 = ([_infsquad] call KPLIB_fnc_getSquadComp);};
+            if (KPLIB_param_unitcap >= 1.5 && ((random 100) > (66 / KPLIB_param_difficulty))) then {_squad6 = ([_infsquad] call KPLIB_fnc_getSquadComp);};
 
             if ((random 100) > (33 / KPLIB_param_difficulty)) then {_vehtospawn pushback (selectRandom KPLIB_o_militiaVehicles);};
             if ((random 100) > (33 / KPLIB_param_difficulty)) then {_vehtospawn pushback (selectRandom KPLIB_o_militiaVehicles);};
@@ -149,7 +155,7 @@ if (_spawn) then {
             };
 
             _spawn_range = 150;
-            _building_ai_max = round ((floor (18 + (round (KPLIB_enemyReadiness / 10 )))) * _popfactor);
+            _building_ai_max = round ((floor (15 + (round (KPLIB_enemyReadiness / 10 )))) * _popfactor);
             _building_range = 200;
 
             if (KPLIB_civ_rep < 0) then {
@@ -165,6 +171,8 @@ if (_spawn) then {
             _squad2 = ([] call KPLIB_fnc_getSquadComp);
             if (KPLIB_param_unitcap >= 1) then {_squad3 = ([] call KPLIB_fnc_getSquadComp);};
             if (KPLIB_param_unitcap >= 1.5 && ((random 100) > (33 / KPLIB_param_difficulty))) then {_squad4 = ([] call KPLIB_fnc_getSquadComp);};
+            if (KPLIB_param_unitcap >= 1 && ((random 100) > (33 / KPLIB_param_difficulty))) then {_squad5 = ([_infsquad] call KPLIB_fnc_getSquadComp);};
+            if (KPLIB_param_unitcap >= 1.5 && ((random 100) > (33 / KPLIB_param_difficulty))) then {_squad6 = ([_infsquad] call KPLIB_fnc_getSquadComp);};
 
             _vehtospawn = [(["defense"] call KPLIB_fnc_getAdaptiveVehicle),(["defense"] call KPLIB_fnc_getAdaptiveVehicle),(selectRandom KPLIB_o_turrets_HMG),(selectRandom KPLIB_o_turrets_AT),(selectRandom KPLIB_o_turrets_MORTAR)];
             if ((random 100) > (33 / KPLIB_param_difficulty)) then {
@@ -182,7 +190,7 @@ if (_spawn) then {
             };
 
             _spawn_range = 150;
-            _building_ai_max = round ((floor (18 + (round (KPLIB_enemyReadiness / 4 )))) * _popfactor);
+            _building_ai_max = round ((floor (15 + (round (KPLIB_enemyReadiness / 4 )))) * _popfactor);
             _building_range = 200;
         };
 
@@ -193,6 +201,8 @@ if (_spawn) then {
             _squad2 = ([_infsquad] call KPLIB_fnc_getSquadComp);
             if (KPLIB_param_unitcap >= 1 && ((random 100) > (33 / KPLIB_param_difficulty))) then {_squad3 = ([_infsquad] call KPLIB_fnc_getSquadComp);};
             if (KPLIB_param_unitcap >= 1.5 && ((random 100) > (66 / KPLIB_param_difficulty))) then {_squad4 = ([_infsquad] call KPLIB_fnc_getSquadComp);};
+            if (KPLIB_param_unitcap >= 1 && ((random 100) > (66 / KPLIB_param_difficulty))) then {_squad5 = ([_infsquad] call KPLIB_fnc_getSquadComp);};
+            if (KPLIB_param_unitcap >= 1.5 && ((random 100) > (66 / KPLIB_param_difficulty))) then {_squad6 = ([_infsquad] call KPLIB_fnc_getSquadComp);};
 
             if ((random 100) > 33 / KPLIB_param_difficulty) then {_vehtospawn pushback (selectRandom KPLIB_o_militiaVehicles);};
             if ((random 100) > 33 / KPLIB_param_difficulty) then {_vehtospawn pushback (selectRandom KPLIB_o_militiaVehicles);};
@@ -210,7 +220,7 @@ if (_spawn) then {
             };
 
             _spawn_range = 125;
-            _building_ai_max = round ((floor (18 + (round (KPLIB_enemyReadiness / 10 )))) * _popfactor);
+            _building_ai_max = round ((floor (10 + (round (KPLIB_enemyReadiness / 10 )))) * _popfactor);
             _building_range = 175;
 
             if (KPLIB_civ_rep < 0) then {
@@ -227,6 +237,7 @@ if (_spawn) then {
             _squad1 = ([] call KPLIB_fnc_getSquadComp);
             if (KPLIB_enemyReadiness > 30) then {_squad2 = ([] call KPLIB_fnc_getSquadComp);};
             if (KPLIB_param_unitcap >= 1.25 && ((random 100) > (66 / KPLIB_param_difficulty))) then {_squad3 = ([] call KPLIB_fnc_getSquadComp);};
+            if (KPLIB_param_unitcap >= 1 && ((random 100) > (66 / KPLIB_param_difficulty))) then {_squad5 = ([_infsquad] call KPLIB_fnc_getSquadComp);};
 
             if((random 100) > 66) then {_vehtospawn pushback (["defense"] call KPLIB_fnc_getAdaptiveVehicle);};
             if (_infsquad == "army") then {
@@ -249,7 +260,7 @@ if (_spawn) then {
         {
             if (_x isEqualTo "Turret_Array_Empty") exitWith {};
             _vehicle = [_sectorpos, _x, false, true, _spawn_range] call KPLIB_fnc_spawnVehicle;
-            [group ((crew _vehicle) select 0),_sectorpos] spawn add_defense_waypoints;
+            [group ((crew _vehicle) select 0),_sectorpos, _spawn_range] spawn add_defense_waypoints;
             _managed_units pushback _vehicle;
             {_managed_units pushback _x;} foreach (crew _vehicle);
             sleep 0.25;
@@ -279,25 +290,39 @@ if (_spawn) then {
 
         if (count _squad1 > 0) then {
             _grp = [_sector, _spawn_range, _squad1] call KPLIB_fnc_spawnRegularSquad;
-            [_grp, _sectorpos] spawn add_defense_waypoints;
+            [_grp, _sectorpos, _spawn_range] spawn add_defense_waypoints;
             _managed_units = _managed_units + (units _grp);
         };
 
         if (count _squad2 > 0) then {
             _grp = [_sector, _spawn_range, _squad2] call KPLIB_fnc_spawnRegularSquad;
-            [_grp, _sectorpos] spawn add_defense_waypoints;
+            [_grp, _sectorpos, _spawn_range] spawn add_defense_waypoints;
             _managed_units = _managed_units + (units _grp);
         };
 
         if (count _squad3 > 0) then {
             _grp = [_sector, _spawn_range, _squad3] call KPLIB_fnc_spawnRegularSquad;
-            [_grp, _sectorpos] spawn add_defense_waypoints;
+            [_grp, _sectorpos, _spawn_range] spawn add_defense_waypoints;
             _managed_units = _managed_units + (units _grp);
         };
 
         if (count _squad4 > 0) then {
             _grp = [_sector, _spawn_range, _squad4] call KPLIB_fnc_spawnRegularSquad;
-            [_grp, _sectorpos] spawn add_defense_waypoints;
+            [_grp, _sectorpos, _spawn_range] spawn add_defense_waypoints;
+            _managed_units = _managed_units + (units _grp);
+        };
+
+        if (count _squad5 > 0) then {
+            _grp = [_sector, _spawn_range * 2, _squad5, _spawn_range] call KPLIB_fnc_spawnRegularSquad;
+            _basepos = getpos (leader _grp);
+            [_grp, _basepos, _spawn_range * 0.5] spawn add_defense_waypoints;
+            _managed_units = _managed_units + (units _grp);
+        };
+
+        if (count _squad6 > 0) then {
+            _grp = [_sector, _spawn_range * 2, _squad6, _spawn_range] call KPLIB_fnc_spawnRegularSquad;
+            _basepos = getpos (leader _grp);
+            [_grp, _basepos, _spawn_range * 0.5] spawn add_defense_waypoints;
             _managed_units = _managed_units + (units _grp);
         };
 

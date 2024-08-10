@@ -2,6 +2,7 @@ scriptName "add_defense_waypoints";
 
 private _grp = _this select 0;
 private _flagpos = _this select 1;
+private _range = _this select 2;
 private _basepos = getpos (leader _grp);
 private _is_infantry = false;
 private _wpPositions = [];
@@ -19,11 +20,11 @@ sleep 1;
 
 if (_is_infantry) then {
     _wpPositions = [
-        _flagpos getPos [random 150, random [0, 36, 72]],
-        _flagpos getPos [random 150, random [72, 108, 144]],
-        _flagpos getPos [random 150, random [144, 180, 216]],
-        _flagpos getPos [random 150, random [216, 252, 288]],
-        _flagpos getPos [random 150, random [288, 324, 360]]
+        _flagpos getPos [random [_range * 0.33, _range * 0.66, _range], random [0, 36, 72]],
+        _flagpos getPos [random [_range * 0.33, _range * 0.66, _range], random [72, 108, 144]],
+        _flagpos getPos [random [_range * 0.33, _range * 0.66, _range], random [144, 180, 216]],
+        _flagpos getPos [random [_range * 0.33, _range * 0.66, _range], random [216, 252, 288]],
+        _flagpos getPos [random [_range * 0.33, _range * 0.66, _range], random [288, 324, 360]]
     ];
     _waypoint = _grp addWaypoint [_wpPositions select 0, 10];
     _waypoint setWaypointType "MOVE";
@@ -68,11 +69,11 @@ if (((units _grp) findIf {alive _x}) != -1) then {
     {doStop _x; _x doFollow leader _grp} foreach units _grp;
     sleep 1;
     _wpPositions = [
-        _basepos getPos [random 150, random [0, 36, 72]],
-        _basepos getPos [random 150, random [72, 108, 144]],
-        _basepos getPos [random 150, random [144, 180, 216]],
-        _basepos getPos [random 150, random [216, 252, 288]],
-        _basepos getPos [random 150, random [288, 324, 360]]
+        _basepos getPos [random [_range * 0.33, _range * 0.66, _range], random [0, 36, 72]],
+        _basepos getPos [random [_range * 0.33, _range * 0.66, _range], random [72, 108, 144]],
+        _basepos getPos [random [_range * 0.33, _range * 0.66, _range], random [144, 180, 216]],
+        _basepos getPos [random [_range * 0.33, _range * 0.66, _range], random [216, 252, 288]],
+        _basepos getPos [random [_range * 0.33, _range * 0.66, _range], random [288, 324, 360]]
     ];
     _waypoint = _grp addWaypoint [_wpPositions select 0, 10];
     _waypoint setWaypointType "SAD";
