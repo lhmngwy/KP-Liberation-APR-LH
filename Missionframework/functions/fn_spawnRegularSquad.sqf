@@ -27,7 +27,7 @@ if (_sector isEqualTo "") exitWith {["Empty string given"] call BIS_fnc_error; g
 
 private _selectedRange = random _range;
 if (_rangeMin != 0) then {
-    _selectedRange = random [_rangeMin, _range / 2, _range];
+    _selectedRange = random [_rangeMin, (_rangeMin + _range) / 2, _range];
 };
 
 // Get spawn position for squad
