@@ -3,7 +3,7 @@ params [
     ["_spawn_marker", "", [""]],
     ["_infOnly", false, [false]],
     ["_objective", [0, 0, 0], [[]], [3]],
-    ["_forceAir", false, [false]],
+    ["_forceAir", false, [false]]
 ];
 
 if (KPLIB_endgame == 1) exitWith {};
