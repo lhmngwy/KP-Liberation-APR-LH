@@ -222,10 +222,10 @@ KPLIB_cap_playerSide = 150;
 KPLIB_cap_enemySide = 300;
 
 // Cap for enemy battlegroups.
-KPLIB_cap_battlegroup = 300;
+KPLIB_cap_battlegroup = 350;
 
 // Cap for enemy patrols.
-KPLIB_cap_patrol = 300;
+KPLIB_cap_patrol = 350;
 
 // Size of enemy battlegroups.
 KPLIB_battlegroup_size = 6;
