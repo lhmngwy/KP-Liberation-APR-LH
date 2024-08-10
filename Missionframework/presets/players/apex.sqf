@@ -85,9 +85,6 @@ KPLIB_b_vehLight = [
     ["B_T_MRAP_01_F",100,0,50],                                         // Hunter
     ["B_T_MRAP_01_hmg_F",100,40,50],                                    // Hunter (HMG)
     ["B_T_MRAP_01_gmg_F",100,60,50],                                    // Hunter (GMG)
-    ["B_T_Truck_01_transport_F",100,0,100],                             // HEMTT Transport
-    ["B_T_Truck_01_covered_F",100,0,100],                               // HEMTT Transport (Covered)
-    ["B_T_Truck_01_flatbed_F",100,0,100],                               // HEMTT Transport (Flatbed)
     ["B_UGV_01_F",150,0,50],                                            // UGV Stomper
     ["B_UGV_01_rcws_F",150,40,50],                                      // UGV Stomper (RCWS)
     ["B_T_Boat_Transport_01_F",100,0,25],                               // Assault Boat
@@ -241,6 +238,9 @@ KPLIB_b_vehSupport = [
     ["ACE_Track",10,0,0],
     ["Land_CanisterFuel_F",0,0,2],
     ["B_T_APC_Tracked_01_CRV_F",500,250,350],                           // CRV-6e Bobcat
+    ["B_T_Truck_01_transport_F",100,0,100],                             // HEMTT Transport
+    ["B_T_Truck_01_covered_F",100,0,100],                               // HEMTT Transport (Covered)
+    ["B_T_Truck_01_flatbed_F",100,0,100],                               // HEMTT Transport (Flatbed)
     [(KPLIB_b_mobileRespawn select 1),200,0,100],                       // HEMTT Medevac
     ["B_T_Truck_01_Repair_F",325,0,75],                                 // HEMTT Repair
     ["B_T_Truck_01_fuel_F",125,0,275],                                  // HEMTT Fuel

@@ -82,14 +82,9 @@ KPLIB_b_vehLight = [
     ["I_E_Offroad_01_F",60,0,35],                                       // Offroad
     ["I_E_Offroad_01_covered_F",60,0,35],                               // Offroad (Covered)
     ["I_E_Offroad_01_comms_F",60,0,35],                                 // Offroad (Comms)
-    ["I_E_Van_02_vehicle_F",70,0,45],                                   // Transporter
-    ["I_E_Van_02_transport_MP_F",70,0,45],                              // Transporter (MP)
-    ["I_E_Van_02_transport_F",70,0,45],                                 // Transporter (Transporter)
     ["B_T_LSV_01_unarmed_F",75,0,50],                                   // Prowler
     ["B_T_LSV_01_armed_F",75,40,50],                                    // Prowler (HMG)
     ["B_T_LSV_01_AT_F",75,60,50],                                       // Prowler (AT)
-    ["I_E_Truck_02_transport_F",125,0,75],                              // Zamak Transport
-    ["I_E_Truck_02_F",125,0,75],                                        // Zamak Transport (Covered)
     ["B_UGV_01_F",150,0,50],                                            // UGV Stomper
     ["B_UGV_01_rcws_F",150,40,50],                                      // UGV Stomper (RCWS)
     ["B_T_Boat_Transport_01_F",100,0,25],                               // Assault Boat
@@ -241,7 +236,12 @@ KPLIB_b_vehSupport = [
     ["ACE_Wheel",10,0,0],
     ["ACE_Track",10,0,0],
     ["Land_CanisterFuel_F",0,0,2],
+    ["I_E_Van_02_vehicle_F",70,0,45],                                   // Transporter
+    ["I_E_Van_02_transport_MP_F",70,0,45],                              // Transporter (MP)
+    ["I_E_Van_02_transport_F",70,0,45],                                 // Transporter (Transporter)
     ["I_E_Van_02_medevac_F",150,0,80],                                  // Transporter (Ambulance)
+    ["I_E_Truck_02_transport_F",125,0,75],                              // Zamak Transport
+    ["I_E_Truck_02_F",125,0,75],                                        // Zamak Transport (Covered)
     [(KPLIB_b_mobileRespawn select 1),200,0,100],                       // Zamak Medevac
     ["I_E_Truck_02_Box_F",325,0,75],                                    // Zamak Repair
     ["I_E_Truck_02_fuel_F",125,0,275],                                  // Zamak Fuel
