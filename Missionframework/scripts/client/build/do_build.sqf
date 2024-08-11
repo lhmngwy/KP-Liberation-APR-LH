@@ -339,6 +339,9 @@ while { true } do {
                 sleep 0.3;
                 _vehicle allowDamage true;
                 _vehicle setDamage 0;
+                if ((toLowerANSI _classname) in KPLIB_allLandVeh_classes) then {
+                    _vehicle remoteExec ["AIDC_fnc_init"];
+                };
                 if ((toLowerANSI _classname) in KPLIB_o_allVeh_classes) then {
                     _vehicle setVariable ["KPLIB_captured", true, true];
                 };

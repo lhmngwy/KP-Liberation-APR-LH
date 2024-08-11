@@ -122,4 +122,6 @@ _newvehicle allowDamage true;
 _newvehicle setDamage 0;
 _newVehicle lock false;
 
+_newVehicle remoteExec ["AIDC_fnc_init"];
+
 _newvehicle

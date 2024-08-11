@@ -45,12 +45,12 @@ Vcm_Settings =
 	VCM_ADVANCEDMOVEMENT = false; //True means AI will actively generate waypoints if no other waypoints are generated for the AI group (2 or more). False disables this advanced movements.
 	VCM_FRMCHANGE = false; //AI GROUPS WILL CHANGE FORMATIONS TO THEIR BEST GUESS.
 	VCM_SKILLCHANGE = false; //AI Groups will have their skills changed by Vcom.
-	VCM_CARGOCHNG = true; //If true, Vcom will handle disembarking/re-embarking orders instead of vanilla. This is with the intention to prevent the endless embark/disembark loops AI are given.	
+	VCM_CARGOCHNG = false; //If true, Vcom will handle disembarking/re-embarking orders instead of vanilla. This is with the intention to prevent the endless embark/disembark loops AI are given.	
 	VCM_TURRETUNLOAD = false;//If false = Prevents AI vehicle turret positions from leaving a vehicle just beecause it is slightly damaged. Example: leaving a tank when just the tracks are damaged.	
 	VCM_DISEMBARKRANGE = 125; //How far AI will disembark from their enemies. If the vehicle is damaged, they will disembark.
 	VCM_AISNIPERS = false; //Special sniper AI
 	VCM_AISUPPRESS = false; //AI will attack from further away with primary weapons to suppress enemies
-	Vcm_DrivingActivated = true; //AI will use experimental driving improvements.
+	Vcm_DrivingActivated = false; //AI will use experimental driving improvements.
 	Vcm_PlayerAISkills = false; //AI in a group, that a players leads, can have their skills changed separately.
 	Vcm_GrenadeChance = 10; 	//Chance the AI will throw a grenade.
 	Vcm_GrenadeCoolDown = 60; 	//Cooldown between each grenade throw. This does not impact vanilla throwing.	

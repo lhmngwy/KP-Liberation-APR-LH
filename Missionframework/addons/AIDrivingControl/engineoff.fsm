@@ -1,0 +1,217 @@
+/*%FSM<COMPILE "C:\Program Files (x86)\Bohemia Interactive\Tools\FSM Editor Personal Edition\scriptedFSM.cfg, Engine Off on Idle">*/
+/*%FSM<HEAD>*/
+/*
+item0[] = {"Engine_Off",0,4346,-100.000000,-200.000000,0.000000,-150.000000,0.000000,"Engine Off"};
+item1[] = {"Delay",4,218,-100.000000,-100.000000,0.000000,-50.000000,0.000000,"Delay"};
+item2[] = {"Vehicle_stopped",2,250,25.000000,-100.000000,125.000000,-50.000000,0.000000,"Vehicle stopped"};
+item3[] = {"No",8,218,-100.000000,0.000000,0.000000,50.000000,0.000000,"No"};
+item4[] = {"Return",2,250,-225.000000,-100.000000,-125.000000,-50.000000,0.000000,"Return"};
+item5[] = {"Yes",4,218,150.000000,0.000000,250.000000,50.000000,1.000000,"Yes"};
+item6[] = {"END",1,250,-350.000000,0.000000,-250.000000,50.000000,0.000000,"END"};
+item7[] = {"No_driver",4,218,-350.000000,-100.000000,-250.000000,-50.000000,1.000000,"No driver"};
+item8[] = {"Timeout",2,250,-100.000000,200.000000,0.000000,250.000000,0.000000,"Timeout"};
+item9[] = {"Yes",4,218,25.000000,300.000000,125.000000,350.000000,1.000000,"Yes"};
+item10[] = {"No",8,218,-225.000000,300.000000,-125.000000,350.000000,0.000000,"No"};
+item11[] = {"Return_1",2,250,-225.000000,100.000000,-125.000000,150.000000,0.000000,"Return"};
+link0[] = {0,1};
+link1[] = {1,2};
+link2[] = {2,3};
+link3[] = {2,5};
+link4[] = {3,4};
+link5[] = {4,1};
+link6[] = {4,7};
+link7[] = {5,8};
+link8[] = {7,6};
+link9[] = {8,9};
+link10[] = {8,10};
+link11[] = {9,11};
+link12[] = {10,11};
+link13[] = {11,1};
+link14[] = {11,7};
+globals[] = {25.000000,1,0,0,16777215,640,480,1,136,6316128,1,-588.884033,567.409546,662.345947,-390.911499,1010,920,1};
+window[] = {2,-1,-1,-1,-1,603,78,1758,78,3,1028};
+*//*%FSM</HEAD>*/
+class FSM
+{
+  fsmName = "Engine Off on Idle";
+  class States
+  {
+    /*%FSM<STATE "Engine_Off">*/
+    class Engine_Off
+    {
+      name = "Engine_Off";
+      init = /*%FSM<STATEINIT""">*/"//Init" \n
+       "params [""_car"", ""_role"", ""_driver""];" \n
+       "" \n
+       "private _delay = 1;" \n
+       "private _timeNow = time;" \n
+       "private _stallshort = [""STEALTH"",""COMBAT""];" \n
+       "private _stalltimeidle = 0;" \n
+       "private _t = 0;" \n
+       "" \n
+       "//hint str _this;" \n
+       "" \n
+       "//Exit non-wheeled, non-driver, player as driver, NOAIDRIVINGCONTROL variable and non-local drivers" \n
+       "if (!(_car isKindOf ""Car"" || _car isKindOf ""Motorcycle"" || _car isKindOf ""Tank"") || {!(_role isEqualTo ""driver"")} || {isPlayer _driver} || {_car getVariable ""NOAIDRIVINGCONTROL""} || {!(local _driver)}) exitWith{};"/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "Delay">*/
+        class Delay
+        {
+          priority = 0.000000;
+          to="Vehicle_stopped";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"(time - _timeNow) > _delay"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "Vehicle_stopped">*/
+    class Vehicle_stopped
+    {
+      name = "Vehicle_stopped";
+      init = /*%FSM<STATEINIT""">*/"//hint str (speed _car);"/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "Yes">*/
+        class Yes
+        {
+          priority = 1.000000;
+          to="Timeout";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"(speed _car < 1)"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/"_stalltimeidle = [10 + (random 20), 3 + (random 7)] select ((behaviour _driver) in _stallshort);" \n
+           "//hint str [_stalltimeidle, _t];"/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "No">*/
+        class No
+        {
+          priority = 0.000000;
+          to="Return";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "Return">*/
+    class Return
+    {
+      name = "Return";
+      init = /*%FSM<STATEINIT""">*/"_timeNow = time;" \n
+       "_t = 0;"/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "No_driver">*/
+        class No_driver
+        {
+          priority = 1.000000;
+          to="END";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"!(alive _driver) || !(_driver isEqualTo (driver (objectParent _driver)))"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "Delay">*/
+        class Delay
+        {
+          priority = 0.000000;
+          to="Vehicle_stopped";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"(time - _timeNow) > _delay"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "END">*/
+    class END
+    {
+      name = "END";
+      init = /*%FSM<STATEINIT""">*/"//hint ""bye"";"/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "Timeout">*/
+    class Timeout
+    {
+      name = "Timeout";
+      init = /*%FSM<STATEINIT""">*/"_t = _t + 1;"/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "Yes">*/
+        class Yes
+        {
+          priority = 1.000000;
+          to="Return_1";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"_t >= _stalltimeidle"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/"_car engineOn false;" \n
+           "_t = 0;"/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "No">*/
+        class No
+        {
+          priority = 0.000000;
+          to="Return_1";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "Return_1">*/
+    class Return_1
+    {
+      name = "Return_1";
+      init = /*%FSM<STATEINIT""">*/"_timeNow = time;"/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "No_driver">*/
+        class No_driver
+        {
+          priority = 1.000000;
+          to="END";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"!(alive _driver) || !(_driver isEqualTo (driver (objectParent _driver)))"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "Delay">*/
+        class Delay
+        {
+          priority = 0.000000;
+          to="Vehicle_stopped";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"(time - _timeNow) > _delay"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+  };
+  initState="Engine_Off";
+  finalStates[] =
+  {
+    "END",
+  };
+};
+/*%FSM</COMPILE>*/

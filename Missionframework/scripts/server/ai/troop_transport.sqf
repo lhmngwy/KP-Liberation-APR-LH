@@ -24,6 +24,11 @@ private _transVehWp = _transGrp addWaypoint [_objective, 0,0];
 _transVehWp setWaypointType "TR UNLOAD";
 _transVehWp setWaypointCompletionRadius _unload_distance;
 
+private _infCargo = fullCrew [_transVeh, "cargo"];
+private _infGrp = group ((_infCargo select 0) select 0);
+[_infGrp, _objective] spawn battlegroup_ai;
+_infGrp setVariable ["KPLIB_isBattleGroup", true];
+
 // Wait until at objective, dead or empty
 waitUntil {
     sleep 0.2;
@@ -32,11 +37,6 @@ waitUntil {
     (count (fullCrew [_transVeh, "cargo"]) == 0) ||
     (((_transVeh distance _objective) < _unload_distance) && !(surfaceIsWater (getpos _transVeh)))
 };
-
-private _infCargo = fullCrew [_transVeh, "cargo"];
-private _infGrp = group ((_infCargo select 0) select 0);
-[_infGrp, _objective] spawn battlegroup_ai;
-_infGrp setVariable ["KPLIB_isBattleGroup", true];
 
 sleep 1;
 

@@ -35,6 +35,7 @@ execVM "scripts\client\ui\ui_manager.sqf";
 execVM "scripts\client\ui\tutorial_manager.sqf";
 execVM "scripts\client\markers\update_production_sites.sqf";
 
+execVM "addons\AIDrivingControl\init.sqf";
 execVM "addons\PAR\fn_init.sqf";
 
 if (KPLIB_param_mapMarkers) then { execVM "addons\SoliderTracker\QS_icons.sqf" };

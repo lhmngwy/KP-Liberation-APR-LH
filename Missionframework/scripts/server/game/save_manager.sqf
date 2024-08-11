@@ -582,6 +582,10 @@ if (!isNil "_saveData") then {
                 }];
             };
 
+            if ((toLowerANSI _class) in KPLIB_allLandVeh_classes) then {
+                _object remoteExec ["AIDC_fnc_init"];
+            };
+
             // Set enemy vehicle as captured
             if ((toLowerANSI _class) in KPLIB_o_allVeh_classes) then {
                 _object setVariable ["KPLIB_captured", true, true];

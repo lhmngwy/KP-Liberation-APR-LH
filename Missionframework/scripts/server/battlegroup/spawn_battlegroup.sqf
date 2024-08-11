@@ -71,7 +71,7 @@ if !(_spawn_marker isEqualTo "") then {
                     [_nextgrp] call battlegroup_ai;
                 };
             };
-            sleep 20;
+            //sleep 20;
         } forEach _selected_opfor_battlegroup;
 
         if ((KPLIB_param_aggressivity > 0.9) && ((random (KPLIB_enemyReadiness max 50) > 25) || _forceAir)) then {
