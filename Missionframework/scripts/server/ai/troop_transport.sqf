@@ -85,7 +85,7 @@ if ((alive _transVeh)) then {
             _transVehWp setWaypointSpeed "NORMAL";
             _transVehWp setWaypointBehaviour "AWARE";
             _transVehWp setWaypointCombatMode "YELLOW";
-            _transVehWp setWaypointCompletionRadius 50;
+            _transVehWp setWaypointCompletionRadius 100;
 
             _transVehWp = _transGrp addWaypoint [_objective, 100];
             _transVehWp setWaypointType "SAD";

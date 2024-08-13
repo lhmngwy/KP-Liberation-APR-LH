@@ -138,7 +138,7 @@ if (count _magazines > 1 || ((count _magazines == 1) && {toLower ((_magazines se
     _pilot_wp_combat_1 setWaypointSpeed "NORMAL";
     _pilot_wp_combat_1 setWaypointBehaviour "AWARE";
     _pilot_wp_combat_1 setWaypointCombatMode "YELLOW";
-    _pilot_wp_combat_1 setWaypointCompletionRadius 200;
+    _pilot_wp_combat_1 setWaypointCompletionRadius 300;
 
     _pilot_wp_combat_1 = _pilot_group addWaypoint [_objective, 100];
     _pilot_wp_combat_1 setWaypointType "SAD";

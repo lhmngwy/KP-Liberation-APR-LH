@@ -26,10 +26,10 @@ if (_vehicle == vehicle leader _grp) then {
     _waypoint setWaypointCompletionRadius 30;
 };
 if (_vehicle isKindOf "LandVehicle") then {
-    _waypoint setWaypointCompletionRadius 50;
+    _waypoint setWaypointCompletionRadius 100;
 };
 if (_vehicle isKindOf "Air") then {
-    _waypoint setWaypointCompletionRadius 200;
+    _waypoint setWaypointCompletionRadius 300;
 };
 
 _waypoint = _grp addWaypoint [_objective, 100];
