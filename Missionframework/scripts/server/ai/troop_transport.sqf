@@ -26,8 +26,6 @@ _transVehWp setWaypointCompletionRadius _unload_distance;
 
 private _infCargo = fullCrew [_transVeh, "cargo"];
 private _infGrp = group ((_infCargo select 0) select 0);
-[_infGrp, _objective] spawn battlegroup_ai;
-_infGrp setVariable ["KPLIB_isBattleGroup", true];
 
 // Wait until at objective, dead or empty
 waitUntil {
@@ -52,6 +50,24 @@ if ((alive _transVeh)) then {
         {unassignVehicle _transVeh} forEach (units _infGrp);
         _infGrp leaveVehicle _transVeh;
         (units _infGrp) allowGetIn false;
+
+        _infWp = _infGrp addWaypoint [_objective, 100];
+        _infWp setWaypointType "MOVE";
+        _infWp setWaypointSpeed "NORMAL";
+        _infWp setWaypointBehaviour "AWARE";
+        _infWp setWaypointCombatMode "YELLOW";
+        _infWp setWaypointCompletionRadius 30;
+
+        _infWp = _infGrp addWaypoint [_objective, 100];
+        _infWp setWaypointType "SAD";
+        _infWp = _infGrp addWaypoint [_objective, 100];
+        _infWp setWaypointType "SAD";
+        _infWp = _infGrp addWaypoint [_objective, 100];
+        _infWp setWaypointType "SAD";
+        _infWp = _infGrp addWaypoint [_objective, 100];
+        _infWp setWaypointType "CYCLE";
+
+        _infGrp setVariable ["KPLIB_isBattleGroup", true];
     };
 
     if (alive (driver _transVeh)) then {
@@ -65,15 +81,18 @@ if ((alive _transVeh)) then {
         // If vehicle has gunner, search and destroy, else go home and delete vehicle
         if !(isNull gunner _transVeh) then {
             _transVehWp = _transGrp addWaypoint [_objective, 100];
-            _transVehWp setWaypointType "SAD";
+            _transVehWp setWaypointType "MOVE";
             _transVehWp setWaypointSpeed "NORMAL";
-            _transVehWp setWaypointBehaviour "COMBAT";
-            _transVehWp setWaypointCombatMode "RED";
-            _transVehWp setWaypointCompletionRadius 30;
+            _transVehWp setWaypointBehaviour "AWARE";
+            _transVehWp setWaypointCombatMode "YELLOW";
+            _transVehWp setWaypointCompletionRadius 50;
 
             _transVehWp = _transGrp addWaypoint [_objective, 100];
             _transVehWp setWaypointType "SAD";
-
+            _transVehWp = _transGrp addWaypoint [_objective, 100];
+            _transVehWp setWaypointType "SAD";
+            _transVehWp = _transGrp addWaypoint [_objective, 100];
+            _transVehWp setWaypointType "SAD";
             _transVehWp = _transGrp addWaypoint [_objective, 100];
             _transVehWp setWaypointType "CYCLE";
         } else {

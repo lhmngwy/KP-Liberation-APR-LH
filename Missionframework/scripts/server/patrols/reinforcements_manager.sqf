@@ -32,7 +32,8 @@ if (KPLIB_enemyReadiness > 15) then {
                 reinforcements_set = true;
                 ["lib_reinforcements",[markertext _targetsector]] remoteExec ["bis_fnc_shownotification"];
                 if ((random KPLIB_enemyReadiness) > (20 + (30 / KPLIB_param_aggressivity))) then {
-                    [_targetsector] spawn send_paratroopers;
+                    _spawnPoint = ([KPLIB_sectors_airSpawn, [markerpos _targetsector], {(markerPos _x) distance _input0}, "ASCEND"] call BIS_fnc_sortBy) select 0;
+                    [markerpos _spawnPoint, markerpos _targetsector] spawn send_paratroopers;
                 };
                 stats_reinforcements_called = stats_reinforcements_called + 1;
             };

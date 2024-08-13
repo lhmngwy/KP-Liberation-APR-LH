@@ -25,9 +25,10 @@ private _mineList = [];
 		if !(_currentBackPack isEqualTo "") then 
 		{
 			_class = [_currentBackPack] call VCM_fnc_Classname;
-			private _parents = [_class,true] call BIS_fnc_returnParents;
-			if (!(isNil "_parents")) then 
-			{
+			if !(typeName _class == "STRING") then {
+				private _parents = [_class,true] call BIS_fnc_returnParents;
+				if (!(isNil "_parents")) then 
+				{
 					if (("StaticWeapon" in _parents) || {("Weapon_Bag_Base" in _parents)}) then 
 					{
 						private _VCOM_HASUAV = false;
@@ -35,6 +36,7 @@ private _mineList = [];
 						_staticList pushBack [_x,_currentBackPack,_VCOM_HASUAV];
 					};
 				};
+			};
 		};
 		//END STATIC WEAPON
 		

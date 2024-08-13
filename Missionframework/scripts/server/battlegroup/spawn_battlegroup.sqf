@@ -55,7 +55,8 @@ if !(_spawn_marker isEqualTo "") then {
 
         {
             if ((_x in KPLIB_o_helicopters) && (_x in KPLIB_o_troopTransports)) then {
-                [_objective, _x] spawn send_paratroopers;
+                [markerpos _spawn_marker, _objective, _x] spawn send_paratroopers;
+                sleep 0.5;
             } else {
                 _vehicle = [markerpos _spawn_marker, _x] call KPLIB_fnc_spawnVehicle;
 
@@ -71,7 +72,6 @@ if !(_spawn_marker isEqualTo "") then {
                     [_nextgrp] call battlegroup_ai;
                 };
             };
-            //sleep 20;
         } forEach _selected_opfor_battlegroup;
 
         if ((KPLIB_param_aggressivity > 0.9) && ((random (KPLIB_enemyReadiness max 50) > 25) || _forceAir)) then {

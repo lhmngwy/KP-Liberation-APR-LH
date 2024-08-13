@@ -9,6 +9,8 @@ if ((_objective select 0) == 0 && (_objective select 1) == 0 && (_objective sele
     _objective = [getPos (leader _grp)] call KPLIB_fnc_getNearestBluforObjective;
 };
 
+private _vehicle = vehicle leader _grp;
+
 [_objective] remoteExec ["remote_call_incoming"];
 
 private _waypoint = [];
@@ -20,7 +22,15 @@ _waypoint setWaypointType "MOVE";
 _waypoint setWaypointSpeed "NORMAL";
 _waypoint setWaypointBehaviour "AWARE";
 _waypoint setWaypointCombatMode "YELLOW";
-_waypoint setWaypointCompletionRadius 30;
+if (_vehicle == vehicle leader _grp) then {
+    _waypoint setWaypointCompletionRadius 30;
+};
+if (_vehicle isKindOf "LandVehicle") then {
+    _waypoint setWaypointCompletionRadius 50;
+};
+if (_vehicle isKindOf "Air") then {
+    _waypoint setWaypointCompletionRadius 200;
+};
 
 _waypoint = _grp addWaypoint [_objective, 100];
 _waypoint setWaypointType "SAD";
