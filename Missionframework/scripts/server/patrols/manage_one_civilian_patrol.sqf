@@ -43,6 +43,7 @@ while { KPLIB_endgame == 0 } do {
 
             [selectRandom KPLIB_c_units, _spawnpos, _grp, "PRIVATE", 0.5] call KPLIB_fnc_createManagedUnit;
             _civveh = (selectRandom KPLIB_c_vehicles) createVehicle _spawnpos;
+            _civveh remoteExec ["AIDC_fnc_init"];
             _civveh setpos _spawnpos;
             _civveh addMPEventHandler ["MPKilled", {
                 params ["_unit", "_killer"];
