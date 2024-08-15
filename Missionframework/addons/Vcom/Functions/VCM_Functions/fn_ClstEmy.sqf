@@ -13,7 +13,7 @@
 		if none found, ARRAY
 */
 
-if (_this isEqualType []) exitWith {_rtrn = [0,0,0];_rtrn};
+if (_this isEqualType []) exitWith {_rtrn = [];_rtrn};
 
 private _unitSide = (side _this);
 private _a1 = [];
@@ -23,6 +23,6 @@ private _a1 = [];
 } forEach allUnits;
 
 private _rtrn = [_a1,_this,true] call VCM_fnc_ClstObj;
-if (isNil "_rtrn") then {_rtrn = [0,0,0]};
+if (isNil "_rtrn") then {_rtrn = []};
 
 _rtrn

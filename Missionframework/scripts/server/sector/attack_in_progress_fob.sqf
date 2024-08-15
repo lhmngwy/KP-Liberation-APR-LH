@@ -17,6 +17,8 @@ if ( KPLIB_param_bluforDefenders ) then {
 
 sleep 60;
 
+private _fobMarker = createMarker ["KPLIB_fobUnderAttack", _thispos];
+KPLIB_sectorsUnderAttack pushBack _fobMarker;
 KPLIB_sectorsUnderAttack pushBack _thispos;
 publicVariable "KPLIB_sectorsUnderAttack";
 
@@ -31,6 +33,8 @@ if ( _ownership == KPLIB_side_player ) exitWith {
 
 [_thispos, 1] remoteExec ["remote_call_fob"];
 _attacktime = KPLIB_vulnerability_timer;
+
+[_fobMarker] remoteExec ["reinforcements_remote_call",2];
 
 while { _attacktime > 0 && ( _ownership == KPLIB_side_enemy || _ownership == KPLIB_side_resistance ) } do {
     _ownership = [ _thispos ] call KPLIB_fnc_getSectorOwnership;
@@ -65,8 +69,9 @@ if ( KPLIB_endgame == 0 ) then {
     };
 };
 
-KPLIB_sectorsUnderAttack = KPLIB_sectorsUnderAttack - [_thispos];
+KPLIB_sectorsUnderAttack = KPLIB_sectorsUnderAttack - [_thispos] - [_fobMarker];
 publicVariable "KPLIB_sectorsUnderAttack";
+deleteMarker _fobMarker;
 
 sleep 60;
 

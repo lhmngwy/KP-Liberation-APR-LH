@@ -1,12 +1,12 @@
 scriptName "manage_patrols";
 
-_combat_triggers = [0,20,40,50,65,80,95];
-if ( KPLIB_param_unitcap < 0.9 ) then { _combat_triggers = [0,20,45,90]; };
-if ( KPLIB_param_unitcap > 1.3 ) then { _combat_triggers = [0,15,25,40,65,75,85,95]; };
+_combat_triggers = [0,5,10,20,40,50,65,80];
+if ( KPLIB_param_unitcap < 0.9 ) then { _combat_triggers = [0,5,20,45,85]; };
+if ( KPLIB_param_unitcap > 1.3 ) then { _combat_triggers = [0,5,15,25,40,65,75,85]; };
 
-_combat_triggers_infantry = [15,35,45,60,70,85];
-if ( KPLIB_param_unitcap < 0.9 ) then { _combat_triggers_infantry = [0,15,40,80]; };
-if ( KPLIB_param_unitcap > 1.3 ) then { _combat_triggers_infantry = [0,10,20,35,55,70,80,90]; };
+_combat_triggers_infantry = [0,5,15,35,45,60,70,85];
+if ( KPLIB_param_unitcap < 0.9 ) then { _combat_triggers_infantry = [0,5,15,40,80]; };
+if ( KPLIB_param_unitcap > 1.3 ) then { _combat_triggers_infantry = [0,5,10,20,35,55,70,80]; };
 
 sleep 5;
 

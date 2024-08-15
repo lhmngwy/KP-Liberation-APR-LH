@@ -24,6 +24,8 @@ if !(_spawn_marker isEqualTo "") then {
 
     [_spawn_marker] remoteExec ["remote_call_battlegroup"];
 
+    sleep 10;
+
     if (worldName in KPLIB_battlegroup_clearance) then {
         [markerPos _spawn_marker, 15] call KPLIB_fnc_createClearance;
     };
@@ -44,6 +46,7 @@ if !(_spawn_marker isEqualTo "") then {
             };
             [_grp] call KPLIB_fnc_LAMBS_enableReinforcements;
             [_grp] call battlegroup_ai;
+            [_objective] remoteExec ["remote_call_incoming"];
             _grp setVariable ["KPLIB_isBattleGroup",true];
         };
     } else {
@@ -67,10 +70,11 @@ if !(_spawn_marker isEqualTo "") then {
                 _bg_groups pushback _nextgrp;
 
                 if (_x in KPLIB_o_troopTransports) then {
-                    [_vehicle] spawn troop_transport;
+                    [_vehicle, _objective] spawn troop_transport;
                 } else {
                     [_nextgrp] call battlegroup_ai;
                 };
+                [_objective] remoteExec ["remote_call_incoming"];
             };
         } forEach _selected_opfor_battlegroup;
 

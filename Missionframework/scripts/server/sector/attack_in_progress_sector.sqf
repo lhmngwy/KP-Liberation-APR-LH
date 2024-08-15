@@ -34,6 +34,10 @@ if ( _ownership == KPLIB_side_player ) exitWith {
 [_sector, 1] remoteExec ["remote_call_sector"];
 _attacktime = KPLIB_vulnerability_timer;
 
+if ((_sector in KPLIB_sectors_factory) || (_sector in KPLIB_sectors_city) || (_sector in KPLIB_sectors_capital) || (_sector in KPLIB_sectors_military)) then {
+    [_sector] remoteExec ["reinforcements_remote_call",2];
+};
+
 while { _attacktime > 0 && ( _ownership == KPLIB_side_enemy || _ownership == KPLIB_side_resistance ) } do {
     _ownership = [markerpos _sector] call KPLIB_fnc_getSectorOwnership;
     _attacktime = _attacktime - 1;

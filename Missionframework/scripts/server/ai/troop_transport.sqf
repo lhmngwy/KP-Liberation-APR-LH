@@ -1,7 +1,7 @@
 params [
     ["_transVeh", objNull, [objNull]],
-    ["_start_pos", [0, 0, 0], [[]], [3]],
-    ["_objective", [0, 0, 0], [[]], [3]]
+    ["_objective", [0, 0, 0], [[]], [3]],
+    ["_start_pos", [0, 0, 0], [[]], [3]]
 ];
 
 if (isNull _transVeh) exitWith {};
@@ -10,11 +10,11 @@ sleep 1;
 private _transGrp = (group (driver _transVeh));
 private _unload_distance = KPLIB_range_sectorCapture + random KPLIB_range_sectorCapture;
 
-if ((_start_pos select 0) == 0 && (_start_pos select 1) == 0 && (_start_pos select 2) == 0) then {
-    _start_pos = getpos _transVeh;
-};
 if ((_objective select 0) == 0 && (_objective select 1) == 0 && (_objective select 2) == 0) then {
     _objective = [getpos _transVeh] call KPLIB_fnc_getNearestBluforObjective;
+};
+if ((_start_pos select 0) == 0 && (_start_pos select 1) == 0 && (_start_pos select 2) == 0) then {
+    _start_pos = getpos _transVeh;
 };
 
 { deleteWaypoint _x } forEachReversed waypoints _transGrp;
@@ -60,6 +60,7 @@ if ((alive _transVeh)) then {
 
         _infWp = _infGrp addWaypoint [_objective, 100];
         _infWp setWaypointType "SAD";
+        _infWp setWaypointBehaviour "COMBAT";
         _infWp = _infGrp addWaypoint [_objective, 100];
         _infWp setWaypointType "SAD";
         _infWp = _infGrp addWaypoint [_objective, 100];
@@ -81,14 +82,16 @@ if ((alive _transVeh)) then {
         // If vehicle has gunner, search and destroy, else go home and delete vehicle
         if !(isNull gunner _transVeh) then {
             _transVehWp = _transGrp addWaypoint [_objective, 100];
-            _transVehWp setWaypointType "MOVE";
+            _transVehWp setWaypointType "SAD";
             _transVehWp setWaypointSpeed "NORMAL";
-            _transVehWp setWaypointBehaviour "AWARE";
-            _transVehWp setWaypointCombatMode "YELLOW";
+            _transVehWp setWaypointBehaviour "COMBAT";
+            _transVehWp setWaypointCombatMode "RED";
             _transVehWp setWaypointCompletionRadius 100;
 
             _transVehWp = _transGrp addWaypoint [_objective, 100];
             _transVehWp setWaypointType "SAD";
+            _transVehWp setWaypointBehaviour "COMBAT";
+            _transVehWp setWaypointCombatMode "RED";
             _transVehWp = _transGrp addWaypoint [_objective, 100];
             _transVehWp setWaypointType "SAD";
             _transVehWp = _transGrp addWaypoint [_objective, 100];

@@ -7,6 +7,8 @@ params [
 if !(isServer) exitWith {};
 
 if (((_objective select 0) == 0 && (_objective select 1) == 0 && (_objective select 2) == 0) || KPLIB_o_helicopters isEqualTo []) exitWith {false};
+
+[_objective] remoteExec ["remote_call_incoming"];
     
 if (_chopper_type == "") then {
     _chopper_type = selectRandom KPLIB_o_helicopters;
@@ -113,6 +115,7 @@ _para_wp_combat_1 setWaypointCombatMode "YELLOW";
 _para_wp_combat_1 setWaypointCompletionRadius 30;
 
 _para_wp_combat_1 = _para_group addWaypoint [_objective, 100];
+_para_wp_combat_1 setWaypointBehaviour "COMBAT";
 _para_wp_combat_1 setWaypointType "SAD";
 _para_wp_combat_1 = _para_group addWaypoint [_objective, 100];
 _para_wp_combat_1 setWaypointType "SAD";
@@ -127,26 +130,26 @@ sleep 4;
 
 {deleteWaypoint _x} forEachReversed waypoints _pilot_group;
 
-_newVehicle forceSpeed -1;
-
 _pilot setSkill _pilotSkill;
 
 _magazines = magazinesAllTurrets [_newVehicle, true];
 if (count _magazines > 1 || ((count _magazines == 1) && {toLower ((_magazines select 0) select 0) find "cmflare" == -1})) then {
     _pilot_wp_combat_1 = _pilot_group addWaypoint [_objective, 100];
-    _pilot_wp_combat_1 setWaypointType "MOVE";
+    _pilot_wp_combat_1 setWaypointType "SAD";
     _pilot_wp_combat_1 setWaypointSpeed "NORMAL";
-    _pilot_wp_combat_1 setWaypointBehaviour "AWARE";
-    _pilot_wp_combat_1 setWaypointCombatMode "YELLOW";
+    _pilot_wp_combat_1 setWaypointBehaviour "COMBAT";
+    _pilot_wp_combat_1 setWaypointCombatMode "RED";
     _pilot_wp_combat_1 setWaypointCompletionRadius 300;
 
-    _pilot_wp_combat_1 = _pilot_group addWaypoint [_objective, 100];
+    _pilot_wp_combat_1 = _pilot_group addWaypoint [_objective, 300];
     _pilot_wp_combat_1 setWaypointType "SAD";
-    _pilot_wp_combat_1 = _pilot_group addWaypoint [_objective, 100];
+    _pilot_wp_combat_1 setWaypointBehaviour "COMBAT";
+    _pilot_wp_combat_1 setWaypointCombatMode "RED";
+    _pilot_wp_combat_1 = _pilot_group addWaypoint [_objective, 300];
     _pilot_wp_combat_1 setWaypointType "SAD";
-    _pilot_wp_combat_1 = _pilot_group addWaypoint [_objective, 100];
+    _pilot_wp_combat_1 = _pilot_group addWaypoint [_objective, 300];
     _pilot_wp_combat_1 setWaypointType "SAD";
-    _pilot_wp_combat_1 = _pilot_group addWaypoint [_objective, 100];
+    _pilot_wp_combat_1 = _pilot_group addWaypoint [_objective, 300];
     _pilot_wp_combat_1 setWaypointType "CYCLE";
 } else {
     _pilot_wp_rtb = _pilot_group addWaypoint [_spawnPos, 100];

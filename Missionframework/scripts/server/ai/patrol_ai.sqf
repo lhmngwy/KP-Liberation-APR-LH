@@ -14,23 +14,9 @@ while { count (units _grp) > 0 } do {
 
         _vehicle = objectParent (leader _grp);
         if (!(isNull _vehicle) && ((typeOf _vehicle) in KPLIB_o_troopTransports)) then {
-            [_vehicle, _patrol_startpos, markerpos reinforcements_sector_under_attack] spawn troop_transport;
+            [_vehicle, markerpos reinforcements_sector_under_attack, _patrol_startpos] spawn troop_transport;
         } else {
-            _waypoint = _grp addWaypoint [markerpos reinforcements_sector_under_attack, 50];
-            _waypoint setWaypointType "MOVE";
-            _waypoint setWaypointSpeed "FULL";
-            _waypoint setWaypointBehaviour "SAFE";
-            _waypoint setWaypointCombatMode "YELLOW";
-            _waypoint setWaypointCompletionRadius 30;
-            _waypoint = _grp addWaypoint [markerpos reinforcements_sector_under_attack, 50];
-            _waypoint setWaypointSpeed "LIMITED";
-            _waypoint setWaypointType "SAD";
-            _waypoint = _grp addWaypoint [markerpos reinforcements_sector_under_attack, 50];
-            _waypoint setWaypointSpeed "LIMITED";
-            _waypoint setWaypointType "SAD";
-            _waypoint = _grp addWaypoint [markerpos reinforcements_sector_under_attack, 50];
-            _waypoint setWaypointSpeed "LIMITED";
-            _waypoint setWaypointType "CYCLE";
+            [_grp, markerpos reinforcements_sector_under_attack] call battlegroup_ai;
         };
 
         sleep 300;
