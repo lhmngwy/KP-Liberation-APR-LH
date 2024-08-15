@@ -38,7 +38,10 @@ _attacktime = KPLIB_vulnerability_timer;
 
 while { _attacktime > 0 && ( _ownership == KPLIB_side_enemy || _ownership == KPLIB_side_resistance ) } do {
     _ownership = [ _thispos ] call KPLIB_fnc_getSectorOwnership;
-    _attacktime = _attacktime - 1;
+    _blufor_count = (([_thispos, KPLIB_range_sectorCapture, KPLIB_side_player] call KPLIB_fnc_getUnitsCount));
+    if (_blufor_count == 0) then {
+        _attacktime = _attacktime - 1;
+    };
     sleep 1;
 };
 
