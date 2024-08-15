@@ -35,10 +35,29 @@ if (KPLIB_enemyReadiness > 15) then {
             reinforcements_sector_under_attack = _targetsector;
             reinforcements_set = true;
             ["lib_reinforcements",[markertext _targetsector]] remoteExec ["bis_fnc_shownotification"];
-            if ((random KPLIB_enemyReadiness) > (20 + (30 / KPLIB_param_aggressivity))) then {
-                sleep 10;
-                _spawnPoint = ([KPLIB_sectors_airSpawn, [markerpos _targetsector], {(markerPos _x) distance _input0}, "ASCEND"] call BIS_fnc_sortBy) select 0;
-                [markerpos _spawnPoint, markerpos _targetsector] spawn send_paratroopers;
+            _spawn_marker = [1000, 2200, false, [0,0,0]] call KPLIB_fnc_getOpforSpawnPoint;
+            _vehicle_pool = [KPLIB_o_battleGrpVehicles, KPLIB_o_battleGrpVehiclesLight] select (KPLIB_enemyReadiness < 40);
+            _pilots = count (allPlayers select { (objectParent _x) isKindOf "Air" && (driver vehicle _x) == _x });
+            _heli_chances = ((floor linearConversion [25, 100, KPLIB_enemyReadiness, 1, 3]) max 1);
+            _i = 0;
+            while { i < _heli_chances } do {
+                _vehicle = selectRandom _vehicle_pool;
+                if (_vehicle in KPLIB_o_helicopters) then {
+                    if (_vehicle in KPLIB_o_troopTransports) then {
+                        [markerpos _spawn_marker, [0,0,0], _vehicle] spawn send_paratroopers;
+                    } else {
+                        _newvehicle = [markerpos _spawn_marker, _vehicle] call KPLIB_fnc_spawnVehicle;
+
+                        sleep 0.5;
+
+                        _grp = group driver _vehicle;
+                        [_grp] call battlegroup_ai;
+                    };
+                };
+                _i = _i + 1;
+            };
+            if ((KPLIB_param_aggressivity > 0.9) && ((random (KPLIB_enemyReadiness max 50) > 25) || (_pilots > 0))) then {
+                [markerpos _targetsector] spawn spawn_air;
             };
             stats_reinforcements_called = stats_reinforcements_called + 1;
         };

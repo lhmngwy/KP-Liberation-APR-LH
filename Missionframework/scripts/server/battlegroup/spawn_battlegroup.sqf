@@ -50,7 +50,7 @@ if !(_spawn_marker isEqualTo "") then {
             _grp setVariable ["KPLIB_isBattleGroup",true];
         };
     } else {
-        private _vehicle_pool = [KPLIB_o_battleGrpVehicles, KPLIB_o_battleGrpVehiclesLight] select (KPLIB_enemyReadiness < 50);
+        private _vehicle_pool = [KPLIB_o_battleGrpVehicles, KPLIB_o_battleGrpVehiclesLight] select (KPLIB_enemyReadiness < 40);
 
         while {count _selected_opfor_battlegroup < _target_size} do {
             _selected_opfor_battlegroup pushback (selectRandom _vehicle_pool);
@@ -78,8 +78,12 @@ if !(_spawn_marker isEqualTo "") then {
             };
         } forEach _selected_opfor_battlegroup;
 
+        _pilots = count (allPlayers select { (objectParent _x) isKindOf "Air" && (driver vehicle _x) == _x });
+        if !(_forceAir) then {
+            _forceAir = (_pilots > 0);
+        };
         if ((KPLIB_param_aggressivity > 0.9) && ((random (KPLIB_enemyReadiness max 50) > 25) || _forceAir)) then {
-            [_objective] spawn spawn_air;
+            [_objective, _pilots] spawn spawn_air;
         };
     };
 
