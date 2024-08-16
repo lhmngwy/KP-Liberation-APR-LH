@@ -32,6 +32,7 @@ Integrated from others:
 - VcomAI 3.4.1, only using a subset of features: https://github.com/genesis92x/VcomAI-3.0/tree/3.4.1---Dev-Build/
     - AI will use artillery (If you have lambs installed, that will be used for this instead).
     - AI in combat or stealth mode will steal vehicles, mount static weapons or replace dead gunners.
+    - AI will plant mines.
 - AI Driving Control: https://forums.bohemia.net/forums/topic/223430-ai-driving-control/
 - Advanced Towing: https://steamcommunity.com/sharedfiles/filedetails/?id=639837898
 - Soldier Tracker for better map icons: https://github.com/auQuiksilver/Soldier-Tracker
