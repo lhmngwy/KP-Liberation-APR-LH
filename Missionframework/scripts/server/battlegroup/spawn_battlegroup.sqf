@@ -57,7 +57,7 @@ if !(_spawn_marker isEqualTo "") then {
         };
 
         {
-            if ((_x in KPLIB_o_helicopters) && (_x in KPLIB_o_troopTransports)) then {
+            if ((_x in KPLIB_o_helicopters) && (_x in KPLIB_o_troopTransports) && (random (KPLIB_enemyReadiness max 40) > 25)) then {
                 [markerpos _spawn_marker, _objective, _x] spawn send_paratroopers;
                 sleep 0.5;
             } else {
@@ -75,6 +75,8 @@ if !(_spawn_marker isEqualTo "") then {
                     [_nextgrp] call battlegroup_ai;
                 };
                 [_objective] remoteExec ["remote_call_incoming"];
+
+                sleep 0.5;
             };
         } forEach _selected_opfor_battlegroup;
 
@@ -82,7 +84,7 @@ if !(_spawn_marker isEqualTo "") then {
         if !(_forceAir) then {
             _forceAir = (_plane_pilots > 0);
         };
-        if ((KPLIB_param_aggressivity > 0.9) && ((random (KPLIB_enemyReadiness max 50) > 25) || _forceAir)) then {
+        if ((KPLIB_param_aggressivity > 0.9) && ((random (KPLIB_enemyReadiness max 40) > 25) || _forceAir)) then {
             [_objective, _plane_pilots] spawn spawn_air;
         };
     };

@@ -38,21 +38,25 @@ if (KPLIB_enemyReadiness > 15) then {
             _spawn_marker = [1000, 2200, false, [0,0,0]] call KPLIB_fnc_getOpforSpawnPoint;
             _vehicle_pool = [KPLIB_o_battleGrpVehicles, KPLIB_o_battleGrpVehiclesLight] select (KPLIB_enemyReadiness < 40);
             _plane_pilots = count (allPlayers select { (objectParent _x) isKindOf "Plane" && (driver vehicle _x) == _x });
-            _heli_chances = ((floor linearConversion [25, 100, KPLIB_enemyReadiness, 1, 3]) max 1);
+            _heli_chances = ((floor linearConversion [0, 100, KPLIB_enemyReadiness, 1, 4]) max 1);
             _i = 0;
             while { i < _heli_chances } do {
-                _vehicle = selectRandom _vehicle_pool;
-                if (_vehicle in KPLIB_o_helicopters) then {
-                    if (_vehicle in KPLIB_o_troopTransports) then {
-                        [markerpos _spawn_marker, [0,0,0], _vehicle] spawn send_paratroopers;
+                _vehicle_class = selectRandom _vehicle_pool;
+                if ((_x in KPLIB_o_helicopters) && (_x in KPLIB_o_troopTransports) && (random (KPLIB_enemyReadiness max 40) > 25)) then {
+                    [markerpos _spawn_marker, markertext _targetsector, _vehicle_class] spawn send_paratroopers;
+                } else {
+                    _newvehicle = [markerpos _spawn_marker, _vehicle_class] call KPLIB_fnc_spawnVehicle;
+
+                    sleep 0.5;
+
+                    _grp = group driver _vehicle;
+                    if (_x in KPLIB_o_troopTransports) then {
+                        [_newvehicle, markertext _targetsector] spawn troop_transport;
                     } else {
-                        _newvehicle = [markerpos _spawn_marker, _vehicle] call KPLIB_fnc_spawnVehicle;
-
-                        sleep 0.5;
-
-                        _grp = group driver _vehicle;
-                        [_grp] call battlegroup_ai;
+                        [_grp, markertext _targetsector] call battlegroup_ai;
                     };
+
+                    sleep 0.5;
                 };
                 _i = _i + 1;
             };

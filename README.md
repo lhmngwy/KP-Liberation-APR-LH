@@ -9,7 +9,7 @@ My customisations include:
 
 - Updated vanilla presets, factions have access to all guns. Uniforms and vehicles are still faction restricted.
 - Enemies will be more spread out around a sector with less predictability.
-- The enemy now knows how to use ground troop transports to drop off reinforcements.
+- The enemy utilises transport vehicles, trucks can drop off troops, helicopters can land to drop off troops, paratroopers work more reliably.
 - The enemy has the ability to call in reinforcements when attacking your sectors.
 - Added persistent player squads, disconnect and reconnect and you will still have your squad!
 - Blufor vehicles, captured vehicles and HC squads will be saved anywhere on the map.

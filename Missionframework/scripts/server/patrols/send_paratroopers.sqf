@@ -22,7 +22,7 @@ private _i = 0;
 private _spawnPos = [];
 while {_spawnPos isEqualTo []} do {
     _i = _i + 1;
-    _spawnpos = (_pos getPos [150 + random 100, random 360]) findEmptyPosition [10, 100, _chopper_type];
+    _spawnpos = (_pos getPos [150, random 360]) findEmptyPosition [10, 100, _chopper_type];
     if (_i isEqualTo 10) exitWith {_spawnPos = zeroPos};
 };
 
@@ -151,6 +151,8 @@ if (count _magazines > 1 || ((count _magazines == 1) && {toLower ((_magazines se
     _pilot_wp_combat_1 setWaypointType "SAD";
     _pilot_wp_combat_1 = _pilot_group addWaypoint [_objective, 300];
     _pilot_wp_combat_1 setWaypointType "CYCLE";
+
+    _pilot_group setVariable ["KPLIB_isBattleGroup", true];
 } else {
     _pilot_wp_rtb = _pilot_group addWaypoint [_spawnPos, 100];
     _pilot_wp_rtb setWaypointType "MOVE";

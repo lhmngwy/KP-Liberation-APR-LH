@@ -102,7 +102,7 @@ if (_classname in KPLIB_o_troopTransports) then {
         [_x, _spawnPos, _infGrp, "PRIVATE", 0.5] call KPLIB_fnc_createManagedUnit;
         _spawned = _spawned + 1;
         if (_spawned == _seats) then { break; };
-    } foreach (([] call KPLIB_fnc_getSquadComp) + ([] call KPLIB_fnc_getSquadComp));
+    } foreach (([] call KPLIB_fnc_getSquadComp) + ([KPLIB_o_rifleman, KPLIB_o_rifleman, KPLIB_o_rifleman, KPLIB_o_rifleman, KPLIB_o_rifleman]));
 
     {_x assignAsCargo _newvehicle; sleep 0.1; _x moveInCargo _newvehicle; sleep 0.1;} forEach (units _infGrp);
 
