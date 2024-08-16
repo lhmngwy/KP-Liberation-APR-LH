@@ -42,7 +42,6 @@ if (_nearestEnemy distance2D _unit < 100) then
 				{
 					if (_Mine isEqualTo (typeof _x)) then
 					{
-						_x setposATL (getposATL _closestRoad);
 						_unitSide = (side _unit);
 						VCOM_mineArray pushBack [_x,_unitSide];
 					};
