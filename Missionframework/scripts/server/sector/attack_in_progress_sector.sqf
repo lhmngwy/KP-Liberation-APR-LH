@@ -42,7 +42,10 @@ while { _attacktime > 0 && ( _ownership == KPLIB_side_enemy || _ownership == KPL
     _ownership = [markerpos _sector] call KPLIB_fnc_getSectorOwnership;
     _blufor_count = (([markerPos _sector, KPLIB_range_sectorCapture, KPLIB_side_player] call KPLIB_fnc_getUnitsCount));
     if (_blufor_count == 0) then {
+        [_sector, 5] remoteExec ["remote_call_sector"];
         _attacktime = _attacktime - 1;
+    } else {
+        [_sector, 4] remoteExec ["remote_call_sector"];
     };
     sleep 1;
 };
