@@ -7654,6 +7654,14 @@
             <Czech>KP Player Menu (vyžaduje CBA)</Czech>
             <Japanese>KP プレイヤーメニュー (CBAを要求)</Japanese>
         </Key>
+        <Key ID="STR_PARAMS_PLAYERMENU_BIS">
+            <Original>BIS Player Menu</Original>
+            <German>BIS Spielermenü</German>
+            <Spanish>Menú de jugador BIS</Spanish>
+            <Italian>Menu di gioco BIS</Italian>
+            <Czech>BIS Player Menu</Czech>
+            <Japanese>BIS プレイヤーメニュー</Japanese>
+        </Key>
         <Key ID="STR_CONFIRM_CLEARANCE_TITLE">
             <Original>Are you sure?</Original>
             <German>Bist du sicher?</German>

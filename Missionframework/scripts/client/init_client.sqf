@@ -11,6 +11,10 @@ kp_vehicle_permissions = compile preprocessFileLineNumbers "scripts\client\misc\
 KPLIB_tents = [];
 publicVariable "KPLIB_tents";
 
+if (KPLIB_param_playerMenu == 2) then {
+    ["InitializePlayer", [player, true]] call BIS_fnc_dynamicGroups;
+};
+
 execVM "scripts\client\actions\intel_manager.sqf";
 execVM "scripts\client\actions\recycle_manager.sqf";
 execVM "scripts\client\actions\unflip_manager.sqf";

@@ -121,17 +121,24 @@ addMissionEventHandler ["PlayerConnected", {
             };
         } forEach _existingData;
 
-        [_unit] joinSilent (createGroup [KPLIB_side_player, true]);
+        _grp = createGroup [KPLIB_side_player, true];
+        [_unit] joinSilent (_grp);
+
+        if (KPLIB_param_playerMenu == 2) then {
+            _leader = leader _grp;
+            _data = [nil, groupId _grp, false]; // [<Insignia>, <Group Name>, <Private>]
+            ["RegisterGroup", [_grp, _leader, _data]] call BIS_fnc_dynamicGroups;
+        };
 
         // Recreate AI squad members at the player's position
         {
-            _x createUnit [position _unit, group _unit,"this setVariable ['KPLIB_playerSide', true, true]; this addMPEventHandler ['MPKilled', {params ['_unit']; [_unit] joinSilent grpNull; ['KPLIB_manageKills', _this] call CBA_fnc_localEvent}]", 0.5, "private"];
+            _x createUnit [position _unit, _grp,"this setVariable ['KPLIB_playerSide', true, true]; this addMPEventHandler ['MPKilled', {params ['_unit']; [_unit] joinSilent grpNull; ['KPLIB_manageKills', _this] call CBA_fnc_localEvent}]", 0.5, "private"];
             sleep 0.1;
         } forEach _aiData;
 
         {
             _x setVariable ["KPLIB_playerSide", true, true];
-        } forEach units group _unit;
+        } forEach units _grp;
 
     };
 }];

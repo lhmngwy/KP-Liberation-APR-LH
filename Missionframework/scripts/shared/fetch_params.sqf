@@ -70,7 +70,7 @@ if(isServer) then {
     GET_PARAM(KPLIB_param_resourcesMulti, "ResourcesMultiplier", 3);
     GET_PARAM_BOOL(KPLIB_param_arsenalType, "ArsenalType", 0);
     GET_PARAM_BOOL(KPLIB_param_directArsenal, "DirectArsenal", 0);
-    GET_PARAM_BOOL(KPLIB_param_playerMenu, "PlayerMenu", 1);
+    GET_PARAM(KPLIB_param_playerMenu, "PlayerMenu", 2);
     GET_PARAM(KPLIB_param_victoryCondition, "VictoryCondition", 0);
 
     // Deactivate BI Revive when ACE Medical is running
@@ -328,7 +328,12 @@ if (!isDedicated && hasInterface) then {
     _text = _text + format ["<font color='#ff8000'>%1</font><br />%2<br /><br />", _param, _value];
 
     _param = localize "STR_PARAMS_PLAYERMENU";
-    _value = if (KPLIB_param_playerMenu) then {localize "STR_PARAMS_PLAYERMENU_KP";} else {localize "STR_PARAMS_PLAYERMENU_GREUH";};
+    switch (KPLIB_param_playerMenu) do {
+        case 0: {_value = localize "STR_PARAMS_PLAYERMENU_GREUH";};
+        case 1: {_value = localize "STR_PARAMS_PLAYERMENU_KP";};
+        case 2: {_value = localize "STR_PARAMS_PLAYERMENU_BIS";};
+        default {_value = localize "STR_PARAMS_PLAYERMENU_BIS";};
+    };
     _text = _text + format ["<font color='#ff8000'>%1</font><br />%2<br /><br />", _param, _value];
 
     _param = localize "STR_PARAMS_VICTORYCONDITION";

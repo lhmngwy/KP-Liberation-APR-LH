@@ -30,10 +30,12 @@ if (!KPPLM_CBA) then {
 };
 
 // Activate selected player menu. If CBA isn't loaded -> fallback to GREUH
-if (KPPLM_CBA && KPLIB_param_playerMenu) then {
+if (KPPLM_CBA && KPLIB_param_playerMenu == 1) then {
     [] call KPPLM_fnc_postInit;
 } else {
-    [] execVM "GREUH\scripts\GREUH_activate.sqf";
+    if (KPLIB_param_playerMenu == 0) then {
+        [] execVM "GREUH\scripts\GREUH_activate.sqf";
+    };
 };
 
 // Temperature and humidity changes
