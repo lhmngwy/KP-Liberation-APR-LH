@@ -1,6 +1,6 @@
-params ["_sector"];
+params ["_sector", "_civ_count"];
 
-if (_sector in KPLIB_sectors_capital || _sector in KPLIB_sectors_city) then {
+if ((_sector in KPLIB_sectors_capital || _sector in KPLIB_sectors_city || _sector in KPLIB_sectors_factory) && _civ_count > 0) then {
     private _penalty = 0;
 
     {

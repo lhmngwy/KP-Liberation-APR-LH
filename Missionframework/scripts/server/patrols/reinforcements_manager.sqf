@@ -37,7 +37,7 @@ if (KPLIB_enemyReadiness > 15) then {
             ["lib_reinforcements",[markertext _targetsector]] remoteExec ["bis_fnc_shownotification"];
             _spawn_marker = [1000, 2200, false, [0,0,0]] call KPLIB_fnc_getOpforSpawnPoint;
             _vehicle_pool = [KPLIB_o_battleGrpVehicles, KPLIB_o_battleGrpVehiclesLight] select (KPLIB_enemyReadiness < 40);
-            _pilots = count (allPlayers select { (objectParent _x) isKindOf "Air" && (driver vehicle _x) == _x });
+            _plane_pilots = count (allPlayers select { (objectParent _x) isKindOf "Plane" && (driver vehicle _x) == _x });
             _heli_chances = ((floor linearConversion [25, 100, KPLIB_enemyReadiness, 1, 3]) max 1);
             _i = 0;
             while { i < _heli_chances } do {
@@ -56,8 +56,8 @@ if (KPLIB_enemyReadiness > 15) then {
                 };
                 _i = _i + 1;
             };
-            if ((KPLIB_param_aggressivity > 0.9) && ((random (KPLIB_enemyReadiness max 50) > 25) || (_pilots > 0))) then {
-                [markerpos _targetsector] spawn spawn_air;
+            if ((KPLIB_param_aggressivity > 0.9) && ((random (KPLIB_enemyReadiness max 50) > 25) || (_plane_pilots > 0))) then {
+                [markerpos _targetsector, _plane_pilots] spawn spawn_air;
             };
             stats_reinforcements_called = stats_reinforcements_called + 1;
         };

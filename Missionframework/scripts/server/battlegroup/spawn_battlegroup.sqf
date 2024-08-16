@@ -78,12 +78,12 @@ if !(_spawn_marker isEqualTo "") then {
             };
         } forEach _selected_opfor_battlegroup;
 
-        _pilots = count (allPlayers select { (objectParent _x) isKindOf "Air" && (driver vehicle _x) == _x });
+        _plane_pilots = count (allPlayers select { (objectParent _x) isKindOf "Plane" && (driver vehicle _x) == _x });
         if !(_forceAir) then {
-            _forceAir = (_pilots > 0);
+            _forceAir = (_plane_pilots > 0);
         };
         if ((KPLIB_param_aggressivity > 0.9) && ((random (KPLIB_enemyReadiness max 50) > 25) || _forceAir)) then {
-            [_objective, _pilots] spawn spawn_air;
+            [_objective, _plane_pilots] spawn spawn_air;
         };
     };
 

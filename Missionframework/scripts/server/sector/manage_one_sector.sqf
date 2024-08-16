@@ -74,13 +74,13 @@ if (_spawn) then {
         _spawncivs = false;
     };
 
-    if (_spawncivs && KPLIB_param_civActivity > 0) then {
-        _managed_units = _managed_units + ([_sector] call KPLIB_fnc_spawnCivilians);
-    };
-
     if ((!(_sector in KPLIB_sectors_player)) && (([markerPos _sector, [_opforcount, _sector] call KPLIB_fnc_getSectorRange, KPLIB_side_player] call KPLIB_fnc_getUnitsCount) > 0)) then {
 
         _hostile = true;
+
+        if (random 100 < (12 / KPLIB_param_difficulty)) then {
+            _spawncivs = false;
+        };
 
         if (_sector in KPLIB_sectors_capital) then {
             if (KPLIB_enemyReadiness < 20) then {_infsquad = "militia";};
@@ -88,8 +88,8 @@ if (_spawn) then {
             _squad1 = ([_infsquad] call KPLIB_fnc_getSquadComp);
             _squad2 = ([_infsquad] call KPLIB_fnc_getSquadComp);
             if (KPLIB_param_unitcap >= 1) then {_squad3 = ([_infsquad] call KPLIB_fnc_getSquadComp);};
-            if (KPLIB_param_unitcap >= 1.25) then {_squad4 = ([_infsquad] call KPLIB_fnc_getSquadComp);};
-            if (KPLIB_param_unitcap >= 1 && ((random 100) > (33 / KPLIB_param_difficulty))) then {_squad5 = ([_infsquad] call KPLIB_fnc_getSquadComp);};
+            if (KPLIB_param_unitcap >= 1.25 && ((random 100) > (33 / KPLIB_param_difficulty))) then {_squad4 = ([_infsquad] call KPLIB_fnc_getSquadComp);};
+            if (KPLIB_param_unitcap >= 1) then {_squad5 = ([_infsquad] call KPLIB_fnc_getSquadComp);};
             if (KPLIB_param_unitcap >= 1.25 && ((random 100) > (33 / KPLIB_param_difficulty))) then {_squad6 = ([_infsquad] call KPLIB_fnc_getSquadComp);};
 
             _vehtospawn = [(selectRandom KPLIB_o_militiaVehicles),(selectRandom KPLIB_o_militiaVehicles),(selectRandom KPLIB_o_turrets_HMG)];
@@ -129,8 +129,8 @@ if (_spawn) then {
             _squad1 = ([_infsquad] call KPLIB_fnc_getSquadComp);
             _squad2 = ([_infsquad] call KPLIB_fnc_getSquadComp);
             if (KPLIB_param_unitcap >= 1 && ((random 100) > (33 / KPLIB_param_difficulty))) then {_squad3 = ([_infsquad] call KPLIB_fnc_getSquadComp);};
-            if (KPLIB_param_unitcap >= 1.5 && ((random 100) > (66 / KPLIB_param_difficulty))) then {_squad4 = ([_infsquad] call KPLIB_fnc_getSquadComp);};
-            if (KPLIB_param_unitcap >= 1 && ((random 100) > (66 / KPLIB_param_difficulty))) then {_squad5 = ([_infsquad] call KPLIB_fnc_getSquadComp);};
+            if (KPLIB_param_unitcap >= 1.5 && ((random 100) > (50 / KPLIB_param_difficulty))) then {_squad4 = ([_infsquad] call KPLIB_fnc_getSquadComp);};
+            if (KPLIB_param_unitcap >= 1 && ((random 100) > (50 / KPLIB_param_difficulty))) then {_squad5 = ([_infsquad] call KPLIB_fnc_getSquadComp);};
             if (KPLIB_param_unitcap >= 1.5 && ((random 100) > (66 / KPLIB_param_difficulty))) then {_squad6 = ([_infsquad] call KPLIB_fnc_getSquadComp);};
 
             if ((random 100) > (33 / KPLIB_param_difficulty)) then {_vehtospawn pushback (selectRandom KPLIB_o_militiaVehicles);};
@@ -201,7 +201,7 @@ if (_spawn) then {
             _squad2 = ([_infsquad] call KPLIB_fnc_getSquadComp);
             if (KPLIB_param_unitcap >= 1 && ((random 100) > (33 / KPLIB_param_difficulty))) then {_squad3 = ([_infsquad] call KPLIB_fnc_getSquadComp);};
             if (KPLIB_param_unitcap >= 1.5 && ((random 100) > (66 / KPLIB_param_difficulty))) then {_squad4 = ([_infsquad] call KPLIB_fnc_getSquadComp);};
-            if (KPLIB_param_unitcap >= 1 && ((random 100) > (66 / KPLIB_param_difficulty))) then {_squad5 = ([_infsquad] call KPLIB_fnc_getSquadComp);};
+            if (KPLIB_param_unitcap >= 1 && ((random 100) > (50 / KPLIB_param_difficulty))) then {_squad5 = ([_infsquad] call KPLIB_fnc_getSquadComp);};
             if (KPLIB_param_unitcap >= 1.5 && ((random 100) > (66 / KPLIB_param_difficulty))) then {_squad6 = ([_infsquad] call KPLIB_fnc_getSquadComp);};
 
             if ((random 100) > 33 / KPLIB_param_difficulty) then {_vehtospawn pushback (selectRandom KPLIB_o_militiaVehicles);};
@@ -237,7 +237,7 @@ if (_spawn) then {
             _squad1 = ([] call KPLIB_fnc_getSquadComp);
             if (KPLIB_enemyReadiness > 30) then {_squad2 = ([] call KPLIB_fnc_getSquadComp);};
             if (KPLIB_param_unitcap >= 1.25 && ((random 100) > (66 / KPLIB_param_difficulty))) then {_squad3 = ([] call KPLIB_fnc_getSquadComp);};
-            if (KPLIB_param_unitcap >= 1 && ((random 100) > (66 / KPLIB_param_difficulty))) then {_squad5 = ([_infsquad] call KPLIB_fnc_getSquadComp);};
+            if (KPLIB_param_unitcap >= 1 && ((random 100) > (50 / KPLIB_param_difficulty))) then {_squad5 = ([_infsquad] call KPLIB_fnc_getSquadComp);};
 
             if((random 100) > 66) then {_vehtospawn pushback (["defense"] call KPLIB_fnc_getAdaptiveVehicle);};
             if (_infsquad == "army") then {
@@ -307,8 +307,9 @@ if (_spawn) then {
         };
 
         if (count _squad4 > 0) then {
-            _grp = [_sector, _spawn_range, _squad4] call KPLIB_fnc_spawnRegularSquad;
-            [_grp, _sectorpos, _spawn_range] spawn add_defense_waypoints;
+            _grp = [_sector, _spawn_range * 2, _squad4] call KPLIB_fnc_spawnRegularSquad;
+            _basepos = getpos (leader _grp);
+            [_grp, _basepos, _spawn_range] spawn add_defense_waypoints;
             _managed_units = _managed_units + (units _grp);
         };
 
@@ -340,6 +341,13 @@ if (_spawn) then {
         };
     };
 
+    _civ_count = 0;
+    if (_spawncivs && KPLIB_param_civActivity > 0) then {
+        _civs = [_sector] call KPLIB_fnc_spawnCivilians;
+        _civ_count = count _civs;
+        _managed_units = _managed_units + _civs;
+    };
+
     if (KPLIB_sectorspawn_debug > 0) then {[format ["Sector %1 (%2) - populating done", (markerText _sector), _sector], "SECTORSPAWN"] remoteExecCall ["KPLIB_fnc_log", 2];};
 
     KPLIB_spawningSector = false; publicVariable "KPLIB_spawningSector";
@@ -350,9 +358,9 @@ if (_spawn) then {
         // sector was captured
         if (_hostile && ([_sectorpos, _local_capture_size] call KPLIB_fnc_getSectorOwnership == KPLIB_side_player) && (KPLIB_endgame == 0)) then {
             if (isServer) then {
-                [_sector] spawn sector_liberated_remote_call;
+                [_sector, _civ_count] spawn sector_liberated_remote_call;
             } else {
-                [_sector] remoteExec ["sector_liberated_remote_call",2];
+                [_sector, _civ_count] remoteExec ["sector_liberated_remote_call",2];
             };
 
             _stopit = true;
@@ -394,6 +402,10 @@ if (_spawn) then {
                 _additionalTickets = (_additionalTickets max 0) min _maximum_additional_tickets;
 
                 _sector_despawn_tickets = BASE_TICKETS + _additionalTickets;
+
+                if (([_sectorpos, (_spawn_range * 2), KPLIB_side_player] call KPLIB_fnc_getUnitsCount) == 0) then {
+                    _sector_despawn_tickets = _maximum_additional_tickets;
+                };
             };
 
             if (_sector_despawn_tickets <= 0) then {

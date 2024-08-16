@@ -23,7 +23,7 @@ params [
     ["_side", KPLIB_side_player, [sideEmpty]]
 ];
 
-private _amount = _side countSide ((_pos nearEntities ["CAManBase", _radius]) select {!(captive _x) && ((getpos _x) select 2 < 500) && lifeState _x != "INCAPACITATED"} && _x getVariable ['PAR_isUnconscious', false]);
+private _amount = _side countSide ((_pos nearEntities ["CAManBase", _radius]) select {!(captive _x) && ((getpos _x) select 2 < 500) && lifeState _x != "INCAPACITATED" && _x getVariable ['PAR_isUnconscious', false]});
 {
     _amount = _amount + (_side countSide (crew _x));
 } forEach ((_pos nearEntities [["Car", "Tank", "Air", "Ship"], _radius]) select {((getpos _x) select 2 < 500) && count (crew _x) > 0});

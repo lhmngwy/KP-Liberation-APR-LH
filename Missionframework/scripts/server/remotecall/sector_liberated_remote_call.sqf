@@ -1,4 +1,4 @@
-params ["_liberated_sector"];
+params ["_liberated_sector", "_civ_count"];
 
 private _KPLIB_enemyReadiness_increase = 0;
 switch (true) do {
@@ -43,9 +43,9 @@ if (_liberated_sector in KPLIB_sectors_factory) then {
     ];
 };
 
-[_liberated_sector] spawn F_cr_liberatedSector;
+[_liberated_sector, _civ_count] spawn F_cr_liberatedSector;
 
-if ((random 100) <= KPLIB_cr_wounded_chance || (count KPLIB_sectors_player) == 1) then {
+if ((_civ_count > 0) && ((random 100) <= KPLIB_cr_wounded_chance || (count KPLIB_sectors_player) == 1)) then {
     [_liberated_sector] spawn civrep_wounded_civs;
 };
 

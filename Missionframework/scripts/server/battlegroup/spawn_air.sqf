@@ -1,8 +1,11 @@
-params ["_first_objective"];
+params [
+    ["_objective", [0, 0, 0], [[]], [3]],
+    ["_min", 0, [0]]
+];
 
 if (KPLIB_o_planes isEqualTo []) exitWith {false};
 
-private _planes_number = ((floor linearConversion [25, 100, KPLIB_enemyReadiness, 1, 3]) min 3) max 0;
+private _planes_number = ((floor linearConversion [40, 100, KPLIB_enemyReadiness, 1, 3]) min 3) max _min;
 
 if (_planes_number < 1) exitWith {};
 
