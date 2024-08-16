@@ -18,7 +18,7 @@ execVM "scripts\client\ammoboxes\ammobox_action_manager.sqf";
 execVM "scripts\client\build\build_overlay.sqf";
 execVM "scripts\client\build\do_build.sqf";
 execVM "scripts\client\commander\enforce_whitelist.sqf";
-execVM "scripts\client\commander\hide_from_zeus.sqf";
+if (KPLIB_param_zeusLimited) then { execVM "scripts\client\commander\hide_from_zeus.sqf" };
 execVM "scripts\client\markers\fob_markers.sqf";
 execVM "scripts\client\markers\hostile_groups.sqf";
 execVM "scripts\client\markers\sector_manager.sqf";
