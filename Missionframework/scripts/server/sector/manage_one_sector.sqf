@@ -171,7 +171,7 @@ if (_spawn) then {
             _squad2 = ([] call KPLIB_fnc_getSquadComp);
             if (KPLIB_param_unitcap >= 1) then {_squad3 = ([] call KPLIB_fnc_getSquadComp);};
             if (KPLIB_param_unitcap >= 1.5 && ((random 100) > (33 / KPLIB_param_difficulty))) then {_squad4 = ([] call KPLIB_fnc_getSquadComp);};
-            if (KPLIB_param_unitcap >= 1 && ((random 100) > (33 / KPLIB_param_difficulty))) then {_squad5 = ([_infsquad] call KPLIB_fnc_getSquadComp);};
+            if (KPLIB_param_unitcap >= 1) then {_squad5 = ([_infsquad] call KPLIB_fnc_getSquadComp);};
             if (KPLIB_param_unitcap >= 1.5 && ((random 100) > (33 / KPLIB_param_difficulty))) then {_squad6 = ([_infsquad] call KPLIB_fnc_getSquadComp);};
 
             _vehtospawn = [(["defense"] call KPLIB_fnc_getAdaptiveVehicle),(["defense"] call KPLIB_fnc_getAdaptiveVehicle),(selectRandom KPLIB_o_turrets_HMG),(selectRandom KPLIB_o_turrets_AT),(selectRandom KPLIB_o_turrets_MORTAR)];
