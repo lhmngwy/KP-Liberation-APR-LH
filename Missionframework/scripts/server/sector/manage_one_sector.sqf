@@ -111,7 +111,7 @@ if (_spawn) then {
             };
 
             _spawn_range = 250;
-            _building_ai_max = round (40 * _popfactor);
+            _building_ai_max = round (50 * _popfactor);
             _local_capture_size = _local_capture_size * 1.5;
             _building_range = 300;
 
@@ -155,7 +155,7 @@ if (_spawn) then {
             };
 
             _spawn_range = 150;
-            _building_ai_max = round ((floor (15 + (round (KPLIB_enemyReadiness / 10 )))) * _popfactor);
+            _building_ai_max = round ((floor (18 + (round (KPLIB_enemyReadiness / 10 )))) * _popfactor);
             _building_range = 200;
 
             if (KPLIB_civ_rep < 0) then {
@@ -190,7 +190,7 @@ if (_spawn) then {
             };
 
             _spawn_range = 150;
-            _building_ai_max = round ((floor (15 + (round (KPLIB_enemyReadiness / 4 )))) * _popfactor);
+            _building_ai_max = round ((floor (18 + (round (KPLIB_enemyReadiness / 4 )))) * _popfactor);
             _building_range = 200;
         };
 
@@ -220,7 +220,7 @@ if (_spawn) then {
             };
 
             _spawn_range = 125;
-            _building_ai_max = round ((floor (10 + (round (KPLIB_enemyReadiness / 10 )))) * _popfactor);
+            _building_ai_max = round ((floor (18 + (round (KPLIB_enemyReadiness / 10 )))) * _popfactor);
             _building_range = 175;
 
             if (KPLIB_civ_rep < 0) then {
