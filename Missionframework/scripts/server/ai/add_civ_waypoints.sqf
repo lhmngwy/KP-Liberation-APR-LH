@@ -8,7 +8,9 @@ fn_setWaypoints = {
     _wpPositions = [];
     for "_i" from 1 to 5 do {
         _position = _basepos getPos [random 125, random 360];
-        while {surfaceIsWater _position} do {
+        _j = 0;
+        while {surfaceIsWater _position && _j < 10} do {
+            _j = _j + 1;
             _position = _basepos getPos [random 125, random 360];
         };
         _wpPositions pushBack (_basepos getPos [random 125, random 360]);

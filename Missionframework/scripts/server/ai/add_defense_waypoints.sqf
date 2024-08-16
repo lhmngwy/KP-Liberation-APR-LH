@@ -18,13 +18,36 @@ sleep 1;
 {doStop _x; _x doFollow leader _grp} foreach units _grp;
 sleep 1;
 
+private _generateWaypoint = {
+    params ["_flagpos", "_range", "_angleMin", "_angleMax"];
+    
+    private _wpPos = [0,0,0];
+    private _isValid = false;
+    private _attempts = 0;
+
+    while { !_isValid && _attempts < 10 } do {
+        _wpPos = _flagpos getPos [
+            random [_range * 0.33, _range * 0.66, _range],
+            random [_angleMin, (_angleMin + (_angleMax - _angleMin) / 2), _angleMax]
+        ];
+
+        if (!(surfaceIsWater _wpPos)) then {
+            _isValid = true;
+        };
+
+        _attempts = _attempts + 1;
+    };
+
+    _wpPos
+};
+
 if (_is_infantry) then {
     _wpPositions = [
-        _flagpos getPos [random [_range * 0.33, _range * 0.66, _range], random [0, 36, 72]],
-        _flagpos getPos [random [_range * 0.33, _range * 0.66, _range], random [72, 108, 144]],
-        _flagpos getPos [random [_range * 0.33, _range * 0.66, _range], random [144, 180, 216]],
-        _flagpos getPos [random [_range * 0.33, _range * 0.66, _range], random [216, 252, 288]],
-        _flagpos getPos [random [_range * 0.33, _range * 0.66, _range], random [288, 324, 360]]
+        [_flagpos, _range, 0, 36] call _generateWaypoint,
+        [_flagpos, _range, 72, 108] call _generateWaypoint,
+        [_flagpos, _range, 144, 180] call _generateWaypoint,
+        [_flagpos, _range, 216, 252] call _generateWaypoint,
+        [_flagpos, _range, 288, 324] call _generateWaypoint
     ];
     _waypoint = _grp addWaypoint [_wpPositions select 0, 10];
     _waypoint setWaypointType "MOVE";
