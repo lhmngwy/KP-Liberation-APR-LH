@@ -848,7 +848,7 @@ class FSM
                                         priority = 105.000000;
                                         to="Return";
                                         precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
-                                        condition=/*%FSM<CONDITION""">*/"_BackbkC8 + 25 < time && {!_CurLGar} && {_ClearCnc < 100} && {leader _Group distance2D _NearestEnemy < 200} && {!_ActivelyClearing}"/*%FSM</CONDITION""">*/;
+                                        condition=/*%FSM<CONDITION""">*/"_BackbkC8 + 25 < time && {!_CurLGar} && {_ClearCnc < 51} && {leader _Group distance2D _NearestEnemy < 200} && {!_ActivelyClearing}"/*%FSM</CONDITION""">*/;
                                         action=/*%FSM<ACTION""">*/"[_Group,_NearestEnemy] spawn VCM_fnc_ClearBuilding;" \n
                                          "private _t = time;" \n
                                          "_Wait = 10;" \n
