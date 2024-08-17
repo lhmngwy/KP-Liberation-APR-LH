@@ -35,7 +35,7 @@ for "_i" from 1 to _planes_number do {
     } forEach (crew _plane);
 
     (crew _plane) joinSilent _grp;
-    sleep 1;
+    sleep 5;
 };
 
 { deleteWaypoint _x } forEachReversed waypoints _grp;

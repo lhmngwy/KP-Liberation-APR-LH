@@ -9,6 +9,7 @@ createMarkerLocal ["opfor_capture_marker", markers_reset];
 "opfor_capture_marker" setMarkerColorLocal KPLIB_color_enemyActive;
 
 if ( isNil "sector_timer" ) then { sector_timer = 0 };
+if ( isNil "pause_sector_timer" ) then { pause_sector_timer = false };
 
 while { true } do {
     sleep 1;

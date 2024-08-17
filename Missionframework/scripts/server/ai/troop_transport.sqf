@@ -93,29 +93,51 @@ if ((alive _transVeh)) then {
         // If vehicle has gunner, search and destroy, else go home and delete vehicle
         _magazines = magazinesAllTurrets [_transVeh, true];
         if (count _magazines > 1 || ((count _magazines == 1) && {toLower ((_magazines select 0) select 0) find "cmflare" == -1})) then {
-            _transVehWp = _transGrp addWaypoint [_objective, 100];
+            _radius = 100;
+            if (_transVeh isKindOf "Air") then {
+                _radius = 300;
+            };
+            _transVehWp = _transGrp addWaypoint [_objective, _radius];
             _transVehWp setWaypointType "SAD";
             _transVehWp setWaypointSpeed "NORMAL";
             _transVehWp setWaypointBehaviour "COMBAT";
             _transVehWp setWaypointCombatMode "RED";
-            _transVehWp setWaypointCompletionRadius 100;
+            _transVehWp setWaypointCompletionRadius _radius;
 
-            _transVehWp = _transGrp addWaypoint [_objective, 100];
+            _transVehWp = _transGrp addWaypoint [_objective, _radius];
             _transVehWp setWaypointType "SAD";
             _transVehWp setWaypointBehaviour "COMBAT";
             _transVehWp setWaypointCombatMode "RED";
-            _transVehWp = _transGrp addWaypoint [_objective, 100];
+            _transVehWp = _transGrp addWaypoint [_objective, _radius];
             _transVehWp setWaypointType "SAD";
-            _transVehWp = _transGrp addWaypoint [_objective, 100];
+            _transVehWp = _transGrp addWaypoint [_objective, _radius];
             _transVehWp setWaypointType "SAD";
-            _transVehWp = _transGrp addWaypoint [_objective, 100];
+            _transVehWp = _transGrp addWaypoint [_objective, _radius];
             _transVehWp setWaypointType "CYCLE";
 
             _transGrp setVariable ["KPLIB_isBattleGroup", true];
         } else {
             _transVehWp = _transGrp addWaypoint [_start_pos, 100];
             _transVehWp setWaypointType "MOVE";
-            _transVehWp setWaypointStatements ["true", "{ this deleteVehicleCrew _x } forEach crew this; deleteVehicle this;"];
+            _transVehWp setWaypointSpeed "FULL";
+            _transVehWp setWaypointBehaviour "CARELESS";
+            _transVehWp setWaypointCombatMode "BLUE";
+            _transVehWp setWaypointCompletionRadius 100;
+
+            _transVehWp = _transGrp addWaypoint [_start_pos, 100];
+            _transVehWp setWaypointType "MOVE";
+
+            _transVehWp = _transGrp addWaypoint [_start_pos, 100];
+            _transVehWp setWaypointType "CYCLE";
+
+            waitUntil {sleep 1;
+                !(alive driver _transVeh) || (_transVeh distance2D _start_pos < 200)
+            };
+
+            if (!alive driver _transVeh) exitWith {};
+
+            deleteVehicleCrew _transVeh;
+            deleteVehicle _transVeh;
         };
     };
 };

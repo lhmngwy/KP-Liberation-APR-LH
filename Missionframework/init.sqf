@@ -117,7 +117,7 @@ if ( isServer) then {
 };
 ////////////////////////////////
 
-[] execVM "addons\A3PE\A3PEInit.sqf";
+if (KPLIB_param_zeusLimited) then { [] execVM "addons\A3PE\A3PEInit.sqf" };
 
 KPLIB_init = true;
 

@@ -116,12 +116,11 @@ KPLIB_o_battleGrpVehicles = [
     "O_MBT_02_cannon_F",                                                // T-100 Varsuk
     "O_MBT_04_cannon_F",                                                // T-140 Angara
     "O_MBT_04_command_F",                                               // T-140K Angara
-    "O_Heli_Light_02_F",                                                // Po-30 Orca (Armed)
-    "O_Heli_Light_02_F",                                                // Po-30 Orca (Armed)
+    "O_Heli_Transport_04_covered_F",                                    // Mi-290 Taru (Transport)
     "O_Heli_Transport_04_covered_F",                                    // Mi-290 Taru (Transport)
     "O_Heli_Transport_04_covered_F",                                    // Mi-290 Taru (Transport)
     "O_Heli_Attack_02_F",                                               // Mi-48 Kajman
-    "O_T_VTOL_02_infantry_hex_F"                                        // Y-32 Xi'an (Infantry)
+    "O_Heli_Attack_02_F"                                                // Mi-48 Kajman
 ];
 
 //All enemy vehicles that can spawn as battlegroups, either assaulting or as reinforcements, at lower enemy combat readiness (aggression levels).
@@ -131,14 +130,12 @@ KPLIB_o_battleGrpVehiclesLight = [
     "O_MRAP_02_hmg_F",                                                  // Ifrit (HMG)
     "O_MRAP_02_hmg_F",                                                  // Ifrit (HMG)
     "O_Truck_03_transport_F",                                           // Tempest Transport
-    "O_Truck_03_transport_F",                                           // Tempest Transport
     "O_Truck_03_covered_F",                                             // Tempest Transport (Covered)
     "O_APC_Wheeled_02_rcws_F",                                          // MSE-3 Marid
     "O_APC_Wheeled_02_rcws_F",                                          // MSE-3 Marid
     "O_APC_Tracked_02_cannon_F",                                        // BTR-K Kamysh
     "O_APC_Tracked_02_cannon_F",                                        // BTR-K Kamysh
-    "O_Heli_Light_02_F",                                                // Po-30 Orca (Armed)
-    "O_Heli_Light_02_F",                                                // Po-30 Orca (Armed)
+    "O_Heli_Transport_04_covered_F",                                    // Mi-290 Taru (Transport)
     "O_Heli_Transport_04_covered_F",                                    // Mi-290 Taru (Transport)
     "O_APC_Tracked_02_AA_F"                                             // ZSU-39 Tigris
 ];

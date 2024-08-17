@@ -3,6 +3,7 @@ scriptName "remote_call_fob";
 if ( isDedicated ) exitWith {};
 
 if ( isNil "sector_timer" ) then { sector_timer = 0 };
+if ( isNil "pause_sector_timer" ) then { pause_sector_timer = false };
 
 params [ "_fob", "_status" ];
 private [ "_fobname" ];
@@ -29,4 +30,12 @@ if ( _status == 3 ) then {
     [ "lib_fob_safe", [ _fobname ] ] call BIS_fnc_showNotification;
     "opfor_capture_marker" setMarkerPosLocal markers_reset;
     sector_timer = 0;
+};
+
+if ( _status == 4 ) then {
+    pause_sector_timer = true;
+};
+
+if ( _status == 5 ) then {
+    pause_sector_timer = false;
 };

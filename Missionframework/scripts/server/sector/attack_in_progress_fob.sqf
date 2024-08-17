@@ -34,16 +34,18 @@ if ( _ownership == KPLIB_side_player ) exitWith {
 [_thispos, 1] remoteExec ["remote_call_fob"];
 _attacktime = KPLIB_vulnerability_timer;
 
+sleep 0.5;
+
 [_fobMarker] remoteExec ["reinforcements_remote_call",2];
 
 while { _attacktime > 0 && ( _ownership == KPLIB_side_enemy || _ownership == KPLIB_side_resistance ) } do {
     _ownership = [ _thispos ] call KPLIB_fnc_getSectorOwnership;
     _blufor_count = (([_thispos, KPLIB_range_sectorCapture, KPLIB_side_player] call KPLIB_fnc_getUnitsCount));
     if (_blufor_count == 0) then {
-        [_sector, 5] remoteExec ["remote_call_sector"];
+        [_sector, 5] remoteExec ["remote_call_fob"];
         _attacktime = _attacktime - 1;
     } else {
-        [_sector, 4] remoteExec ["remote_call_sector"];
+        [_sector, 4] remoteExec ["remote_call_fob"];
     };
     sleep 1;
 };

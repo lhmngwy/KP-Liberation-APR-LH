@@ -3,7 +3,7 @@ scriptName "remote_call_sector";
 if ( isDedicated ) exitWith {};
 
 if ( isNil "sector_timer" ) then { sector_timer = 0 };
-if ( isNil "pause_sector_timer" ) then { sector_timer = false };
+if ( isNil "pause_sector_timer" ) then { pause_sector_timer = false };
 
 params [ "_sector", "_status" ];
 

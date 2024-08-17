@@ -22,6 +22,9 @@ if ( KPLIB_param_bluforDefenders ) then {
 
 sleep 60;
 
+KPLIB_sectorsUnderAttack pushBack _sector;
+publicVariable "KPLIB_sectorsUnderAttack";
+
 _ownership = [ markerpos _sector ] call KPLIB_fnc_getSectorOwnership;
 if ( _ownership == KPLIB_side_player ) exitWith {
     if ( KPLIB_param_bluforDefenders ) then {
@@ -33,6 +36,8 @@ if ( _ownership == KPLIB_side_player ) exitWith {
 
 [_sector, 1] remoteExec ["remote_call_sector"];
 _attacktime = KPLIB_vulnerability_timer;
+
+sleep 0.5;
 
 if ((_sector in KPLIB_sectors_factory) || (_sector in KPLIB_sectors_city) || (_sector in KPLIB_sectors_capital) || (_sector in KPLIB_sectors_military)) then {
     [_sector] remoteExec ["reinforcements_remote_call",2];
@@ -87,6 +92,9 @@ if ( KPLIB_endgame == 0 ) then {
         } foreach (((markerpos _sector) nearEntities ["CAManBase", KPLIB_range_sectorCapture * 0.8]) select {side group _x == KPLIB_side_enemy});
     };
 };
+
+KPLIB_sectorsUnderAttack = KPLIB_sectorsUnderAttack - [_sector];
+publicVariable "KPLIB_sectorsUnderAttack";
 
 sleep 60;
 
