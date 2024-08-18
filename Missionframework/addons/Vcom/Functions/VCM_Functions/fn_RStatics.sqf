@@ -42,21 +42,23 @@ private _mineList = [];
 		
 		//_PushArray = [_hasSatchel,_ActualObj,_hasMine,_satchelArray];
 		private _mineArray = _x call VCM_fnc_HasMine;
-		private _hasSatchel = _mineArray select 0;
-		private _mineObject = _mineArray select 1;
-		private _hasMine = _mineArray select 2;
-		private _satchelArray = _mineArray select 3;
-		
-		if (_hasMine) then
-		{
-			_mineList pushback [_x,(_mineObject select 0)];
+		if (!isNil "_mineArray" && {typeName _mineArray == "ARRAY"}) then {
+			private _hasSatchel = _mineArray select 0;
+			private _mineObject = _mineArray select 1;
+			private _hasMine = _mineArray select 2;
+			private _satchelArray = _mineArray select 3;
+			
+			if (_hasMine) then
+			{
+				_mineList pushback [_x,(_mineObject select 0)];
+			};
+			if (_hasSatchel) then
+			{
+				_satchelList pushback [_x,(_satchelArray select 0)];
+			};
+			
+			if (VCM_ARTYENABLE) then {_x call VCM_fnc_CheckArty;};
 		};
-		if (_hasSatchel) then
-		{
-			_satchelList pushback [_x,(_satchelArray select 0)];
-		};
-		
-		if (VCM_ARTYENABLE) then {_x call VCM_fnc_CheckArty;};
 	};
 } forEach (units _this);
 

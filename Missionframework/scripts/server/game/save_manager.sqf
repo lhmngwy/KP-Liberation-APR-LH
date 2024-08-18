@@ -15,26 +15,6 @@ if (KPLIB_param_wipe_savegame_1 == 1 && KPLIB_param_wipe_savegame_2 == 1) then {
     ["No save wipe", "SAVE"] call KPLIB_fnc_log;
 };
 
-// Auto save when last player exits
-if (hasInterface) then {
-    [] spawn {
-        waitUntil {!isNull findDisplay 46};
-        (findDisplay 46) displayAddEventHandler ["Unload", {
-            if (!isServer) exitWith {};
-            ["Player server exit. Saving mission data.", "SAVE"] call KPLIB_fnc_log;
-            [] call KPLIB_fnc_doSave;
-        }];
-    };
-} else {
-    addMissionEventHandler ["HandleDisconnect", {
-        if !(allPlayers isEqualTo []) exitWith {false};
-        params ["_unit"];
-        deleteVehicle _unit;
-        ["Last player disconnected. Saving mission data.", "SAVE"] call KPLIB_fnc_log;
-        [] call KPLIB_fnc_doSave;
-    }];
-};
-
 // Save player squad on disconnect
 addMissionEventHandler ["PlayerDisconnected", {
     params ["_id", "_uid", "_name", "_jip", "_owner", "_idstr"];
@@ -87,6 +67,25 @@ addMissionEventHandler ["PlayerDisconnected", {
 
     profileNamespace setVariable [KPLIB_squad_save_key, _updatedData];
     saveProfileNamespace;
+
+    deleteVehicle _unit;
+
+    if ((allPlayers - entities "HeadlessClient_F") isEqualTo []) then {
+        ["Last player disconnected. Saving mission data.", "SAVE"] call KPLIB_fnc_log;
+        [] call KPLIB_fnc_doSave;
+    };
+}];
+
+addMissionEventHandler ["Ended", {
+    ["Mission ended. Saving mission data.", "SAVE"] call KPLIB_fnc_log;
+    KPLIB_sectors_player = KPLIB_sectors_player - KPLIB_sectorsUnderAttack;
+    [] call KPLIB_fnc_doSave;
+}];
+
+addMissionEventHandler ["MPEnded", {
+    ["Mission ended. Saving mission data.", "SAVE"] call KPLIB_fnc_log;
+    KPLIB_sectors_player = KPLIB_sectors_player - KPLIB_sectorsUnderAttack;
+    [] call KPLIB_fnc_doSave;
 }];
 
 // Restore player squad on connect
