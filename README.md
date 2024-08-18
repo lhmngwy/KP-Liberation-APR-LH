@@ -10,7 +10,10 @@ My customisations include:
 - Updated vanilla presets, factions have access to all guns. Uniforms and vehicles are still faction restricted.
 - Enemies will be more spread out around a sector with less predictability.
 - The enemy utilises transport vehicles, trucks can drop off troops, helicopters can land to drop off troops, paratroopers work more reliably.
-- The enemy has the ability to call in reinforcements when attacking your sectors.
+- Enemy attacks on player sectors have been improved:
+    - The enemy has the ability to call in reinforcements when attacking your sectors.
+    - The countdown timer will pause when players are at the point defending it.
+    - If you end the mission while a sector is under attack, the sector will be lost.
 - Added persistent player squads, disconnect and reconnect and you will still have your squad!
 - Blufor vehicles, captured vehicles and HC squads will be saved anywhere on the map.
 - Enemy and civilian vehicles must be taken to a FOB at least once to count as captured.
@@ -33,10 +36,10 @@ Integrated from others:
     - AI will use artillery (If you have lambs installed, that will be used for this instead).
     - AI in combat or stealth mode will steal vehicles, mount static weapons or replace dead gunners.
     - AI will plant mines.
-- AI Driving Control: https://forums.bohemia.net/forums/topic/223430-ai-driving-control/
+- AI Driving Control, vehicles won't smash into each other or run over friendlies: https://forums.bohemia.net/forums/topic/223430-ai-driving-control/
 - Advanced Towing: https://steamcommunity.com/sharedfiles/filedetails/?id=639837898
 - Soldier Tracker for better map icons: https://github.com/auQuiksilver/Soldier-Tracker
-- Arma 3 Performance Extension: https://github.com/Battlekeeper/Arma3PerformanceExtension
+- Arma 3 Performance Extension, hides units and bodies not in line of sight to improve performance: https://github.com/Battlekeeper/Arma3PerformanceExtension
 - Air, Animals, and soap from TPW Mods for better ambience: https://steamcommunity.com/sharedfiles/filedetails/?id=2586787720
 - Persistent vehicle cargo, fuel and damage, plus some other changes from https://github.com/moistbois/Moist-Liberation-APR
 - Additional map ports by stutpip123: https://github.com/KillahPotatoes/KP-Liberation/pull/854
