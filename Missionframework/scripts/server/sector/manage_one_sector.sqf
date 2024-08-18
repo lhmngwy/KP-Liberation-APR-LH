@@ -401,7 +401,7 @@ if (_spawn) then {
 
                 _sector_despawn_tickets = BASE_TICKETS + _additionalTickets;
 
-                if ((!(_sector in KPLIB_sectors_player)) && (([_sectorpos, (_local_capture_size * 2), KPLIB_side_player] call KPLIB_fnc_getUnitsCount) > 0)) then {
+                if ((!(_sector in KPLIB_sectors_player)) && (([_sectorpos, (_local_capture_size * 1.5), KPLIB_side_player] call KPLIB_fnc_getUnitsCount) > 0)) then {
                     _sector_despawn_tickets = _maximum_additional_tickets;
                 };
             };
