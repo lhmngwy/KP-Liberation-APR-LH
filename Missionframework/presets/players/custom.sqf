@@ -348,6 +348,13 @@ KPLIB_b_squadPara = [
     "B_soldier_PG_F"
 ];
 
+// Light infantry vehicle squad.
+KPLIB_b_squadLight = [
+    "B_Soldier_TL_F",
+    "B_Soldier_F",
+    "B_Soldier_F"
+];
+
 /*
     --- Vehicles to unlock ---
     Classnames below have to be unlocked by capturing military bases.

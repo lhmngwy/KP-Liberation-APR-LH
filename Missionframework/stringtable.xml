@@ -906,6 +906,9 @@
             <Czech>Výsadkářské družstvo</Czech>
             <Japanese>空挺分隊</Japanese>
         </Key>
+        <Key ID="STR_VEH_SQUAD">
+            <Original>Vehicle Squad</Original>
+        </Key>
         <Key ID="STR_UNITCAP">
             <Original>Unit cap</Original>
             <French>Limite</French>

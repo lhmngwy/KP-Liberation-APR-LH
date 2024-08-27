@@ -3528,29 +3528,13 @@ _habitable = [];
 	} foreach tpw_core_allhouses;
 tpw_core_habitable = _habitable;
 
-// REPOSITION ANY UNITS THAT FALL THROUGH TERRAIN
-[] spawn 
-	{
-	while {true} do
-		{
-			{
-			_dpos = getposatl _x;
-			if (_dpos select 2 < -0.5) then 
-				{_dpos set[2,0.5];
-				_x setposatl _dpos; 
-				};
-			} foreach (allunits + alldead);
-		sleep random 10;
-		};
-	};	
-
 // OBJECT SCAN
 tpw_core_habhouses = [];
 sleep 10;
 _lastpos = [0,0,0];
 while {true} do
 	{
-	if ((speed player < 20) && {player distance _lastpos > 250}) then
+	if ((speed player < 20) && (player distance _lastpos > 250) && (!tpw_core_battle)) then
 		{
 		tpw_core_habhouses = tpw_core_allhouses select {_x distance player < 500};
 		tpw_core_vegetation = nearestterrainobjects[player,["tree","small tree","bush"],500,false];

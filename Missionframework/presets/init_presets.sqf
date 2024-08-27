@@ -100,7 +100,8 @@ KPLIB_b_allSquads = [
     [KPLIB_b_squadAT,90,30,0],
     [KPLIB_b_squadAA,90,30,0],
     [KPLIB_b_squadRecon,90,0,0],
-    [KPLIB_b_squadPara,70,0,0]
+    [KPLIB_b_squadPara,70,0,0],
+    [KPLIB_b_squadVeh,30,0,0]
 ];
 
 // Squad names for build menu
@@ -110,7 +111,8 @@ KPLIB_b_squadNames = [
     localize "STR_AT_SQUAD",
     localize "STR_AA_SQUAD",
     localize "STR_RECON_SQUAD",
-    localize "STR_PARA_SQUAD"
+    localize "STR_PARA_SQUAD",
+    localize "STR_VEH_SQUAD"
 ];
 
 /*
