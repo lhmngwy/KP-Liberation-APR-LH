@@ -110,7 +110,7 @@ while {alive _driver && !(isNull (objectParent _driver))} do{
 
 				private _menbboxidx = _carsarray findIf {_x isKindOf "Man" && {_x inArea [getPos _car,AIDCBBOXW,AIDCBBOXL,_cardir,true]} && {(side _x) in AIDCSIDEFRIENDS} && {isNull (objectParent _x)} && {alive _x}}; //&& {abs ((getPosATL _x) select 2) <= abs ((getPosATL AIDCCAR) select 2)} //indoors-sidewalks
 
-				if (_menbboxidx isEqualTo -1 || {!alive _driver} || {isNull (objectParent _driver)} || {(behaviour _driver) isEqualTo "STEALTH"} || (vehicleMoveInfo _car) select 0 isEqualTo "DirectByComander") then{
+				if (_menbboxidx isEqualTo -1 || {!alive _driver} || {isNull (objectParent _driver)} || {(behaviour _driver) isEqualTo "STEALTH"} || ((vehicleMoveInfo _car) select 0) isEqualTo "DirectByComander") then{
 					breakOut "menbboxarea";
 				}else{
 					AIDCCARSPEED(2);
@@ -199,7 +199,7 @@ while {alive _driver && !(isNull (objectParent _driver))} do{
 			//Cars
 			case (_frontcar isKindOf "LandVehicle"):{
 				//Same group front car in formation aka auto drive, on road vs offroad and enemy
-				if (((group _frontcar) isEqualTo _groupcar && {!((expectedDestination _driver) select 1 in AIDCAIMODES)}) || {isOnRoad ASLToAGL getPosASL _car && {!(isOnRoad ASLToAGL getPosASL _frontcar)}} || {!((side _frontcar) in AIDCSIDEFRIENDS)}) exitWith{
+				if (((group _frontcar) isEqualTo _groupcar && {!(((expectedDestination _driver) select 1) in AIDCAIMODES)}) || {isOnRoad ASLToAGL getPosASL _car && {!(isOnRoad ASLToAGL getPosASL _frontcar)}} || {!((side _frontcar) in AIDCSIDEFRIENDS)}) exitWith{
 					AIDCCARSPEED(-1);
 					_stopcar = objNull;
 				};
@@ -338,7 +338,7 @@ while {alive _driver && !(isNull (objectParent _driver))} do{
 		AIDCCARSPEED(-1);
 		_stopcar = objNull;
 
-		if (time > _followtime  && {speed _car < 1} && {!((expectedDestination _driver) select 1 in AIDCAIMODES)} && {_driver distance (formationPosition _driver) > 50} && {!(isPlayer (leader _groupcar))}) then{
+		if (time > _followtime  && {speed _car < 1} && {!(((expectedDestination _driver) select 1) in AIDCAIMODES)} && {_driver distance (formationPosition _driver) > 50} && {!(isPlayer (leader _groupcar))}) then{
 			AIDCCARFOLLOW(leader _groupcar);
 			_followtime = time + 10;
 

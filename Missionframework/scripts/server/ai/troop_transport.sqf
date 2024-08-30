@@ -92,7 +92,8 @@ if ((alive _transVeh)) then {
 
         // If vehicle has gunner, search and destroy, else go home and delete vehicle
         _magazines = magazinesAllTurrets [_transVeh, true];
-        if (count _magazines > 1 || ((count _magazines == 1) && {toLower ((_magazines select 0) select 0) find "cmflare" == -1})) then {
+        if ((count _magazines > 1 || ((count _magazines == 1) && {toLower ((_magazines select 0) select 0) find "cmflare" == -1}))
+            && (typeOf _transVeh != "O_Heli_Light_02_F")) then {
             _radius = 100;
             if (_transVeh isKindOf "Air") then {
                 _radius = 300;

@@ -133,7 +133,8 @@ sleep 4;
 _pilot setSkill _pilotSkill;
 
 _magazines = magazinesAllTurrets [_newVehicle, true];
-if (count _magazines > 1 || ((count _magazines == 1) && {toLower ((_magazines select 0) select 0) find "cmflare" == -1})) then {
+if ((count _magazines > 1 || ((count _magazines == 1) && {toLower ((_magazines select 0) select 0) find "cmflare" == -1}))
+    && (typeOf _newVehicle != "O_Heli_Light_02_F")) then {
     _pilot_wp_combat_1 = _pilot_group addWaypoint [_objective, 100];
     _pilot_wp_combat_1 setWaypointType "SAD";
     _pilot_wp_combat_1 setWaypointSpeed "NORMAL";

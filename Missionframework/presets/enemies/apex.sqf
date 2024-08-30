@@ -24,7 +24,7 @@ KPLIB_o_rifleman = "O_T_Soldier_F";                                     // Rifle
 KPLIB_o_riflemanLAT = "O_T_Soldier_LAT_F";                              // Rifleman (LAT)
 KPLIB_o_grenadier = "O_T_Soldier_GL_F";                                 // Grenadier
 KPLIB_o_machinegunner = "O_T_Soldier_AR_F";                             // Autorifleman
-KPLIB_o_heavyGunner = "O_T_HeavyGunner_F";                                // Heavy Gunner
+KPLIB_o_heavyGunner = "O_T_HeavyGunner_F";                              // Heavy Gunner
 KPLIB_o_marksman = "O_T_Soldier_M_F";                                   // Marksman
 KPLIB_o_sharpshooter = "O_T_Soldier_M_F";                               // Marksman
 KPLIB_o_sniper = "O_T_Sniper_F";                                        // Sniper
@@ -33,7 +33,7 @@ KPLIB_o_aaSpecialist = "O_T_Soldier_AA_F";                              // AA Sp
 KPLIB_o_medic = "O_T_Medic_F";                                          // Combat Life Saver
 KPLIB_o_engineer = "O_T_Engineer_F";                                    // Engineer
 KPLIB_o_paratrooper = "O_T_Soldier_PG_F";                               // Paratrooper
-KPLIB_o_expSpecialist = "O_T_Soldier_Exp_F";                              // Explosive specialist
+KPLIB_o_expSpecialist = "O_T_Soldier_Exp_F";                            // Explosive specialist
 
 // Enemy vehicles used by secondary objectives.
 KPLIB_o_mrap = "O_T_LSV_02_unarmed_F";                                  // Qilin
@@ -116,7 +116,7 @@ KPLIB_o_battleGrpVehicles = [
     "O_T_MBT_02_cannon_ghex_F",                                         // T-100 Varsuk
     "O_T_MBT_04_cannon_F",                                              // T-140 Angara
     "O_T_MBT_04_command_F",                                             // T-140K Angara
-    "O_Heli_Transport_04_covered_F",                                    // Mi-290 Taru (Transport)
+    "O_Heli_Light_02_F",                                                // Po-30 Orca (Armed)
     "O_Heli_Transport_04_covered_F",                                    // Mi-290 Taru (Transport)
     "O_Heli_Transport_04_covered_F",                                    // Mi-290 Taru (Transport)
     "O_Heli_Attack_02_F",                                               // Mi-48 Kajman
@@ -135,8 +135,8 @@ KPLIB_o_battleGrpVehiclesLight = [
     "O_T_APC_Wheeled_02_rcws_ghex_F",                                   // MSE-3 Marid
     "O_T_APC_Tracked_02_cannon_ghex_F",                                 // BTR-K Kamysh
     "O_T_APC_Tracked_02_cannon_ghex_F",                                 // BTR-K Kamysh
-    "O_Heli_Transport_04_covered_F",                                    // Mi-290 Taru (Transport)
-    "O_Heli_Transport_04_covered_F",                                    // Mi-290 Taru (Transport)
+    "O_Heli_Light_02_F",                                                // Po-30 Orca (Armed)
+    "O_Heli_Light_02_F",                                                // Po-30 Orca (Armed)
     "O_T_APC_Tracked_02_AA_ghex_F"                                      // ZSU-39 Tigris
 ];
 

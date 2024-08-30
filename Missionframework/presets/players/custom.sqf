@@ -349,7 +349,7 @@ KPLIB_b_squadPara = [
 ];
 
 // Light infantry vehicle squad.
-KPLIB_b_squadLight = [
+KPLIB_b_squadVeh = [
     "B_Soldier_TL_F",
     "B_Soldier_F",
     "B_Soldier_F"

@@ -133,6 +133,7 @@ KPLIB_b_squadAT                 = KPLIB_b_squadAT                   select {[_x]
 KPLIB_b_squadAA                 = KPLIB_b_squadAA                   select {[_x] call KPLIB_fnc_checkClass};
 KPLIB_b_squadRecon              = KPLIB_b_squadRecon                select {[_x] call KPLIB_fnc_checkClass};
 KPLIB_b_squadPara               = KPLIB_b_squadPara                 select {[_x] call KPLIB_fnc_checkClass};
+KPLIB_b_squadVeh                = KPLIB_b_squadVeh                  select {[_x] call KPLIB_fnc_checkClass};
 private _elite_crosscheck = (KPLIB_b_vehLight + KPLIB_b_vehHeavy + KPLIB_b_vehAir + KPLIB_b_vehStatic + KPLIB_b_vehSupport) apply {(_x#0);};
 KPLIB_b_vehToUnlock             = KPLIB_b_vehToUnlock               arrayIntersect _elite_crosscheck;
 
@@ -174,7 +175,7 @@ KPLIB_b_deco_classes            = KPLIB_b_objectsDeco               apply {toLow
 KPLIB_b_support_classes         = KPLIB_b_vehSupport                apply {toLowerANSI (_x select 0)};
 KPLIB_transport_classes         = KPLIB_transportConfigs            apply {toLowerANSI (_x select 0)};
 
-KPLIB_b_inf_classes append (KPLIB_b_squadLight + KPLIB_b_squadInf + KPLIB_b_squadAT + KPLIB_b_squadAA + KPLIB_b_squadRecon + KPLIB_b_squadPara);
+KPLIB_b_inf_classes append (KPLIB_b_squadLight + KPLIB_b_squadInf + KPLIB_b_squadAT + KPLIB_b_squadAA + KPLIB_b_squadRecon + KPLIB_b_squadPara + KPLIB_b_squadVeh);
 KPLIB_b_inf_classes             = KPLIB_b_inf_classes               apply {toLowerANSI _x};
 KPLIB_b_inf_classes             = KPLIB_b_inf_classes               arrayIntersect KPLIB_b_inf_classes;
 

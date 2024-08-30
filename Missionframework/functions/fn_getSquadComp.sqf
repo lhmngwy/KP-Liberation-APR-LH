@@ -25,7 +25,7 @@ if (_type == "army") then {
     private _selected = false;
     private _randomchance = 0;
     _squadcomp = KPLIB_o_squadStd;
-    if (random 1 > 0.5) then {
+    if (random 1 < 0.33) then {
         _squadcomp = KPLIB_o_squadStd2;
     };
 
