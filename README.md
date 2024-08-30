@@ -28,6 +28,7 @@ My customisations include:
 - Added tents and landing craft as mobile respawn points (See recommended add-ons).
 - Civilians will spawn in player sectors.
 - Improved civilian waypoints, they will move around the general area and between buildings. They will also go indoors at night or during rain.
+- Improved civilian vehicle patrols, you should see fewer stuck civilian vehicles and pile ups.
 
 Integrated from others:
 

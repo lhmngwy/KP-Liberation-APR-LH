@@ -5,23 +5,22 @@ private [ "_spawnsector", "_grp", "_usable_sectors", "_spawntype", "_civnumber",
 
 _civveh = objNull;
 
-sleep (150 + (random 150));
+sleep (15 + (random 15));
 _spawnsector = "";
-
-if ( isNil "KPLIB_sectors_active" ) then { KPLIB_sectors_active = [] };
 
 while { KPLIB_endgame == 0 } do {
 
     _spawnsector = "";
     _usable_sectors = [];
     {
-        if ((([markerPos _x, 1000, KPLIB_side_player] call KPLIB_fnc_getUnitsCount) == 0) && (count ([markerPos _x, 3500] call KPLIB_fnc_getNearbyPlayers) > 0)) then {
+        if ((count ([markerPos _x, 1000] call KPLIB_fnc_getNearbyPlayers) == 0) && (count ([markerPos _x, 3000] call KPLIB_fnc_getNearbyPlayers) > 0)) then {
             _usable_sectors pushback _x;
         }
 
-    } foreach ((KPLIB_sectors_capital + KPLIB_sectors_city + KPLIB_sectors_factory) - (KPLIB_sectors_active));
+    } foreach (KPLIB_sectors_capital + KPLIB_sectors_city + KPLIB_sectors_factory);
 
-    if ( count _usable_sectors > 0 ) then {
+    _usable_count = count _usable_sectors;
+    if ( _usable_count > 0 && KPLIB_active_civilian_patrols < _usable_count ) then {
         _spawnsector = selectRandom _usable_sectors;
 
         _grp = createGroup [KPLIB_side_civilian, true];
@@ -35,7 +34,7 @@ while { KPLIB_endgame == 0 } do {
 
             _nearestroad = objNull;
             while { isNull _nearestroad } do {
-                _nearestroad = [(markerPos (_spawnsector)) getPos [random (100), random (360)], 200, []] call BIS_fnc_nearestRoad;
+                _nearestroad = [(markerPos (_spawnsector)) getPos [random (300), random (360)], 300, []] call BIS_fnc_nearestRoad;
                 sleep 1;
             };
 
@@ -62,7 +61,7 @@ while { KPLIB_endgame == 0 } do {
         _sectors_patrol = [];
         _patrol_startpos = getpos (leader _grp);
         {
-            if ((_patrol_startpos distance (markerpos _x) < 5000) && (count ([markerPos _x, 4000] call KPLIB_fnc_getNearbyPlayers) > 0)) then {
+            if ((_patrol_startpos distance (markerpos _x) < 5000) && (count ([markerPos _x, 3000] call KPLIB_fnc_getNearbyPlayers) > 0)) then {
                 _sectors_patrol pushback _x;
             };
         } foreach (KPLIB_sectors_capital + KPLIB_sectors_city + KPLIB_sectors_factory);
@@ -80,7 +79,7 @@ while { KPLIB_endgame == 0 } do {
         {doStop _x; _x doFollow leader _grp} foreach units _grp;
 
         {
-            _nearestroad = [(markerPos _x) getPos [random(100), random(360)], 200, []] call BIS_fnc_nearestRoad;
+            _nearestroad = [(markerPos _x) getPos [random(300), random(360)], 300, []] call BIS_fnc_nearestRoad;
             if ( isNull _nearestroad ) then {
                 _waypoint = _grp addWaypoint [ markerpos _x, 100 ];
             } else {
@@ -103,24 +102,29 @@ while { KPLIB_endgame == 0 } do {
             };
         };
 
+        KPLIB_active_civilian_patrols = KPLIB_active_civilian_patrols + 1;
+
+        _vel = 12;
         waitUntil {
-            sleep (30 + (random 30));
-            ((({alive _x} count (units _grp)) == 0) || (count ([getpos leader _grp, 4000] call KPLIB_fnc_getNearbyPlayers) == 0))
+            sleep (15 + (random 15));
+            _stuck = false;
+            if ( !(isNull _civveh) ) then {
+                _vel = ((sqrt (((velocity _civveh) select 0) ^ 2 + ((velocity _civveh) select 1) ^ 2)) + _vel) / 2;
+                _stuck = ((_vel < 3) && (count ([getpos leader _grp, 500] call KPLIB_fnc_getNearbyPlayers) == 0));
+            };
+            (_stuck || (count ([getpos leader _grp, 3500] call KPLIB_fnc_getNearbyPlayers) == 0))
         };
 
-        if ( count (units _grp) > 0 ) then {
-            if (count ([getpos leader _grp, 4000] call KPLIB_fnc_getNearbyPlayers) == 0) then {
-
-                if ( !(isNull _civveh) ) then {
-                     if ( { ( alive _x ) && (side group _x == KPLIB_side_player ) } count (crew _civveh) == 0 ) then {
-                        deleteVehicle _civveh
-                    };
-                };
-
-                { deletevehicle _x } foreach units _grp;
+        if ( !(isNull _civveh) && !(_civveh getVariable ["KPLIB_seized", false]) ) then {
+            if ( { ( alive _x ) && (side group _x == KPLIB_side_player ) } count (crew _civveh) == 0 ) then {
+                deleteVehicle _civveh;
             };
         };
+
+        { deletevehicle _x } foreach units _grp;
+
+        KPLIB_active_civilian_patrols = KPLIB_active_civilian_patrols - 1;
     };
 
-    sleep 150 + (random (150));
+    sleep 15 + (random (15));
 };
