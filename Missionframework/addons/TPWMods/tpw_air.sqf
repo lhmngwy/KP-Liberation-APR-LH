@@ -136,8 +136,8 @@ while {true} do
 		// Spawn new aircraft as necessary	
 		if (tpw_air_active && tpw_air_inflight < tpw_air_max) then 
 		{
+			sleep tpw_air_time / 2 + (random tpw_air_time / 2);
 			[player] spawn tpw_air_fnc_flyby;
-			sleep tpw_air_time / 2 + (random tpw_air_time/ 2);
 		};
 	sleep 33.33;	
 	};

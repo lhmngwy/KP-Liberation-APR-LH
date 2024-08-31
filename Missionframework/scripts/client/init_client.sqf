@@ -46,7 +46,8 @@ if (KPLIB_param_mapMarkers) then { execVM "addons\SoliderTracker\QS_icons.sqf" }
 
 [["C_MAN","C_MAN","CUP_C","CAF_AG","CAF_AG","C_MAN"],[],5,23,1] execvm "addons\TPWMods\tpw_core.sqf";
 if (count KPLIB_c_vehAir > 0) then {[10,600,2,[100,250,500],2,KPLIB_c_vehAir] execvm "addons\TPWMods\tpw_air.sqf";};
-[10,7,200,100,60,10,1] execvm "addons\TPWMods\tpw_animals.sqf";
+[600,2000,15,2] execvm "addons\TPWMods\tpw_boats.sqf";
+[10,10,200,100,60,10,1] execvm "addons\TPWMods\tpw_animals.sqf";
 [1,1,1,1,1,0,0,[0],12,1,1] execvm "addons\TPWMods\tpw_soap.sqf";
 
 player addMPEventHandler ["MPKilled", {

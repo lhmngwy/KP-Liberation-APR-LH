@@ -29,15 +29,6 @@ tpw_animal_noisetime = _this select 4; // maximum time in between animal noises
 tpw_animal_saddleperc = _this select 5; // % of horses spawned with saddles (if using dbo_horses)
 tpw_animal_crows = _this select 6;
 
-// DEFAULT VALUES FOR MP
-if (isMultiplayer) then 
-	{
-	tpw_animal_sleep = 9.99; 
-	tpw_animal_max =15; 
-	tpw_animal_maxradius = 200;
-	tpw_animal_minradius = 75;
-	};
-
 // VARIABLES
 tpw_animal_debug = false; // debugging
 tpw_animal_array = []; // array of animals near player

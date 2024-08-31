@@ -43,7 +43,7 @@ Integrated from others:
 - Advanced Towing: https://steamcommunity.com/sharedfiles/filedetails/?id=639837898
 - Soldier Tracker for better map icons: https://github.com/auQuiksilver/Soldier-Tracker
 - Arma 3 Performance Extension, hides units and bodies not in line of sight to improve performance: https://github.com/Battlekeeper/Arma3PerformanceExtension
-- Air, Animals, and soap from TPW Mods for better ambience: https://steamcommunity.com/sharedfiles/filedetails/?id=2586787720
+- Air, Boats, Animals, and soap from TPW Mods for better ambience: https://steamcommunity.com/sharedfiles/filedetails/?id=2586787720
 - Persistent vehicle cargo, fuel and damage, plus some other changes from https://github.com/moistbois/Moist-Liberation-APR
 - Additional map ports by stutpip123: https://github.com/KillahPotatoes/KP-Liberation/pull/854
 
