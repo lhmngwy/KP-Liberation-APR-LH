@@ -92,10 +92,12 @@ while { KPLIB_endgame == 0 } do {
         };
 
         _vel = 12;
+        _destroyed = false;
         while { _patrol_continue } do {
             sleep (15 + (random 15));
             if ( count (units _grp) == 0  ) then {
                 _patrol_continue = false;
+                _destroyed = true;
             } else {
                 _stuck = false;
                 if !(_is_infantry) then {
@@ -117,7 +119,7 @@ while { KPLIB_endgame == 0 } do {
         KPLIB_active_enemy_patrols = KPLIB_active_enemy_patrols - 1;
     };
 
-    if ( !([] call KPLIB_fnc_isCapitalActive) ) then {
+    if ( _destroyed && !([] call KPLIB_fnc_isCapitalActive) ) then {
         sleep (((random 300.0) + 300) / KPLIB_param_difficulty);
     };
 
