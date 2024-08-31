@@ -231,7 +231,7 @@ KPLIB_cap_patrol = 350;
 KPLIB_battlegroup_size = 6;
 
 // Cap for civilian vehicles traveling between sectors.
-KPLIB_civilians_amount = 12;
+KPLIB_civilians_amount = 16;
 
 
 /*

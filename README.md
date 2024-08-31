@@ -14,6 +14,9 @@ My customisations include:
     - The enemy has the ability to call in reinforcements when attacking your sectors.
     - The countdown timer will pause when players are at the point defending it.
     - If you end the mission while a sector is under attack, the sector will be lost.
+- Improved enemy and civilian patrols:
+    - You will see fewer stuck vehicles and pile ups.
+    - Patrols will despawn as the player moves further away and respawn near the player.
 - Added persistent player squads, disconnect and reconnect and you will still have your squad!
 - Blufor vehicles, captured vehicles and HC squads will be saved anywhere on the map.
 - Enemy and civilian vehicles must be taken to a FOB at least once to count as captured.
@@ -27,8 +30,7 @@ My customisations include:
     - If there's less than 4 enemies nearby you can respawn without penalty.
 - Added tents and landing craft as mobile respawn points (See recommended add-ons).
 - Civilians will spawn in player sectors.
-- Improved civilian waypoints, they will move around the general area and between buildings. They will also go indoors at night or during rain.
-- Improved civilian vehicle patrols, you should see fewer stuck civilian vehicles and pile ups.
+- Improved civilian in-location waypoints, they will move around the general area and between buildings. They will also go indoors at night or during rain.
 
 Integrated from others:
 
@@ -37,7 +39,7 @@ Integrated from others:
     - AI will use artillery (If you have lambs installed, that will be used for this instead).
     - AI in combat or stealth mode will steal vehicles, mount static weapons or replace dead gunners.
     - AI will plant mines.
-- AI Driving Control, vehicles won't smash into each other or run over friendlies: https://forums.bohemia.net/forums/topic/223430-ai-driving-control/
+- AI Driving Control, vehicles won't smash into each other or run over friendlies as often: https://forums.bohemia.net/forums/topic/223430-ai-driving-control/
 - Advanced Towing: https://steamcommunity.com/sharedfiles/filedetails/?id=639837898
 - Soldier Tracker for better map icons: https://github.com/auQuiksilver/Soldier-Tracker
 - Arma 3 Performance Extension, hides units and bodies not in line of sight to improve performance: https://github.com/Battlekeeper/Arma3PerformanceExtension

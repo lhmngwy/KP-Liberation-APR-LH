@@ -21,6 +21,8 @@ while { KPLIB_endgame == 0 } do {
 
     _usable_count = count _usable_sectors;
     if ( _usable_count > 0 && KPLIB_active_civilian_patrols < _usable_count ) then {
+        KPLIB_active_civilian_patrols = KPLIB_active_civilian_patrols + 1;
+        
         _spawnsector = selectRandom _usable_sectors;
 
         _grp = createGroup [KPLIB_side_civilian, true];
@@ -101,8 +103,6 @@ while { KPLIB_endgame == 0 } do {
                 _grp setGroupOwner ( owner _headless_client );
             };
         };
-
-        KPLIB_active_civilian_patrols = KPLIB_active_civilian_patrols + 1;
 
         _vel = 12;
         waitUntil {
