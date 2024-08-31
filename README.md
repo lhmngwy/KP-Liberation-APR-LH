@@ -3,9 +3,9 @@ This is my customised fork of Apricot_ale's fork of KP Liberation. It was create
 
 [![license](https://img.shields.io/github/license/KillahPotatoes/KP-Liberation.svg)](https://github.com/KillahPotatoes/KP-Liberation/blob/master/LICENSE.md)
 
-Apricot_ale's fork is a uniquely modified version of [KP Liberation](https://github.com/KillahPotatoes/KP-Liberation), incorporating several pull requests (PRs) that have already been submitted.
+Apricot_ale's fork is a uniquely modified version of [KP Liberation](https://github.com/KillahPotatoes/KP-Liberation), incorporating several pull requests (PRs) that have previously been submitted.
 
-My customisations include:
+I've improved or reworked most aspects of the mission. My customisations include:
 
 - Updated vanilla presets, factions have access to all guns. Uniforms and vehicles are still faction restricted.
 - Enemies will be more spread out around a sector with less predictability.
