@@ -102,7 +102,7 @@ while { KPLIB_endgame == 0 } do {
                 _stuck = false;
                 if !(_is_infantry) then {
                     _vel = ((sqrt (((velocity _vehicle_object) select 0) ^ 2 + ((velocity _vehicle_object) select 1) ^ 2)) + _vel) / 2;
-                    _stuck = ((_vel < 3) && (count ([getpos leader _grp, 1000] call KPLIB_fnc_getNearbyPlayers) == 0) && ((behaviour (leader group _vehicle_object)) != "COMBAT"));
+                    _stuck = ((_vel < 3) && (count ([getpos leader _grp, 1000] call KPLIB_fnc_getNearbyPlayers) == 0) && ((behaviour (leader _grp)) != "COMBAT"));
                 };
                 if ( _stuck || ([ getpos (leader _grp) , 4000 , KPLIB_side_player ] call KPLIB_fnc_getUnitsCount == 0 ) ) then {
                     _patrol_continue = false;
