@@ -11,37 +11,37 @@ private _unitscount = [markerPos _sector, _corrected_size , KPLIB_side_player] c
 private _return = true;
 
 if (_unitscount > 0 && _unitscount <= 10) then {
-    sleep 5;
+    sleep 3;
 };
 sleep 0.1;
 
 _unitscount = [markerPos _sector, _corrected_size, KPLIB_side_player] call KPLIB_fnc_getUnitsCount;
 if (_unitscount > 0 && _unitscount <= 6) then {
-    sleep 5;
+    sleep 3;
 };
 sleep 0.1;
 
 _unitscount = [markerPos _sector, _corrected_size, KPLIB_side_player] call KPLIB_fnc_getUnitsCount;
 if (_unitscount > 0 && _unitscount <= 4) then {
-    sleep 5;
+    sleep 3;
 };
 sleep 0.1;
 
 _unitscount = [markerPos _sector, _corrected_size, KPLIB_side_player] call KPLIB_fnc_getUnitsCount;
 if (_unitscount > 0 && _unitscount <= 3) then {
-    sleep 5;
+    sleep 3;
 };
 sleep 0.1;
 
 _unitscount = [markerPos _sector, _corrected_size, KPLIB_side_player] call KPLIB_fnc_getUnitsCount;
 if (_unitscount > 0 && _unitscount <= 2) then {
-    sleep 5;
+    sleep 3;
 };
 sleep 0.1;
 
 _unitscount = [markerPos _sector, _corrected_size, KPLIB_side_player] call KPLIB_fnc_getUnitsCount;
 if (_unitscount == 1) then {
-    sleep 5;
+    sleep 3;
 };
 
 _unitscount = [markerPos _sector, _corrected_size, KPLIB_side_player] call KPLIB_fnc_getUnitsCount;
