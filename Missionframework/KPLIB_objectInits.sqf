@@ -239,7 +239,6 @@ KPLIB_objectInits = [
             if (!(KPLIB_param_autodanger) && {(side _this) isEqualTo KPLIB_side_player}) then {
                 _this disableAI "AUTOCOMBAT";
             };
-            _this allowFleeing 0;
 
             // Militia uses torches at night
             if ((typeOf _this) in KPLIB_o_militiaInfantry) then {
