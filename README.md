@@ -1,11 +1,13 @@
 # KP Liberation APR LH
-This is my customised fork of Apricot_ale's fork of KP Liberation. It was created for my brother and I to play. The changes improve co-op for low player counts, as well as creating a more dynamic battlefield.
+This is my customised fork of Apricot_ale's fork of KP Liberation. It was created for my brother and I to play. The changes improve co-op for low player counts, as well as creating a more dynamic battlefield. I've generally improved, fixed or reworked most aspects of the mission.
+
+The mission is configured to run on my 13th gen Intel i5 dedicated server. If you want to run the mission locally or on less powerful hardware, I recommend reducing the "Maximum amount of AI units" mission parameter.
 
 [![license](https://img.shields.io/github/license/KillahPotatoes/KP-Liberation.svg)](https://github.com/KillahPotatoes/KP-Liberation/blob/master/LICENSE.md)
 
 Apricot_ale's fork is a uniquely modified version of [KP Liberation](https://github.com/KillahPotatoes/KP-Liberation), incorporating several pull requests (PRs) that have previously been submitted.
 
-I've improved or reworked most aspects of the mission. My customisations include:
+My changes include:
 
 - Updated vanilla presets, factions have access to all guns. Uniforms and vehicles are still faction restricted.
 - Enemies will be more spread out around a sector with less predictability.
@@ -32,6 +34,7 @@ I've improved or reworked most aspects of the mission. My customisations include
 - Added tents and landing craft as mobile respawn points (See recommended add-ons).
 - Civilians will spawn in player sectors.
 - Improved civilian in-location waypoints, they will move around the general area and between buildings. They will also go indoors at night or during rain.
+- Performance improvements when spawning sectors. Only one sector will spawn at a time to prevent the server getting bogged down. This also has the benefit of better spreading the load between headless clients. 
 
 Integrated from others:
 
