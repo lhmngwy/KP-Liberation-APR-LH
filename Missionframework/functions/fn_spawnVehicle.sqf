@@ -41,7 +41,7 @@ if (_precise) then {
     while {_spawnPos isEqualTo []} do {
         _i = _i + 1;
         _spawnpos = (_pos getPos [random _range, random 360]) findEmptyPosition [10, 100, _classname];
-        if (_i isEqualTo 10) exitWith {_spawnPos = zeroPos};
+        if (_i isEqualTo 20) exitWith {_spawnPos = []};
     };
 };
 

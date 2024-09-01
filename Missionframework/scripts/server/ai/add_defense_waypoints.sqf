@@ -5,12 +5,15 @@ private _flagpos = _this select 1;
 private _range = _this select 2;
 private _basepos = getpos (leader _grp);
 private _is_infantry = false;
+private _is_boat = false;
 private _wpPositions = [];
 private _waypoint = [];
 
 if ((isNull _grp) || (typeName _grp != "GROUP")) exitWith {};
 
 if (vehicle (leader _grp) == (leader _grp)) then {_is_infantry = true;};
+
+if ((typeOf (vehicle (leader _grp))) in KPLIB_o_boats) then {_is_boat = true;};
 
 sleep 5;
 { deleteWaypoint _x } forEachReversed waypoints _grp;
@@ -31,8 +34,14 @@ private _generateWaypoint = {
             random [_angleMin, (_angleMin + (_angleMax - _angleMin) / 2), _angleMax]
         ];
 
-        if (!(surfaceIsWater _wpPos)) then {
-            _isValid = true;
+        if (_is_boat) then {
+            if (surfaceIsWater _wpPos) then {
+                _isValid = true;
+            };
+        } else {
+            if (!(surfaceIsWater _wpPos)) then {
+                _isValid = true;
+            };
         };
 
         _attempts = _attempts + 1;
@@ -41,7 +50,7 @@ private _generateWaypoint = {
     _wpPos
 };
 
-if (_is_infantry) then {
+if (_is_infantry || _is_boat) then {
     _wpPositions = [
         [_flagpos, _range, 0, 36] call _generateWaypoint,
         [_flagpos, _range, 72, 108] call _generateWaypoint,

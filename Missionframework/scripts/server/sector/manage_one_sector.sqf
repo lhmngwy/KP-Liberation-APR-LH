@@ -93,6 +93,7 @@ if (_spawn) then {
             if (KPLIB_param_unitcap >= 1.25 && ((random 100) > (33 / KPLIB_param_difficulty))) then {_squad6 = ([_infsquad] call KPLIB_fnc_getSquadComp);};
 
             _vehtospawn = [(selectRandom KPLIB_o_militiaVehicles),(selectRandom KPLIB_o_militiaVehicles),(selectRandom KPLIB_o_turrets_HMG)];
+            if ((random 100) > (33 / KPLIB_param_difficulty)) then {_vehtospawn pushback (selectRandom KPLIB_o_boats);};
             if ((random 100) > (66 / KPLIB_param_difficulty)) then {_vehtospawn pushback (selectRandom KPLIB_o_militiaVehicles);};
             if ((random 100) > (50 / KPLIB_param_difficulty)) then {_vehtospawn pushback (selectRandom KPLIB_o_militiaVehicles);};
             if ((random 100) > (66 / KPLIB_param_difficulty)) then {_vehtospawn pushback (selectRandom KPLIB_o_turrets_HMG);};
@@ -133,6 +134,7 @@ if (_spawn) then {
             if (KPLIB_param_unitcap >= 1 && ((random 100) > (50 / KPLIB_param_difficulty))) then {_squad5 = ([_infsquad] call KPLIB_fnc_getSquadComp);};
             if (KPLIB_param_unitcap >= 1.5 && ((random 100) > (66 / KPLIB_param_difficulty))) then {_squad6 = ([_infsquad] call KPLIB_fnc_getSquadComp);};
 
+            if ((random 100) > (66 / KPLIB_param_difficulty)) then {_vehtospawn pushback (selectRandom KPLIB_o_boats);};
             if ((random 100) > (33 / KPLIB_param_difficulty)) then {_vehtospawn pushback (selectRandom KPLIB_o_militiaVehicles);};
             if ((random 100) > (33 / KPLIB_param_difficulty)) then {_vehtospawn pushback (selectRandom KPLIB_o_militiaVehicles);};
             if ((random 100) > (33 / KPLIB_param_difficulty)) then {_vehtospawn pushback (selectRandom KPLIB_o_turrets_HMG);};
@@ -181,6 +183,7 @@ if (_spawn) then {
                 _vehtospawn pushback ((selectRandom KPLIB_o_turrets_MORTAR));
             };
             if ((random 100) > (33 / KPLIB_param_difficulty)) then {
+                _vehtospawn pushback (selectRandom KPLIB_o_boats);
                 _vehtospawn pushback (["defense"] call KPLIB_fnc_getAdaptiveVehicle);
             };
             if ((random 100) > (66 / KPLIB_param_difficulty)) then {
@@ -204,6 +207,7 @@ if (_spawn) then {
             if (KPLIB_param_unitcap >= 1 && ((random 100) > (50 / KPLIB_param_difficulty))) then {_squad5 = ([_infsquad] call KPLIB_fnc_getSquadComp);};
             if (KPLIB_param_unitcap >= 1.5 && ((random 100) > (66 / KPLIB_param_difficulty))) then {_squad6 = ([_infsquad] call KPLIB_fnc_getSquadComp);};
 
+            if ((random 100) > (66 / KPLIB_param_difficulty)) then {_vehtospawn pushback (selectRandom KPLIB_o_boats);};
             if ((random 100) > 33 / KPLIB_param_difficulty) then {_vehtospawn pushback (selectRandom KPLIB_o_militiaVehicles);};
             if ((random 100) > 33 / KPLIB_param_difficulty) then {_vehtospawn pushback (selectRandom KPLIB_o_militiaVehicles);};
             if ((random 100) > 33 / KPLIB_param_difficulty) then {_vehtospawn pushback (selectRandom KPLIB_o_turrets_HMG);};
@@ -257,16 +261,24 @@ if (_spawn) then {
 
         {
             if (_x isEqualTo "Turret_Array_Empty") exitWith {};
-            _vehicle = [_sectorpos, _x, false, true, _spawn_range] call KPLIB_fnc_spawnVehicle;
-            [group ((crew _vehicle) select 0),_sectorpos, _spawn_range] spawn add_defense_waypoints;
-            _managed_units pushback _vehicle;
-            {_managed_units pushback _x;} foreach (crew _vehicle);
-            sleep 0.25;
-            if ((_x in KPLIB_o_turrets_MORTAR) && _lambsEnable) then {
-                [group ((crew _vehicle) select 0)] call lambs_wp_fnc_taskArtilleryRegister;
+            _x_spawn_range = _spawn_range;
+            if (_x in KPLIB_o_boats) then {
+                _x_spawn_range = 500;
             };
-            if ((_x in KPLIB_param_supportModule_artyVeh) && _lambsEnable) then {
-                [group ((crew _vehicle) select 0)] call lambs_wp_fnc_taskArtilleryRegister;
+            _vehicle = [_sectorpos, _x, false, true, _x_spawn_range] call KPLIB_fnc_spawnVehicle;
+            if !(isNull _vehicle) then {
+                _grp = group ((crew _vehicle) select 0);
+                _basepos = getpos (leader _grp);
+                [_grp, _basepos, _spawn_range] spawn add_defense_waypoints;
+                _managed_units pushback _vehicle;
+                {_managed_units pushback _x;} foreach (crew _vehicle);
+                sleep 0.25;
+                if ((_x in KPLIB_o_turrets_MORTAR) && _lambsEnable) then {
+                    [group ((crew _vehicle) select 0)] call lambs_wp_fnc_taskArtilleryRegister;
+                };
+                if ((_x in KPLIB_param_supportModule_artyVeh) && _lambsEnable) then {
+                    [group ((crew _vehicle) select 0)] call lambs_wp_fnc_taskArtilleryRegister;
+                };
             };
         } forEach _vehtospawn;
 

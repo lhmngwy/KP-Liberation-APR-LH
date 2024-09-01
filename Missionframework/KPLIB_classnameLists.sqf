@@ -398,6 +398,7 @@ boats_names = [
     "UNS_Zodiac_W",
     "B_Lifeboat",
     "vn_b_boat_05_01",
+    "rksla3_lcvpmk5_1_generic_grey",
     "rksla3_lcvpmk5_viv_generic_grey"
 ];
 

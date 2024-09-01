@@ -166,6 +166,11 @@ KPLIB_o_planes = [
     "O_Plane_Fighter_02_F"                                              // To-201 Shikra
 ];
 
+// Enemy boats that will need to spawn in water.
+KPLIB_o_boats = [
+    "O_Boat_Armed_01_hmg_F"                                             // Speedboat HMG
+];
+
 // Enemy defence turrets that will be spawned in sectors.
 KPLIB_o_turrets_HMG = [
     "O_HMG_01_F",
