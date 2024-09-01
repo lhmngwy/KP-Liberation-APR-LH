@@ -36,9 +36,17 @@ PAR_unblock_AI = {
 			player setPosATL (getPosATL player vectorAdd [([] call F_getRND), ([] call F_getRND), 0.3]);
 		};
 	} else {
+		_objects = nearestTerrainObjects [player, [], 50];
+		_bridgeCount = 0;
+		{ 
+			_object = toLower((getModelInfo _x) select 0);
+			if (((_object) find "bridge" >= 0) && ((_object) find "pillar" <= 0)) then { 
+				_bridgeCount = _bridgeCount + 1;
+			}; 
+		} forEach _objects; 
 		{
 			_unit = _x;
-			if (isNull (objectParent _unit) && (player distance2D _unit) < 50 && (lifeState _unit != 'INCAPACITATED')) then {
+			if (isNull (objectParent _unit) && ((player distance2D _unit < 50) || (_bridgeCount > 0)) && (lifeState _unit != 'INCAPACITATED')) then {
 				_unit stop true;
 				sleep 1;
 				_unit doWatch objNull;
