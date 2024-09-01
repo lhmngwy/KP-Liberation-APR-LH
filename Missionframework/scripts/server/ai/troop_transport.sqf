@@ -20,6 +20,7 @@ if ((_start_pos select 0) == 0 && (_start_pos select 1) == 0 && (_start_pos sele
 private _helipad = objNull;
 private _target = _objective;
 if (_transVeh isKindOf "Air") then {
+    _unload_distance = _unload_distance * 1.5;
     _transVeh flyInHeight [100 + random 40, true];
     _helipad_pos = [];
     private _i = 0;
