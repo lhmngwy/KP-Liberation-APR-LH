@@ -10,6 +10,7 @@ I've improved or reworked most aspects of the mission. My customisations include
 - Updated vanilla presets, factions have access to all guns. Uniforms and vehicles are still faction restricted.
 - Enemies will be more spread out around a sector with less predictability.
 - The enemy utilises transport vehicles, trucks can drop off troops, helicopters can land to drop off troops, paratroopers work more reliably.
+- Enemy boats will spawn in coastal sectors.
 - Enemy attacks on player sectors have been improved:
     - The enemy has the ability to call in reinforcements when attacking your sectors.
     - The countdown timer will pause when players are at the point defending it.

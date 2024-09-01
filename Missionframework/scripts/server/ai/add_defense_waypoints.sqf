@@ -28,7 +28,7 @@ private _generateWaypoint = {
     private _isValid = false;
     private _attempts = 0;
 
-    while { !_isValid && _attempts < 10 } do {
+    while { !_isValid && _attempts < 20 } do {
         _wpPos = _flagpos getPos [
             random [_range * 0.33, _range * 0.66, _range],
             random [_angleMin, (_angleMin + (_angleMax - _angleMin) / 2), _angleMax]
