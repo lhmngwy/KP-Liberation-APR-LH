@@ -1,5 +1,5 @@
 # KP Liberation APR LH
-This is my customised fork of Apricot_ale's fork of KP Liberation. It was created for my brother and I to play. The changes improve co-op for low player counts, as well as creating a more dynamic battlefield. I've generally improved, fixed or reworked most aspects of the mission.
+This is my customised fork of Apricot_ale's fork of KP Liberation. It was originally created for my brother and I to play. The changes improve co-op for low player counts, as well as creating a more dynamic battlefield. I've generally improved, fixed or reworked most aspects of the mission.
 
 The mission is configured to run on my 13th gen Intel i5 dedicated server. If you want to run the mission locally or on less powerful hardware, I recommend reducing the "Maximum amount of AI units" mission parameter.
 
