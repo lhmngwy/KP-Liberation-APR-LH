@@ -34,7 +34,7 @@ My changes include:
 - Added tents and landing craft as mobile respawn points (See recommended add-ons).
 - Civilians will spawn in player sectors.
 - Improved civilian in-location waypoints, they will move around the general area and between buildings. They will also go indoors at night or during rain.
-- Performance improvements when spawning sectors. Sectors will spawn one after the other rather than all spawning simultaneously to prevent the server getting bogged down. This also has the benefit of better spreading the load between headless clients. 
+- Performance improvements when spawning sectors. Sectors will spawn one after the other, rather than all spawning simultaneously, to prevent the server getting bogged down. This also has the benefit of better spreading the load between headless clients. 
 
 Integrated from others:
 
